@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.konsola5.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "IsCrookMixin",
+    "IsHammerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

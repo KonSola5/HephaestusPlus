@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "tag": "fabricaeexnihilo:hammers"
+    }
+  ],
+  "max_level": 1,
+  "result": {
+    "level": 1,
+    "name": "hephaestusplus:smashing"
+  },
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "fabric:type": "fabric:any",
+    "ingredients": [
+      {
+        "tag": "tconstruct:modifiable/harvest/primary"
+      }
+    ]
+  }
+}

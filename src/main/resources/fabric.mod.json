@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "hephaestusplus",
+	"version": "${version}",
+	"name": "HephaestusPlus",
+	"description": "An addon for Hephaestus adding materials and tools from various mods!",
+	"authors": [
+		"KonSola5"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hephaestusplus/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.konsola5.HephaestusPlus"
+		],
+		"fabric-datagen": [
+			"com.konsola5.HephaestusPlusDataGenerator"
+		]
+	},
+	"mixins": [
+		"hephaestusplus.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.23",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"tconstruct": "1.20.1-3.6.3.232"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

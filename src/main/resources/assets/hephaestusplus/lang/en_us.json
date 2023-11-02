@@ -1,0 +1,28 @@
+{
+  "_comment1": "HephaestusPlus Tools",
+
+  "item.hephaestusplus.hand_hammer": "Hand Hammer",
+  "item.hephaestusplus.crook": "Crook",
+  "item.hephaestusplus.crook_head": "Crook Head",
+
+  "_comment2": "HephaestusPlus Tool Descriptions",
+
+  "item.hephaestusplus.hand_hammer.description": "The Hand Hammer is a block smashing tool. It is effective against anything smashable by a FabricaeExNihilo Hammer.",
+  "item.hephaestusplus.crook.description": "The Crook is a tool allowing you to gain String from Infested Leaves. It is effective against anything crookable by a FabricaeExNihilo Crook.",
+
+  "_comment3": "HephaestusPlus Modifiers",
+
+  "modifier.hephaestusplus.smashing": "Smashing",
+  "modifier.hephaestusplus.smashing.flavor": "Stop! Hammer time!",
+  "modifier.hephaestusplus.smashing.description": "Allows the tool to smash blocks like a FabricaeExNihilo Hammer.",
+
+  "modifier.hephaestusplus.crooking": "Crooking",
+  "modifier.hephaestusplus.crooking.flavor": "I am not a crook!",
+  "modifier.hephaestusplus.crooking.description": "Allows the tool to crook blocks like a FabricaeExNihilo Crook.",
+
+  "_comment4": "HephaestusTools Patterns",
+  "pattern.hephaestusplus.crook_head": "Crook Head",
+  "item.hephaestusplus.crook_head_cast": "Crook Head Cast",
+  "item.hephaestusplus.crook_head_sand_cast": "Crook Head Sand Cast",
+  "item.hephaestusplus.crook_head_red_sand_cast": "Crook Head Red Sand Cast"
+}

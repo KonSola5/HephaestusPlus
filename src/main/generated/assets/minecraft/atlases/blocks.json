@@ -1,0 +1,604 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/pockets"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/scope"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/blocking"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/shulking"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/soulspeed"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/blindshot"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/ambidextrous"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/sharpness"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/frost_walker"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/step_up"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/punch"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/dual_wielding"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/path_maker"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/draconic"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/slurping"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/music_disc_13"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/glowing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/swiftstrike"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/exchanging"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/diamond"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/tier"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/totem_of_undying"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/shiny"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/autosmelt"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/power"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/held/stripping"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/haste"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/spilling"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/reach"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/long_fall"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/sweeping"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/held/pathing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:item/materials/reinforcement/iron"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/flamewake"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/knockback_resistance"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/sticky"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/emerald"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/tier"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/fortune"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/dragonborn"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/trueshot"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/fire_charge"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/plowing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/impaling"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/revitalizing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/bulk_quiver"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/fiery"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/projectile_protection"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:item/materials/reinforcement/slimesteel"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:item/arrow/amethyst"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/boundless"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/slime_ball"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/writable_book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/multishot"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/reflecting"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/cooling"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/killager"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/speedy"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/turtle_shell"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/nearsighted"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/fire_protection"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/netherite_scrap"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/tier"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/blast_protection"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/golden_apple"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/held/tilling"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/item_frame"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/experience_bottle"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/magic_protection"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/held/offhanded"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/expanded"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/ricochet"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/piercing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/lightspeed"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:item/materials/silky_cloth"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/unbreakable"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/wetting"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/looting"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/netherite_ingot"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/tier"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/freezing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/leaping"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/depth_strider"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/smite"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/sinistral"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/strength"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/luck"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/parrying"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/protection"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/tool_belt"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/double_jump"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/knockback"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/farsighted"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/antiaquatic"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/bane_of_sssss"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/severing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/hydraulic"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/melee_protection"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/bouncy"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/blasting"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/spyglass"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/feather_falling"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/recapitated"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/flint_and_steel"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/springy"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/tank"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/melting"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/golden_chestplate"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/trick_quiver"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/bucket"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/snowdrift"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/thorns"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/end_crystal"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/embellishment"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/harvest/magnetic"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/necrotic"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/green_dye"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/rebalanced"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/lightspeed"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/melee/padded"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/ranged/quick_charge"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/shield_strap"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:item/heart_of_the_sea"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/armor/respiration"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/default_cover"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/default_pages"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "hephaestusplus:gui/tinker_pattern/crook_head"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/tinker_pattern/crook_head"
+    }
+  ]
+}

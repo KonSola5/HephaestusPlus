@@ -1,0 +1,8 @@
+{
+  "loader": "tconstruct:material",
+  "parent": "forge:item/default",
+  "textures": {
+    "texture": "hephaestusplus:item/tool/crook/head"
+  },
+  "offset": [-2, 3]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 2,
+  "pattern": "hephaestusplus:crook_head",
+  "pattern_item": {
+    "fabric:type": "fabric:any",
+    "ingredients": [
+      {
+        "tag": "tconstruct:patterns/default"
+      },
+      {
+        "item": "hephaestusplus:crook_head_cast"
+      }
+    ]
+  },
+  "result": {
+    "item": "hephaestusplus:crook_head"
+  }
+}

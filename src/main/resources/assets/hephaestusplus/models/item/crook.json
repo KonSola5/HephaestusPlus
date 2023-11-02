@@ -1,0 +1,20 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":        "hephaestusplus:item/tool/crook/head",
+    "broken_head": "hephaestusplus:item/tool/crook/broken_head",
+    "handle":      "hephaestusplus:item/tool/crook/handle",
+    "binding":     "hephaestusplus:item/tool/crook/binding"
+  },
+  "modifier_roots": [ "hephaestusplus:item/tool/crook/modifiers/" ],
+  "parts": [
+    { "name": "handle",  "index": 1 },
+    { "name": "head",    "index": 0, "broken": "broken_head" },
+    { "name": "binding", "index": 2 }
+  ],
+  "overrides": [{
+    "predicate": { "tconstruct:charging": 2 },
+    "model": "tconstruct:item/blocking/pickaxe"
+  }]
+}

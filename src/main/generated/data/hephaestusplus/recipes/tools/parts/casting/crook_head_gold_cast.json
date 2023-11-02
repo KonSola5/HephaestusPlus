@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "hephaestusplus:casts/multi_use/crook_head"
+  },
+  "item_cost": 2,
+  "result": "hephaestusplus:crook_head"
+}

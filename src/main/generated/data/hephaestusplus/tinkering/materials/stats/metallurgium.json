@@ -2,16 +2,16 @@
   "stats": {
     "tconstruct:extra": {},
     "tconstruct:handle": {
-      "durability": 1.1,
-      "miningSpeed": 1.0,
+      "durability": 1.5,
+      "miningSpeed": 1.25,
       "attackSpeed": 1.0,
-      "attackDamage": 1.0
+      "attackDamage": 1.25
     },
     "tconstruct:head": {
-      "durability": 800,
-      "miningSpeed": 5.0,
-      "harvestTier": "minecraft:diamond",
-      "attack": 2.5
+      "durability": 3000,
+      "miningSpeed": 15.0,
+      "harvestTier": "hephaestusplus:metallurgium",
+      "attack": 8.0
     }
   }
 }

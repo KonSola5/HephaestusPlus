@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.konsola5.HephaestusPlus"
+			"konsola5.hephaestusplus.HephaestusPlus"
 		],
 		"fabric-datagen": [
-			"com.konsola5.HephaestusPlusDataGenerator"
+			"konsola5.hephaestusplus.HephaestusPlusDataGenerator"
 		]
 	},
 	"mixins": [

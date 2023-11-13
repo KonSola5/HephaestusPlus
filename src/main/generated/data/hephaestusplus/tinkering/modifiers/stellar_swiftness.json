@@ -6,11 +6,6 @@
       "stat": "tconstruct:attack_speed",
       "type": "multiply_base",
       "value": 0.15
-    },
-    {
-      "stat": "tconstruct:mining_speed",
-      "type": "multiply_base",
-      "value": 0.15
     }
   ]
 }

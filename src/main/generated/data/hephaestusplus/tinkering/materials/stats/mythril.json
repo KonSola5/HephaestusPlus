@@ -2,16 +2,16 @@
   "stats": {
     "tconstruct:extra": {},
     "tconstruct:handle": {
-      "durability": 1.1,
-      "miningSpeed": 1.0,
-      "attackSpeed": 1.0,
-      "attackDamage": 1.0
+      "durability": 1.0,
+      "miningSpeed": 1.1,
+      "attackSpeed": 1.1,
+      "attackDamage": 1.1
     },
     "tconstruct:head": {
-      "durability": 800,
-      "miningSpeed": 5.0,
-      "harvestTier": "minecraft:diamond",
-      "attack": 2.5
+      "durability": 1564,
+      "miningSpeed": 14.3,
+      "harvestTier": "minecraft:netherite",
+      "attack": 3.0
     }
   }
 }

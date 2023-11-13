@@ -77,6 +77,8 @@ sourceSets {
 	}
 }
 dependencies {
+	implementation 'org.projectlombok:lombok:1.18.22'
+
 	// To change the versions see the gradle.properties file
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -93,14 +95,24 @@ dependencies {
 	// FabricaeExNihilo
 	modImplementation "maven.modrinth:j9JARqmz:vkrmmrFW"
 
-	implementation("com.github.LlamaLad7:MixinExtras:0.1.1")
-	annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")
-
-	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:${project.port_lib_version}+${project.minecraft_base_version}-entity-refactor")) {
-		exclude(group: "io.vram")
-	}
+//	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:${project.port_lib_version}+${project.minecraft_base_version}-entity-refactor")) {
+//		exclude(group: "io.vram")
+//	}
 
 	modImplementation annotationProcessor(include("com.github.mattidragon:configtoolkit:$configtoolkit_version"))
+	// I can't believe I have to say this in a Minecraft video, but here it comes:
+	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+
+	modImplementation "maven.modrinth:mythicmetals:${project.mm_version}"
+	modRuntimeOnly "maven.modrinth:alloy-forgery:${project.af_version}"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+
+	// Mixin Extras
+	implementation(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-fabric:${project.me_version}"))
+
+	// Additional Entity Attributes
+	modImplementation ("maven.modrinth:additionalentityattributes:${project.aea_version}")
 
 	//include(modApi("teamreborn:energy:${project.tr_energy_version}")) {
 	//	transitive = false

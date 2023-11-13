@@ -1,0 +1,37 @@
+{
+  "replace": false,
+  "parts": [
+    {
+      "path": "hephaestusplus:item/tool/hand_hammer/head",
+      "statType": "tconstruct:head"
+    },
+    {
+      "path": "hephaestusplus:item/tool/hand_hammer/binding",
+      "statType": "tconstruct:extra"
+    },
+    {
+      "path": "hephaestusplus:item/tool/hand_hammer/broken_head",
+      "statType": "tconstruct:head"
+    },
+    {
+      "path": "hephaestusplus:item/tool/hand_hammer/handle",
+      "statType": "tconstruct:handle"
+    },
+    {
+      "path": "hephaestusplus:item/tool/crook/head",
+      "statType": "tconstruct:head"
+    },
+    {
+      "path": "hephaestusplus:item/tool/crook/binding",
+      "statType": "tconstruct:extra"
+    },
+    {
+      "path": "hephaestusplus:item/tool/crook/broken_head",
+      "statType": "tconstruct:head"
+    },
+    {
+      "path": "hephaestusplus:item/tool/crook/handle",
+      "statType": "tconstruct:handle"
+    }
+  ]
+}

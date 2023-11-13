@@ -2,6 +2,7 @@ package com.konsola5;
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +21,9 @@ public class HephaestusPlus implements ModInitializer {
 		MixinExtrasBootstrap.init();
 		Registry.init();
 		LOGGER.info("Hello Fabric world!");
+	}
+
+	public static ResourceLocation getResource(String name) {
+		return new ResourceLocation(MOD_ID, name);
 	}
 }

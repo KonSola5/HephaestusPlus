@@ -20,9 +20,105 @@
   "modifier.hephaestusplus.crooking.flavor": "I am not a crook!",
   "modifier.hephaestusplus.crooking.description": "Allows the tool to crook blocks like a FabricaeExNihilo Crook.",
 
+  "modifier.hephaestusplus.regrowth": "Regrowth",
+  "modifier.hephaestusplus.regrowth.flavor": "Naturally fascinating!",
+  "modifier.hephaestusplus.regrowth.description": "Magically regenerates itself over time!",
+  "modifier.hephaestusplus.regrowth.attack_damage": "Overgrown Damage",
+
+  "modifier.hephaestusplus.branding": "Branding",
+  "modifier.hephaestusplus.branding.flavor": "Feeling like a cowboy?",
+  "modifier.hephaestusplus.branding.description": "Hitting mobs may make them hotter. Hotter mobs burn with more lively fire.",
+
+  "modifier.hephaestusplus.magically_modifiable": "Magically Modifiable",
+  "modifier.hephaestusplus.magically_modifiable.flavor": "Shiny!",
+  "modifier.hephaestusplus.magically_modifiable.description": "Mythril's magical properties set the tool off with a bonus upgrade!",
+
+  "modifier.hephaestusplus.stellar_swiftness": "Stellar Swiftness",
+  "modifier.hephaestusplus.stellar_swiftness.flavor": "Swift like a shooting star!",
+  "modifier.hephaestusplus.stellar_swiftness.description": "Your tool swings and mines really fast!",
+
+  "modifier.hephaestusplus.durable": "Durable",
+  "modifier.hephaestusplus.durable.flavor": "Not a powercell!",
+  "modifier.hephaestusplus.durable.description": "Tool is way longer lasting, mines faster and damages more",
+
+  "modifier.hephaestusplus.solid": "Solid",
+  "modifier.hephaestusplus.solid.flavor": "Strong as diamonds.",
+  "modifier.hephaestusplus.solid.description": "Your tool takes less damage every lost durability point",
+
+
   "_comment4": "HephaestusTools Patterns",
   "pattern.hephaestusplus.crook_head": "Crook Head",
   "item.hephaestusplus.crook_head_cast": "Crook Head Cast",
   "item.hephaestusplus.crook_head_sand_cast": "Crook Head Sand Cast",
-  "item.hephaestusplus.crook_head_red_sand_cast": "Crook Head Red Sand Cast"
+  "item.hephaestusplus.crook_head_red_sand_cast": "Crook Head Red Sand Cast",
+
+  "_comment5": "HephaestusPlus Materials",
+
+  "material.hephaestusplus.adamantite": "Adamantite",
+  "material.hephaestusplus.adamantite.flavor": "Legends say that this alloy is as strong as diamonds.",
+  "material.hephaestusplus.adamantite.encyclopedia": "Tool takes up to 50% less damage based on a quite complicated formula.\nLower levels bias the characteristic towards lower durabilities, higher levels towards higher durabilities.",
+
+  "material.hephaestusplus.aquarium": "Aquarium",
+  "material.hephaestusplus.aquarium.flavor": "An aquatic alloy, has strong affinity to water",
+  "material.hephaestusplus.aquarium.encyclopedia": "Negates the mining penalty when mining underwater, and grants +8 mining speed underwater, or +4 mining speed when in rain.",
+
+  "material.hephaestusplus.banglum": "Banglum",
+  "material.hephaestusplus.banglum.flavor": "Despite the name, it's not related to fire.",
+  "material.hephaestusplus.banglum.encyclopedia": "Can blast 3x3x(level*2) tunnels, consuming 2 durability per block",
+
+  "material.hephaestusplus.carmot": "Carmot",
+  "material.hephaestusplus.carmot.flavor": "Shine of this alloy could be confused with that of diamonds.",
+  "material.hephaestusplus.carmot.encyclopedia": "Gives an extra level of Fortune and Looting per level",
+
+  "material.hephaestusplus.celestium": "Celestium",
+  "material.hephaestusplus.celestium.flavor": "A celestial alloy, changing its properties between night and day.",
+  "material.hephaestusplus.celestium.encyclopedia": "Gives +15% speed and -15% attack at night,\nand -15% speed and +15% attack at day per level",
+
+  "material.hephaestusplus.durasteel": "Durasteel",
+  "material.hephaestusplus.durasteel.flavor": "Durable steel.",
+  "material.hephaestusplus.durasteel.encyclopedia": "Grants +12% durability, +4% damage and speed per level",
+
+  "material.hephaestusplus.hallowed": "Hallowed",
+  "material.hephaestusplus.hallowed.flavor": "A spooky alloy, has strong affinity to souls",
+  "material.hephaestusplus.hallowed.encyclopedia": "Killing mobs stores souls inside of the tool.\nIncreases damage by a half of a natural logarithm of stored souls.",
+
+  "material.hephaestusplus.kyber": "Kyber",
+  "material.hephaestusplus.kyber.flavor": "A light-focusing material used in lightsabers.",
+  "material.hephaestusplus.kyber.encyclopedia": "Deals extra damage to mobs in bright places",
+
+  "material.hephaestusplus.metallurgium": "Metallurgium",
+  "material.hephaestusplus.metallurgium.flavor": "The ultimate alloy. Extremely sharp and durable.",
+  "material.hephaestusplus.metallurgium.encyclopedia": "TODO",
+
+  "material.hephaestusplus.mythril": "Mythril",
+  "material.hephaestusplus.mythril.flavor": "... for it was wrought of pure silver to the power and strength of triple steel",
+  "material.hephaestusplus.mythril.encyclopedia": "Grants 1 extra upgrade slot per part.",
+
+  "material.hephaestusplus.orichalcum": "Orichalcum",
+  "material.hephaestusplus.orichalcum.flavor": "Despite the name, it's not related to fire.",
+  "material.hephaestusplus.orichalcum.encyclopedia": "Gives a 5% chance per level of restoring durability each second.\nIf this trait repairs the tool 1200 times, the tool gains +1 damage.",
+
+  "material.hephaestusplus.palladium": "Palladium",
+  "material.hephaestusplus.palladium.flavor": "With Palladium tools, you can brand mobs like a cowboy.",
+  "material.hephaestusplus.palladium.encyclopedia": "Gives a 15% chance per level of inflicting Heat on target.\nSet the entity with Heat ablaze for extra damage!",
+
+  "material.hephaestusplus.prometheum": "Prometheum",
+  "material.hephaestusplus.prometheum.flavor": "Despite the name, it's not related to fire.",
+  "material.hephaestusplus.prometheum.encyclopedia": "Gives a 5% chance per level of restoring durability each second.\nIf this trait repairs the tool 1200 times, the tool gains +1 damage.",
+
+  "material.hephaestusplus.quadrillum": "Quadrillum",
+  "material.hephaestusplus.quadrillum.flavor": "A material sourced from asteroids. Has a high affinity to heights.",
+  "material.hephaestusplus.quadrillum.encyclopedia": "Grants mining speed at higher heights, +6 per 64 blocks above 64",
+
+  "material.hephaestusplus.runite": "Runite",
+  "material.hephaestusplus.runite.flavor": "Despite the name, it's not related to fire.",
+  "material.hephaestusplus.runite.encyclopedia": "Has 10% chance per level to completely immobilize a mob for 5 seconds",
+
+  "material.hephaestusplus.star_platinum": "Star Platinum",
+  "material.hephaestusplus.star_platinum.flavor": "Surprisingly lightweight.",
+  "material.hephaestusplus.star_platinum.encyclopedia": "Gives +15% attack and mining speed per level",
+
+  "material.hephaestusplus.stormyx": "Stormyx",
+  "material.hephaestusplus.stormyx.flavor": "Zeus, the ancient god of storms would approve of this alloy.",
+  "material.hephaestusplus.stormyx.encyclopedia": "Give a 1% chance per level of striking a targeted mob with lightning"
 }

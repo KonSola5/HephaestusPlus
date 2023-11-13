@@ -2,6 +2,41 @@
   "modifier.hephaestusplus": {
     "__abilities__": null,
     "smashing":    "#828282",
-    "crooking":    "#592f13"
+    "crooking":    "#592f13",
+
+    "__traits__": null,
+    "solid": "#a30d17",
+    "bang_bang": "#b06e37",
+    "celestial": "#e9c8ac",
+    "durable": "#373737",
+    "soul_power": "#cecee5",
+    "prismatic": "#a86ecb",
+    "magically_modifiable": "#5ddaea",
+    "branding": "#dc7223",
+    "regrowth": "#396955",
+    "cosmic": "#4d5858",
+    "freezing": "#0092b1",
+    "stellar_swiftness": "#bbbadc",
+    "zeus_wrath": "#d760d0"
+  },
+
+  "material.hephaestusplus": {
+    "adamantite": "#a30d17",
+    "aquarium": "#3f8ad0",
+    "banglum":  "#b06e37",
+    "carmot": "#b6253c",
+    "celestium":  "#e9c8ac",
+    "durasteel": "#373737",
+    "hallowed":  "#cecee5",
+    "kyber": "#a86ecb",
+    "metallurgium":  "#6a2bc7",
+    "mythril": "#5ddaea",
+    "orichalcum":  "#95e49c",
+    "palladium": "#dc7223",
+    "prometheum":  "#396955",
+    "quadrillum": "#4d5858",
+    "runite":  "#0092b1",
+    "star_platinum": "#bbbadc",
+    "stormyx":  "#d760d0"
   }
 }

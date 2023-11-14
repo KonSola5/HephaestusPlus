@@ -1,0 +1,8 @@
+{
+  "loader": "mantle:fluid_texture",
+  "textures": {
+    "still": "hephaestusplus:block/fluid/star_platinum/still",
+    "flowing": "hephaestusplus:block/fluid/star_platinum/flowing"
+  }
+}
+

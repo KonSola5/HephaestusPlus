@@ -26,13 +26,10 @@ public class HephaestusPlusMaterialTraitsProvider extends AbstractMaterialTraitD
 //        addDefaultTraits(MoarMaterialIds.banglum,      Registry.BANG_BANG);
         addDefaultTraits(MoarMaterialIds.banglum,      TinkerModifiers.cultivated);
         addDefaultTraits(MoarMaterialIds.carmot,       ModifierIds.fortune, ModifierIds.looting);
-//        addDefaultTraits(MoarMaterialIds.celestium,    Registry.CELESTIAL);
-        addDefaultTraits(MoarMaterialIds.celestium,    TinkerModifiers.cultivated);
+        addDefaultTraits(MoarMaterialIds.celestium,    MoarModifierIds.celestial_swiftness);
         addDefaultTraits(MoarMaterialIds.durasteel,    MoarModifierIds.durable);
-//        addDefaultTraits(MoarMaterialIds.hallowed,     Registry.SOUL_POWER);
-        addDefaultTraits(MoarMaterialIds.hallowed,     TinkerModifiers.cultivated);
-//        addDefaultTraits(MoarMaterialIds.kyber,        Registry.PRISMATIC);
-        addDefaultTraits(MoarMaterialIds.kyber,        TinkerModifiers.cultivated);
+        addDefaultTraits(MoarMaterialIds.hallowed,     Registry.SOUL_POWERED);
+        addDefaultTraits(MoarMaterialIds.kyber,        Registry.PRISMATIC);
 //        addDefaultTraits(MoarMaterialIds.metallurgium, Registry.);
         addDefaultTraits(MoarMaterialIds.metallurgium, TinkerModifiers.cultivated);
         addDefaultTraits(MoarMaterialIds.mythril,      MoarModifierIds.magically_modifiable);
@@ -43,7 +40,6 @@ public class HephaestusPlusMaterialTraitsProvider extends AbstractMaterialTraitD
 //        addDefaultTraits(MoarMaterialIds.runite,       Registry.FREEZING);
         addDefaultTraits(MoarMaterialIds.runite,       TinkerModifiers.cultivated);
         addDefaultTraits(MoarMaterialIds.star_platinum,MoarModifierIds.stellar_swiftness);
-//        addDefaultTraits(MoarMaterialIds.stormyx,      Registry.ZEUS_WRATH);
-        addDefaultTraits(MoarMaterialIds.stormyx,      TinkerModifiers.cultivated);
+        addDefaultTraits(MoarMaterialIds.stormyx,      Registry.STORM_SPELL);
     }
 }

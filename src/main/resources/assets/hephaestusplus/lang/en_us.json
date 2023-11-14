@@ -53,6 +53,17 @@
   "modifier.hephaestusplus.prismatic": "Prismatic",
   "modifier.hephaestusplus.prismatic.flavor": "Focus the light, damage the monsters!",
   "modifier.hephaestusplus.prismatic.description": "Your tool deals more damage when standing in lit areas",
+  "modifier.hephaestusplus.prismatic.attack_damage": "Prismatic Damage",
+
+  "modifier.hephaestusplus.storm_spell": "Storm Spell",
+  "modifier.hephaestusplus.storm_spell.flavor": "Who needs mana?",
+  "modifier.hephaestusplus.storm_spell.description": "Striking an opponent may summon thunder upon it",
+
+  "modifier.hephaestusplus.soul_powered": "Soul Powered",
+  "modifier.hephaestusplus.soul_powered.flavor": "Powered by souls of your deceased opponents",
+  "modifier.hephaestusplus.soul_powered.description": "Your tool damages more, the more mobs you kill!",
+  "modifier.hephaestusplus.soul_powered.stored_souls": "Stored Souls",
+  "modifier.hephaestusplus.soul_powered.attack_damage": "Soul Powered Damage",
 
 
   "_comment4": "HephaestusTools Patterns",
@@ -129,9 +140,67 @@
 
   "material.hephaestusplus.stormyx": "Stormyx",
   "material.hephaestusplus.stormyx.flavor": "A magical alloy with magical, thundery abilities.",
-  "material.hephaestusplus.stormyx.encyclopedia": "Give a 1% chance per level of striking a targeted mob with lightning",
+  "material.hephaestusplus.stormyx.encyclopedia": "Give a 2% chance per level of striking a targeted mob with lightning.\nChance quadrupled in thunderstorms",
 
   "_comment6": "HephaestusPlus Tiers",
 
-  "stat.tconstruct.harvest_tier.hephaestusplus.metallurgium": "Metallurgium"
+  "stat.tconstruct.harvest_tier.hephaestusplus.metallurgium": "Metallurgium",
+
+  "_comment7": "HephaestusPlus Buckets and Fluids",
+  "item.hephaestusplus.molten_adamantite_bucket": "Molten Adamantite Bucket",
+  "fluid.hephaestusplus.molten_adamantite": "Molten Adamantite",
+
+  "item.hephaestusplus.molten_aquarium_bucket": "Molten Aquarium Bucket",
+  "fluid.hephaestusplus.molten_aquarium": "Molten Aquarium",
+
+  "item.hephaestusplus.molten_banglum_bucket": "Molten Banglum Bucket",
+  "fluid.hephaestusplus.molten_banglum": "Molten Banglum",
+
+  "item.hephaestusplus.molten_carmot_bucket": "Molten Carmot Bucket",
+  "fluid.hephaestusplus.molten_carmot": "Molten Carmot",
+
+  "item.hephaestusplus.molten_celestium_bucket": "Molten Celestium Bucket",
+  "fluid.hephaestusplus.molten_celestium": "Molten Celestium",
+
+  "item.hephaestusplus.molten_durasteel_bucket": "Molten Durasteel Bucket",
+  "fluid.hephaestusplus.molten_durasteel": "Molten Durasteel",
+
+  "item.hephaestusplus.molten_hallowed_bucket": "Molten Hallowed Bucket",
+  "fluid.hephaestusplus.molten_hallowed": "Molten Hallowed",
+
+  "item.hephaestusplus.molten_kyber_bucket": "Molten Kyber Bucket",
+  "fluid.hephaestusplus.molten_kyber": "Molten Kyber",
+
+  "item.hephaestusplus.molten_manganese_bucket": "Molten Manganese Bucket",
+  "fluid.hephaestusplus.molten_manganese": "Molten Manganese",
+
+  "item.hephaestusplus.molten_metallurgium_bucket": "Molten Metallurgium Bucket",
+  "fluid.hephaestusplus.molten_metallurgium": "Molten Metallurgium",
+
+  "item.hephaestusplus.molten_mythril_bucket": "Molten Mythril Bucket",
+  "fluid.hephaestusplus.molten_mythril": "Molten Mythril",
+
+  "item.hephaestusplus.molten_orichalcum_bucket": "Molten Orichalcum Bucket",
+  "fluid.hephaestusplus.molten_orichalcum": "Molten Orichalcum",
+
+  "item.hephaestusplus.molten_palladium_bucket": "Molten Palladium Bucket",
+  "fluid.hephaestusplus.molten_palladium": "Molten Palladium",
+
+  "item.hephaestusplus.molten_prometheum_bucket": "Molten Prometheum Bucket",
+  "fluid.hephaestusplus.molten_prometheum": "Molten Prometheum",
+
+  "item.hephaestusplus.molten_quadrillum_bucket": "Molten Quadrillum Bucket",
+  "fluid.hephaestusplus.molten_quadrillum": "Molten Quadrillum",
+
+  "item.hephaestusplus.molten_runite_bucket": "Molten Runite Bucket",
+  "fluid.hephaestusplus.molten_runite": "Molten Runite",
+
+  "item.hephaestusplus.molten_star_platinum_bucket": "Molten Star Platinum Bucket",
+  "fluid.hephaestusplus.molten_star_platinum": "Molten Star Platinum",
+
+  "item.hephaestusplus.molten_stormyx_bucket": "Molten Stormyx Bucket",
+  "fluid.hephaestusplus.molten_stormyx": "Molten Stormyx",
+
+  "item.hephaestusplus.molten_unobtainium_bucket": "Molten Unobtainium Bucket",
+  "fluid.hephaestusplus.molten_unobtainium": "Molten Unobtainium"
 }

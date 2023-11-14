@@ -9,7 +9,7 @@
     "bang_bang": "#b06e37",
     "celestial": "#e9c8ac",
     "durable": "#373737",
-    "soul_power": "#cecee5",
+    "soul_powered": "#cecee5",
     "prismatic": "#a86ecb",
     "magically_modifiable": "#5ddaea",
     "branding": "#dc7223",
@@ -17,7 +17,7 @@
     "cosmic": "#4d5858",
     "freezing": "#0092b1",
     "stellar_swiftness": "#bbbadc",
-    "zeus_wrath": "#d760d0"
+    "storm_spell": "#d760d0"
   },
 
   "material.hephaestusplus": {

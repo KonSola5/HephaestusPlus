@@ -1,0 +1,8 @@
+{
+  "loader": "mantle:fluid_texture",
+  "textures": {
+    "still": "hephaestusplus:block/fluid/hallowed/still",
+    "flowing": "hephaestusplus:block/fluid/hallowed/flowing"
+  }
+}
+

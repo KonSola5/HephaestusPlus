@@ -32,7 +32,9 @@ public class PrismaticModifier extends Modifier {
             BlockPos pos = BlockPos.containing(player.position());
             int light = player.getCommandSenderWorld().getBrightness(LightLayer.BLOCK, pos);
             float bonus = (float) (light * level * 0.01);
-            addPercentTooltip(PRISMATIC_DAMAGE, bonus, tooltip);
+            if (bonus > 0) {
+                addPercentTooltip(PRISMATIC_DAMAGE, bonus, tooltip);
+            }
         }
     }
 }

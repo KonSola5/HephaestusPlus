@@ -8,8 +8,13 @@ import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 import konsola5.hephaestusplus.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -26,6 +31,7 @@ import slimeknights.tconstruct.library.client.data.TinkerSpriteSourceGenerator;
 import slimeknights.tconstruct.library.client.data.material.GeneratorPartTextureJsonGenerator;
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.modifiers.impl.SingleLevelModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
@@ -42,6 +48,7 @@ public class Registry {
     // Resource Locations (for NBT)
     public static final ResourceLocation PROMETHEUM_REPAIRS = new ResourceLocation(HephaestusPlus.MOD_ID, "prometheum_repairs");
     public static final ResourceLocation STORED_SOULS = new ResourceLocation(HephaestusPlus.MOD_ID, "stored_souls");
+    public static final ResourceLocation TOOL_OWNER = new ResourceLocation(HephaestusPlus.MOD_ID, "tool_owner");
     // Deferred Registers
     public static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(HephaestusPlus.MOD_ID);
     public static final ItemDeferredRegisterExtension ADDON_ITEMS = new ItemDeferredRegisterExtension(HephaestusPlus.MOD_ID);
@@ -66,8 +73,9 @@ public class Registry {
     public static StaticModifier<Modifier> COSMIC = MODIFIERS.register("cosmic", CosmicModifier::new);
     public static StaticModifier<Modifier> PRISMATIC = MODIFIERS.register("prismatic", PrismaticModifier::new);
     public static StaticModifier<Modifier> STORM_SPELL = MODIFIERS.register("storm_spell", StormSpellModifier::new);
-
     public static StaticModifier<Modifier> SOUL_POWERED = MODIFIERS.register("soul_powered", SoulPoweredModifier::new);
+    public static StaticModifier<Modifier> FREEZING = MODIFIERS.register("freezing", FreezingModifier::new);
+    public static StaticModifier<NoLevelsModifier> UNOBTAINABLE = MODIFIERS.register("unobtainable", UnobtainableModifier::new);
     private static final Item.Properties TOOL = new FabricItemSettings().maxCount(1);
     // Hephaestus tools
     public static final ItemObject<ModifiableItem> handHammer = ADDON_ITEMS.register("hand_hammer", () -> new ModifiableItem(TOOL, ToolDefinitions.HAND_HAMMER, TinkerTabs.TAB_TOOLS));

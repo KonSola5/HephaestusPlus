@@ -30,7 +30,7 @@
   "modifier.hephaestusplus.branding.description": "Hitting mobs may make them hotter. Hotter mobs burn with more lively fire.",
 
   "modifier.hephaestusplus.cosmic": "Cosmic",
-  "modifier.hephaestusplus.cosmic.flavor": "Miner's friend! (backwards)",
+  "modifier.hephaestusplus.cosmic.flavor": "¡puǝᴉɹɟ s,ɹǝuᴉW",
   "modifier.hephaestusplus.cosmic.description": "Tool mines faster the higher you mine, just don't mine too high",
   "modifier.hephaestusplus.cosmic.mining_speed": "Height Mining",
 
@@ -57,7 +57,18 @@
 
   "modifier.hephaestusplus.storm_spell": "Storm Spell",
   "modifier.hephaestusplus.storm_spell.flavor": "Who needs mana?",
-  "modifier.hephaestusplus.storm_spell.description": "Striking an opponent may summon thunder upon it",
+  "modifier.hephaestusplus.storm_spell.description": "Striking an opponent may summon thunder upon them",
+
+  "modifier.hephaestusplus.freezing": "Freezing",
+  "modifier.hephaestusplus.freezing.flavor": "Go! Stop! Go!",
+  "modifier.hephaestusplus.freezing.description": "Striking an opponent may freeze them in place for a brief amount of time",
+
+  "modifier.hephaestusplus.unobtainable": "Unobtainable",
+  "modifier.hephaestusplus.unobtainable.flavor": "Only you are worthy of this tool.",
+  "modifier.hephaestusplus.unobtainable.description": "Only the person who forged the tool from this part may hold it",
+  "modifier.hephaestusplus.unobtainable.tool_no_owner": "Place the tool in inventory to bind it",
+  "modifier.hephaestusplus.unobtainable.tool_owned_by": "Tool owned by",
+  "modifier.hephaestusplus.unobtainable.not_your_tool": "§cThis is not your tool!§r",
 
   "modifier.hephaestusplus.soul_powered": "Soul Powered",
   "modifier.hephaestusplus.soul_powered.flavor": "Powered by souls of your deceased opponents",
@@ -92,7 +103,7 @@
 
   "material.hephaestusplus.celestium": "Celestium",
   "material.hephaestusplus.celestium.flavor": "A celestial alloy, incredibly sharp and surprisingly lightweight.",
-  "material.hephaestusplus.celestium.encyclopedia": "Gives +15% attack speed and mining speed per level",
+  "material.hephaestusplus.celestium.encyclopedia": "Only the person that created the tool can hold it safely - others will take continuous damage holding the tool.",
 
   "material.hephaestusplus.durasteel": "Durasteel",
   "material.hephaestusplus.durasteel.flavor": "Durable steel.",
@@ -108,7 +119,7 @@
 
   "material.hephaestusplus.metallurgium": "Metallurgium",
   "material.hephaestusplus.metallurgium.flavor": "The ultimate alloy. Extremely sharp and durable.",
-  "material.hephaestusplus.metallurgium.encyclopedia": "TODO",
+  "material.hephaestusplus.metallurgium.encyclopedia": "Only the person that created the tool can hold it safely - others will take continuous damage holding the tool.",
 
   "material.hephaestusplus.mythril": "Mythril",
   "material.hephaestusplus.mythril.flavor": "... for it was wrought of pure silver to the power and strength of triple steel",
@@ -202,5 +213,8 @@
   "fluid.hephaestusplus.molten_stormyx": "Molten Stormyx",
 
   "item.hephaestusplus.molten_unobtainium_bucket": "Molten Unobtainium Bucket",
-  "fluid.hephaestusplus.molten_unobtainium": "Molten Unobtainium"
+  "fluid.hephaestusplus.molten_unobtainium": "Molten Unobtainium",
+
+  "comment_8": "Damage types",
+  "death.attack.not_your_tool": "%s can't obtain this tool, but understood too late"
 }

@@ -24,10 +24,6 @@ public class HephaestusPlusModifierProvider extends AbstractModifierProvider {
         addModifier(MoarModifierIds.stellar_swiftness, StatBoostModifier.builder()
                 .multiplyBase(ToolStats.ATTACK_SPEED, 0.15f)
                 .build());
-        addModifier(MoarModifierIds.celestial_swiftness, StatBoostModifier.builder()
-                .multiplyBase(ToolStats.ATTACK_SPEED, 0.15f)
-                .multiplyBase(ToolStats.MINING_SPEED, 0.15f)
-                .build());
         addModifier(MoarModifierIds.durable, StatBoostModifier.builder()
                 .multiplyBase(ToolStats.DURABILITY,        0.12f)
                 .multiplyBase(ToolStats.ATTACK_DAMAGE,     0.04f)

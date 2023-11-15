@@ -44,7 +44,7 @@ public class HephaestusPlusMaterialStatsProvider extends AbstractMaterialStatsDa
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.celestium,
                new HeadMaterialStats(2470, 20.0f, METALLURGIUM, 6f),
-               HandleMaterialStats.DEFAULT.withDurability(1.10f).withMiningSpeed(1.4f).withAttackDamage(1.2f).withAttackSpeed(1.3f),
+               HandleMaterialStats.DEFAULT.withDurability(0.75f).withMiningSpeed(1.4f).withAttackDamage(1.2f).withAttackSpeed(1.3f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.durasteel,
                new HeadMaterialStats(820, 7.1f, DIAMOND, 3.5f),
@@ -60,11 +60,11 @@ public class HephaestusPlusMaterialStatsProvider extends AbstractMaterialStatsDa
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.metallurgium,
                new HeadMaterialStats(3000, 15f, METALLURGIUM, 8f),
-               HandleMaterialStats.DEFAULT.withDurability(1.5f).withMiningSpeed(1.25f).withAttackDamage(1.25f).withAttackSpeed(1f),
+               HandleMaterialStats.DEFAULT.withDurability(1.2f).withMiningSpeed(1.2f).withAttackDamage(1.2f).withAttackSpeed(0.8f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.mythril,
                new HeadMaterialStats(1564, 14.3f, NETHERITE, 3f),
-               HandleMaterialStats.DEFAULT.withDurability(1f).withMiningSpeed(1.1f).withAttackDamage(1.1f).withAttackSpeed(1.1f),
+               HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(0.9f).withAttackDamage(0.9f).withAttackSpeed(1.1f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.orichalcum,
                new HeadMaterialStats(2048, 6f, NETHERITE, 4f),

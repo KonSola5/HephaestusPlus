@@ -17,7 +17,8 @@
     "cosmic": "#4d5858",
     "freezing": "#0092b1",
     "stellar_swiftness": "#bbbadc",
-    "storm_spell": "#d760d0"
+    "storm_spell": "#d760d0",
+    "unobtainable": "#4d5858"
   },
 
   "material.hephaestusplus": {

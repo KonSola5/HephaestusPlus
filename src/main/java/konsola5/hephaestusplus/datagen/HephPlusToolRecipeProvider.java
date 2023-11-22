@@ -9,9 +9,9 @@ import slimeknights.tconstruct.library.data.recipe.IToolRecipeHelper;
 
 import java.util.function.Consumer;
 
-public class HephaestusPlusToolRecipeProvider extends BaseRecipeProvider implements IMaterialRecipeHelper, IToolRecipeHelper {
+public class HephPlusToolRecipeProvider extends BaseRecipeProvider implements IMaterialRecipeHelper, IToolRecipeHelper {
 
-    public HephaestusPlusToolRecipeProvider(FabricDataOutput output) {
+    public HephPlusToolRecipeProvider(FabricDataOutput output) {
         super(output);
     }
 

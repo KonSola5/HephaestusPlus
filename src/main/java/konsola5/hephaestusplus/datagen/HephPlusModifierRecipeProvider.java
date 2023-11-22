@@ -15,8 +15,8 @@ import wraith.fabricaeexnihilo.modules.ModTags;
 
 import java.util.function.Consumer;
 
-public class HephaestusPlusModifierRecipeProvider extends BaseRecipeProvider {
-    public HephaestusPlusModifierRecipeProvider(FabricDataOutput output) {
+public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
+    public HephPlusModifierRecipeProvider(FabricDataOutput output) {
         super(output);
     }
 

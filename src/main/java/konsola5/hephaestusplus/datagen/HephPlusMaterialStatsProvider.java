@@ -12,9 +12,9 @@ import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
 import static net.minecraft.world.item.Tiers.*;
 
-public class HephaestusPlusMaterialStatsProvider extends AbstractMaterialStatsDataProvider {
+public class HephPlusMaterialStatsProvider extends AbstractMaterialStatsDataProvider {
     public static Tier METALLURGIUM = MetallurgiumTier.instance;
-    public HephaestusPlusMaterialStatsProvider(FabricDataOutput output, AbstractMaterialDataProvider materials) {
+    public HephPlusMaterialStatsProvider(FabricDataOutput output, AbstractMaterialDataProvider materials) {
         super(output, materials);
     }
 
@@ -43,7 +43,7 @@ public class HephaestusPlusMaterialStatsProvider extends AbstractMaterialStatsDa
                HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(1.2f).withAttackDamage(1f).withAttackSpeed(1f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.celestium,
-               new HeadMaterialStats(2470, 20.0f, METALLURGIUM, 6f),
+               new HeadMaterialStats(1970, 20.0f, METALLURGIUM, 6f),
                HandleMaterialStats.DEFAULT.withDurability(0.75f).withMiningSpeed(1.4f).withAttackDamage(1.2f).withAttackSpeed(1.3f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.durasteel,
@@ -51,7 +51,7 @@ public class HephaestusPlusMaterialStatsProvider extends AbstractMaterialStatsDa
                HandleMaterialStats.DEFAULT.withDurability(1.25f).withMiningSpeed(1.05f).withAttackDamage(1.05f).withAttackSpeed(1.05f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.hallowed,
-               new HeadMaterialStats(1984, 12.0f, NETHERITE, 4f),
+               new HeadMaterialStats(1488, 12.0f, NETHERITE, 4f),
                HandleMaterialStats.DEFAULT.withDurability(1f).withMiningSpeed(1f).withAttackDamage(1.1f).withAttackSpeed(0.85f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.kyber,
@@ -59,15 +59,15 @@ public class HephaestusPlusMaterialStatsProvider extends AbstractMaterialStatsDa
                HandleMaterialStats.DEFAULT.withDurability(1.10f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.metallurgium,
-               new HeadMaterialStats(3000, 15f, METALLURGIUM, 8f),
+               new HeadMaterialStats(2500, 15f, METALLURGIUM, 8f),
                HandleMaterialStats.DEFAULT.withDurability(1.2f).withMiningSpeed(1.2f).withAttackDamage(1.2f).withAttackSpeed(0.8f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.mythril,
-               new HeadMaterialStats(1564, 14.3f, NETHERITE, 3f),
+               new HeadMaterialStats(782, 14.3f, NETHERITE, 3f),
                HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(0.9f).withAttackDamage(0.9f).withAttackSpeed(1.1f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.orichalcum,
-               new HeadMaterialStats(2048, 6f, NETHERITE, 4f),
+               new HeadMaterialStats(1536, 6f, NETHERITE, 4f),
                HandleMaterialStats.DEFAULT.withDurability(1.3f).withMiningSpeed(0.8f).withAttackDamage(1f).withAttackSpeed(0.8f),
                ExtraMaterialStats.DEFAULT);
        addMaterialStats(MoarMaterialIds.palladium,

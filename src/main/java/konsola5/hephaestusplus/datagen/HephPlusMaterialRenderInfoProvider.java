@@ -6,9 +6,9 @@ import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialRenderInfoProvider;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 
-public class HephaestusPlusMaterialRenderInfoProvider extends AbstractMaterialRenderInfoProvider {
+public class HephPlusMaterialRenderInfoProvider extends AbstractMaterialRenderInfoProvider {
 
-    public HephaestusPlusMaterialRenderInfoProvider(FabricDataOutput output, @Nullable AbstractMaterialSpriteProvider materialSprites) {
+    public HephPlusMaterialRenderInfoProvider(FabricDataOutput output, @Nullable AbstractMaterialSpriteProvider materialSprites) {
         super(output, materialSprites);
     }
 

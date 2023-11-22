@@ -8,8 +8,8 @@ import slimeknights.tconstruct.library.modifiers.dynamic.StatBoostModifier;
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
-public class HephaestusPlusModifierProvider extends AbstractModifierProvider {
-    public HephaestusPlusModifierProvider(FabricDataOutput output) {
+public class HephPlusModifierProvider extends AbstractModifierProvider {
+    public HephPlusModifierProvider(FabricDataOutput output) {
         super(output);
     }
 

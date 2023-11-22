@@ -9,8 +9,8 @@ import slimeknights.tconstruct.library.data.material.AbstractMaterialTraitDataPr
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 
-public class HephaestusPlusMaterialTraitsProvider extends AbstractMaterialTraitDataProvider {
-    public HephaestusPlusMaterialTraitsProvider(FabricDataOutput output, AbstractMaterialDataProvider materials) {
+public class HephPlusMaterialTraitsProvider extends AbstractMaterialTraitDataProvider {
+    public HephPlusMaterialTraitsProvider(FabricDataOutput output, AbstractMaterialDataProvider materials) {
         super(output, materials);
     }
 

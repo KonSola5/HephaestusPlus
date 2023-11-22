@@ -4,9 +4,9 @@ import konsola5.hephaestusplus.ids.MoarMaterialIds;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 
-public class HephaestusPlusMaterialDataProvider extends AbstractMaterialDataProvider {
+public class HephPlusMaterialDataProvider extends AbstractMaterialDataProvider {
 
-    public HephaestusPlusMaterialDataProvider(FabricDataOutput output) {
+    public HephPlusMaterialDataProvider(FabricDataOutput output) {
         super(output);
     }
 

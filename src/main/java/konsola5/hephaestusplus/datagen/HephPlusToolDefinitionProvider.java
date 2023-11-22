@@ -13,8 +13,8 @@ import wraith.fabricaeexnihilo.modules.ModTags;
 
 import static slimeknights.tconstruct.tools.TinkerToolParts.*;
 
-public class HephaestusPlusToolDefinitionProvider extends AbstractToolDefinitionDataProvider {
-    public HephaestusPlusToolDefinitionProvider(FabricDataOutput output) {
+public class HephPlusToolDefinitionProvider extends AbstractToolDefinitionDataProvider {
+    public HephPlusToolDefinitionProvider(FabricDataOutput output) {
         super(output, HephaestusPlus.MOD_ID);
     }
 

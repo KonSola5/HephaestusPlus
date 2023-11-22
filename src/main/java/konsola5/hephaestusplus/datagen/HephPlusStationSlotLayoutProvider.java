@@ -8,8 +8,8 @@ import slimeknights.tconstruct.library.data.tinkering.AbstractStationSlotLayoutP
 import slimeknights.tconstruct.tools.TinkerToolParts;
 
 
-public class HephaestusPlusStationSlotLayoutProvider extends AbstractStationSlotLayoutProvider {
-    public HephaestusPlusStationSlotLayoutProvider(FabricDataOutput output) {
+public class HephPlusStationSlotLayoutProvider extends AbstractStationSlotLayoutProvider {
+    public HephPlusStationSlotLayoutProvider(FabricDataOutput output) {
         super(output);
     }
 

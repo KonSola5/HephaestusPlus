@@ -8,13 +8,8 @@ import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 import konsola5.hephaestusplus.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -205,22 +200,22 @@ public class Registry {
 
     public static void gatherData(FabricDataGenerator.Pack pack, ExistingFileHelper existingFileHelper) {
 
-        pack.addProvider(HephaestusPlusToolRecipeProvider::new);
-        pack.addProvider(HephaestusPlusStationSlotLayoutProvider::new);
-        pack.addProvider(HephaestusPlusModifierRecipeProvider::new);
-        pack.addProvider(HephaestusPlusToolDefinitionProvider::new);
-        pack.addProvider(HephaestusPlusModifierProvider::new);
+        pack.addProvider(HephPlusToolRecipeProvider::new);
+        pack.addProvider(HephPlusStationSlotLayoutProvider::new);
+        pack.addProvider(HephPlusModifierRecipeProvider::new);
+        pack.addProvider(HephPlusToolDefinitionProvider::new);
+        pack.addProvider(HephPlusModifierProvider::new);
 
-        HephaestusPlusMaterialDataProvider materials = pack.addProvider(HephaestusPlusMaterialDataProvider::new);
-        pack.addProvider((output, registriesFuture) -> new HephaestusPlusMaterialStatsProvider(output, materials));
-        pack.addProvider((output, registriesFuture) -> new HephaestusPlusMaterialTraitsProvider(output, materials));
+        HephPlusMaterialDataProvider materials = pack.addProvider(HephPlusMaterialDataProvider::new);
+        pack.addProvider((output, registriesFuture) -> new HephPlusMaterialStatsProvider(output, materials));
+        pack.addProvider((output, registriesFuture) -> new HephPlusMaterialTraitsProvider(output, materials));
         TinkerMaterialSpriteProvider materialSprites = new TinkerMaterialSpriteProvider();
         HephaestusPlusMaterialSpriteProvider moreToolMats = new HephaestusPlusMaterialSpriteProvider();
         TinkerPartSpriteProvider partSprites = new TinkerPartSpriteProvider();
         HephaestusPlusPartSpriteProvider morePartSprites = new HephaestusPlusPartSpriteProvider();
         //pack.addProvider((output, registriesFuture) -> new MaterialRenderInfoProvider(output, materialSprites));
         //pack.addProvider((output, registriesFuture) -> new GeneratorPartTextureJsonGenerator(output, HephaestusPlus.MOD_ID, partSprites));
-        pack.addProvider((output, registriesFuture) -> new HephaestusPlusMaterialRenderInfoProvider(output, moreToolMats));
+        pack.addProvider((output, registriesFuture) -> new HephPlusMaterialRenderInfoProvider(output, moreToolMats));
         pack.addProvider((output, registriesFuture) -> new GeneratorPartTextureJsonGenerator(output, HephaestusPlus.MOD_ID, morePartSprites));
         //Tinkers' materials for HephaestusPlus parts
         pack.addProvider((output, registriesFuture) -> new MaterialPartTextureGenerator(output, existingFileHelper, morePartSprites, materialSprites));

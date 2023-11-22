@@ -1,11 +1,11 @@
-// 1.20.1	2023-11-15T18:55:54.1444616	HephaestusPlus/HephaestusPlus Material Stats
-1965ffea6b29c5634a4439a9e2701dd54d42b47e data\hephaestusplus\tinkering\materials\stats\metallurgium.json
+// 1.20.1	2023-11-22T15:34:44.0453816	HephaestusPlus/HephaestusPlus Material Stats
+64a66f6b3d760e6a1b9958681fa754506b42e0a5 data\hephaestusplus\tinkering\materials\stats\metallurgium.json
 615687ec80409df7a8efc98af6cfb868cf935b95 data\hephaestusplus\tinkering\materials\stats\prometheum.json
-491f598ed6e67e20c5c6cbd730317df4b01edf48 data\hephaestusplus\tinkering\materials\stats\celestium.json
+cfccff4f09bc1dae4906557748ea15faa091a8d2 data\hephaestusplus\tinkering\materials\stats\celestium.json
 a219fd3da2325be2253492272c523cb96c3c1fd7 data\hephaestusplus\tinkering\materials\stats\aquarium.json
 af2d8171f717c2bdbbb3fe0b930d7cd0795a03b5 data\hephaestusplus\tinkering\materials\stats\carmot.json
 057d572b8707897475aa167bb35092362079efa5 data\hephaestusplus\tinkering\materials\stats\banglum.json
-d2f7350167e79953dc5f7f5418cded91409dbdcc data\hephaestusplus\tinkering\materials\stats\orichalcum.json
+33f482f91758863d87a5b7068511b9dda13a8ddf data\hephaestusplus\tinkering\materials\stats\orichalcum.json
 c3175d0cb4c1bce5b7ceb43244fc2955c0b3d0e2 data\hephaestusplus\tinkering\materials\stats\stormyx.json
 5a887c45d3c9a0a4ce320a8d159189ebebaf8dc2 data\hephaestusplus\tinkering\materials\stats\durasteel.json
 2787a738539a419c03f3f7a31549431a3a8352a6 data\hephaestusplus\tinkering\materials\stats\quadrillum.json
@@ -13,6 +13,6 @@ c3175d0cb4c1bce5b7ceb43244fc2955c0b3d0e2 data\hephaestusplus\tinkering\materials
 ed4742c0770ca704c40b326ecad35171edc01c1d data\hephaestusplus\tinkering\materials\stats\palladium.json
 3a05368487db5446394bc964ae863f7508dde248 data\hephaestusplus\tinkering\materials\stats\runite.json
 0918bfb0ecc613269410f67757ecefc45ccee40e data\hephaestusplus\tinkering\materials\stats\adamantite.json
-e51a3f042da9d8bf050fbf5f80da3d6ed67182a2 data\hephaestusplus\tinkering\materials\stats\mythril.json
-5f24e9ba2bea592014dc6086baf7ed70c5c9d96a data\hephaestusplus\tinkering\materials\stats\hallowed.json
+1621f243349ea59bc0eee46c1e74d784260c8626 data\hephaestusplus\tinkering\materials\stats\mythril.json
+6e24d39bc5b50100303fff5490c9cb21dec9b61c data\hephaestusplus\tinkering\materials\stats\hallowed.json
 c10067c1ac9aafa7224bf0c3cd86d869167f21de data\hephaestusplus\tinkering\materials\stats\star_platinum.json

@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:aquarium_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_aquarium"
+  },
+  "output": "hephaestusplus:aquarium",
+  "temperature": 700
+}

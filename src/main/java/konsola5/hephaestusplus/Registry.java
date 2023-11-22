@@ -200,7 +200,10 @@ public class Registry {
 
     public static void gatherData(FabricDataGenerator.Pack pack, ExistingFileHelper existingFileHelper) {
 
+        pack.addProvider(HephPlusFluidTagsProvider::new);
+
         pack.addProvider(HephPlusToolRecipeProvider::new);
+        pack.addProvider(HephPlusMaterialRecipeProvider::new);
         pack.addProvider(HephPlusStationSlotLayoutProvider::new);
         pack.addProvider(HephPlusModifierRecipeProvider::new);
         pack.addProvider(HephPlusToolDefinitionProvider::new);

@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:durasteel_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_durasteel"
+  },
+  "output": "hephaestusplus:durasteel",
+  "temperature": 700
+}

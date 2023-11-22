@@ -8,7 +8,7 @@
       "attackDamage": 1.2
     },
     "tconstruct:head": {
-      "durability": 3000,
+      "durability": 2500,
       "miningSpeed": 15.0,
       "harvestTier": "hephaestusplus:metallurgium",
       "attack": 8.0

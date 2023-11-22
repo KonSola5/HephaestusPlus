@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "#c:molten_adamantite",
+    "#c:molten_aquarium",
+    "#c:molten_banglum",
+    "#c:molten_carmot",
+    "#c:molten_celestium",
+    "#c:molten_durasteel",
+    "#c:molten_hallowed",
+    "#c:molten_kyber",
+    "#c:molten_metallurgium",
+    "#c:molten_mythril",
+    "#c:molten_orichalcum",
+    "#c:molten_palladium",
+    "#c:molten_prometheum",
+    "#c:molten_quadrillum",
+    "#c:molten_runite",
+    "#c:molten_star_platinum",
+    "#c:molten_stormyx"
+  ]
+}

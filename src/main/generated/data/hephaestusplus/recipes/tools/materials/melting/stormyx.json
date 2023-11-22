@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:stormyx_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material_melting",
+  "input": "hephaestusplus:stormyx",
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_stormyx"
+  },
+  "temperature": 700
+}

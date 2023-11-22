@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:star_platinum_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material_melting",
+  "input": "hephaestusplus:star_platinum",
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_star_platinum"
+  },
+  "temperature": 700
+}

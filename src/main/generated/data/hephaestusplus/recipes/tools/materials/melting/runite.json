@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:runite_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material_melting",
+  "input": "hephaestusplus:runite",
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_runite"
+  },
+  "temperature": 700
+}

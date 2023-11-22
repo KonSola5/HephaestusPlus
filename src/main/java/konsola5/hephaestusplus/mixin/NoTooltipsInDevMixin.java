@@ -14,7 +14,7 @@ public class NoTooltipsInDevMixin {
             shift = At.Shift.AFTER),
             cancellable = true, remap = false)
     private static void injected(CallbackInfo ci) {
-        boolean TOOLTIPS = false;
+        boolean TOOLTIPS = true;
         if (!TOOLTIPS) ci.cancel();
     }
 }

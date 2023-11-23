@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:palladium_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:palladium_blocks"
+  },
+  "leftover": {
+    "tag": "c:palladium_ingots"
+  },
+  "material": "hephaestusplus:palladium",
+  "needed": 1,
+  "value": 9
+}

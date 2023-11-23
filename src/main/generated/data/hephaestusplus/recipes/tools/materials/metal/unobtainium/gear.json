@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:unobtainium_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:unobtainium_gears"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "hephaestusplus:molten_unobtainium"
+  },
+  "temperature": 1400,
+  "time": 155
+}

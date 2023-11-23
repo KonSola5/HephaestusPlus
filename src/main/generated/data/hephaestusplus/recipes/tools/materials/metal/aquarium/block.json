@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:aquarium_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:aquarium_blocks"
+  },
+  "result": {
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_aquarium"
+  },
+  "temperature": 700,
+  "time": 171
+}

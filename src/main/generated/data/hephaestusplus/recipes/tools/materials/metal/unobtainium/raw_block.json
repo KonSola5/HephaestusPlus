@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:raw_unobtainium_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "tag": "c:raw_unobtainium_blocks"
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_unobtainium"
+  },
+  "temperature": 1400,
+  "time": 466
+}

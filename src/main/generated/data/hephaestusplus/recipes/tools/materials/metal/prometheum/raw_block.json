@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:raw_prometheum_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "tag": "c:raw_prometheum_blocks"
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_prometheum"
+  },
+  "temperature": 800,
+  "time": 361
+}

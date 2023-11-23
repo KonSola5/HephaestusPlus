@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:nuggets/durasteel"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:nuggets/durasteel"
+  },
+  "result": {
+    "amount": 1000,
+    "fluid": "hephaestusplus:molten_durasteel"
+  },
+  "temperature": 800,
+  "time": 20
+}

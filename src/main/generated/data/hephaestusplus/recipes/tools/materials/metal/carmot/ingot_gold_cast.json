@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "cooling_time": 65,
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_carmot"
+  },
+  "result": {
+    "tag": "c:carmot_ingots"
+  }
+}

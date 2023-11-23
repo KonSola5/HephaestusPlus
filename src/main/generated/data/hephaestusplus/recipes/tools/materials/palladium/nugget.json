@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:palladium_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:palladium_nuggets"
+  },
+  "material": "hephaestusplus:palladium",
+  "needed": 9,
+  "value": 1
+}

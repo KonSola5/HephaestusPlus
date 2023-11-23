@@ -1,13 +1,14 @@
 package konsola5.hephaestusplus;
 
+import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
+import konsola5.hephaestusplus.datagen.*;
 import konsola5.hephaestusplus.modifiers.*;
 import konsola5.hephaestusplus.spritegen.HephaestusPlusMaterialSpriteProvider;
 import konsola5.hephaestusplus.spritegen.HephaestusPlusPartSpriteProvider;
 import konsola5.hephaestusplus.tools.ToolDefinitions;
-import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
-import konsola5.hephaestusplus.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
@@ -47,20 +48,35 @@ public class Registry {
     // Deferred Registers
     public static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(HephaestusPlus.MOD_ID);
     public static final ItemDeferredRegisterExtension ADDON_ITEMS = new ItemDeferredRegisterExtension(HephaestusPlus.MOD_ID);
+
     private static FluidAttributes.Builder hotBuilder() {
         return ModelFluidAttributes.builder().density(2000).viscosity(10000).temperature(1000).sound(SoundEvents.BUCKET_FILL_LAVA, SoundEvents.BUCKET_EMPTY_LAVA);
     }
+
     protected static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(HephaestusPlus.MOD_ID);
     // Items
-    public static final ItemObject<ToolPartItem> crookHead = ADDON_ITEMS.register("crook_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID, TinkerTabs.TAB_TOOL_PARTS));
 
-    public static final CastItemObject crookHeadCast = ADDON_ITEMS.registerCast("crook_head", SMELTERY_PROPS);
+    public static ItemObject<ToolPartItem> crookHead;
+    public static CastItemObject crookHeadCast;
+
+    static {
+        if (FabricLoader.getInstance().isModLoaded("fabricaeexnihilo")) {
+            crookHead = ADDON_ITEMS.register("crook_head", () -> new ToolPartItem(PARTS_PROPS, HeadMaterialStats.ID, TinkerTabs.TAB_TOOL_PARTS));
+            crookHeadCast = ADDON_ITEMS.registerCast("crook_head", SMELTERY_PROPS);
+        } else {
+            crookHead = null;
+            crookHeadCast = null;
+        }
+    }
+
     // Modifiers
 
-    public static StaticModifier<Modifier> REGROWTH = MODIFIERS.register("regrowth", RegrowthModifier::new);
+
     public static StaticModifier<SingleLevelModifier> SMASHING = MODIFIERS.register("smashing", SingleLevelModifier::new);
 
     public static StaticModifier<SingleLevelModifier> CROOKING = MODIFIERS.register("crooking", SingleLevelModifier::new);
+    public static StaticModifier<Modifier> REGROWTH = MODIFIERS.register("regrowth", RegrowthModifier::new);
+    public static StaticModifier<Modifier> BANG_BANG = MODIFIERS.register("bang_bang", BangBangModifier::new);
     public static StaticModifier<Modifier> BRANDING = MODIFIERS.register("branding", BrandingModifier::new);
     // Tool properties
     public static StaticModifier<Modifier> CARMOT_FORTUNE = MODIFIERS.register("carmot_fortune", Modifier::new);
@@ -70,11 +86,22 @@ public class Registry {
     public static StaticModifier<Modifier> STORM_SPELL = MODIFIERS.register("storm_spell", StormSpellModifier::new);
     public static StaticModifier<Modifier> SOUL_POWERED = MODIFIERS.register("soul_powered", SoulPoweredModifier::new);
     public static StaticModifier<Modifier> FREEZING = MODIFIERS.register("freezing", FreezingModifier::new);
+    public static StaticModifier<Modifier> LEGENDARY_BANGLUM = MODIFIERS.register("legendary_banglum", LegendaryBanglumModifier::new);
     public static StaticModifier<NoLevelsModifier> UNOBTAINABLE = MODIFIERS.register("unobtainable", UnobtainableModifier::new);
     private static final Item.Properties TOOL = new FabricItemSettings().maxCount(1);
     // Hephaestus tools
-    public static final ItemObject<ModifiableItem> handHammer = ADDON_ITEMS.register("hand_hammer", () -> new ModifiableItem(TOOL, ToolDefinitions.HAND_HAMMER, TinkerTabs.TAB_TOOLS));
-    public static final ItemObject<ModifiableItem> crook = ADDON_ITEMS.register("crook", () -> new ModifiableItem(TOOL, ToolDefinitions.CROOK, TinkerTabs.TAB_TOOLS));
+    public static ItemObject<ModifiableItem> handHammer;
+    public static ItemObject<ModifiableItem> crook;
+
+    static {
+        if (FabricLoader.getInstance().isModLoaded("fabricaeexnihilo")) {
+            handHammer = ADDON_ITEMS.register("hand_hammer", () -> new ModifiableItem(TOOL, ToolDefinitions.HAND_HAMMER, TinkerTabs.TAB_TOOLS));
+            crook = ADDON_ITEMS.register("crook", () -> new ModifiableItem(TOOL, ToolDefinitions.CROOK, TinkerTabs.TAB_TOOLS));
+        } else {
+            handHammer = null;
+            crook = null;
+        }
+    }
 
     // HephaestusPlus fluids
     /*
@@ -108,87 +135,92 @@ public class Registry {
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenBanglum = FLUIDS.register(
             "molten_banglum",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1070),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenCarmot = FLUIDS.register(
             "molten_carmot",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1270),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenCelestium = FLUIDS.register(
             "molten_celestium",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1700),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenDurasteel = FLUIDS.register(
             "molten_durasteel",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1100),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenHallowed = FLUIDS.register(
             "molten_hallowed",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1500),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenKyber = FLUIDS.register(
             "molten_kyber",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1060),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenManganese = FLUIDS.register(
             "molten_manganese",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(800),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenMetallurgium = FLUIDS.register(
             "molten_metallurgium",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1770),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenMythril = FLUIDS.register(
             "molten_mythril",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1200),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenOrichalcum = FLUIDS.register(
             "molten_orichalcum",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1050),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenPalladium = FLUIDS.register(
             "molten_palladium",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1200),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenPrometheum = FLUIDS.register(
             "molten_prometheum",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1100),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenQuadrillum = FLUIDS.register(
             "molten_quadrillum",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(850),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenRunite = FLUIDS.register(
             "molten_runite",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1270),
+            properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
+            12);
+    public static final FluidObject<SimpleFlowableFluid> moltenStarrite = FLUIDS.register(
+            "molten_starrite",
+            hotBuilder().temperature(1200),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenStarPlatinum = FLUIDS.register(
             "molten_star_platinum",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1600),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenStormyx = FLUIDS.register(
             "molten_stormyx",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1200),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
     public static final FluidObject<SimpleFlowableFluid> moltenUnobtainium = FLUIDS.register(
             "molten_unobtainium",
-            hotBuilder().temperature(1000),
+            hotBuilder().temperature(1700),
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
 

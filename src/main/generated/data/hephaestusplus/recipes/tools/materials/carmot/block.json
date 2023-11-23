@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:carmot_blocks"
+  },
+  "leftover": {
+    "tag": "c:carmot_ingots"
+  },
+  "material": "hephaestusplus:carmot",
+  "needed": 1,
+  "value": 9
+}

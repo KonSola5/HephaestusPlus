@@ -1,8 +1,9 @@
 {
   "modifier.hephaestusplus": {
     "__abilities__": null,
-    "smashing":    "#828282",
-    "crooking":    "#592f13",
+    "smashing":             "#828282",
+    "crooking":             "#592f13",
+    "legendary_banglum":    "#fca800",
 
     "__traits__": null,
     "solid": "#95e49c",

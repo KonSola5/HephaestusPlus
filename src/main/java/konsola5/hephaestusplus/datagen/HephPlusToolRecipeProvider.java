@@ -29,7 +29,7 @@ public class HephPlusToolRecipeProvider extends BaseRecipeProvider implements IM
         String partFolder = "tools/parts/";
         String castFolder = "smeltery/casts/";
 
-        partRecipes(consumer, Registry.crookHead, Registry.crookHeadCast,2, partFolder, castFolder);
+        partRecipes(consumer, Registry.crookHead, Registry.crookHeadCast, 2, partFolder, castFolder);
     }
 
     @Override

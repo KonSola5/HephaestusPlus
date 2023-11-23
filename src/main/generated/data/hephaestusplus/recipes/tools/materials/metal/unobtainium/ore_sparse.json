@@ -1,0 +1,31 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "tconstruct:tag_intersection_present",
+      "registry": "minecraft:item",
+      "tags": [
+        "c:unobtainium_ores",
+        "c:ore_rates/sparse"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "fabric:type": "fabric:all",
+    "ingredients": [
+      {
+        "tag": "c:unobtainium_ores"
+      },
+      {
+        "tag": "c:ore_rates/sparse"
+      }
+    ]
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_unobtainium"
+  },
+  "temperature": 1400,
+  "time": 116
+}

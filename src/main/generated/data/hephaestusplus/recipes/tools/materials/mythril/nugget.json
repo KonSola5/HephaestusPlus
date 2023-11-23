@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:mythril_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:mythril_nuggets"
+  },
+  "material": "hephaestusplus:mythril",
+  "needed": 9,
+  "value": 1
+}

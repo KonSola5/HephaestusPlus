@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:banglum_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:banglum_blocks"
+  },
+  "leftover": {
+    "tag": "c:banglum_ingots"
+  },
+  "material": "hephaestusplus:banglum",
+  "needed": 1,
+  "value": 9
+}

@@ -17,6 +17,7 @@ import java.util.List;
 
 public class PrismaticModifier extends Modifier {
     private static final Component PRISMATIC_DAMAGE = HephaestusPlus.makeTranslation("modifier", "prismatic.attack_damage");
+
     @Override
     public float getEntityDamage(IToolStackView tool, int level, ToolAttackContext context, float baseDamage, float damage) {
         LivingEntity attacker = context.getAttacker();

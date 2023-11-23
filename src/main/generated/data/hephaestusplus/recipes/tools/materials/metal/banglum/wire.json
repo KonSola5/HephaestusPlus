@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:banglum_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:banglum_wires"
+  },
+  "result": {
+    "amount": 4500,
+    "fluid": "hephaestusplus:molten_banglum"
+  },
+  "temperature": 770,
+  "time": 12
+}

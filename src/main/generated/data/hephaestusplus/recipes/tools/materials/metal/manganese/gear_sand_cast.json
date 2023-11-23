@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manganese_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/gear"
+  },
+  "cast_consumed": true,
+  "cooling_time": 100,
+  "fluid": {
+    "amount": 36000,
+    "tag": "c:molten_manganese"
+  },
+  "result": {
+    "tag": "c:manganese_gears"
+  }
+}

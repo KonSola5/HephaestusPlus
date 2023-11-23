@@ -1,0 +1,62 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:raw_runite_blocks"
+      ]
+    }
+  ],
+  "type": "porting_lib:conditional",
+  "recipes": [
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:tags_populated",
+          "values": [
+            "c:silver_ingots"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "byproducts": [
+          {
+            "amount": 81000,
+            "fluid": "tconstruct:molten_silver"
+          }
+        ],
+        "ingredient": {
+          "tag": "c:raw_runite_blocks"
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 81000,
+          "fluid": "hephaestusplus:molten_runite"
+        },
+        "temperature": 970,
+        "time": 393
+      }
+    },
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "porting_lib:true"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "ingredient": {
+          "tag": "c:raw_runite_blocks"
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 81000,
+          "fluid": "hephaestusplus:molten_runite"
+        },
+        "temperature": 970,
+        "time": 393
+      }
+    }
+  ]
+}

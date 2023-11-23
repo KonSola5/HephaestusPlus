@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:unobtainium_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "cooling_time": 26,
+  "fluid": {
+    "amount": 1000,
+    "tag": "c:molten_unobtainium"
+  },
+  "result": {
+    "tag": "c:unobtainium_nuggets"
+  }
+}

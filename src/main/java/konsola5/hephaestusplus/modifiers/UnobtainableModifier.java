@@ -11,9 +11,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
-import slimeknights.tconstruct.library.modifiers.impl.SingleLevelModifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.utils.TooltipKey;
@@ -45,6 +43,7 @@ public class UnobtainableModifier extends NoLevelsModifier {
         ModDataNBT persistentData = tool.getPersistentData();
         persistentData.putString(TOOL_OWNER, uuid.toString());
     }
+
     @Override
     public void onInventoryTick(@NotNull IToolStackView tool, int level, @NotNull Level world, @NotNull LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, @NotNull ItemStack stack) {
         if (getHolderUUID(tool) == null) {

@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:geore_clusters/stormyx"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:geore_clusters/stormyx"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "hephaestusplus:molten_stormyx"
+  },
+  "temperature": 900,
+  "time": 158
+}

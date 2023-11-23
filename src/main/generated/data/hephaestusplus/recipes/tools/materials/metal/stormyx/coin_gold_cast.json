@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:stormyx_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/coin"
+  },
+  "cooling_time": 37,
+  "fluid": {
+    "amount": 3000,
+    "tag": "c:molten_stormyx"
+  },
+  "result": {
+    "tag": "c:stormyx_coins"
+  }
+}

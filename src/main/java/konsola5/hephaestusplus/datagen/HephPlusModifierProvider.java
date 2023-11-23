@@ -25,10 +25,10 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                 .multiplyBase(ToolStats.ATTACK_SPEED, 0.15f)
                 .build());
         addModifier(MoarModifierIds.durable, StatBoostModifier.builder()
-                .multiplyBase(ToolStats.DURABILITY,        0.12f)
-                .multiplyBase(ToolStats.ATTACK_DAMAGE,     0.04f)
-                .multiplyBase(ToolStats.MINING_SPEED,      0.04f)
-                .multiplyBase(ToolStats.VELOCITY,          0.03f)
+                .multiplyBase(ToolStats.DURABILITY, 0.12f)
+                .multiplyBase(ToolStats.ATTACK_DAMAGE, 0.04f)
+                .multiplyBase(ToolStats.MINING_SPEED, 0.04f)
+                .multiplyBase(ToolStats.VELOCITY, 0.03f)
                 .multiplyBase(ToolStats.PROJECTILE_DAMAGE, 0.03f)
                 .build());
     }

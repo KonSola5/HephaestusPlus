@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:stormyx_rods"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/rod"
+  },
+  "cooling_time": 45,
+  "fluid": {
+    "amount": 4500,
+    "tag": "c:molten_stormyx"
+  },
+  "result": {
+    "tag": "c:stormyx_rods"
+  }
+}

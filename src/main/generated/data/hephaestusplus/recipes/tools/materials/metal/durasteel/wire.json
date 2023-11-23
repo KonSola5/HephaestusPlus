@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:durasteel_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:durasteel_wires"
+  },
+  "result": {
+    "amount": 4500,
+    "fluid": "hephaestusplus:molten_durasteel"
+  },
+  "temperature": 800,
+  "time": 12
+}

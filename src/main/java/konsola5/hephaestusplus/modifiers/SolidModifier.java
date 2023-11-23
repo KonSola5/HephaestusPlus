@@ -41,9 +41,9 @@ public class SolidModifier extends Modifier {
 
         double n = (double) level / 2;
 
-        double usage = 100 * (double) tool.getCurrentDurability()/((double)tool.getCurrentDurability()+(double)tool.getDamage());
+        double usage = 100 * (double) tool.getCurrentDurability() / ((double) tool.getCurrentDurability() + (double) tool.getDamage());
         // Curved scaling towards lower durabilities on lvl 1, Linear scaling on lvl 2, higher levels bias scaling towards higher durabilities
-        return Math.max(0.01*(50-Math.pow(Math.pow(2,1/n)*0.05*usage*Math.pow(0.2,(n-2)/n),n)),0);
+        return Math.max(0.01 * (50 - Math.pow(Math.pow(2, 1 / n) * 0.05 * usage * Math.pow(0.2, (n - 2) / n), n)), 0);
     }
 
     @Override

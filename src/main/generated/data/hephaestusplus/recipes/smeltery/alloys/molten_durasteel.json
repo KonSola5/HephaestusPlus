@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manganese_ingots"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_ingots"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:durasteel_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "amount": 9000,
+      "tag": "c:molten_manganese"
+    },
+    {
+      "amount": 9000,
+      "tag": "c:molten_quadrillum"
+    }
+  ],
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_durasteel"
+  },
+  "temperature": 800
+}

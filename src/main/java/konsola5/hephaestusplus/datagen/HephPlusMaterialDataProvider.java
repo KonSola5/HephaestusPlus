@@ -17,22 +17,22 @@ public class HephPlusMaterialDataProvider extends AbstractMaterialDataProvider {
 
     @Override
     protected void addMaterials() {
-        addCompatMetalMaterial(MoarMaterialIds.adamantite,   3, ORDER_COMPAT); // Solid
-        addCompatMetalMaterial(MoarMaterialIds.aquarium,     3, ORDER_COMPAT); // Aqua Affinity
-        addCompatMetalMaterial(MoarMaterialIds.banglum,      3, ORDER_COMPAT); // Bang-Bang
-        addCompatMetalMaterial(MoarMaterialIds.carmot,       3, ORDER_COMPAT); // Fortune, Looting V
-        addCompatMetalMaterial(MoarMaterialIds.celestium,    3, ORDER_COMPAT); // Celestial
-        addCompatMetalMaterial(MoarMaterialIds.durasteel,    3, ORDER_COMPAT); // Durable
-        addCompatMetalMaterial(MoarMaterialIds.hallowed,     3, ORDER_COMPAT); // Soul Powered (more dmg when killing mobs)
-        addCompatMetalMaterial(MoarMaterialIds.kyber,        3, ORDER_COMPAT); // Prismatic (more dmg in light)
-        addCompatMetalMaterial(MoarMaterialIds.metallurgium, 3, ORDER_COMPAT); //
-        addCompatMetalMaterial(MoarMaterialIds.mythril,      3, ORDER_COMPAT); // Magically Modifiable
-        addCompatMetalMaterial(MoarMaterialIds.orichalcum,   3, ORDER_COMPAT); //
-        addCompatMetalMaterial(MoarMaterialIds.palladium,    3, ORDER_COMPAT); // Branding V
-        addCompatMetalMaterial(MoarMaterialIds.prometheum,   3, ORDER_COMPAT); // Regrowth V
-        addCompatMetalMaterial(MoarMaterialIds.quadrillum,   3, ORDER_COMPAT); // Cosmic (inverse of Dwarven)
-        addCompatMetalMaterial(MoarMaterialIds.runite,       3, ORDER_COMPAT); // Freezing
-        addCompatMetalMaterial(MoarMaterialIds.star_platinum,3, ORDER_COMPAT); // Stellar Swiftness
-        addCompatMetalMaterial(MoarMaterialIds.stormyx,      3, ORDER_COMPAT); // Zeus' Wrath
+        addCompatMetalMaterial(MoarMaterialIds.adamantite, 2, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.aquarium, 2, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.banglum, 2, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.carmot, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.celestium, 4, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.durasteel, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.hallowed, 4, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.kyber, 2, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.metallurgium, 4, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.mythril, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.orichalcum, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.palladium, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.prometheum, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.quadrillum, 2, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.runite, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.star_platinum, 4, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.stormyx, 3, ORDER_COMPAT);
     }
 }

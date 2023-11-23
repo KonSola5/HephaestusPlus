@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:adamantite_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:adamantite_nuggets"
+  },
+  "material": "hephaestusplus:adamantite",
+  "needed": 9,
+  "value": 1
+}

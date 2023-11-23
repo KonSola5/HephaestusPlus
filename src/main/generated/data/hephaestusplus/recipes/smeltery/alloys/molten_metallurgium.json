@@ -1,0 +1,48 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:hallowed_ingots"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:palladium_ingots"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:unobtainium"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:metallurgium_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "amount": 9000,
+      "tag": "c:molten_hallowed"
+    },
+    {
+      "amount": 9000,
+      "tag": "c:molten_palladium"
+    },
+    {
+      "amount": 9000,
+      "tag": "c:molten_unobtainium"
+    }
+  ],
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_metallurgium"
+  },
+  "temperature": 1470
+}

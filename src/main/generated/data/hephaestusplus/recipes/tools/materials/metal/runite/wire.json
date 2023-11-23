@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:runite_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:runite_wires"
+  },
+  "result": {
+    "amount": 4500,
+    "fluid": "hephaestusplus:molten_runite"
+  },
+  "temperature": 970,
+  "time": 13
+}

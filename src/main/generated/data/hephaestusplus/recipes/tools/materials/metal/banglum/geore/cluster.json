@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:geore_clusters/banglum"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:geore_clusters/banglum"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "hephaestusplus:molten_banglum"
+  },
+  "temperature": 770,
+  "time": 148
+}

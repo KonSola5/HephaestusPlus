@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:aquarium_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/wire"
+  },
+  "cooling_time": 40,
+  "fluid": {
+    "amount": 4500,
+    "tag": "c:molten_aquarium"
+  },
+  "result": {
+    "tag": "c:aquarium_wires"
+  }
+}

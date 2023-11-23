@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:quadrillum_ingots"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_quadrillum"
+  },
+  "temperature": 550,
+  "time": 52
+}

@@ -1,0 +1,19 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:star_platinum_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 225,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_star_platinum"
+  },
+  "result": {
+    "tag": "c:star_platinum_blocks"
+  }
+}

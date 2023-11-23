@@ -4,11 +4,8 @@ import konsola5.hephaestusplus.Registry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.FluidTagsProvider;
 import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.tconstruct.common.TinkerTags;
-import slimeknights.tconstruct.common.data.tags.FluidTagProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -29,14 +26,17 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
         tagAll(Registry.moltenHallowed);
         tagAll(Registry.moltenKyber);
         tagAll(Registry.moltenMetallurgium);
+        tagAll(Registry.moltenManganese);
         tagAll(Registry.moltenMythril);
         tagAll(Registry.moltenOrichalcum);
         tagAll(Registry.moltenPalladium);
         tagAll(Registry.moltenPrometheum);
         tagAll(Registry.moltenQuadrillum);
         tagAll(Registry.moltenRunite);
+        tagAll(Registry.moltenStarrite);
         tagAll(Registry.moltenStarPlatinum);
         tagAll(Registry.moltenStormyx);
+        tagAll(Registry.moltenUnobtainium);
 
         this.tag(TinkerTags.Fluids.METAL_TOOLTIPS)
                 .addTag(Registry.moltenAdamantite.getForgeTag())
@@ -48,14 +48,17 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
                 .addTag(Registry.moltenHallowed.getForgeTag())
                 .addTag(Registry.moltenKyber.getForgeTag())
                 .addTag(Registry.moltenMetallurgium.getForgeTag())
+                .addTag(Registry.moltenManganese.getForgeTag())
                 .addTag(Registry.moltenMythril.getForgeTag())
                 .addTag(Registry.moltenOrichalcum.getForgeTag())
                 .addTag(Registry.moltenPalladium.getForgeTag())
                 .addTag(Registry.moltenPrometheum.getForgeTag())
                 .addTag(Registry.moltenQuadrillum.getForgeTag())
                 .addTag(Registry.moltenRunite.getForgeTag())
+                .addTag(Registry.moltenStarrite.getForgeTag())
                 .addTag(Registry.moltenStarPlatinum.getForgeTag())
-                .addTag(Registry.moltenStormyx.getForgeTag());
+                .addTag(Registry.moltenStormyx.getForgeTag())
+                .addTag(Registry.moltenUnobtainium.getForgeTag());
     }
 
     @Override
@@ -63,12 +66,16 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
         return "HephaestusPlus Fluid Tags";
     }
 
-    /** Tags this fluid using local tags */
+    /**
+     * Tags this fluid using local tags
+     */
     private void tagLocal(FluidObject<?> fluid) {
         getOrCreateTagBuilder(fluid.getLocalTag()).add(fluid.getStill(), fluid.getFlowing());
     }
 
-    /** Tags this fluid with local and forge tags */
+    /**
+     * Tags this fluid with local and forge tags
+     */
     private void tagAll(FluidObject<?> fluid) {
         tagLocal(fluid);
         tag(fluid.getForgeTag()).addTag(fluid.getLocalTag());

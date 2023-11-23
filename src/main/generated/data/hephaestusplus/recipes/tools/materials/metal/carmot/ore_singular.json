@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "base": "c:carmot_ores",
+      "condition": "tconstruct:tag_difference_present",
+      "registry": "minecraft:item",
+      "subtracted": [
+        "c:ore_rates/sparse",
+        "c:ore_rates/dense"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "fabric:type": "fabric:difference",
+    "base": {
+      "tag": "c:carmot_ores"
+    },
+    "subtracted": {
+      "fabric:type": "fabric:any",
+      "ingredients": [
+        {
+          "tag": "c:ore_rates/sparse"
+        },
+        {
+          "tag": "c:ore_rates/dense"
+        }
+      ]
+    }
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 18000,
+    "fluid": "hephaestusplus:molten_carmot"
+  },
+  "temperature": 970,
+  "time": 164
+}

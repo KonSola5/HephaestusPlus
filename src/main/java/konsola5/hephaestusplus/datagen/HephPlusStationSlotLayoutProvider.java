@@ -18,15 +18,15 @@ public class HephPlusStationSlotLayoutProvider extends AbstractStationSlotLayout
         Ingredient modifiable = Ingredient.of(TinkerTags.Items.MODIFIABLE);
         defineModifiable(Registry.handHammer)
                 .sortIndex(SORT_HARVEST)
-                .addInputItem(TinkerToolParts.hammerHead,    53, 22)
-                .addInputItem(TinkerToolParts.toolHandle,  15, 60)
+                .addInputItem(TinkerToolParts.hammerHead, 53, 22)
+                .addInputItem(TinkerToolParts.toolHandle, 15, 60)
                 .addInputItem(TinkerToolParts.toolBinding, 33, 42)
                 .build();
 
         defineModifiable(Registry.crook)
                 .sortIndex(SORT_HARVEST)
-                .addInputItem(Registry.crookHead,          53, 22)
-                .addInputItem(TinkerToolParts.toolHandle,  15, 60)
+                .addInputItem(Registry.crookHead, 53, 22)
+                .addInputItem(TinkerToolParts.toolHandle, 15, 60)
                 .addInputItem(TinkerToolParts.toolBinding, 33, 42)
                 .build();
     }

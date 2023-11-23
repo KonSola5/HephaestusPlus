@@ -1,7 +1,7 @@
 package konsola5.hephaestusplus.modifiers;
 
-import konsola5.hephaestusplus.HephaestusPlus;
 import io.github.fabricators_of_create.porting_lib.entity.events.PlayerEvents;
+import konsola5.hephaestusplus.HephaestusPlus;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
@@ -22,19 +22,26 @@ import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 import javax.annotation.Nullable;
-
 import java.util.List;
 
 public class CosmicModifier extends Modifier implements ConditionalStatModifierHook {
     private static final Component MINING_SPEED = HephaestusPlus.makeTranslation("modifier", "cosmic.mining_speed");
     private static final Component VELOCITY = HephaestusPlus.makeTranslation("modifier", "cosmic.velocity");
-    /** Distance below sea level to get boost */
+    /**
+     * Distance below sea level to get boost
+     */
     private static final float BOOST_DISTANCE = 64f;
-    /** Blocks above 0 when debuff starts, and the range of debuff in the world */
+    /**
+     * Blocks above 0 when debuff starts, and the range of debuff in the world
+     */
     private static final float DEBUFF_RANGE = 128f;
-    /** Mining speed boost when at distance, gets larger when lower */
+    /**
+     * Mining speed boost when at distance, gets larger when lower
+     */
     private static final float MINING_BONUS = 6;
-    /** Velocity boost when at distance, gets larger when lower */
+    /**
+     * Velocity boost when at distance, gets larger when lower
+     */
     private static final float VELOCITY_BONUS = 0.05f;
 
     @Override
@@ -42,7 +49,9 @@ public class CosmicModifier extends Modifier implements ConditionalStatModifierH
         hookBuilder.addHook(this, TinkerHooks.CONDITIONAL_STAT);
     }
 
-    /** Gets the boost for the given level and height, can go negative */
+    /**
+     * Gets the boost for the given level and height, can go negative
+     */
     private static float getBoost(Level world, float y, int level, float baseSpeed, float modifier, float bonus) {
         // grants 0 bonus at 64, 1x at BOOST_DISTANCE, 2x at 2*BOOST_DISTANCE
         // prevents the modifier from getting too explosive in tall worlds, clamp between -6 and 12
@@ -52,7 +61,7 @@ public class CosmicModifier extends Modifier implements ConditionalStatModifierH
         }
 
         // start the debuff 64 blocks above the bottom, but for short worlds start it at Y = 32
-        float baselineDebuff = Math.min(world.getMinBuildHeight() + DEBUFF_RANGE/2, 32);
+        float baselineDebuff = Math.min(world.getMinBuildHeight() + DEBUFF_RANGE / 2, 32);
         if (y < baselineDebuff) {
             // range of 64 blocks for the regular debuff, anything above is full debuff
             if (y <= baselineDebuff - DEBUFF_RANGE) {
@@ -84,7 +93,7 @@ public class CosmicModifier extends Modifier implements ConditionalStatModifierH
             if (player != null && key == TooltipKey.SHIFT) {
                 // passing in 1 means greater than 1 is a boost, and less than 1 is a percentage
                 // the -1 means for percentage, the range is now 0 to -75%, and for flat boost it's properly 0 to baseBoost
-                boost = getBoost(player.level(), (float)player.getY(), level, 1, 1f, baseBoost) - 1;
+                boost = getBoost(player.level(), (float) player.getY(), level, 1, 1f, baseBoost) - 1;
                 if (boost < 0) {
                     // goes from 0 to -75%, don't show 0%
                     if (boost <= -0.01) {

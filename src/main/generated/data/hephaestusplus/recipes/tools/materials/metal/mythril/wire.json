@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:mythril_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:mythril_wires"
+  },
+  "result": {
+    "amount": 4500,
+    "fluid": "hephaestusplus:molten_mythril"
+  },
+  "temperature": 900,
+  "time": 13
+}

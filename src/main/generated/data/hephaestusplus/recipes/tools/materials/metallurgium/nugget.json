@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:metallurgium_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:metallurgium_nuggets"
+  },
+  "material": "hephaestusplus:metallurgium",
+  "needed": 9,
+  "value": 1
+}

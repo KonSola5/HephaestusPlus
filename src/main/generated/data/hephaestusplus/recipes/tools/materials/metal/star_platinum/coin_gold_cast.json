@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:star_platinum_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/coin"
+  },
+  "cooling_time": 43,
+  "fluid": {
+    "amount": 3000,
+    "tag": "c:molten_star_platinum"
+  },
+  "result": {
+    "tag": "c:star_platinum_coins"
+  }
+}

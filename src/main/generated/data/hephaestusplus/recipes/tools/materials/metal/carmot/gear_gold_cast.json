@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gear"
+  },
+  "cooling_time": 131,
+  "fluid": {
+    "amount": 36000,
+    "tag": "c:molten_carmot"
+  },
+  "result": {
+    "tag": "c:carmot_gears"
+  }
+}

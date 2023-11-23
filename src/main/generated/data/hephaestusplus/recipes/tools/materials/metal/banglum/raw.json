@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:raw_banglum_ores"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "tag": "c:raw_banglum_ores"
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_banglum"
+  },
+  "temperature": 770,
+  "time": 89
+}

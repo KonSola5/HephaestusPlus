@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:sheetmetals/unobtainium"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:sheetmetals/unobtainium"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_unobtainium"
+  },
+  "temperature": 1400,
+  "time": 78
+}

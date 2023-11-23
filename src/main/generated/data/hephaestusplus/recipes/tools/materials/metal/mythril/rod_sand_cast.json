@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:mythril_rods"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/rod"
+  },
+  "cast_consumed": true,
+  "cooling_time": 45,
+  "fluid": {
+    "amount": 4500,
+    "tag": "c:molten_mythril"
+  },
+  "result": {
+    "tag": "c:mythril_rods"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:runite_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:runite_coins"
+  },
+  "result": {
+    "amount": 3000,
+    "fluid": "hephaestusplus:molten_runite"
+  },
+  "temperature": 970,
+  "time": 44
+}

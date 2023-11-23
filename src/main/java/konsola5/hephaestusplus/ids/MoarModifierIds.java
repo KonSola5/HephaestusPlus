@@ -13,7 +13,9 @@ public class MoarModifierIds {
     public static final ModifierId solid = new ModifierId(HephaestusPlus.MOD_ID, "solid");
     public static final ModifierId durable = new ModifierId(HephaestusPlus.MOD_ID, "durable");
     public static final ModifierId unobtainable = new ModifierId(HephaestusPlus.MOD_ID, "unobtainable");
-    public static final ModifierId metallurgic = new ModifierId(HephaestusPlus.MOD_ID, "metallurgic");
+    public static final ModifierId bang_bang = new ModifierId(HephaestusPlus.MOD_ID, "bang_bang");
+    public static final ModifierId legendary_banglum = new ModifierId(HephaestusPlus.MOD_ID, "legendary_banglum");
 
-    private MoarModifierIds() {}
+    private MoarModifierIds() {
+    }
 }

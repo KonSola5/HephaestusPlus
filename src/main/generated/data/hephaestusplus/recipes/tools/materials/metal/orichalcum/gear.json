@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:orichalcum_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:orichalcum_gears"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "hephaestusplus:molten_orichalcum"
+  },
+  "temperature": 750,
+  "time": 117
+}

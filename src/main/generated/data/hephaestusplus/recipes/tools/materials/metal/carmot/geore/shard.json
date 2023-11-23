@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:geore_shards/carmot"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:geore_shards/carmot"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_carmot"
+  },
+  "temperature": 970,
+  "time": 65
+}

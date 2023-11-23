@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:orichalcum_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:orichalcum_ingots"
+  },
+  "material": "hephaestusplus:orichalcum",
+  "needed": 1,
+  "value": 1
+}

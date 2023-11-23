@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "base": "c:manganese_ores",
+      "condition": "tconstruct:tag_difference_present",
+      "registry": "minecraft:item",
+      "subtracted": [
+        "c:ore_rates/sparse",
+        "c:ore_rates/dense"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "fabric:type": "fabric:difference",
+    "base": {
+      "tag": "c:manganese_ores"
+    },
+    "subtracted": {
+      "fabric:type": "fabric:any",
+      "ingredients": [
+        {
+          "tag": "c:ore_rates/sparse"
+        },
+        {
+          "tag": "c:ore_rates/dense"
+        }
+      ]
+    }
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 18000,
+    "fluid": "hephaestusplus:molten_manganese"
+  },
+  "temperature": 500,
+  "time": 125
+}

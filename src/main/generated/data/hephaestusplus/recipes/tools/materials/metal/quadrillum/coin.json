@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:quadrillum_coins"
+  },
+  "result": {
+    "amount": 3000,
+    "fluid": "hephaestusplus:molten_quadrillum"
+  },
+  "temperature": 550,
+  "time": 34
+}

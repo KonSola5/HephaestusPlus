@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:palladium_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/nugget"
+  },
+  "cast_consumed": true,
+  "cooling_time": 21,
+  "fluid": {
+    "amount": 1000,
+    "tag": "c:molten_palladium"
+  },
+  "result": {
+    "tag": "c:palladium_nuggets"
+  }
+}

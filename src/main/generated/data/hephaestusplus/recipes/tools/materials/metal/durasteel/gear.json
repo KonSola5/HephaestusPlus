@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:durasteel_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:durasteel_gears"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "hephaestusplus:molten_durasteel"
+  },
+  "temperature": 800,
+  "time": 120
+}

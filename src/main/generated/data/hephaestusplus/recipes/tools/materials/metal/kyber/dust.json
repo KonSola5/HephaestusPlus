@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:kyber_dusts"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:kyber_dusts"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_kyber"
+  },
+  "temperature": 760,
+  "time": 44
+}

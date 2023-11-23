@@ -7,6 +7,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
+import nourl.mythicmetals.item.MythicItems;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.recipe.modifiers.adding.ModifierRecipeBuilder;
@@ -54,6 +55,12 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
                 .setMaxLevel(1)
                 .setSlots(SlotType.ABILITY, 1)
                 .save(consumer, prefix(MoarModifierIds.crooking, abilityFolder));
+        ModifierRecipeBuilder.modifier(MoarModifierIds.legendary_banglum)
+                .setTools(ingredientFromTags(TinkerTags.Items.HARVEST_PRIMARY))
+                .addInput(MythicItems.Mats.BANGLUM_CHUNK)
+                .setMaxLevel(1)
+                .setSlots(SlotType.ABILITY, 1)
+                .save(consumer, prefix(MoarModifierIds.legendary_banglum, abilityFolder));
     }
 
     @SafeVarargs

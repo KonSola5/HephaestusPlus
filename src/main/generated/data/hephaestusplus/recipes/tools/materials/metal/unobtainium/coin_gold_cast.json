@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:unobtainium_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/coin"
+  },
+  "cooling_time": 45,
+  "fluid": {
+    "amount": 3000,
+    "tag": "c:molten_unobtainium"
+  },
+  "result": {
+    "tag": "c:unobtainium_coins"
+  }
+}

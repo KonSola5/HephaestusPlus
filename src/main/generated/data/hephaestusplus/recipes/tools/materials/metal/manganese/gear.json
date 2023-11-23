@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manganese_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:manganese_gears"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "hephaestusplus:molten_manganese"
+  },
+  "temperature": 500,
+  "time": 100
+}

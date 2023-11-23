@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:celestium_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:celestium_ingots"
+  },
+  "material": "hephaestusplus:celestium",
+  "needed": 1,
+  "value": 1
+}

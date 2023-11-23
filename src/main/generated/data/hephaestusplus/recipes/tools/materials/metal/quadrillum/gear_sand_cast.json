@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/gear"
+  },
+  "cast_consumed": true,
+  "cooling_time": 103,
+  "fluid": {
+    "amount": 36000,
+    "tag": "c:molten_quadrillum"
+  },
+  "result": {
+    "tag": "c:quadrillum_gears"
+  }
+}

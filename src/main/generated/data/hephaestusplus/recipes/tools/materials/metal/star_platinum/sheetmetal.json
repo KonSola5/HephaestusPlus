@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:sheetmetals/star_platinum"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:sheetmetals/star_platinum"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_star_platinum"
+  },
+  "temperature": 1300,
+  "time": 75
+}

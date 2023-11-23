@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/coin"
+  },
+  "cooling_time": 30,
+  "fluid": {
+    "amount": 3000,
+    "tag": "c:molten_quadrillum"
+  },
+  "result": {
+    "tag": "c:quadrillum_coins"
+  }
+}

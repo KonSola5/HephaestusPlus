@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:banglum_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:banglum_nuggets"
+  },
+  "material": "hephaestusplus:banglum",
+  "needed": 9,
+  "value": 1
+}

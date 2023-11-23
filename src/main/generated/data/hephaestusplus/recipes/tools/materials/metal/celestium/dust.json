@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:celestium_dusts"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:celestium_dusts"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_celestium"
+  },
+  "temperature": 1400,
+  "time": 58
+}

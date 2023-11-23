@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:runite_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:runite_ingots"
+  },
+  "material": "hephaestusplus:runite",
+  "needed": 1,
+  "value": 1
+}

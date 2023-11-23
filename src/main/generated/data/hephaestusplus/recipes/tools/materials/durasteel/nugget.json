@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:durasteel_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:durasteel_nuggets"
+  },
+  "material": "hephaestusplus:durasteel",
+  "needed": 9,
+  "value": 1
+}

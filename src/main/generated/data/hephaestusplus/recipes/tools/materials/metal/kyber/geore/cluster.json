@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:geore_clusters/kyber"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:geore_clusters/kyber"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "hephaestusplus:molten_kyber"
+  },
+  "temperature": 760,
+  "time": 147
+}

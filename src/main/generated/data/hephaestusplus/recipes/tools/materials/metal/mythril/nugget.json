@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:nuggets/mythril"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:nuggets/mythril"
+  },
+  "result": {
+    "amount": 1000,
+    "fluid": "hephaestusplus:molten_mythril"
+  },
+  "temperature": 900,
+  "time": 21
+}

@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:quadrillum_blocks"
+  },
+  "leftover": {
+    "tag": "c:quadrillum_ingots"
+  },
+  "material": "hephaestusplus:quadrillum",
+  "needed": 1,
+  "value": 9
+}

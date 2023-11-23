@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:orichalcum_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:orichalcum_nuggets"
+  },
+  "material": "hephaestusplus:orichalcum",
+  "needed": 9,
+  "value": 1
+}

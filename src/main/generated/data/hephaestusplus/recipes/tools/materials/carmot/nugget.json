@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:carmot_nuggets"
+  },
+  "material": "hephaestusplus:carmot",
+  "needed": 9,
+  "value": 1
+}

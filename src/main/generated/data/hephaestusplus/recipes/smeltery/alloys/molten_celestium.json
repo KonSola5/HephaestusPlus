@@ -1,0 +1,58 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:star_platinum"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:kyber_ingots"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_ingots"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:unobtainium"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:celestium_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "amount": 9000,
+      "tag": "c:molten_star_platinum"
+    },
+    {
+      "amount": 9000,
+      "tag": "c:molten_kyber"
+    },
+    {
+      "amount": 9000,
+      "tag": "c:molten_carmot"
+    },
+    {
+      "amount": 9000,
+      "tag": "c:molten_unobtainium"
+    }
+  ],
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_celestium"
+  },
+  "temperature": 1400
+}

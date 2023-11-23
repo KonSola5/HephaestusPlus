@@ -1,0 +1,31 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "tconstruct:tag_intersection_present",
+      "registry": "minecraft:item",
+      "tags": [
+        "c:prometheum_ores",
+        "c:ore_rates/dense"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "fabric:type": "fabric:all",
+    "ingredients": [
+      {
+        "tag": "c:prometheum_ores"
+      },
+      {
+        "tag": "c:ore_rates/dense"
+      }
+    ]
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 54000,
+    "fluid": "hephaestusplus:molten_prometheum"
+  },
+  "temperature": 800,
+  "time": 271
+}

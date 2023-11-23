@@ -76,6 +76,14 @@
   "modifier.hephaestusplus.soul_powered.stored_souls": "Stored Souls",
   "modifier.hephaestusplus.soul_powered.attack_damage": "Soul Powered Damage",
 
+  "modifier.hephaestusplus.bang_bang": "Bang Bang",
+  "modifier.hephaestusplus.bang_bang.flavor": "Kaboom!",
+  "modifier.hephaestusplus.bang_bang.description": "Tool can blast tunnels if Legendary Banglum is applied",
+
+  "modifier.hephaestusplus.legendary_banglum": "Legendary Banglum",
+  "modifier.hephaestusplus.legendary_banglum.flavor": "Ka-pow!",
+  "modifier.hephaestusplus.legendary_banglum.description": "Increases knockback, gives greater buffs to tools with Banglum parts.",
+
 
   "_comment4": "HephaestusTools Patterns",
   "pattern.hephaestusplus.crook_head": "Crook Head",
@@ -94,8 +102,8 @@
   "material.hephaestusplus.aquarium.encyclopedia": "Negates the mining penalty when mining underwater, and grants +8 mining speed underwater, or +4 mining speed when in rain.",
 
   "material.hephaestusplus.banglum": "Banglum",
-  "material.hephaestusplus.banglum.flavor": "Despite the name, it's not related to fire.",
-  "material.hephaestusplus.banglum.encyclopedia": "Can blast 3x3x(level*2) tunnels, consuming 2 durability per block",
+  "material.hephaestusplus.banglum.flavor": "A very explosive metal! Don't detonate yourself!",
+  "material.hephaestusplus.banglum.encyclopedia": "If Legendary Banglum is applied, the tool can blast 3x3x(level*2) tunnels, consuming 2 durability per block.",
 
   "material.hephaestusplus.carmot": "Carmot",
   "material.hephaestusplus.carmot.flavor": "Shine of this alloy could be confused with that of diamonds.",
@@ -206,6 +214,9 @@
   "item.hephaestusplus.molten_runite_bucket": "Molten Runite Bucket",
   "fluid.hephaestusplus.molten_runite": "Molten Runite",
 
+  "item.hephaestusplus.molten_starrite_bucket": "Molten Starrite Bucket",
+  "fluid.hephaestusplus.molten_starrite": "Molten Starrite",
+
   "item.hephaestusplus.molten_star_platinum_bucket": "Molten Star Platinum Bucket",
   "fluid.hephaestusplus.molten_star_platinum": "Molten Star Platinum",
 
@@ -216,5 +227,5 @@
   "fluid.hephaestusplus.molten_unobtainium": "Molten Unobtainium",
 
   "comment_8": "Damage types",
-  "death.attack.not_your_tool": "%s can't obtain this tool, but understood too late"
+  "death.attack.not_your_tool": "%s obtained a tool unobtainable for them"
 }

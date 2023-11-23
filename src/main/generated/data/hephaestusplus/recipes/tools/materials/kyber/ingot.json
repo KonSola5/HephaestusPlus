@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:kyber_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:kyber_ingots"
+  },
+  "material": "hephaestusplus:kyber",
+  "needed": 1,
+  "value": 1
+}

@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:raw_aquarium_ores"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "tag": "c:raw_aquarium_ores"
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_aquarium"
+  },
+  "temperature": 700,
+  "time": 85
+}

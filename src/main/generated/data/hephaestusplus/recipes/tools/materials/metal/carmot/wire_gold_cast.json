@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/wire"
+  },
+  "cooling_time": 46,
+  "fluid": {
+    "amount": 4500,
+    "tag": "c:molten_carmot"
+  },
+  "result": {
+    "tag": "c:carmot_wires"
+  }
+}

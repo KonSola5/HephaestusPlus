@@ -1,0 +1,32 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manganese_ingots"
+      ]
+    },
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:steel_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "amount": 9000,
+      "tag": "c:molten_manganese"
+    },
+    {
+      "amount": 9000,
+      "tag": "c:molten_iron"
+    }
+  ],
+  "result": {
+    "amount": 9000,
+    "fluid": "tconstruct:molten_steel"
+  },
+  "temperature": 950
+}

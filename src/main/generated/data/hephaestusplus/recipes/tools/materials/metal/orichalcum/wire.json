@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:orichalcum_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:orichalcum_wires"
+  },
+  "result": {
+    "amount": 4500,
+    "fluid": "hephaestusplus:molten_orichalcum"
+  },
+  "temperature": 750,
+  "time": 12
+}

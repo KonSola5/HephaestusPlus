@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "cooling_time": 17,
+  "fluid": {
+    "amount": 1000,
+    "tag": "c:molten_quadrillum"
+  },
+  "result": {
+    "tag": "c:quadrillum_nuggets"
+  }
+}

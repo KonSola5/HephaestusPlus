@@ -1,0 +1,62 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:raw_orichalcum_blocks"
+      ]
+    }
+  ],
+  "type": "porting_lib:conditional",
+  "recipes": [
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:tags_populated",
+          "values": [
+            "c:adamantite_ingots"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "byproducts": [
+          {
+            "amount": 81000,
+            "fluid": "hephaestusplus:molten_adamantite"
+          }
+        ],
+        "ingredient": {
+          "tag": "c:raw_orichalcum_blocks"
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 81000,
+          "fluid": "hephaestusplus:molten_orichalcum"
+        },
+        "temperature": 750,
+        "time": 351
+      }
+    },
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "porting_lib:true"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "ingredient": {
+          "tag": "c:raw_orichalcum_blocks"
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 81000,
+          "fluid": "hephaestusplus:molten_orichalcum"
+        },
+        "temperature": 750,
+        "time": 351
+      }
+    }
+  ]
+}

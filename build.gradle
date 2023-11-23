@@ -104,7 +104,7 @@ dependencies {
 	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
 
 	modImplementation "maven.modrinth:mythicmetals:${project.mm_version}"
-	modRuntimeOnly "maven.modrinth:alloy-forgery:${project.af_version}"
+	modImplementation "maven.modrinth:alloy-forgery:${project.af_version}"
 	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
 	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
 

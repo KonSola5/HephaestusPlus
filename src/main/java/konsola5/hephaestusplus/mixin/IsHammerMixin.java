@@ -12,9 +12,9 @@ import wraith.fabricaeexnihilo.modules.tools.HammerItem;
 
 @Mixin(HammerItem.class)
 public class IsHammerMixin {
-	@Inject(method = "isHammer", at = @At("RETURN"), cancellable = true)
-	private static void checkSmashing(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-		int level = ModifierUtil.getModifierLevel(stack, Registry.SMASHING.getId());
-		cir.setReturnValue(level > 0 || stack.getItem() instanceof HammerItem || stack.is(ModTags.HAMMERS));
-	}
+    @Inject(method = "isHammer", at = @At("RETURN"), cancellable = true)
+    private static void checkSmashing(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+        int level = ModifierUtil.getModifierLevel(stack, Registry.SMASHING.getId());
+        cir.setReturnValue(level > 0 || stack.getItem() instanceof HammerItem || stack.is(ModTags.HAMMERS));
+    }
 }

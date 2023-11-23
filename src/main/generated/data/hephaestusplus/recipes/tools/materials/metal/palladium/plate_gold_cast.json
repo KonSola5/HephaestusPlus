@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:palladium_plates"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/plate"
+  },
+  "cooling_time": 63,
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_palladium"
+  },
+  "result": {
+    "tag": "c:palladium_plates"
+  }
+}

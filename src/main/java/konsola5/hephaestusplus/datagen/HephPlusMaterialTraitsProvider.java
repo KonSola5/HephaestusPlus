@@ -21,23 +21,22 @@ public class HephPlusMaterialTraitsProvider extends AbstractMaterialTraitDataPro
 
     @Override
     protected void addMaterialTraits() {
-        addDefaultTraits(MoarMaterialIds.adamantite,   ModifierIds.sharpness);
-        addDefaultTraits(MoarMaterialIds.aquarium,     TinkerModifiers.hydraulic);
-//        addDefaultTraits(MoarMaterialIds.banglum,      Registry.BANG_BANG);
-        addDefaultTraits(MoarMaterialIds.banglum,      TinkerModifiers.cultivated);
-        addDefaultTraits(MoarMaterialIds.carmot,       ModifierIds.fortune, ModifierIds.looting);
-        addDefaultTraits(MoarMaterialIds.celestium,    MoarModifierIds.unobtainable);
-        addDefaultTraits(MoarMaterialIds.durasteel,    MoarModifierIds.durable);
-        addDefaultTraits(MoarMaterialIds.hallowed,     Registry.SOUL_POWERED);
-        addDefaultTraits(MoarMaterialIds.kyber,        Registry.PRISMATIC);
+        addDefaultTraits(MoarMaterialIds.adamantite, ModifierIds.sharpness);
+        addDefaultTraits(MoarMaterialIds.aquarium, TinkerModifiers.hydraulic);
+        addDefaultTraits(MoarMaterialIds.banglum, MoarModifierIds.bang_bang);
+        addDefaultTraits(MoarMaterialIds.carmot, ModifierIds.fortune, ModifierIds.looting);
+        addDefaultTraits(MoarMaterialIds.celestium, MoarModifierIds.unobtainable);
+        addDefaultTraits(MoarMaterialIds.durasteel, MoarModifierIds.durable);
+        addDefaultTraits(MoarMaterialIds.hallowed, Registry.SOUL_POWERED);
+        addDefaultTraits(MoarMaterialIds.kyber, Registry.PRISMATIC);
         addDefaultTraits(MoarMaterialIds.metallurgium, MoarModifierIds.unobtainable);
-        addDefaultTraits(MoarMaterialIds.mythril,      MoarModifierIds.magically_modifiable);
-        addDefaultTraits(MoarMaterialIds.orichalcum,   Registry.SOLID);
-        addDefaultTraits(MoarMaterialIds.palladium,    Registry.BRANDING);
-        addDefaultTraits(MoarMaterialIds.prometheum,   Registry.REGROWTH);
-        addDefaultTraits(MoarMaterialIds.quadrillum,   Registry.COSMIC);
-        addDefaultTraits(MoarMaterialIds.runite,       Registry.FREEZING);
-        addDefaultTraits(MoarMaterialIds.star_platinum,MoarModifierIds.stellar_swiftness);
-        addDefaultTraits(MoarMaterialIds.stormyx,      Registry.STORM_SPELL);
+        addDefaultTraits(MoarMaterialIds.mythril, MoarModifierIds.magically_modifiable);
+        addDefaultTraits(MoarMaterialIds.orichalcum, Registry.SOLID);
+        addDefaultTraits(MoarMaterialIds.palladium, Registry.BRANDING);
+        addDefaultTraits(MoarMaterialIds.prometheum, Registry.REGROWTH);
+        addDefaultTraits(MoarMaterialIds.quadrillum, Registry.COSMIC);
+        addDefaultTraits(MoarMaterialIds.runite, Registry.FREEZING);
+        addDefaultTraits(MoarMaterialIds.star_platinum, MoarModifierIds.stellar_swiftness);
+        addDefaultTraits(MoarMaterialIds.stormyx, Registry.STORM_SPELL);
     }
 }

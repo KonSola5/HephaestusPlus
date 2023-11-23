@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:hallowed_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:hallowed_nuggets"
+  },
+  "material": "hephaestusplus:hallowed",
+  "needed": 9,
+  "value": 1
+}

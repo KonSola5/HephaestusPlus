@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:stormyx_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:stormyx_nuggets"
+  },
+  "material": "hephaestusplus:stormyx",
+  "needed": 9,
+  "value": 1
+}

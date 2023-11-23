@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:nuggets/palladium"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:nuggets/palladium"
+  },
+  "result": {
+    "amount": 1000,
+    "fluid": "hephaestusplus:molten_palladium"
+  },
+  "temperature": 900,
+  "time": 21
+}

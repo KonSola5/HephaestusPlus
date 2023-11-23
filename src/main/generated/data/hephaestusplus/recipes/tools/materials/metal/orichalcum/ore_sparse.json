@@ -1,0 +1,80 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "tconstruct:tag_intersection_present",
+      "registry": "minecraft:item",
+      "tags": [
+        "c:orichalcum_ores",
+        "c:ore_rates/sparse"
+      ]
+    }
+  ],
+  "type": "porting_lib:conditional",
+  "recipes": [
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:tags_populated",
+          "values": [
+            "c:adamantite_ingots"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "byproducts": [
+          {
+            "amount": 9000,
+            "fluid": "hephaestusplus:molten_adamantite"
+          }
+        ],
+        "ingredient": {
+          "fabric:type": "fabric:all",
+          "ingredients": [
+            {
+              "tag": "c:orichalcum_ores"
+            },
+            {
+              "tag": "c:ore_rates/sparse"
+            }
+          ]
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 9000,
+          "fluid": "hephaestusplus:molten_orichalcum"
+        },
+        "temperature": 750,
+        "time": 88
+      }
+    },
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "porting_lib:true"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "ingredient": {
+          "fabric:type": "fabric:all",
+          "ingredients": [
+            {
+              "tag": "c:orichalcum_ores"
+            },
+            {
+              "tag": "c:ore_rates/sparse"
+            }
+          ]
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 9000,
+          "fluid": "hephaestusplus:molten_orichalcum"
+        },
+        "temperature": 750,
+        "time": 88
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:adamantite_gears"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/gear"
+  },
+  "cooling_time": 114,
+  "fluid": {
+    "amount": 36000,
+    "tag": "c:molten_adamantite"
+  },
+  "result": {
+    "tag": "c:adamantite_gears"
+  }
+}

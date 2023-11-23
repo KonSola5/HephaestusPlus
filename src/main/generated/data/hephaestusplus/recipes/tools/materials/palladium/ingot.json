@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:palladium_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:palladium_ingots"
+  },
+  "material": "hephaestusplus:palladium",
+  "needed": 1,
+  "value": 1
+}

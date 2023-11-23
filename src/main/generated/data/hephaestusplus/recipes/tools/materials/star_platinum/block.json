@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:star_platinum_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:star_platinum_blocks"
+  },
+  "leftover": {
+    "tag": "c:star_platinum_ingots"
+  },
+  "material": "hephaestusplus:star_platinum",
+  "needed": 1,
+  "value": 9
+}

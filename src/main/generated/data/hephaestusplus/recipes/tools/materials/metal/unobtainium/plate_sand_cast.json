@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:unobtainium_plates"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/plate"
+  },
+  "cast_consumed": true,
+  "cooling_time": 78,
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_unobtainium"
+  },
+  "result": {
+    "tag": "c:unobtainium_plates"
+  }
+}

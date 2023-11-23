@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:nuggets/star_platinum"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:nuggets/star_platinum"
+  },
+  "result": {
+    "amount": 1000,
+    "fluid": "hephaestusplus:molten_star_platinum"
+  },
+  "temperature": 1300,
+  "time": 25
+}

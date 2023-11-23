@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:kyber_rods"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:kyber_rods"
+  },
+  "result": {
+    "amount": 4500,
+    "fluid": "hephaestusplus:molten_kyber"
+  },
+  "temperature": 760,
+  "time": 12
+}

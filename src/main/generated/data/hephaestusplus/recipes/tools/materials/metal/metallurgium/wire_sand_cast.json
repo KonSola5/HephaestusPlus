@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:metallurgium_wires"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/wire"
+  },
+  "cast_consumed": true,
+  "cooling_time": 56,
+  "fluid": {
+    "amount": 4500,
+    "tag": "c:molten_metallurgium"
+  },
+  "result": {
+    "tag": "c:metallurgium_wires"
+  }
+}

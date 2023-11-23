@@ -1,0 +1,93 @@
+{
+  "fabric:load_conditions": [
+    {
+      "base": "c:runite_ores",
+      "condition": "tconstruct:tag_difference_present",
+      "registry": "minecraft:item",
+      "subtracted": [
+        "c:ore_rates/sparse",
+        "c:ore_rates/dense"
+      ]
+    }
+  ],
+  "type": "porting_lib:conditional",
+  "recipes": [
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:tags_populated",
+          "values": [
+            "c:silver_ingots"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "byproducts": [
+          {
+            "amount": 18000,
+            "fluid": "tconstruct:molten_silver"
+          }
+        ],
+        "ingredient": {
+          "fabric:type": "fabric:difference",
+          "base": {
+            "tag": "c:runite_ores"
+          },
+          "subtracted": {
+            "fabric:type": "fabric:any",
+            "ingredients": [
+              {
+                "tag": "c:ore_rates/sparse"
+              },
+              {
+                "tag": "c:ore_rates/dense"
+              }
+            ]
+          }
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 18000,
+          "fluid": "hephaestusplus:molten_runite"
+        },
+        "temperature": 970,
+        "time": 164
+      }
+    },
+    {
+      "fabric:load_conditions": [
+        {
+          "condition": "porting_lib:true"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:ore_melting",
+        "ingredient": {
+          "fabric:type": "fabric:difference",
+          "base": {
+            "tag": "c:runite_ores"
+          },
+          "subtracted": {
+            "fabric:type": "fabric:any",
+            "ingredients": [
+              {
+                "tag": "c:ore_rates/sparse"
+              },
+              {
+                "tag": "c:ore_rates/dense"
+              }
+            ]
+          }
+        },
+        "rate": "metal",
+        "result": {
+          "amount": 18000,
+          "fluid": "hephaestusplus:molten_runite"
+        },
+        "temperature": 970,
+        "time": 164
+      }
+    }
+  ]
+}

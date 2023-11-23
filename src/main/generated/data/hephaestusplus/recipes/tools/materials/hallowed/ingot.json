@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:hallowed_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:hallowed_ingots"
+  },
+  "material": "hephaestusplus:hallowed",
+  "needed": 1,
+  "value": 1
+}

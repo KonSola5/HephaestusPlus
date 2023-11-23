@@ -1,0 +1,19 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:prometheum_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 180,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_prometheum"
+  },
+  "result": {
+    "tag": "c:prometheum_blocks"
+  }
+}

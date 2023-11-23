@@ -2,6 +2,7 @@
   "required": true,
   "package": "konsola5.hephaestusplus.mixin",
   "compatibilityLevel": "JAVA_17",
+  "plugin": "konsola5.hephaestusplus.HephPlusMixinPlugin",
   "mixins": [
     "IsCrookMixin",
     "IsHammerMixin"

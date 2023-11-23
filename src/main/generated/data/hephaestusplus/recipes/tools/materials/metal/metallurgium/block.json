@@ -1,0 +1,19 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:metallurgium_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 238,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_metallurgium"
+  },
+  "result": {
+    "tag": "c:metallurgium_blocks"
+  }
+}

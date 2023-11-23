@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:prometheum_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:prometheum_nuggets"
+  },
+  "material": "hephaestusplus:prometheum",
+  "needed": 9,
+  "value": 1
+}

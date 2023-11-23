@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:prometheum_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:prometheum_ingots"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_prometheum"
+  },
+  "temperature": 800,
+  "time": 60
+}

@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:adamantite_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:adamantite_blocks"
+  },
+  "result": {
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_adamantite"
+  },
+  "temperature": 700,
+  "time": 171
+}

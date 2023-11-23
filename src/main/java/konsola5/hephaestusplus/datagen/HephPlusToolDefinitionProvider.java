@@ -1,8 +1,8 @@
 package konsola5.hephaestusplus.datagen;
 
+import io.github.fabricators_of_create.porting_lib.tool.ToolActions;
 import konsola5.hephaestusplus.HephaestusPlus;
 import konsola5.hephaestusplus.Registry;
-import io.github.fabricators_of_create.porting_lib.tool.ToolActions;
 import konsola5.hephaestusplus.tools.ToolDefinitions;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;

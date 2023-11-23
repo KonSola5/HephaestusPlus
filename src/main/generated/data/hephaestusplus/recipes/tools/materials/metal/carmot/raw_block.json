@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:raw_carmot_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:ore_melting",
+  "ingredient": {
+    "tag": "c:raw_carmot_blocks"
+  },
+  "rate": "metal",
+  "result": {
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_carmot"
+  },
+  "temperature": 970,
+  "time": 393
+}

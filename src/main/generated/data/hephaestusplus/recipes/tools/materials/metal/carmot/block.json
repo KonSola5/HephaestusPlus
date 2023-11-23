@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:carmot_blocks"
+  },
+  "result": {
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_carmot"
+  },
+  "temperature": 970,
+  "time": 196
+}

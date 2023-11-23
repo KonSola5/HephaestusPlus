@@ -17,8 +17,14 @@
 		"main": [
 			"konsola5.hephaestusplus.HephaestusPlus"
 		],
+		"client": [
+			"konsola5.hephaestusplus.HephaestusPlusClient"
+		],
 		"fabric-datagen": [
 			"konsola5.hephaestusplus.HephaestusPlusDataGenerator"
+		],
+		"rei_client": [
+			"konsola5.hephaestusplus.REIPlugin"
 		]
 	},
 	"mixins": [

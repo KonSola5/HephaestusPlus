@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:starrite_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:starrite_coins"
+  },
+  "result": {
+    "amount": 3000,
+    "fluid": "hephaestusplus:molten_starrite"
+  },
+  "temperature": 900,
+  "time": 42
+}

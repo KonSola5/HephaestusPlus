@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:aquarium_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:aquarium_nuggets"
+  },
+  "material": "hephaestusplus:aquarium",
+  "needed": 9,
+  "value": 1
+}

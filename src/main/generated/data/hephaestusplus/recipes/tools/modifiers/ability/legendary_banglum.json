@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "mythicmetals:banglum_chunk"
+    }
+  ],
+  "max_level": 1,
+  "result": {
+    "level": 1,
+    "name": "hephaestusplus:legendary_banglum"
+  },
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "fabric:type": "fabric:any",
+    "ingredients": [
+      {
+        "tag": "tconstruct:modifiable/harvest/primary"
+      }
+    ]
+  }
+}

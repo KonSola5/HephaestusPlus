@@ -55,10 +55,12 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
                 .addTag(Registry.moltenPrometheum.getForgeTag())
                 .addTag(Registry.moltenQuadrillum.getForgeTag())
                 .addTag(Registry.moltenRunite.getForgeTag())
-                .addTag(Registry.moltenStarrite.getForgeTag())
                 .addTag(Registry.moltenStarPlatinum.getForgeTag())
                 .addTag(Registry.moltenStormyx.getForgeTag())
                 .addTag(Registry.moltenUnobtainium.getForgeTag());
+
+        this.tag(TinkerTags.Fluids.LARGE_GEM_TOOLTIPS)
+                .addTag(Registry.moltenStarrite.getForgeTag());
     }
 
     @Override

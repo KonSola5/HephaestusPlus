@@ -6,11 +6,17 @@ import konsola5.hephaestusplus.recipecompat.HephPlusSmelteryCompat;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
+import nourl.mythicmetals.blocks.MythicBlocks;
+import nourl.mythicmetals.item.MythicItems;
+import nourl.mythicmetals.item.tools.MythicToolMaterials;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
 
 import java.util.function.Consumer;
 
@@ -61,6 +67,12 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
         compatMeltingCasting(consumer, MoarMaterialIds.runite, Registry.moltenRunite, folder);
         compatMeltingCasting(consumer, MoarMaterialIds.star_platinum, Registry.moltenStarPlatinum, folder);
         compatMeltingCasting(consumer, MoarMaterialIds.stormyx, Registry.moltenStormyx, folder);
+
+        this.gemCasting(consumer, Registry.moltenStarrite, MythicItems.Mats.STARRITE, folder + "starrite/gem");
+        this.gemMelting(consumer, Registry.moltenStarrite.get(), "starrite", true, 9,folder + "starrite/gem", true);
+        ItemCastingRecipeBuilder.basinRecipe(MythicBlocks.STARRITE.getStorageBlock())
+                .setFluidAndTime(Registry.moltenStarrite, false, FluidValues.LARGE_GEM_BLOCK)
+                .save(consumer, modResource(folder + "starrite/block"));
 
 
         for (HephPlusSmelteryCompat compat : HephPlusSmelteryCompat.values()) {
@@ -114,7 +126,7 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
                 tagCondition("platinum_ingots"),
                 tagCondition("star_platinum"));
         AlloyRecipeBuilder.alloy(Registry.moltenStarPlatinum.get(), FluidValues.INGOT)
-                .addInput(Registry.moltenStarrite.getForgeTag(), FluidValues.INGOT)
+                .addInput(Registry.moltenStarrite.getForgeTag(), FluidValues.GEM)
                 .addInput(TinkerFluids.moltenPlatinum.getForgeTag(), FluidValues.INGOT)
                 .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(Registry.moltenStarPlatinum.get()), alloyFolder));
 

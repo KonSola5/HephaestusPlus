@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "plugin": "konsola5.hephaestusplus.HephPlusMixinPlugin",
   "mixins": [
+    "CarmotShieldMixin",
     "IsCrookMixin",
     "IsHammerMixin"
   ],

@@ -12,9 +12,11 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
+import slimeknights.tconstruct.library.tools.helper.TooltipBuilder;
+import slimeknights.tconstruct.library.tools.helper.TooltipUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
-import slimeknights.tconstruct.library.utils.TooltipKey;
+import slimeknights.mantle.client.TooltipKey;
 
 import java.util.List;
 import java.util.UUID;
@@ -27,6 +29,10 @@ public class UnobtainableModifier extends NoLevelsModifier {
     private static final Component TOOL_NO_OWNER = HephaestusPlus.makeTranslation("modifier", "unobtainable.tool_no_owner");
     private static final Component TOOL_OWNED_BY = HephaestusPlus.makeTranslation("modifier", "unobtainable.tool_owned_by");
     private static final Component NOT_YOUR_TOOL = HephaestusPlus.makeTranslation("modifier", "unobtainable.not_your_tool");
+    private static final Component YOUR_TOOL = HephaestusPlus.makeTranslation("modifier", "unobtainable.your_tool");
+
+    private static LivingEntity holder = null;
+
 
     public UUID getHolderUUID(IToolStackView tool) {
         if (tool.getPersistentData().get(TOOL_OWNER) != null) {
@@ -45,7 +51,8 @@ public class UnobtainableModifier extends NoLevelsModifier {
     }
 
     @Override
-    public void onInventoryTick(@NotNull IToolStackView tool, int level, @NotNull Level world, @NotNull LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, @NotNull ItemStack stack) {
+    public void onInventoryTick(@NotNull IToolStackView tool, int level, @NotNull Level world, @NotNull LivingEntity tool_holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, @NotNull ItemStack stack) {
+        holder = tool_holder;
         if (getHolderUUID(tool) == null) {
             bindTool(tool, holder.getUUID());
         }
@@ -56,15 +63,35 @@ public class UnobtainableModifier extends NoLevelsModifier {
     }
 
     @Override
+    public Component getDisplayName(IToolStackView tool, int level) {
+        return getDisplayName().copy()
+                .append(": ").append(addOwnerInfo(tool));
+    }
+
+    @Override
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, @NotNull List<Component> tooltip, @NotNull TooltipKey tooltipKey, @NotNull TooltipFlag tooltipFlag) {
-        if (tool.getPersistentData().get(TOOL_OWNER) == null) {
-            tooltip.add(TOOL_NO_OWNER);
-        } else {
-            if (player == null || !player.getUUID().equals(getHolderUUID(tool))) {
-                tooltip.add(NOT_YOUR_TOOL);
+
+        if (player != null) {
+            if (tool.getPersistentData().get(TOOL_OWNER) == null) {
+                tooltip.add(TOOL_NO_OWNER);
             } else {
                 tooltip.add(Component.empty().append(TOOL_OWNED_BY).append(": ").append(player.getName()));
             }
         }
+    }
+
+    private Component addOwnerInfo(IToolStackView tool) {
+        if (holder != null) {
+            if (tool.getPersistentData().get(TOOL_OWNER) == null) {
+                return(TOOL_NO_OWNER);
+            } else {
+                if (!holder.getUUID().equals(getHolderUUID(tool))) {
+                    return (NOT_YOUR_TOOL);
+                } else {
+                    return (YOUR_TOOL);
+                }
+            }
+        }
+        return Component.empty();
     }
 }

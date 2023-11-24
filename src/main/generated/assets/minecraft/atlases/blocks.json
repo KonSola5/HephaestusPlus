@@ -402,6 +402,14 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "mythicmetals:item/banglum_chunk"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/melee/parrying"
     },
     {
@@ -442,6 +450,14 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "fabricaeexnihilo:item/tools/hammer/wooden_hammer"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/armor/melee_protection"
     },
     {
@@ -455,6 +471,14 @@
     {
       "type": "minecraft:single",
       "resource": "minecraft:item/spyglass"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "fabricaeexnihilo:item/tools/crook/wooden_crook"
     },
     {
       "type": "minecraft:single",

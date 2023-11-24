@@ -1,12 +1,16 @@
 {
   "default": [
     {
-      "name": "tconstruct:fortune",
-      "level": 1
-    },
-    {
-      "name": "tconstruct:looting",
+      "name": "hephaestusplus:carmot_synergy",
       "level": 1
     }
-  ]
+  ],
+  "perStat": {
+    "tconstruct:extra": [
+      {
+        "name": "tconstruct:fortune",
+        "level": 1
+      }
+    ]
+  }
 }

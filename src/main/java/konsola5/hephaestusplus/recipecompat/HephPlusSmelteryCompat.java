@@ -27,7 +27,6 @@ public enum HephPlusSmelteryCompat {
     PROMETHEUM(Registry.moltenPrometheum, true),
     QUADRILLUM(Registry.moltenQuadrillum, true),
     RUNITE(Registry.moltenRunite, HephPlusByproducts.SILVER),
-    STARRITE(Registry.moltenStarrite, true),
     STAR_PLATINUM(Registry.moltenStarPlatinum),
     STORMYX(Registry.moltenStormyx, true),
     UNOBTAINIUM(Registry.moltenUnobtainium, true);

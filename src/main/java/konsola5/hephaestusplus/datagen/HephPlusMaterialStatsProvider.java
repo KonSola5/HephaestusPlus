@@ -36,11 +36,11 @@ public class HephPlusMaterialStatsProvider extends AbstractMaterialStatsDataProv
                 HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(1.1f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.banglum,
-                new HeadMaterialStats(260, 9f, IRON, 2f),
+                new HeadMaterialStats(260, 8f, IRON, 2f),
                 HandleMaterialStats.DEFAULT.withDurability(0.6f).withMiningSpeed(1.3f).withAttackDamage(1f).withAttackSpeed(1.2f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.carmot,
-                new HeadMaterialStats(1130, 10.5f, DIAMOND, 3f),
+                new HeadMaterialStats(1130, 7.5f, DIAMOND, 3f),
                 HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(1.2f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.celestium,
@@ -64,7 +64,7 @@ public class HephPlusMaterialStatsProvider extends AbstractMaterialStatsDataProv
                 HandleMaterialStats.DEFAULT.withDurability(1.2f).withMiningSpeed(1.2f).withAttackDamage(1.2f).withAttackSpeed(0.8f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.mythril,
-                new HeadMaterialStats(782, 14.3f, NETHERITE, 3f),
+                new HeadMaterialStats(782, 12.3f, NETHERITE, 3f),
                 HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(0.9f).withAttackDamage(0.9f).withAttackSpeed(1.1f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.orichalcum,
@@ -84,7 +84,7 @@ public class HephPlusMaterialStatsProvider extends AbstractMaterialStatsDataProv
                 HandleMaterialStats.DEFAULT.withDurability(1.10f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.runite,
-                new HeadMaterialStats(1337, 8.9f, DIAMOND, 3.3f),
+                new HeadMaterialStats(1337, 6.9f, DIAMOND, 4.20f),
                 HandleMaterialStats.DEFAULT.withDurability(1.10f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.star_platinum,
@@ -92,7 +92,7 @@ public class HephPlusMaterialStatsProvider extends AbstractMaterialStatsDataProv
                 HandleMaterialStats.DEFAULT.withDurability(1.10f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.stormyx,
-                new HeadMaterialStats(1305, 8.5f, DIAMOND, 3.5f),
+                new HeadMaterialStats(1305, 7.5f, DIAMOND, 3.5f),
                 HandleMaterialStats.DEFAULT.withDurability(1.10f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
     }

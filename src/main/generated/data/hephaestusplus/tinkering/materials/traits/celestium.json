@@ -3,6 +3,10 @@
     {
       "name": "hephaestusplus:unobtainable",
       "level": 1
+    },
+    {
+      "name": "tconstruct:worldbound",
+      "level": 1
     }
   ]
 }

@@ -35,7 +35,7 @@ public class BangBangModifier extends Modifier implements BlockInteractionModifi
 
     @Override
     public int getPriority() {
-        return 74; // after Glowing
+        return 76; // before Pathing
     }
 
     @Override

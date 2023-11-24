@@ -80,7 +80,6 @@ dependencies {
 	implementation 'org.projectlombok:lombok:1.18.22'
 
 	// To change the versions see the gradle.properties file
-	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	//mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	mappings loom.officialMojangMappings()
@@ -94,10 +93,8 @@ dependencies {
 	modImplementation("slimeknights.mantle:Mantle:${minecraft_version}-${mantle_version}")
 	// FabricaeExNihilo
 	modImplementation "maven.modrinth:j9JARqmz:vkrmmrFW"
-
-//	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:${project.port_lib_version}+${project.minecraft_base_version}-entity-refactor")) {
-//		exclude(group: "io.vram")
-//	}
+	// Jade
+	modImplementation "maven.modrinth:nvQzSEkH:OPfSqApE"
 
 	modImplementation annotationProcessor(include("com.github.mattidragon:configtoolkit:$configtoolkit_version"))
 	// I can't believe I have to say this in a Minecraft video, but here it comes:
@@ -105,6 +102,10 @@ dependencies {
 
 	modImplementation "maven.modrinth:mythicmetals:${project.mm_version}"
 	modImplementation "maven.modrinth:alloy-forgery:${project.af_version}"
+
+	modRuntimeOnly "maven.modrinth:tamago:2.2"
+	// Come on, trigger the Bytecode Junkie
+	//modRuntimeOnly("com.simibubi.create:create-fabric-${minecraft_version}:${create_version}")
 	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
 	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
 
@@ -121,11 +122,6 @@ dependencies {
 	//modImplementation "curse.maven:techreborn-233564:4708962"
 	//modImplementation "curse.maven:reborncore-237903:4708961"
 	//modImplementation include("dev.isxander.yacl:yet-another-config-lib-fabric:$yacl_version")
-
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
-
-	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 }
 
 processResources {

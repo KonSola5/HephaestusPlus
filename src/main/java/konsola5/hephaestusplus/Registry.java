@@ -79,7 +79,7 @@ public class Registry {
     public static StaticModifier<Modifier> BANG_BANG = MODIFIERS.register("bang_bang", BangBangModifier::new);
     public static StaticModifier<Modifier> BRANDING = MODIFIERS.register("branding", BrandingModifier::new);
     // Tool properties
-    public static StaticModifier<Modifier> CARMOT_FORTUNE = MODIFIERS.register("carmot_fortune", Modifier::new);
+    public static StaticModifier<Modifier> CARMOT_SYNERGY = MODIFIERS.register("carmot_synergy", Modifier::new);
     public static StaticModifier<Modifier> SOLID = MODIFIERS.register("solid", SolidModifier::new);
     public static StaticModifier<Modifier> COSMIC = MODIFIERS.register("cosmic", CosmicModifier::new);
     public static StaticModifier<Modifier> PRISMATIC = MODIFIERS.register("prismatic", PrismaticModifier::new);

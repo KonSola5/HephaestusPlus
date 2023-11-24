@@ -3,15 +3,20 @@ package konsola5.hephaestusplus;
 import dev.architectury.fluid.FluidStack;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
 import me.shedaniel.rei.api.client.registry.entry.EntryRegistry;
+import me.shedaniel.rei.api.common.entry.EntryStack;
+import me.shedaniel.rei.api.common.entry.type.EntryType;
 import me.shedaniel.rei.api.common.util.EntryStacks;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Fluid;
+import slimeknights.tconstruct.TConstruct;
+import slimeknights.tconstruct.plugin.rei.TConstructREIConstants;
 
 public class REIPlugin implements REIClientPlugin {
     @Override
     public void registerEntries(EntryRegistry registry) {
+        // Hide fluids and Legendary Banglum if Mythic Metals isn't loaded
         if (!FabricLoader.getInstance().isModLoaded("mythicmetals")) {
             removeFluid(registry, Registry.moltenAdamantite  .get(), Registry.moltenAdamantite.asItem());
             removeFluid(registry, Registry.moltenAquarium    .get(), Registry.moltenAquarium.asItem());
@@ -33,6 +38,12 @@ public class REIPlugin implements REIClientPlugin {
             removeFluid(registry, Registry.moltenStarrite    .get(), Registry.moltenStarrite.asItem());
             removeFluid(registry, Registry.moltenStormyx     .get(), Registry.moltenStormyx.asItem());
             removeFluid(registry, Registry.moltenUnobtainium .get(), Registry.moltenUnobtainium.asItem());
+            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "legendary_banglum"));
+        }
+        // Hide Crooking and Smashing is FEN isn't loaded
+        if (!FabricLoader.getInstance().isModLoaded("fabricaeexnihilo")) {
+            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "crooking"));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "smashing"));
         }
     }
 

@@ -63,12 +63,17 @@
   "modifier.hephaestusplus.freezing.flavor": "Go! Stop! Go!",
   "modifier.hephaestusplus.freezing.description": "Striking an opponent may freeze them in place for a brief amount of time",
 
+  "modifier.hephaestusplus.carmot_synergy": "Carmot Synergy",
+  "modifier.hephaestusplus.carmot_synergy.flavor": "Goes well with Carmot Armor!",
+  "modifier.hephaestusplus.carmot_synergy.description": "Holding a tool will regenerate Carmot Shield faster",
+
   "modifier.hephaestusplus.unobtainable": "Unobtainable",
   "modifier.hephaestusplus.unobtainable.flavor": "Only you are worthy of this tool.",
   "modifier.hephaestusplus.unobtainable.description": "Only the person who forged the tool from this part may hold it",
-  "modifier.hephaestusplus.unobtainable.tool_no_owner": "Place the tool in inventory to bind it",
-  "modifier.hephaestusplus.unobtainable.tool_owned_by": "Tool owned by",
-  "modifier.hephaestusplus.unobtainable.not_your_tool": "§cThis is not your tool!§r",
+  "modifier.hephaestusplus.unobtainable.tool_no_owner": "Unbound",
+  "modifier.hephaestusplus.unobtainable.tool_owned_by": "Owned by",
+  "modifier.hephaestusplus.unobtainable.not_your_tool": "§cNot your tool!§r",
+  "modifier.hephaestusplus.unobtainable.your_tool": "§aYour tool§r",
 
   "modifier.hephaestusplus.soul_powered": "Soul Powered",
   "modifier.hephaestusplus.soul_powered.flavor": "Powered by souls of your deceased opponents",
@@ -106,8 +111,8 @@
   "material.hephaestusplus.banglum.encyclopedia": "If Legendary Banglum is applied, the tool can blast 3x3x(level*2) tunnels, consuming 2 durability per block.",
 
   "material.hephaestusplus.carmot": "Carmot",
-  "material.hephaestusplus.carmot.flavor": "Shine of this alloy could be confused with that of diamonds.",
-  "material.hephaestusplus.carmot.encyclopedia": "Gives an extra level of Fortune and Looting per level",
+  "material.hephaestusplus.carmot.flavor": "Legends say that the Philosopher's Stone was made out of this metal.",
+  "material.hephaestusplus.carmot.encyclopedia": "Holding a tool with Carmot Synergy will shorten the shield's maximum cooldown by 1 second per level, and speed up the shield regeneration rate. Binding gives an extra level of Fortune.",
 
   "material.hephaestusplus.celestium": "Celestium",
   "material.hephaestusplus.celestium.flavor": "A celestial alloy, incredibly sharp and surprisingly lightweight.",
@@ -168,64 +173,86 @@
   "_comment7": "HephaestusPlus Buckets and Fluids",
   "item.hephaestusplus.molten_adamantite_bucket": "Molten Adamantite Bucket",
   "fluid.hephaestusplus.molten_adamantite": "Molten Adamantite",
+  "block.hephaestusplus.molten_adamantite_fluid": "Molten Adamantite",
 
   "item.hephaestusplus.molten_aquarium_bucket": "Molten Aquarium Bucket",
   "fluid.hephaestusplus.molten_aquarium": "Molten Aquarium",
+  "block.hephaestusplus.molten_aquarium_fluid": "Molten Aquarium",
 
   "item.hephaestusplus.molten_banglum_bucket": "Molten Banglum Bucket",
   "fluid.hephaestusplus.molten_banglum": "Molten Banglum",
+  "block.hephaestusplus.molten_banglum_fluid": "Molten Banglum",
 
   "item.hephaestusplus.molten_carmot_bucket": "Molten Carmot Bucket",
   "fluid.hephaestusplus.molten_carmot": "Molten Carmot",
+  "block.hephaestusplus.molten_carmot_fluid": "Molten Carmot",
 
   "item.hephaestusplus.molten_celestium_bucket": "Molten Celestium Bucket",
   "fluid.hephaestusplus.molten_celestium": "Molten Celestium",
+  "block.hephaestusplus.molten_celestium_fluid": "Molten Celestium",
 
   "item.hephaestusplus.molten_durasteel_bucket": "Molten Durasteel Bucket",
   "fluid.hephaestusplus.molten_durasteel": "Molten Durasteel",
+  "block.hephaestusplus.molten_durasteel_fluid": "Molten Durasteel",
 
   "item.hephaestusplus.molten_hallowed_bucket": "Molten Hallowed Bucket",
   "fluid.hephaestusplus.molten_hallowed": "Molten Hallowed",
+  "block.hephaestusplus.molten_hallowed_fluid": "Molten Hallowed",
 
   "item.hephaestusplus.molten_kyber_bucket": "Molten Kyber Bucket",
   "fluid.hephaestusplus.molten_kyber": "Molten Kyber",
+  "block.hephaestusplus.molten_kyber_fluid": "Molten Kyber",
 
   "item.hephaestusplus.molten_manganese_bucket": "Molten Manganese Bucket",
   "fluid.hephaestusplus.molten_manganese": "Molten Manganese",
+  "block.hephaestusplus.molten_manganese_fluid": "Molten Manganese",
 
   "item.hephaestusplus.molten_metallurgium_bucket": "Molten Metallurgium Bucket",
   "fluid.hephaestusplus.molten_metallurgium": "Molten Metallurgium",
+  "block.hephaestusplus.molten_metallurgium_fluid": "Molten Metallurgium",
 
   "item.hephaestusplus.molten_mythril_bucket": "Molten Mythril Bucket",
   "fluid.hephaestusplus.molten_mythril": "Molten Mythril",
+  "block.hephaestusplus.molten_mythril_fluid": "Molten Mythril",
 
   "item.hephaestusplus.molten_orichalcum_bucket": "Molten Orichalcum Bucket",
   "fluid.hephaestusplus.molten_orichalcum": "Molten Orichalcum",
+  "block.hephaestusplus.molten_orichalcum_fluid": "Molten Orichalcum",
 
   "item.hephaestusplus.molten_palladium_bucket": "Molten Palladium Bucket",
   "fluid.hephaestusplus.molten_palladium": "Molten Palladium",
+  "block.hephaestusplus.molten_palladium_fluid": "Molten Palladium",
 
   "item.hephaestusplus.molten_prometheum_bucket": "Molten Prometheum Bucket",
   "fluid.hephaestusplus.molten_prometheum": "Molten Prometheum",
+  "block.hephaestusplus.molten_prometheum_fluid": "Molten Prometheum",
 
   "item.hephaestusplus.molten_quadrillum_bucket": "Molten Quadrillum Bucket",
   "fluid.hephaestusplus.molten_quadrillum": "Molten Quadrillum",
+  "block.hephaestusplus.molten_quadrillum_fluid": "Molten Quadrillum",
 
   "item.hephaestusplus.molten_runite_bucket": "Molten Runite Bucket",
   "fluid.hephaestusplus.molten_runite": "Molten Runite",
+  "block.hephaestusplus.molten_runite_fluid": "Molten Runite",
 
   "item.hephaestusplus.molten_starrite_bucket": "Molten Starrite Bucket",
   "fluid.hephaestusplus.molten_starrite": "Molten Starrite",
+  "block.hephaestusplus.molten_starrite_fluid": "Molten Starrite",
 
   "item.hephaestusplus.molten_star_platinum_bucket": "Molten Star Platinum Bucket",
   "fluid.hephaestusplus.molten_star_platinum": "Molten Star Platinum",
+  "block.hephaestusplus.molten_star_platinum_fluid": "Molten Star Platinum",
 
   "item.hephaestusplus.molten_stormyx_bucket": "Molten Stormyx Bucket",
   "fluid.hephaestusplus.molten_stormyx": "Molten Stormyx",
+  "block.hephaestusplus.molten_stormyx_fluid": "Molten Stormyx",
 
   "item.hephaestusplus.molten_unobtainium_bucket": "Molten Unobtainium Bucket",
   "fluid.hephaestusplus.molten_unobtainium": "Molten Unobtainium",
+  "block.hephaestusplus.molten_unobtainium_fluid": "Molten Unobtainium",
 
   "comment_8": "Damage types",
-  "death.attack.not_your_tool": "%s obtained a tool unobtainable for them"
+  "death.attack.not_your_tool": "%s obtained a tool unobtainable for them",
+
+  "jade.modName.hephaestusplus": "HephaestusPlus"
 }

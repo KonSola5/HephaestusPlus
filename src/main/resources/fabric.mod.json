@@ -3,12 +3,14 @@
 	"id": "hephaestusplus",
 	"version": "${version}",
 	"name": "HephaestusPlus",
-	"description": "An addon for Hephaestus adding materials and tools from various mods!",
+	"description": "An addon for Hephaestus adding materials and tools to complement various mods!",
 	"authors": [
 		"KonSola5"
 	],
 	"contact": {
-		"sources": "https://github.com/KonSola5/HephaestusPlus"
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/hephaestusplus",
+		"sources": "https://github.com/KonSola5/HephaestusPlus",
+		"issues": "https://github.com/KonSola5/HephaestusPlus/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/hephaestusplus/icon.png",

@@ -105,23 +105,23 @@ public class Registry {
 
     // HephaestusPlus fluids
     /*
-        adamantite
-        aquarium
-        banglum
-        carmot
-        celestium
-        durasteel
-        hallowed
-        kyber
-        metallurgium
-        mythril
-        orichalcum
-        palladium
-        prometheum
-        quadrillum
-        runite
-        star_platinum
-        stormyx
+        - Adamantite
+        - Aquarium
+        - Banglum
+        - Carmot
+        - Celestium
+        - Durasteel
+        - Hallowed
+        - Kyber
+        - Metallurgium
+        - Mythril
+        - Orichalcum
+        - Palladium
+        - Prometheum
+        - Quadrillum
+        - Runite
+        - Star_platinum
+        - Stormyx
     */
     public static final FluidObject<SimpleFlowableFluid> moltenAdamantite = FLUIDS.register(
             "molten_adamantite",

@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:geore_small_buds/starrite"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:geore_small_buds/starrite"
+  },
+  "result": {
+    "amount": 8100,
+    "fluid": "hephaestusplus:molten_starrite"
+  },
+  "temperature": 900,
+  "time": 63
+}

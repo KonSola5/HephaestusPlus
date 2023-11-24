@@ -1,0 +1,5 @@
+{
+  "hephaestusplus:crooking":  ["fabricaeexnihilo:item/tools/crook/wooden_crook", "tconstruct:gui/modifiers/book"],
+  "hephaestusplus:smashing":  ["fabricaeexnihilo:item/tools/hammer/wooden_hammer", "tconstruct:gui/modifiers/book"],
+  "hephaestusplus:legendary_banglum":  ["mythicmetals:item/banglum_chunk", "tconstruct:gui/modifiers/book"]
+}

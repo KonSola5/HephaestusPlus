@@ -1,7 +1,13 @@
 {
   "replace": false,
   "values": [
-    "hephaestusplus:hand_hammer",
-	"hephaestusplus:crook"
+    {
+      "id": "hephaestusplus:hand_hammer",
+      "required": false
+    },
+    {
+      "id": "hephaestusplus:crook",
+      "required": false
+    },
   ]
 }

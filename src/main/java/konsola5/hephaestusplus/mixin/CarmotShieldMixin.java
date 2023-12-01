@@ -18,15 +18,15 @@ import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 
 @Mixin(CarmotShield.class)
 public abstract class CarmotShieldMixin {
-    @Shadow @Final private Player player;
-    @Shadow public float shieldHealth;
-    @Shadow public int cooldown;
-    @Shadow public int renderTime;
-    @Shadow public abstract boolean shouldRenderShield();
+    @Shadow(remap = false) @Final private Player player;
+    @Shadow(remap = false) public float shieldHealth;
+    @Shadow(remap = false) public int cooldown;
+    @Shadow(remap = false) public int renderTime;
+    @Shadow(remap = false) public abstract boolean shouldRenderShield();
 
-    @Shadow public abstract float getMaxHealth();
+    @Shadow(remap = false) public abstract float getMaxHealth();
 
-    @Shadow @Final public static int MAX_COOLDOWN;
+    @Shadow(remap = false) @Final public static int MAX_COOLDOWN;
 
     @Inject(method = "tickShield", at = @At("HEAD"), cancellable = true, locals = LocalCapture.CAPTURE_FAILHARD, remap = false)
     public void buffShield(CallbackInfo ci) {

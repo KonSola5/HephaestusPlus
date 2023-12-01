@@ -12,9 +12,9 @@ import wraith.fabricaeexnihilo.modules.tools.CrookItem;
 
 @Mixin(CrookItem.class)
 public class IsCrookMixin {
-    @Inject(method = "isCrook", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "isCrook", at = @At("HEAD"), cancellable = true)
     private static void checkCrooking(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         int level = ModifierUtil.getModifierLevel(stack, Registry.CROOKING.getId());
-        cir.setReturnValue(level > 0 || stack.getItem() instanceof CrookItem || stack.is(ModTags.CROOKS));
+        if (level > 0) cir.setReturnValue(true);
     }
 }

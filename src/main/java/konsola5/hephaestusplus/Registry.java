@@ -1,6 +1,7 @@
 package konsola5.hephaestusplus;
 
 import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
+import io.github.fabricators_of_create.porting_lib.util.TierSortingRegistry;
 import konsola5.hephaestusplus.datagen.*;
 import konsola5.hephaestusplus.modifiers.*;
 import konsola5.hephaestusplus.spritegen.HephaestusPlusMaterialSpriteProvider;
@@ -12,6 +13,7 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import slimeknights.mantle.fluid.attributes.FluidAttributes;
@@ -37,23 +39,27 @@ import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
+import java.util.List;
+
+import static konsola5.hephaestusplus.HephaestusPlus.MOD_ID;
+
 public class Registry {
     // Properties
     private static final Item.Properties PARTS_PROPS = new Item.Properties();
     private static final Item.Properties SMELTERY_PROPS = new Item.Properties();
     // Resource Locations (for NBT)
-    public static final ResourceLocation PROMETHEUM_REPAIRS = new ResourceLocation(HephaestusPlus.MOD_ID, "prometheum_repairs");
-    public static final ResourceLocation STORED_SOULS = new ResourceLocation(HephaestusPlus.MOD_ID, "stored_souls");
-    public static final ResourceLocation TOOL_OWNER = new ResourceLocation(HephaestusPlus.MOD_ID, "tool_owner");
+    public static final ResourceLocation PROMETHEUM_REPAIRS = new ResourceLocation(MOD_ID, "prometheum_repairs");
+    public static final ResourceLocation STORED_SOULS = new ResourceLocation(MOD_ID, "stored_souls");
+    public static final ResourceLocation TOOL_OWNER = new ResourceLocation(MOD_ID, "tool_owner");
     // Deferred Registers
-    public static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(HephaestusPlus.MOD_ID);
-    public static final ItemDeferredRegisterExtension ADDON_ITEMS = new ItemDeferredRegisterExtension(HephaestusPlus.MOD_ID);
+    public static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(MOD_ID);
+    public static final ItemDeferredRegisterExtension ADDON_ITEMS = new ItemDeferredRegisterExtension(MOD_ID);
 
     private static FluidAttributes.Builder hotBuilder() {
         return ModelFluidAttributes.builder().density(2000).viscosity(10000).temperature(1000).sound(SoundEvents.BUCKET_FILL_LAVA, SoundEvents.BUCKET_EMPTY_LAVA);
     }
 
-    protected static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(HephaestusPlus.MOD_ID);
+    protected static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(MOD_ID);
     // Items
 
     public static ItemObject<ToolPartItem> crookHead;
@@ -224,10 +230,14 @@ public class Registry {
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
 
+    public static Tier METALLURGIUM = MetallurgiumTier.instance;
+    public static ResourceLocation MINING_LEVEL_5 = new ResourceLocation("fabric:needs_tool_level_5");
+
     public static void init() {
         MODIFIERS.register();
         ADDON_ITEMS.register();
         FLUIDS.register();
+        TierSortingRegistry.registerTier(METALLURGIUM, new ResourceLocation(MOD_ID,"metallurgium"), List.of(new ResourceLocation("netherite")), List.of());
     }
 
     public static void gatherData(FabricDataGenerator.Pack pack, ExistingFileHelper existingFileHelper) {
@@ -251,7 +261,7 @@ public class Registry {
         //pack.addProvider((output, registriesFuture) -> new MaterialRenderInfoProvider(output, materialSprites));
         //pack.addProvider((output, registriesFuture) -> new GeneratorPartTextureJsonGenerator(output, HephaestusPlus.MOD_ID, partSprites));
         pack.addProvider((output, registriesFuture) -> new HephPlusMaterialRenderInfoProvider(output, moreToolMats));
-        pack.addProvider((output, registriesFuture) -> new GeneratorPartTextureJsonGenerator(output, HephaestusPlus.MOD_ID, morePartSprites));
+        pack.addProvider((output, registriesFuture) -> new GeneratorPartTextureJsonGenerator(output, MOD_ID, morePartSprites));
         //Tinkers' materials for HephaestusPlus parts
         pack.addProvider((output, registriesFuture) -> new MaterialPartTextureGenerator(output, existingFileHelper, morePartSprites, materialSprites));
         //HephaestusPlus materials for Tinkers' parts

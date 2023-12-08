@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-24T12:43:43.9929633	HephaestusPlus/HephaestusPlus Material Stats
+// 1.20.1	2023-12-02T14:02:17.7254775	HephaestusPlus/HephaestusPlus Material Stats
 64a66f6b3d760e6a1b9958681fa754506b42e0a5 data\hephaestusplus\tinkering\materials\stats\metallurgium.json
 615687ec80409df7a8efc98af6cfb868cf935b95 data\hephaestusplus\tinkering\materials\stats\prometheum.json
 cfccff4f09bc1dae4906557748ea15faa091a8d2 data\hephaestusplus\tinkering\materials\stats\celestium.json
@@ -10,8 +10,8 @@ b163e945869531f2b99030c97dacbbda9f7e599a data\hephaestusplus\tinkering\materials
 5a887c45d3c9a0a4ce320a8d159189ebebaf8dc2 data\hephaestusplus\tinkering\materials\stats\durasteel.json
 2787a738539a419c03f3f7a31549431a3a8352a6 data\hephaestusplus\tinkering\materials\stats\quadrillum.json
 7d293ef44803daae3fdfe2076f9e4fcec2243309 data\hephaestusplus\tinkering\materials\stats\kyber.json
-b2b52ef3e7b29632f08b48d98b3166284a34c202 data\hephaestusplus\tinkering\materials\stats\runite.json
 ed4742c0770ca704c40b326ecad35171edc01c1d data\hephaestusplus\tinkering\materials\stats\palladium.json
+b2b52ef3e7b29632f08b48d98b3166284a34c202 data\hephaestusplus\tinkering\materials\stats\runite.json
 0918bfb0ecc613269410f67757ecefc45ccee40e data\hephaestusplus\tinkering\materials\stats\adamantite.json
 27cc967b0535b1365a17ce14335af55c8d271a41 data\hephaestusplus\tinkering\materials\stats\mythril.json
 6e24d39bc5b50100303fff5490c9cb21dec9b61c data\hephaestusplus\tinkering\materials\stats\hallowed.json

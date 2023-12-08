@@ -5,6 +5,8 @@
   "plugin": "konsola5.hephaestusplus.HephPlusMixinPlugin",
   "mixins": [
     "CarmotShieldMixin",
+    "GetTagFromVanillaTierMixin",
+    "IsCorrectTierVanillaMixin",
     "IsCrookMixin",
     "IsHammerMixin"
   ],

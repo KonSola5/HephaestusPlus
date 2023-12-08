@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 233,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_celestium"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:celestium_blocks"
   },
   "result": {
-    "tag": "c:celestium_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_celestium"
+  },
+  "temperature": 1400,
+  "time": 233
 }

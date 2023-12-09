@@ -22,6 +22,12 @@ public class MoarModifierIds {
     public static final ModifierId bang_bang = new ModifierId(HephaestusPlus.MOD_ID, "bang_bang");
     public static final ModifierId legendary_banglum = new ModifierId(HephaestusPlus.MOD_ID, "legendary_banglum");
 
+    public static final ModifierId manashield = new ModifierId(HephaestusPlus.MOD_ID, "manashield");
+    public static final ModifierId crude_manashield = new ModifierId(HephaestusPlus.MOD_ID, "crude_manashield");
+    public static final ModifierId garbage_collector = new ModifierId(HephaestusPlus.MOD_ID, "garbage_collector");
+    public static final ModifierId fairy_blessing = new ModifierId(HephaestusPlus.MOD_ID, "fairy_blessing");
+    public static final ModifierId terrafirma = new ModifierId(HephaestusPlus.MOD_ID, "terrafirma");
+
     private MoarModifierIds() {
     }
 }

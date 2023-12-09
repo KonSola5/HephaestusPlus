@@ -89,6 +89,25 @@
   "modifier.hephaestusplus.legendary_banglum.flavor": "Ka-pow!",
   "modifier.hephaestusplus.legendary_banglum.description": "Increases knockback, gives greater buffs to tools with Banglum parts.",
 
+  "modifier.hephaestusplus.manashield": "Manashield",
+  "modifier.hephaestusplus.manashield.flavor": "Masterful Manabending",
+  "modifier.hephaestusplus.manashield.description": "The tool can avoid taking durability damage by consuming Mana from the mana-carrying items.",
+
+  "modifier.hephaestusplus.crude_manashield": "Crude Manashield",
+  "modifier.hephaestusplus.crude_manashield.flavor": "Doesn't attract Mana as well, but it will do.",
+  "modifier.hephaestusplus.crude_manashield.description": "The tool has a chance of avoiding durability damage by consuming Mana from the mana-carrying items.",
+
+  "modifier.hephaestusplus.garbage_collector": "Garbage Collector",
+  "modifier.hephaestusplus.garbage_collector.flavor": "Get that weak stuff outta here!",
+  "modifier.hephaestusplus.garbage_collector.description": "The tool can void mundane items just like the Elementium Pickaxe",
+
+  "modifier.hephaestusplus.terrafirma": "Terrafirma",
+  "modifier.hephaestusplus.terrafirma.flavor": "...craft.",
+  "modifier.hephaestusplus.terrafirma.description": "If hungry and hurt, holding the tool will encircle you with a soothing, healing aura.",
+
+  "modifier.hephaestusplus.fairy_blessing": "Fairy Blessing",
+  "modifier.hephaestusplus.fairy_blessing.flavor": "A special grace.",
+  "modifier.hephaestusplus.fairy_blessing.description": "Increases the Pixie spawn chance upon being damaged when held",
 
   "_comment4": "HephaestusTools Patterns",
   "pattern.hephaestusplus.crook_head": "Crook Head",
@@ -164,7 +183,27 @@
 
   "material.hephaestusplus.stormyx": "Stormyx",
   "material.hephaestusplus.stormyx.flavor": "A magical alloy with magical, thundery abilities.",
-  "material.hephaestusplus.stormyx.encyclopedia": "Give a 2% chance per level of striking a targeted mob with lightning.\nChance quadrupled in thunderstorms",
+  "material.hephaestusplus.stormyx.encyclopedia": "Gives a 2% chance per level of striking a targeted mob with lightning.\nChance quadrupled in thunderstorms",
+
+  "material.hephaestusplus.livingwood": "Livingwood",
+  "material.hephaestusplus.livingwood.flavor": "Like wood, but more lively.",
+  "material.hephaestusplus.livingwood.encyclopedia": "Makes repairs 50% more effective per part",
+
+  "material.hephaestusplus.livingrock": "Livingrock",
+  "material.hephaestusplus.livingrock.flavor": "Like stone, but more lively.",
+  "material.hephaestusplus.livingrock.encyclopedia": "Causes the tool to mine faster by half of the square root of the trait level times lost durability",
+
+  "material.hephaestusplus.manasteel": "Manasteel",
+  "material.hephaestusplus.manasteel.flavor": "A mana-infused metal, known for its extreme mana affinity.",
+  "material.hephaestusplus.manasteel.encyclopedia": "Manashield:\nThe tool can use mana from mana-containing items to prevent taking durability damage.\nHigher levels decrease the mana cost per durability.",
+
+  "material.hephaestusplus.elementium": "Elementium",
+  "material.hephaestusplus.elementium.flavor": "A magical metal imported from Alfheim.",
+  "material.hephaestusplus.elementium.encyclopedia": "Voids mundane materials (like stone, dirt, ...) when mining.\nIncreases the Pixie spawn chance by 3% per level.",
+
+  "material.hephaestusplus.terrasteel": "Terrasteel",
+  "material.hephaestusplus.terrasteel.flavor": "A perfect fusion of various mana materials",
+  "material.hephaestusplus.terrasteel.encyclopedia": "If you are hungry and hurt, holding a tool will restore 1 health point every 5 seconds at the cost of some Mana. Faster healing at higher levels.",
 
   "_comment6": "HephaestusPlus Tiers",
 

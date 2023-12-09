@@ -20,7 +20,12 @@
     "freezing": "#0092b1",
     "stellar_swiftness": "#bbbadc",
     "storm_spell": "#d760d0",
-    "unobtainable": "#4d5858"
+    "unobtainable": "#4d5858",
+    "crude_manashield": "#c9c2b2",
+    "manashield": "#67b9ef",
+    "garbage_collector": "#e58dbd",
+    "fairy_blessing": "#e58dbd",
+    "terrafirma": "#5ada30"
   },
 
   "material.hephaestusplus": {
@@ -40,7 +45,12 @@
     "quadrillum": "#4d5858",
     "runite":  "#0092b1",
     "star_platinum": "#bbbadc",
-    "stormyx":  "#d760d0"
+    "stormyx":  "#d760d0",
+    "livingrock": "#c9c2b2",
+    "livingwood": "#562210",
+    "manasteel": "#67b9ef",
+    "elementium": "#e58dbd",
+    "terrasteel": "#5ada30"
   },
 
   "harvest_tier.hephaestusplus": {

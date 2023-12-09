@@ -82,7 +82,11 @@ dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	//mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	mappings loom.officialMojangMappings()
+	mappings loom.layered() {
+		officialMojangMappings()
+		parchment("org.parchmentmc.data:parchment-1.19.3:2023.03.12@zip") // Don't know why Botania uses 1.19.3 parchment data, but ditto.
+		//mappings("net.fabricmc:yarn:${project.yarn_mappings}:v2")
+	}
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
@@ -114,6 +118,11 @@ dependencies {
 
 	// Additional Entity Attributes
 	modImplementation ("maven.modrinth:additionalentityattributes:${project.aea_version}")
+
+	// Botania
+	modImplementation("vazkii.botania:Botania:1.20.1-441-FABRIC") {
+		exclude group: "dev.emi", module: "emi-fabric"
+	}
 
 	//include(modApi("teamreborn:energy:${project.tr_energy_version}")) {
 	//	transitive = false

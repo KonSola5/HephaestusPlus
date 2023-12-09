@@ -17,6 +17,7 @@ public class HephPlusMaterialDataProvider extends AbstractMaterialDataProvider {
 
     @Override
     protected void addMaterials() {
+        // Mythic Metals
         addCompatMetalMaterial(MoarMaterialIds.adamantite, 2, ORDER_COMPAT);
         addCompatMetalMaterial(MoarMaterialIds.aquarium, 2, ORDER_COMPAT);
         addCompatMetalMaterial(MoarMaterialIds.banglum, 2, ORDER_COMPAT);
@@ -34,5 +35,11 @@ public class HephPlusMaterialDataProvider extends AbstractMaterialDataProvider {
         addCompatMetalMaterial(MoarMaterialIds.runite, 3, ORDER_COMPAT);
         addCompatMetalMaterial(MoarMaterialIds.star_platinum, 4, ORDER_COMPAT);
         addCompatMetalMaterial(MoarMaterialIds.stormyx, 3, ORDER_COMPAT);
+        // Botania
+        addCompatMaterial(MoarMaterialIds.livingwood, 1, ORDER_COMPAT, "livingwood_logs", true);
+        addCompatMaterial(MoarMaterialIds.livingrock, 1, ORDER_COMPAT, "livingrock", true);
+        addCompatMetalMaterial(MoarMaterialIds.manasteel, 2, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.elementium, 3, ORDER_COMPAT);
+        addCompatMetalMaterial(MoarMaterialIds.terrasteel, 4, ORDER_COMPAT);
     }
 }

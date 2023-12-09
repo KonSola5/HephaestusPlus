@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "hephaestusplus:manashield",
+      "level": 1
+    },
+    {
+      "name": "hephaestusplus:terrafirma",
+      "level": 1
+    }
+  ]
+}

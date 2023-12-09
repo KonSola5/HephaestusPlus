@@ -95,6 +95,27 @@ public class HephPlusMaterialStatsProvider extends AbstractMaterialStatsDataProv
                 new HeadMaterialStats(1305, 7.5f, DIAMOND, 3.5f),
                 HandleMaterialStats.DEFAULT.withDurability(1.10f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
+
+        addMaterialStats(MoarMaterialIds.livingwood,
+                new HeadMaterialStats(75, 2.05f, WOOD, 0f),
+                HandleMaterialStats.DEFAULT.withDurability(1f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
+                ExtraMaterialStats.DEFAULT);
+        addMaterialStats(MoarMaterialIds.livingrock,
+                new HeadMaterialStats(150, 4.1f, STONE, 1f),
+                HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(1.05f).withAttackDamage(1f).withAttackSpeed(1f),
+                ExtraMaterialStats.DEFAULT);
+        addMaterialStats(MoarMaterialIds.manasteel,
+                new HeadMaterialStats(300, 6.2f, DIAMOND, 2f),
+                HandleMaterialStats.DEFAULT.withDurability(1.1f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
+                ExtraMaterialStats.DEFAULT);
+        addMaterialStats(MoarMaterialIds.elementium,
+                new HeadMaterialStats(720, 6.2f, DIAMOND, 2f),
+                HandleMaterialStats.DEFAULT.withDurability(1.1f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),
+                ExtraMaterialStats.DEFAULT);
+        addMaterialStats(MoarMaterialIds.terrasteel,
+                new HeadMaterialStats(2300, 9f, NETHERITE, 3f),
+                HandleMaterialStats.DEFAULT.withDurability(1.05f).withMiningSpeed(1.05f).withAttackDamage(1.05f).withAttackSpeed(0.9f),
+                ExtraMaterialStats.DEFAULT);
     }
 
 }

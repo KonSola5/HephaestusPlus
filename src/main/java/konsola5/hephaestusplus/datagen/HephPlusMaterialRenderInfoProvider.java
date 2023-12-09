@@ -31,6 +31,13 @@ public class HephPlusMaterialRenderInfoProvider extends AbstractMaterialRenderIn
         buildRenderInfo(MoarMaterialIds.runite).color(0x0092b1).fallbacks("metal");
         buildRenderInfo(MoarMaterialIds.star_platinum).color(0xbbbadc).fallbacks("metal");
         buildRenderInfo(MoarMaterialIds.stormyx).color(0xd760d0).fallbacks("metal");
+
+        buildRenderInfo(MoarMaterialIds.livingwood).color(0x36180e).fallbacks("wood");
+        buildRenderInfo(MoarMaterialIds.livingrock).color(0xc7c0af).fallbacks("rock");
+        buildRenderInfo(MoarMaterialIds.manasteel).color(0x66b7eb).fallbacks("metal");
+        buildRenderInfo(MoarMaterialIds.elementium).color(0xc342a6).fallbacks("metal");
+        buildRenderInfo(MoarMaterialIds.terrasteel).color(0x69e561).fallbacks("metal");
+
     }
 
     @Override

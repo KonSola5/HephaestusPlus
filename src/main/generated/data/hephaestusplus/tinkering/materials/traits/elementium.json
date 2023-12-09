@@ -1,0 +1,40 @@
+{
+  "default": [
+    {
+      "name": "hephaestusplus:manashield",
+      "level": 1
+    }
+  ],
+  "perStat": {
+    "tconstruct:head": [
+      {
+        "name": "hephaestusplus:manashield",
+        "level": 1
+      },
+      {
+        "name": "hephaestusplus:fairy_blessing",
+        "level": 1
+      }
+    ],
+    "tconstruct:extra": [
+      {
+        "name": "hephaestusplus:manashield",
+        "level": 1
+      },
+      {
+        "name": "hephaestusplus:garbage_collector",
+        "level": 1
+      }
+    ],
+    "tconstruct:handle": [
+      {
+        "name": "hephaestusplus:manashield",
+        "level": 1
+      },
+      {
+        "name": "hephaestusplus:fairy_blessing",
+        "level": 1
+      }
+    ]
+  }
+}

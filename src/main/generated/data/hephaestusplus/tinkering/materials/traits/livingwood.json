@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "hephaestusplus:crude_manashield",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:cultivated",
+      "level": 1
+    }
+  ]
+}

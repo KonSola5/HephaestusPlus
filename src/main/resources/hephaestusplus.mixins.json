@@ -8,7 +8,8 @@
     "GetTagFromVanillaTierMixin",
     "IsCorrectTierVanillaMixin",
     "IsCrookMixin",
-    "IsHammerMixin"
+    "IsHammerMixin",
+    "ShouldFilterOutMixin"
   ],
   "client": [
     "NoTooltipsInDevMixin"

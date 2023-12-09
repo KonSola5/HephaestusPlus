@@ -11,6 +11,8 @@ import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.stats.ExtraMaterialStats;
+import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
+import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
 import java.lang.reflect.Modifier;
 
@@ -44,5 +46,14 @@ public class HephPlusMaterialTraitsProvider extends AbstractMaterialTraitDataPro
         addDefaultTraits(MoarMaterialIds.runite, MoarModifierIds.freezing);
         addDefaultTraits(MoarMaterialIds.star_platinum, MoarModifierIds.stellar_swiftness);
         addDefaultTraits(MoarMaterialIds.stormyx, MoarModifierIds.storm_spell);
+
+        addDefaultTraits(MoarMaterialIds.livingwood, MoarModifierIds.crude_manashield, TinkerModifiers.cultivated.getId());
+        addDefaultTraits(MoarMaterialIds.livingrock, MoarModifierIds.crude_manashield, TinkerModifiers.stonebound.getId());
+        addDefaultTraits(MoarMaterialIds.manasteel, MoarModifierIds.manashield);
+        addDefaultTraits(MoarMaterialIds.elementium, MoarModifierIds.manashield);
+        addTraits(MoarMaterialIds.elementium, HeadMaterialStats.ID, MoarModifierIds.manashield, MoarModifierIds.fairy_blessing);
+        addTraits(MoarMaterialIds.elementium, HandleMaterialStats.ID, MoarModifierIds.manashield, MoarModifierIds.fairy_blessing);
+        addTraits(MoarMaterialIds.elementium, ExtraMaterialStats.ID, MoarModifierIds.manashield, MoarModifierIds.garbage_collector);
+        addDefaultTraits(MoarMaterialIds.terrasteel, MoarModifierIds.manashield, MoarModifierIds.terrafirma);
     }
 }

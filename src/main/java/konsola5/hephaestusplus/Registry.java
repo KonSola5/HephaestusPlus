@@ -94,6 +94,12 @@ public class Registry {
     public static StaticModifier<Modifier> FREEZING = MODIFIERS.register("freezing", FreezingModifier::new);
     public static StaticModifier<Modifier> LEGENDARY_BANGLUM = MODIFIERS.register("legendary_banglum", LegendaryBanglumModifier::new);
     public static StaticModifier<NoLevelsModifier> UNOBTAINABLE = MODIFIERS.register("unobtainable", UnobtainableModifier::new);
+
+    public static StaticModifier<Modifier> MANASHIELD = MODIFIERS.register("manashield", ManashieldModifier::new);
+    public static StaticModifier<Modifier> CRUDE_MANASHIELD = MODIFIERS.register("crude_manashield", CrudeManashieldModifier::new);
+    public static StaticModifier<SingleLevelModifier> GARBAGE_COLLECTOR = MODIFIERS.register("garbage_collector", SingleLevelModifier::new);
+    public static StaticModifier<Modifier> FAIRY_BLESSING = MODIFIERS.register("fairy_blessing", FairyBlessingModifier::new);
+    public static StaticModifier<Modifier> TERRAFIRMA = MODIFIERS.register("terrafirma", TerrafirmaModifier::new);
     private static final Item.Properties TOOL = new FabricItemSettings().maxCount(1);
     // Hephaestus tools
     public static ItemObject<ModifiableItem> handHammer;
@@ -230,6 +236,23 @@ public class Registry {
             properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
             12);
 
+    public static final FluidObject<SimpleFlowableFluid> moltenManasteel = FLUIDS.register(
+            "molten_manasteel",
+            hotBuilder().temperature(1000),
+            properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
+            12);
+    public static final FluidObject<SimpleFlowableFluid> moltenElementium = FLUIDS.register(
+            "molten_elementium",
+            hotBuilder().temperature(1300),
+            properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
+            12);
+    public static final FluidObject<SimpleFlowableFluid> moltenTerrasteel = FLUIDS.register(
+            "molten_terrasteel",
+            hotBuilder().temperature(1500),
+            properties -> properties.mapColor(MapColor.FIRE).replaceable().pushReaction(PushReaction.DESTROY).liquid(),
+            12);
+
+
     public static Tier METALLURGIUM = MetallurgiumTier.instance;
     public static ResourceLocation MINING_LEVEL_5 = new ResourceLocation("fabric:needs_tool_level_5");
 
@@ -237,7 +260,6 @@ public class Registry {
         MODIFIERS.register();
         ADDON_ITEMS.register();
         FLUIDS.register();
-        TierSortingRegistry.registerTier(METALLURGIUM, new ResourceLocation(MOD_ID,"metallurgium"), List.of(new ResourceLocation("netherite")), List.of());
     }
 
     public static void gatherData(FabricDataGenerator.Pack pack, ExistingFileHelper existingFileHelper) {

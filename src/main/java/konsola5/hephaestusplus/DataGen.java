@@ -9,6 +9,6 @@ public class DataGen implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator generator) {
         ExistingFileHelper helper = ExistingFileHelper.withResourcesFromArg();
         FabricDataGenerator.Pack pack = generator.createPack();
-        Registry.gatherData(pack, helper);
+        HephPlusRegistry.gatherData(pack, helper);
     }
 }

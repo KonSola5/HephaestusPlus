@@ -20,7 +20,7 @@ public class HephaestusPlusClient implements ClientModInitializer {
             });
         }
 
-        setTranslucent(Registry.moltenStarrite);
+        setTranslucent(HephPlusRegistry.moltenStarrite);
     }
 
     private static void setTranslucent(FluidObject<?> fluid) {

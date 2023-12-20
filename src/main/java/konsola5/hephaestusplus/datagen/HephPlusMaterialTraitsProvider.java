@@ -1,20 +1,15 @@
 package konsola5.hephaestusplus.datagen;
 
-import konsola5.hephaestusplus.Registry;
 import konsola5.hephaestusplus.ids.MoarMaterialIds;
 import konsola5.hephaestusplus.ids.MoarModifierIds;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialTraitDataProvider;
-import slimeknights.tconstruct.library.materials.stats.MaterialStatsId;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.stats.ExtraMaterialStats;
 import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
-
-import java.lang.reflect.Modifier;
 
 public class HephPlusMaterialTraitsProvider extends AbstractMaterialTraitDataProvider {
     public HephPlusMaterialTraitsProvider(FabricDataOutput output, AbstractMaterialDataProvider materials) {

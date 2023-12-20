@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.datagen;
 
-import konsola5.hephaestusplus.Registry;
+import konsola5.hephaestusplus.HephPlusRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -17,50 +17,50 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
 
     @Override
     public void addTags(HolderLookup.Provider provider) {
-        tagAll(Registry.moltenAdamantite);
-        tagAll(Registry.moltenAquarium);
-        tagAll(Registry.moltenBanglum);
-        tagAll(Registry.moltenCarmot);
-        tagAll(Registry.moltenCelestium);
-        tagAll(Registry.moltenDurasteel);
-        tagAll(Registry.moltenHallowed);
-        tagAll(Registry.moltenKyber);
-        tagAll(Registry.moltenMetallurgium);
-        tagAll(Registry.moltenManganese);
-        tagAll(Registry.moltenMythril);
-        tagAll(Registry.moltenOrichalcum);
-        tagAll(Registry.moltenPalladium);
-        tagAll(Registry.moltenPrometheum);
-        tagAll(Registry.moltenQuadrillum);
-        tagAll(Registry.moltenRunite);
-        tagAll(Registry.moltenStarrite);
-        tagAll(Registry.moltenStarPlatinum);
-        tagAll(Registry.moltenStormyx);
-        tagAll(Registry.moltenUnobtainium);
+        tagAll(HephPlusRegistry.moltenAdamantite);
+        tagAll(HephPlusRegistry.moltenAquarium);
+        tagAll(HephPlusRegistry.moltenBanglum);
+        tagAll(HephPlusRegistry.moltenCarmot);
+        tagAll(HephPlusRegistry.moltenCelestium);
+        tagAll(HephPlusRegistry.moltenDurasteel);
+        tagAll(HephPlusRegistry.moltenHallowed);
+        tagAll(HephPlusRegistry.moltenKyber);
+        tagAll(HephPlusRegistry.moltenMetallurgium);
+        tagAll(HephPlusRegistry.moltenManganese);
+        tagAll(HephPlusRegistry.moltenMythril);
+        tagAll(HephPlusRegistry.moltenOrichalcum);
+        tagAll(HephPlusRegistry.moltenPalladium);
+        tagAll(HephPlusRegistry.moltenPrometheum);
+        tagAll(HephPlusRegistry.moltenQuadrillum);
+        tagAll(HephPlusRegistry.moltenRunite);
+        tagAll(HephPlusRegistry.moltenStarrite);
+        tagAll(HephPlusRegistry.moltenStarPlatinum);
+        tagAll(HephPlusRegistry.moltenStormyx);
+        tagAll(HephPlusRegistry.moltenUnobtainium);
 
         this.tag(TinkerTags.Fluids.METAL_TOOLTIPS)
-                .addTag(Registry.moltenAdamantite.getForgeTag())
-                .addTag(Registry.moltenAquarium.getForgeTag())
-                .addTag(Registry.moltenBanglum.getForgeTag())
-                .addTag(Registry.moltenCarmot.getForgeTag())
-                .addTag(Registry.moltenCelestium.getForgeTag())
-                .addTag(Registry.moltenDurasteel.getForgeTag())
-                .addTag(Registry.moltenHallowed.getForgeTag())
-                .addTag(Registry.moltenKyber.getForgeTag())
-                .addTag(Registry.moltenMetallurgium.getForgeTag())
-                .addTag(Registry.moltenManganese.getForgeTag())
-                .addTag(Registry.moltenMythril.getForgeTag())
-                .addTag(Registry.moltenOrichalcum.getForgeTag())
-                .addTag(Registry.moltenPalladium.getForgeTag())
-                .addTag(Registry.moltenPrometheum.getForgeTag())
-                .addTag(Registry.moltenQuadrillum.getForgeTag())
-                .addTag(Registry.moltenRunite.getForgeTag())
-                .addTag(Registry.moltenStarPlatinum.getForgeTag())
-                .addTag(Registry.moltenStormyx.getForgeTag())
-                .addTag(Registry.moltenUnobtainium.getForgeTag());
+                .addTag(HephPlusRegistry.moltenAdamantite.getForgeTag())
+                .addTag(HephPlusRegistry.moltenAquarium.getForgeTag())
+                .addTag(HephPlusRegistry.moltenBanglum.getForgeTag())
+                .addTag(HephPlusRegistry.moltenCarmot.getForgeTag())
+                .addTag(HephPlusRegistry.moltenCelestium.getForgeTag())
+                .addTag(HephPlusRegistry.moltenDurasteel.getForgeTag())
+                .addTag(HephPlusRegistry.moltenHallowed.getForgeTag())
+                .addTag(HephPlusRegistry.moltenKyber.getForgeTag())
+                .addTag(HephPlusRegistry.moltenMetallurgium.getForgeTag())
+                .addTag(HephPlusRegistry.moltenManganese.getForgeTag())
+                .addTag(HephPlusRegistry.moltenMythril.getForgeTag())
+                .addTag(HephPlusRegistry.moltenOrichalcum.getForgeTag())
+                .addTag(HephPlusRegistry.moltenPalladium.getForgeTag())
+                .addTag(HephPlusRegistry.moltenPrometheum.getForgeTag())
+                .addTag(HephPlusRegistry.moltenQuadrillum.getForgeTag())
+                .addTag(HephPlusRegistry.moltenRunite.getForgeTag())
+                .addTag(HephPlusRegistry.moltenStarPlatinum.getForgeTag())
+                .addTag(HephPlusRegistry.moltenStormyx.getForgeTag())
+                .addTag(HephPlusRegistry.moltenUnobtainium.getForgeTag());
 
         this.tag(TinkerTags.Fluids.LARGE_GEM_TOOLTIPS)
-                .addTag(Registry.moltenStarrite.getForgeTag());
+                .addTag(HephPlusRegistry.moltenStarrite.getForgeTag());
     }
 
     @Override

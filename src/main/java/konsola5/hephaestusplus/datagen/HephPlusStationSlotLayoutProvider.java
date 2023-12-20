@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.datagen;
 
-import konsola5.hephaestusplus.Registry;
+import konsola5.hephaestusplus.HephPlusRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.world.item.crafting.Ingredient;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -16,16 +16,16 @@ public class HephPlusStationSlotLayoutProvider extends AbstractStationSlotLayout
     @Override
     protected void addLayouts() {
         Ingredient modifiable = Ingredient.of(TinkerTags.Items.MODIFIABLE);
-        defineModifiable(Registry.handHammer)
+        defineModifiable(HephPlusRegistry.handHammer)
                 .sortIndex(SORT_HARVEST)
                 .addInputItem(TinkerToolParts.hammerHead, 53, 22)
                 .addInputItem(TinkerToolParts.toolHandle, 15, 60)
                 .addInputItem(TinkerToolParts.toolBinding, 33, 42)
                 .build();
 
-        defineModifiable(Registry.crook)
+        defineModifiable(HephPlusRegistry.crook)
                 .sortIndex(SORT_HARVEST)
-                .addInputItem(Registry.crookHead, 53, 22)
+                .addInputItem(HephPlusRegistry.crookHead, 53, 22)
                 .addInputItem(TinkerToolParts.toolHandle, 15, 60)
                 .addInputItem(TinkerToolParts.toolBinding, 33, 42)
                 .build();

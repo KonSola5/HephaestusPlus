@@ -2,11 +2,8 @@ package konsola5.hephaestusplus;
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap;
 import io.github.fabricators_of_create.porting_lib.util.TierSortingRegistry;
-import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -30,7 +27,7 @@ public class HephaestusPlus implements ModInitializer {
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
         MixinExtrasBootstrap.init();
-        Registry.init();
+        HephPlusRegistry.init();
         // The Metallurgium tier, surprised that mods generally don't initialize tiers like that
         if (!TierSortingRegistry.isTierSorted(MetallurgiumTier.instance)) {
             if (TierSortingRegistry.getSortedTiers().size() != 0) {

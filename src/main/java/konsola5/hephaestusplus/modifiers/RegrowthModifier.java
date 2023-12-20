@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.modifiers;
 
-import konsola5.hephaestusplus.Registry;
+import konsola5.hephaestusplus.HephPlusRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -33,7 +33,7 @@ public class RegrowthModifier extends Modifier implements ConditionalStatModifie
     }
 
     public void incrementRepairs(ModDataNBT persistentData) {
-        persistentData.putInt(Registry.PROMETHEUM_REPAIRS, persistentData.getInt(Registry.PROMETHEUM_REPAIRS) + 1);
+        persistentData.putInt(HephPlusRegistry.PROMETHEUM_REPAIRS, persistentData.getInt(HephPlusRegistry.PROMETHEUM_REPAIRS) + 1);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class RegrowthModifier extends Modifier implements ConditionalStatModifie
     @Override
     public float getEntityDamage(IToolStackView tool, int level, ToolAttackContext context, float baseDamage, float damage) {
         IModDataView persistentData = tool.getPersistentData();
-        int repairs = persistentData.getInt(Registry.PROMETHEUM_REPAIRS);
+        int repairs = persistentData.getInt(HephPlusRegistry.PROMETHEUM_REPAIRS);
         int bonus = 0;
         if (repairs >= REPAIR_THRESHOLD) {
             bonus = 1;
@@ -60,13 +60,13 @@ public class RegrowthModifier extends Modifier implements ConditionalStatModifie
 
     @Override
     public void onRemoved(IToolStackView tool) {
-        tool.getPersistentData().remove(Registry.PROMETHEUM_REPAIRS);
+        tool.getPersistentData().remove(HephPlusRegistry.PROMETHEUM_REPAIRS);
     }
 
     @Override
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         IModDataView persistentData = tool.getPersistentData();
-        int repairs = persistentData.getInt(Registry.PROMETHEUM_REPAIRS);
+        int repairs = persistentData.getInt(HephPlusRegistry.PROMETHEUM_REPAIRS);
         if (repairs >= REPAIR_THRESHOLD) {
             addDamageTooltip(tool, 1, tooltip);
         }

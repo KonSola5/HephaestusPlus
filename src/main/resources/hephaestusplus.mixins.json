@@ -9,10 +9,12 @@
     "IsCorrectTierVanillaMixin",
     "IsCrookMixin",
     "IsHammerMixin",
+    "PlayerMixin",
     "ShouldFilterOutMixin"
   ],
   "client": [
-    "NoTooltipsInDevMixin"
+    "NoTooltipsInDevMixin",
+    "PlateArmorModelMixin"
   ],
   "injectors": {
     "defaultRequire": 1

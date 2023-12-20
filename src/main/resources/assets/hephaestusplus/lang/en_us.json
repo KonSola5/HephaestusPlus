@@ -123,7 +123,7 @@
 
   "material.hephaestusplus.aquarium": "Aquarium",
   "material.hephaestusplus.aquarium.flavor": "An aquatic alloy, has strong affinity to water",
-  "material.hephaestusplus.aquarium.encyclopedia": "Negates the mining penalty when mining underwater, and grants +8 mining speed underwater, or +4 mining speed when in rain.",
+  "material.hephaestusplus.aquarium.encyclopedia": "Negates the mining penalty when mining underwater, and grants +8 mining speed underwater, or +4 mining speed when in rain per level.",
 
   "material.hephaestusplus.banglum": "Banglum",
   "material.hephaestusplus.banglum.flavor": "A very explosive metal! Don't detonate yourself!",
@@ -195,7 +195,7 @@
 
   "material.hephaestusplus.manasteel": "Manasteel",
   "material.hephaestusplus.manasteel.flavor": "A mana-infused metal, known for its extreme mana affinity.",
-  "material.hephaestusplus.manasteel.encyclopedia": "Manashield:\nThe tool can use mana from mana-containing items to prevent taking durability damage.\nHigher levels decrease the mana cost per durability.",
+  "material.hephaestusplus.manasteel.encyclopedia": "The tool can use mana from mana-containing items to prevent taking durability damage.\nHigher levels decrease the mana cost per durability.",
 
   "material.hephaestusplus.elementium": "Elementium",
   "material.hephaestusplus.elementium.flavor": "A magical metal imported from Alfheim.",
@@ -289,6 +289,18 @@
   "item.hephaestusplus.molten_unobtainium_bucket": "Molten Unobtainium Bucket",
   "fluid.hephaestusplus.molten_unobtainium": "Molten Unobtainium",
   "block.hephaestusplus.molten_unobtainium_fluid": "Molten Unobtainium",
+  
+  "item.hephaestusplus.molten_manasteel_bucket": "Molten Manasteel Bucket",
+  "fluid.hephaestusplus.molten_manasteel": "Molten Manasteel",
+  "block.hephaestusplus.molten_manasteel_fluid": "Molten Manasteel",
+  
+  "item.hephaestusplus.molten_elementium_bucket": "Molten Elementium Bucket",
+  "fluid.hephaestusplus.molten_elementium": "Molten Elentium",
+  "block.hephaestusplus.molten_elementium_fluid": "Molten Elementium",
+  
+  "item.hephaestusplus.molten_terrasteel_bucket": "Molten Terrasteel Bucket",
+  "fluid.hephaestusplus.molten_terrasteel": "Molten Terrasteel",
+  "block.hephaestusplus.molten_terrasteel_fluid": "Molten Terrasteel",
 
   "comment_8": "Damage types",
   "death.attack.not_your_tool": "%s obtained a tool unobtainable for them",

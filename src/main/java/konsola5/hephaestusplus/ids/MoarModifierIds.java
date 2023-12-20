@@ -10,6 +10,8 @@ public class MoarModifierIds {
     public static final ModifierId stellar_swiftness = new ModifierId(HephaestusPlus.MOD_ID, "stellar_swiftness");
     public static final ModifierId prismatic = new ModifierId(HephaestusPlus.MOD_ID, "prismatic");
     public static final ModifierId carmot_synergy = new ModifierId(HephaestusPlus.MOD_ID, "carmot_synergy");
+    public static final ModifierId carmot_shield = new ModifierId(HephaestusPlus.MOD_ID, "carmot_shield");
+    public static final ModifierId carmot_boost = new ModifierId(HephaestusPlus.MOD_ID, "carmot_boost");
     public static final ModifierId branding = new ModifierId(HephaestusPlus.MOD_ID, "branding");
     public static final ModifierId solid = new ModifierId(HephaestusPlus.MOD_ID, "solid");
     public static final ModifierId durable = new ModifierId(HephaestusPlus.MOD_ID, "durable");

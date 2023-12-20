@@ -10,34 +10,32 @@ import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Fluid;
-import slimeknights.tconstruct.TConstruct;
-import slimeknights.tconstruct.plugin.rei.TConstructREIConstants;
 
 public class REIPlugin implements REIClientPlugin {
     @Override
     public void registerEntries(EntryRegistry registry) {
         // Hide fluids and Legendary Banglum if Mythic Metals isn't loaded
         if (!FabricLoader.getInstance().isModLoaded("mythicmetals")) {
-            removeFluid(registry, Registry.moltenAdamantite  .get(), Registry.moltenAdamantite.asItem());
-            removeFluid(registry, Registry.moltenAquarium    .get(), Registry.moltenAquarium.asItem());
-            removeFluid(registry, Registry.moltenBanglum     .get(), Registry.moltenBanglum.asItem());
-            removeFluid(registry, Registry.moltenCarmot      .get(), Registry.moltenCarmot.asItem());
-            removeFluid(registry, Registry.moltenCelestium   .get(), Registry.moltenCelestium.asItem());
-            removeFluid(registry, Registry.moltenDurasteel   .get(), Registry.moltenDurasteel.asItem());
-            removeFluid(registry, Registry.moltenHallowed    .get(), Registry.moltenHallowed.asItem());
-            removeFluid(registry, Registry.moltenKyber       .get(), Registry.moltenKyber.asItem());
-            removeFluid(registry, Registry.moltenManganese   .get(), Registry.moltenManganese.asItem());
-            removeFluid(registry, Registry.moltenMetallurgium.get(), Registry.moltenMetallurgium.asItem());
-            removeFluid(registry, Registry.moltenMythril     .get(), Registry.moltenMythril.asItem());
-            removeFluid(registry, Registry.moltenOrichalcum  .get(), Registry.moltenOrichalcum.asItem());
-            removeFluid(registry, Registry.moltenPalladium   .get(), Registry.moltenPalladium.asItem());
-            removeFluid(registry, Registry.moltenPrometheum  .get(), Registry.moltenPrometheum.asItem());
-            removeFluid(registry, Registry.moltenQuadrillum  .get(), Registry.moltenQuadrillum.asItem());
-            removeFluid(registry, Registry.moltenRunite      .get(), Registry.moltenRunite.asItem());
-            removeFluid(registry, Registry.moltenStarPlatinum.get(), Registry.moltenStarPlatinum.asItem());
-            removeFluid(registry, Registry.moltenStarrite    .get(), Registry.moltenStarrite.asItem());
-            removeFluid(registry, Registry.moltenStormyx     .get(), Registry.moltenStormyx.asItem());
-            removeFluid(registry, Registry.moltenUnobtainium .get(), Registry.moltenUnobtainium.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenAdamantite  .get(), HephPlusRegistry.moltenAdamantite.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenAquarium    .get(), HephPlusRegistry.moltenAquarium.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenBanglum     .get(), HephPlusRegistry.moltenBanglum.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenCarmot      .get(), HephPlusRegistry.moltenCarmot.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenCelestium   .get(), HephPlusRegistry.moltenCelestium.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenDurasteel   .get(), HephPlusRegistry.moltenDurasteel.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenHallowed    .get(), HephPlusRegistry.moltenHallowed.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenKyber       .get(), HephPlusRegistry.moltenKyber.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenManganese   .get(), HephPlusRegistry.moltenManganese.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenMetallurgium.get(), HephPlusRegistry.moltenMetallurgium.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenMythril     .get(), HephPlusRegistry.moltenMythril.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenOrichalcum  .get(), HephPlusRegistry.moltenOrichalcum.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenPalladium   .get(), HephPlusRegistry.moltenPalladium.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenPrometheum  .get(), HephPlusRegistry.moltenPrometheum.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenQuadrillum  .get(), HephPlusRegistry.moltenQuadrillum.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenRunite      .get(), HephPlusRegistry.moltenRunite.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenStarPlatinum.get(), HephPlusRegistry.moltenStarPlatinum.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenStarrite    .get(), HephPlusRegistry.moltenStarrite.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenStormyx     .get(), HephPlusRegistry.moltenStormyx.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenUnobtainium .get(), HephPlusRegistry.moltenUnobtainium.asItem());
             registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "legendary_banglum"));
         }
         // Hide Crooking and Smashing is FEN isn't loaded

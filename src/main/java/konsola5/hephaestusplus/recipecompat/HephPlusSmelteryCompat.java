@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.recipecompat;
 
-import konsola5.hephaestusplus.Registry;
+import konsola5.hephaestusplus.HephPlusRegistry;
 import net.minecraft.world.item.Item;
 import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.mantle.util.SimpleFlowableFluid;
@@ -11,25 +11,25 @@ import java.util.Locale;
  * Enum holding all relevant smeltery compat. A copy-over from Hephaestus code
  */
 public enum HephPlusSmelteryCompat {
-    ADAMANTITE(Registry.moltenAdamantite, HephPlusByproducts.ORICHALCUM),
-    AQUARIUM(Registry.moltenAquarium, true),
-    BANGLUM(Registry.moltenBanglum, true),
-    CARMOT(Registry.moltenCarmot, true),
-    CELESTIUM(Registry.moltenCelestium),
-    DURASTEEL(Registry.moltenDurasteel),
-    HALLOWED(Registry.moltenHallowed),
-    KYBER(Registry.moltenKyber, HephPlusByproducts.AMETHYST),
-    MANGANESE(Registry.moltenManganese, true),
-    METALLURGIUM(Registry.moltenMetallurgium),
-    MYTHRIL(Registry.moltenMythril, true),
-    ORICHALCUM(Registry.moltenOrichalcum, HephPlusByproducts.ADAMANTITE),
-    PALLADIUM(Registry.moltenPalladium, true),
-    PROMETHEUM(Registry.moltenPrometheum, true),
-    QUADRILLUM(Registry.moltenQuadrillum, true),
-    RUNITE(Registry.moltenRunite, HephPlusByproducts.SILVER),
-    STAR_PLATINUM(Registry.moltenStarPlatinum),
-    STORMYX(Registry.moltenStormyx, true),
-    UNOBTAINIUM(Registry.moltenUnobtainium, true);
+    ADAMANTITE(HephPlusRegistry.moltenAdamantite, HephPlusByproducts.ORICHALCUM),
+    AQUARIUM(HephPlusRegistry.moltenAquarium, true),
+    BANGLUM(HephPlusRegistry.moltenBanglum, true),
+    CARMOT(HephPlusRegistry.moltenCarmot, true),
+    CELESTIUM(HephPlusRegistry.moltenCelestium),
+    DURASTEEL(HephPlusRegistry.moltenDurasteel),
+    HALLOWED(HephPlusRegistry.moltenHallowed),
+    KYBER(HephPlusRegistry.moltenKyber, HephPlusByproducts.AMETHYST),
+    MANGANESE(HephPlusRegistry.moltenManganese, true),
+    METALLURGIUM(HephPlusRegistry.moltenMetallurgium),
+    MYTHRIL(HephPlusRegistry.moltenMythril, true),
+    ORICHALCUM(HephPlusRegistry.moltenOrichalcum, HephPlusByproducts.ADAMANTITE),
+    PALLADIUM(HephPlusRegistry.moltenPalladium, true),
+    PROMETHEUM(HephPlusRegistry.moltenPrometheum, true),
+    QUADRILLUM(HephPlusRegistry.moltenQuadrillum, true),
+    RUNITE(HephPlusRegistry.moltenRunite, HephPlusByproducts.SILVER),
+    STAR_PLATINUM(HephPlusRegistry.moltenStarPlatinum),
+    STORMYX(HephPlusRegistry.moltenStormyx, true),
+    UNOBTAINIUM(HephPlusRegistry.moltenUnobtainium, true);
 
     private final String name = this.name().toLowerCase(Locale.US);
     private final FluidObject<? extends SimpleFlowableFluid> fluid;

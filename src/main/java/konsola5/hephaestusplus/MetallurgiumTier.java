@@ -1,16 +1,12 @@
 package konsola5.hephaestusplus;
 
 import io.github.fabricators_of_create.porting_lib.extensions.extensions.TierExtensions;
-import io.github.fabricators_of_create.porting_lib.util.TagUtil;
 import net.fabricmc.fabric.api.mininglevel.v1.MiningLevelManager;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.Nullable;
-
-import static konsola5.hephaestusplus.Registry.MINING_LEVEL_5;
 
 public class MetallurgiumTier implements Tier, TierExtensions {
 

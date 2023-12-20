@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToColorMapping;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToSpriteTransformer;
+import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 
 public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSpriteProvider {
     public String getName() {
@@ -45,7 +46,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff8e5322)
                         .addARGB(255, 0xff8e5e36).build());
         buildMaterial(MoarMaterialIds.carmot)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff441238)
@@ -188,7 +189,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
 
         buildMaterial(MoarMaterialIds.livingrock)
                 .meleeHarvest()
-                .fallbacks("metal")
+                .fallbacks("rock")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff8e8574)
                         .addARGB(102, 0xff9d9583)
@@ -198,7 +199,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(255, 0xffd1cbba).build());
         buildMaterial(MoarMaterialIds.livingwood)
                 .meleeHarvest()
-                .fallbacks("metal")
+                .fallbacks("wood", "stick", "primitive")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff380a04)
                         .addARGB(102, 0xff420e05)
@@ -220,21 +221,21 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                 .meleeHarvest()
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
-                        .addARGB(63, 0xff70003e)
-                        .addARGB(102, 0xff8c004d)
-                        .addARGB(140, 0xffd90078)
-                        .addARGB(178, 0xffe156a2)
-                        .addARGB(216, 0xffe58dbd)
-                        .addARGB(255, 0xffeeeeee).build());
+                        .addARGB(63, 0xff431a5f)
+                        .addARGB(102, 0xff773188)
+                        .addARGB(140, 0xffc342a6)
+                        .addARGB(178, 0xffdd82a3)
+                        .addARGB(216, 0xfff2c5c2)
+                        .addARGB(255, 0xfffcf8f6).build());
         buildMaterial(MoarMaterialIds.terrasteel)
                 .meleeHarvest()
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
-                        .addARGB(63, 0xff01370e)
-                        .addARGB(102, 0xff015a17)
-                        .addARGB(140, 0xff269b00)
-                        .addARGB(178, 0xff2bad00)
-                        .addARGB(216, 0xff5ada30)
-                        .addARGB(255, 0xff78de56).build());
+                        .addARGB(63, 0xff043b1c)
+                        .addARGB(102, 0xff0c7127)
+                        .addARGB(140, 0xff69e561)
+                        .addARGB(178, 0xff2ab73a)
+                        .addARGB(216, 0xffcafcb3)
+                        .addARGB(255, 0xffcafcb3).build());
     }
 }

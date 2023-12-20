@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.recipecompat;
 
-import konsola5.hephaestusplus.Registry;
+import konsola5.hephaestusplus.HephPlusRegistry;
 import net.minecraft.world.level.material.Fluid;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IByproduct;
@@ -29,8 +29,8 @@ public enum HephPlusByproducts implements IByproduct {
 //    // gems
 //    DIAMOND ("diamond",  true, TinkerFluids.moltenDiamond, FluidValues.GEM),
     AMETHYST("amethyst", true, TinkerFluids.moltenAmethyst, FluidValues.GEM),
-    ORICHALCUM(false, Registry.moltenOrichalcum),
-    ADAMANTITE(false, Registry.moltenAdamantite);
+    ORICHALCUM(false, HephPlusRegistry.moltenOrichalcum),
+    ADAMANTITE(false, HephPlusRegistry.moltenAdamantite);
 //    QUARTZ  ("quartz",   true, TinkerFluids.moltenQuartz, FluidValues.GEM);
 
     ;

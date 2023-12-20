@@ -1,10 +1,15 @@
 package konsola5.hephaestusplus.datagen;
 
+import konsola5.hephaestusplus.HephPlusRegistry;
 import konsola5.hephaestusplus.ids.MoarModifierIds;
+import konsola5.hephaestusplus.mixin.CarmotShieldMixin;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import slimeknights.tconstruct.library.data.tinkering.AbstractModifierProvider;
 import slimeknights.tconstruct.library.modifiers.dynamic.ExtraModifier;
 import slimeknights.tconstruct.library.modifiers.dynamic.StatBoostModifier;
+import slimeknights.tconstruct.library.modifiers.util.ModifierLevelDisplay;
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
@@ -31,6 +36,17 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                 .multiplyBase(ToolStats.VELOCITY, 0.03f)
                 .multiplyBase(ToolStats.PROJECTILE_DAMAGE, 0.03f)
                 .build());
+        addModifier(MoarModifierIds.carmot_shield, StatBoostModifier.builder().attribute(
+                "hephaestusplus.modifier.carmot_shield",
+                HephPlusRegistry.CARMOT_SHIELD,
+                AttributeModifier.Operation.ADDITION,
+                5,
+                EquipmentSlot.HEAD,
+                EquipmentSlot.CHEST,
+                EquipmentSlot.LEGS,
+                EquipmentSlot.FEET
+                )
+                .display(ModifierLevelDisplay.NO_LEVELS).build());
     }
 
 

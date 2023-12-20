@@ -1,16 +1,13 @@
 package konsola5.hephaestusplus.datagen;
 
-import konsola5.hephaestusplus.Registry;
+import konsola5.hephaestusplus.HephPlusRegistry;
 import konsola5.hephaestusplus.ids.MoarMaterialIds;
 import konsola5.hephaestusplus.recipecompat.HephPlusSmelteryCompat;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 import nourl.mythicmetals.blocks.MythicBlocks;
 import nourl.mythicmetals.item.MythicItems;
-import nourl.mythicmetals.item.tools.MythicToolMaterials;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
@@ -50,28 +47,28 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
         metalMaterialRecipe(consumer, MoarMaterialIds.star_platinum, folder, "star_platinum", true);
         metalMaterialRecipe(consumer, MoarMaterialIds.stormyx, folder, "stormyx", true);
 
-        compatMeltingCasting(consumer, MoarMaterialIds.adamantite, Registry.moltenAdamantite, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.aquarium, Registry.moltenAquarium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.banglum, Registry.moltenBanglum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.carmot, Registry.moltenCarmot, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.celestium, Registry.moltenCelestium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.durasteel, Registry.moltenDurasteel, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.hallowed, Registry.moltenHallowed, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.kyber, Registry.moltenKyber, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.metallurgium, Registry.moltenMetallurgium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.mythril, Registry.moltenMythril, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.orichalcum, Registry.moltenOrichalcum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.palladium, Registry.moltenPalladium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.prometheum, Registry.moltenPrometheum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.quadrillum, Registry.moltenQuadrillum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.runite, Registry.moltenRunite, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.star_platinum, Registry.moltenStarPlatinum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.stormyx, Registry.moltenStormyx, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.adamantite, HephPlusRegistry.moltenAdamantite, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.aquarium, HephPlusRegistry.moltenAquarium, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.banglum, HephPlusRegistry.moltenBanglum, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.carmot, HephPlusRegistry.moltenCarmot, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.celestium, HephPlusRegistry.moltenCelestium, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.durasteel, HephPlusRegistry.moltenDurasteel, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.hallowed, HephPlusRegistry.moltenHallowed, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.kyber, HephPlusRegistry.moltenKyber, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.metallurgium, HephPlusRegistry.moltenMetallurgium, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.mythril, HephPlusRegistry.moltenMythril, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.orichalcum, HephPlusRegistry.moltenOrichalcum, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.palladium, HephPlusRegistry.moltenPalladium, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.prometheum, HephPlusRegistry.moltenPrometheum, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.quadrillum, HephPlusRegistry.moltenQuadrillum, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.runite, HephPlusRegistry.moltenRunite, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.star_platinum, HephPlusRegistry.moltenStarPlatinum, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.stormyx, HephPlusRegistry.moltenStormyx, folder);
 
-        this.gemCasting(consumer, Registry.moltenStarrite, MythicItems.Mats.STARRITE, folder + "starrite/gem");
-        this.gemMelting(consumer, Registry.moltenStarrite.get(), "starrite", true, 9,folder + "starrite/gem", true);
+        this.gemCasting(consumer, HephPlusRegistry.moltenStarrite, MythicItems.Mats.STARRITE, folder + "starrite/gem");
+        this.gemMelting(consumer, HephPlusRegistry.moltenStarrite.get(), "starrite", true, 9,folder + "starrite/gem", true);
         ItemCastingRecipeBuilder.basinRecipe(MythicBlocks.STARRITE.getStorageBlock())
-                .setFluidAndTime(Registry.moltenStarrite, false, FluidValues.LARGE_GEM_BLOCK)
+                .setFluidAndTime(HephPlusRegistry.moltenStarrite, false, FluidValues.LARGE_GEM_BLOCK)
                 .save(consumer, modResource(folder + "starrite/block"));
 
 
@@ -87,28 +84,28 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
                 tagCondition("mythril_ingots"),
                 tagCondition("orichalcum_ingots"),
                 tagCondition("hallowed_ingots"));
-        AlloyRecipeBuilder.alloy(Registry.moltenHallowed.get(), FluidValues.INGOT)
-                .addInput(Registry.moltenAdamantite.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenMythril.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenOrichalcum.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(Registry.moltenHallowed.get()), alloyFolder));
+        AlloyRecipeBuilder.alloy(HephPlusRegistry.moltenHallowed.get(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenAdamantite.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenMythril.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenOrichalcum.getForgeTag(), FluidValues.INGOT)
+                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusRegistry.moltenHallowed.get()), alloyFolder));
 
         wrapped = withCondition(consumer,
                 tagCondition("hallowed_ingots"),
                 tagCondition("palladium_ingots"),
                 tagCondition("unobtainium"),
                 tagCondition("metallurgium_ingots"));
-        AlloyRecipeBuilder.alloy(Registry.moltenMetallurgium.get(), FluidValues.INGOT)
-                .addInput(Registry.moltenHallowed.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenPalladium.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenUnobtainium.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(Registry.moltenMetallurgium.get()), alloyFolder));
+        AlloyRecipeBuilder.alloy(HephPlusRegistry.moltenMetallurgium.get(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenHallowed.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenPalladium.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenUnobtainium.getForgeTag(), FluidValues.INGOT)
+                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusRegistry.moltenMetallurgium.get()), alloyFolder));
 
         wrapped = withCondition(consumer,
                 tagCondition("manganese_ingots"),
                 tagCondition("steel_ingots"));
         AlloyRecipeBuilder.alloy(TinkerFluids.moltenSteel.get(), FluidValues.INGOT)
-                .addInput(Registry.moltenManganese.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenManganese.getForgeTag(), FluidValues.INGOT)
                 .addInput(TinkerFluids.moltenIron.getForgeTag(), FluidValues.INGOT)
                 .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(TinkerFluids.moltenSteel.get()), alloyFolder));
 
@@ -116,19 +113,19 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
                 tagCondition("manganese_ingots"),
                 tagCondition("quadrillum_ingots"),
                 tagCondition("durasteel_ingots"));
-        AlloyRecipeBuilder.alloy(Registry.moltenDurasteel.get(), FluidValues.INGOT)
-                .addInput(Registry.moltenManganese.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenQuadrillum.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(Registry.moltenDurasteel.get()), alloyFolder));
+        AlloyRecipeBuilder.alloy(HephPlusRegistry.moltenDurasteel.get(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenManganese.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenQuadrillum.getForgeTag(), FluidValues.INGOT)
+                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusRegistry.moltenDurasteel.get()), alloyFolder));
 
         wrapped = withCondition(consumer,
                 tagCondition("starrite"),
                 tagCondition("platinum_ingots"),
                 tagCondition("star_platinum"));
-        AlloyRecipeBuilder.alloy(Registry.moltenStarPlatinum.get(), FluidValues.INGOT)
-                .addInput(Registry.moltenStarrite.getForgeTag(), FluidValues.GEM)
+        AlloyRecipeBuilder.alloy(HephPlusRegistry.moltenStarPlatinum.get(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenStarrite.getForgeTag(), FluidValues.GEM)
                 .addInput(TinkerFluids.moltenPlatinum.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(Registry.moltenStarPlatinum.get()), alloyFolder));
+                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusRegistry.moltenStarPlatinum.get()), alloyFolder));
 
         wrapped = withCondition(consumer,
                 tagCondition("star_platinum"),
@@ -136,12 +133,12 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
                 tagCondition("carmot_ingots"),
                 tagCondition("unobtainium"),
                 tagCondition("celestium_ingots"));
-        AlloyRecipeBuilder.alloy(Registry.moltenCelestium.get(), FluidValues.INGOT)
-                .addInput(Registry.moltenStarPlatinum.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenKyber.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenCarmot.getForgeTag(), FluidValues.INGOT)
-                .addInput(Registry.moltenUnobtainium.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(Registry.moltenCelestium.get()), alloyFolder));
+        AlloyRecipeBuilder.alloy(HephPlusRegistry.moltenCelestium.get(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenStarPlatinum.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenKyber.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenCarmot.getForgeTag(), FluidValues.INGOT)
+                .addInput(HephPlusRegistry.moltenUnobtainium.getForgeTag(), FluidValues.INGOT)
+                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusRegistry.moltenCelestium.get()), alloyFolder));
 
 
     }

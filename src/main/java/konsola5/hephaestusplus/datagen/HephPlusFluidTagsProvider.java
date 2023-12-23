@@ -38,6 +38,10 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
         tagAll(HephPlusRegistry.moltenStormyx);
         tagAll(HephPlusRegistry.moltenUnobtainium);
 
+        tagAll(HephPlusRegistry.moltenManasteel);
+        tagAll(HephPlusRegistry.moltenElementium);
+        tagAll(HephPlusRegistry.moltenTerrasteel);
+
         this.tag(TinkerTags.Fluids.METAL_TOOLTIPS)
                 .addTag(HephPlusRegistry.moltenAdamantite.getForgeTag())
                 .addTag(HephPlusRegistry.moltenAquarium.getForgeTag())
@@ -57,7 +61,11 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
                 .addTag(HephPlusRegistry.moltenRunite.getForgeTag())
                 .addTag(HephPlusRegistry.moltenStarPlatinum.getForgeTag())
                 .addTag(HephPlusRegistry.moltenStormyx.getForgeTag())
-                .addTag(HephPlusRegistry.moltenUnobtainium.getForgeTag());
+                .addTag(HephPlusRegistry.moltenUnobtainium.getForgeTag())
+        // Botania
+                .addTag(HephPlusRegistry.moltenManasteel.getForgeTag())
+                .addTag(HephPlusRegistry.moltenElementium.getForgeTag())
+                .addTag(HephPlusRegistry.moltenTerrasteel.getForgeTag());
 
         this.tag(TinkerTags.Fluids.LARGE_GEM_TOOLTIPS)
                 .addTag(HephPlusRegistry.moltenStarrite.getForgeTag());

@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:metallurgium_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:swappable_modifier",
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "tag": "c:metallurgium_ingots"
+    },
+    {
+      "tag": "c:metallurgium_ingots"
+    },
+    {
+      "tag": "c:metallurgium_ingots"
+    }
+  ],
+  "result": {
+    "name": "tconstruct:embellishment",
+    "value": "hephaestusplus:metallurgium"
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/embellishment/metal"
+  }
+}

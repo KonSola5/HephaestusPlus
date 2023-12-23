@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:carmot_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:swappable_modifier",
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "tag": "c:carmot_ingots"
+    },
+    {
+      "tag": "c:carmot_ingots"
+    },
+    {
+      "tag": "c:carmot_ingots"
+    }
+  ],
+  "result": {
+    "name": "tconstruct:embellishment",
+    "value": "hephaestusplus:carmot"
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/embellishment/metal"
+  }
+}

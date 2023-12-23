@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:kyber_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:swappable_modifier",
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "tag": "c:kyber_ingots"
+    },
+    {
+      "tag": "c:kyber_ingots"
+    },
+    {
+      "tag": "c:kyber_ingots"
+    }
+  ],
+  "result": {
+    "name": "tconstruct:embellishment",
+    "value": "hephaestusplus:kyber"
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/embellishment/metal"
+  }
+}

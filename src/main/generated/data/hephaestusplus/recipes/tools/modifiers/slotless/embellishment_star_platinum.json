@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:star_platinum_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:swappable_modifier",
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "tag": "c:star_platinum_ingots"
+    },
+    {
+      "tag": "c:star_platinum_ingots"
+    },
+    {
+      "tag": "c:star_platinum_ingots"
+    }
+  ],
+  "result": {
+    "name": "tconstruct:embellishment",
+    "value": "hephaestusplus:star_platinum"
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/embellishment/metal"
+  }
+}

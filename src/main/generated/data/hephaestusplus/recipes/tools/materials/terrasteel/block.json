@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:terrasteel_blocks"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:terrasteel_blocks"
+  },
+  "leftover": {
+    "tag": "c:terrasteel_ingots"
+  },
+  "material": "hephaestusplus:terrasteel",
+  "needed": 1,
+  "value": 9
+}

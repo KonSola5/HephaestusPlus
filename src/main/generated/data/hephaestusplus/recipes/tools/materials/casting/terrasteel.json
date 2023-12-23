@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:terrasteel_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_terrasteel"
+  },
+  "output": "hephaestusplus:terrasteel",
+  "temperature": 1200
+}

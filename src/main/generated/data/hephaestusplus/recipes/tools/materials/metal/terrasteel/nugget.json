@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:nuggets/terrasteel"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:nuggets/terrasteel"
+  },
+  "result": {
+    "amount": 1000,
+    "fluid": "hephaestusplus:molten_terrasteel"
+  },
+  "temperature": 1200,
+  "time": 24
+}

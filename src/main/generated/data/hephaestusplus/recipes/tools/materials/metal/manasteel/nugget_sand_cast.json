@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manasteel_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/nugget"
+  },
+  "cast_consumed": true,
+  "cooling_time": 19,
+  "fluid": {
+    "amount": 1000,
+    "tag": "c:molten_manasteel"
+  },
+  "result": {
+    "tag": "c:manasteel_nuggets"
+  }
+}

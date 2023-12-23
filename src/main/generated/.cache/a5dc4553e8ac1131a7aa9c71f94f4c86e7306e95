@@ -1,5 +1,7 @@
-// 1.20.1	2023-12-20T22:15:00.819802	HephaestusPlus/HephaestusPlus Simple Modifiers
+// 1.20.1	2023-12-23T18:53:45.7728718	HephaestusPlus/HephaestusPlus Simple Modifiers
 da2dd019ab05f61cdcee1c0a582c98e169ff524e data\hephaestusplus\tinkering\modifiers\magically_modifiable.json
-538e41a9dd03b6eb3e82215ab0cabbe81a03d989 data\hephaestusplus\tinkering\modifiers\carmot_shield.json
+21b4f94645aaccef37f7df977a85d7846ee82e44 data\hephaestusplus\tinkering\modifiers\carmot_shield.json
+e6d6085f9294aae66059b4e3788718a719112a5b data\hephaestusplus\tinkering\modifiers\fairy_blessing.json
 3181caa367e70f5702318c2a286f4fc765b9ebbb data\hephaestusplus\tinkering\modifiers\stellar_swiftness.json
+906b42e9c5e2ca4cda93e47d111870ffb79bd851 data\hephaestusplus\tinkering\modifiers\carmot_boost.json
 8314b65f364cce85a79dbbb1fff51393bb7641aa data\hephaestusplus\tinkering\modifiers\durable.json

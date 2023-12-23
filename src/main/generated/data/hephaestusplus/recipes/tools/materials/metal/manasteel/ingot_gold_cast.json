@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manasteel_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "cooling_time": 57,
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_manasteel"
+  },
+  "result": {
+    "tag": "c:manasteel_ingots"
+  }
+}

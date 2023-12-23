@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "mythicmetals:carmot_smithing_template"
+    }
+  ],
+  "max_level": 1,
+  "result": {
+    "level": 1,
+    "name": "hephaestusplus:carmot_shield"
+  },
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "fabric:type": "fabric:any",
+    "ingredients": [
+      {
+        "tag": "tconstruct:modifiable/armor"
+      }
+    ]
+  }
+}

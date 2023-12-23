@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:terrasteel_coins"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:terrasteel_coins"
+  },
+  "result": {
+    "amount": 3000,
+    "fluid": "hephaestusplus:molten_terrasteel"
+  },
+  "temperature": 1200,
+  "time": 48
+}

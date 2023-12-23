@@ -7,6 +7,8 @@ import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpri
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToColorMapping;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToSpriteTransformer;
 import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
+import slimeknights.tconstruct.tools.stats.BowstringMaterialStats;
+import slimeknights.tconstruct.tools.stats.RepairKitStats;
 
 public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSpriteProvider {
     public String getName() {
@@ -16,7 +18,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
     @Override
     protected void addAllMaterials() {
         buildMaterial(MoarMaterialIds.adamantite)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff150711)
@@ -26,7 +28,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xffb02514)
                         .addARGB(255, 0xffb04032).build());
         buildMaterial(MoarMaterialIds.aquarium)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff091025)
@@ -36,7 +38,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff206db5)
                         .addARGB(255, 0xff3577b5).build());
         buildMaterial(MoarMaterialIds.banglum)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff0a2531)
@@ -56,7 +58,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xffca3e62)
                         .addARGB(255, 0xffe5438a).build());
         buildMaterial(MoarMaterialIds.celestium)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff41052c)
@@ -66,7 +68,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xffe5958d)
                         .addARGB(255, 0xffe9c8ac).build());
         buildMaterial(MoarMaterialIds.durasteel)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff0c0c0c)
@@ -76,7 +78,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff4d4d4d)
                         .addARGB(255, 0xff666666).build());
         buildMaterial(MoarMaterialIds.hallowed)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff25242d)
@@ -86,7 +88,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xffcecee5)
                         .addARGB(255, 0xffe1e1ee).build());
         buildMaterial(MoarMaterialIds.kyber)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff2a1452)
@@ -96,7 +98,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xffa86ecb)
                         .addARGB(255, 0xffcf9aee).build());
         buildMaterial(MoarMaterialIds.metallurgium)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff070531)
@@ -106,7 +108,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff6a2bc7)
                         .addARGB(255, 0xff8b42ee).build());
         buildMaterial(MoarMaterialIds.mythril)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff25152b)
@@ -116,7 +118,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff5ddaea)
                         .addARGB(255, 0xff97ecd6).build());
         buildMaterial(MoarMaterialIds.orichalcum)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff101b22)
@@ -126,7 +128,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff70cd68)
                         .addARGB(255, 0xffafe6ab).build());
         buildMaterial(MoarMaterialIds.palladium)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff5a0e09)
@@ -136,7 +138,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xffe09123)
                         .addARGB(255, 0xffe9bf35).build());
         buildMaterial(MoarMaterialIds.prometheum)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff092831)
@@ -146,7 +148,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff3eaf50)
                         .addARGB(255, 0xff83cc70).build());
         buildMaterial(MoarMaterialIds.quadrillum)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff020303)
@@ -156,7 +158,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff3a4242)
                         .addARGB(255, 0xff4d5959).build());
         buildMaterial(MoarMaterialIds.runite)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff002131)
@@ -166,7 +168,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff00a2c1)
                         .addARGB(255, 0xff00d5d8).build());
         buildMaterial(MoarMaterialIds.star_platinum)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff302a52)
@@ -208,7 +210,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xff562210)
                         .addARGB(255, 0xff5e2409).build());
         buildMaterial(MoarMaterialIds.manasteel)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff25128a)
@@ -217,8 +219,18 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(178, 0xff4f72eb)
                         .addARGB(216, 0xff67b9ef)
                         .addARGB(255, 0xffb5fffb).build());
+        buildMaterial(MoarMaterialIds.manastring)
+                .statType(BowstringMaterialStats.ID, RepairKitStats.ID)
+                .fallbacks("primitive")
+                .colorMapper(GreyToColorMapping.builderFromBlack()
+                        .addARGB(63, 0xff004a66)
+                        .addARGB(102, 0xff007289)
+                        .addARGB(140, 0xff9bfcf1)
+                        .addARGB(178, 0xff9bfcf1)
+                        .addARGB(216, 0xffcdfcf7)
+                        .addARGB(255, 0xffffffff).build());
         buildMaterial(MoarMaterialIds.elementium)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff431a5f)
@@ -228,7 +240,7 @@ public class HephaestusPlusMaterialSpriteProvider extends AbstractMaterialSprite
                         .addARGB(216, 0xfff2c5c2)
                         .addARGB(255, 0xfffcf8f6).build());
         buildMaterial(MoarMaterialIds.terrasteel)
-                .meleeHarvest()
+                .meleeHarvest().statType(TinkerPartSpriteProvider.PLATE)
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
                         .addARGB(63, 0xff043b1c)

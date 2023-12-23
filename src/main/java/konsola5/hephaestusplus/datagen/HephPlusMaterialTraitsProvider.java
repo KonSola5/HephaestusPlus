@@ -45,6 +45,7 @@ public class HephPlusMaterialTraitsProvider extends AbstractMaterialTraitDataPro
         addDefaultTraits(MoarMaterialIds.livingwood, MoarModifierIds.crude_manashield, TinkerModifiers.cultivated.getId());
         addDefaultTraits(MoarMaterialIds.livingrock, MoarModifierIds.crude_manashield, TinkerModifiers.stonebound.getId());
         addDefaultTraits(MoarMaterialIds.manasteel, MoarModifierIds.manashield);
+        addDefaultTraits(MoarMaterialIds.manastring, MoarModifierIds.manashot);
         addDefaultTraits(MoarMaterialIds.elementium, MoarModifierIds.manashield);
         addTraits(MoarMaterialIds.elementium, HeadMaterialStats.ID, MoarModifierIds.manashield, MoarModifierIds.fairy_blessing);
         addTraits(MoarMaterialIds.elementium, HandleMaterialStats.ID, MoarModifierIds.manashield, MoarModifierIds.fairy_blessing);

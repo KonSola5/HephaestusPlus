@@ -1,9 +1,9 @@
 package konsola5.hephaestusplus;
 
-import io.github.fabricators_of_create.porting_lib.core.PortingLib;
 import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 import konsola5.hephaestusplus.datagen.*;
 import konsola5.hephaestusplus.modifiers.*;
+import konsola5.hephaestusplus.spritegen.HephPlusMaterialRenderInfoProvider;
 import konsola5.hephaestusplus.spritegen.HephaestusPlusMaterialSpriteProvider;
 import konsola5.hephaestusplus.spritegen.HephaestusPlusPartSpriteProvider;
 import konsola5.hephaestusplus.tools.ToolDefinitions;
@@ -50,6 +50,7 @@ public class HephPlusRegistry {
     // Properties
     private static final Item.Properties PARTS_PROPS = new Item.Properties();
     private static final Item.Properties SMELTERY_PROPS = new Item.Properties();
+    private static final Item.Properties ITEM_PROPS = new Item.Properties();
     // Resource Locations (for NBT)
     public static final ResourceLocation PROMETHEUM_REPAIRS = new ResourceLocation(MOD_ID, "prometheum_repairs");
     public static final ResourceLocation STORED_SOULS = new ResourceLocation(MOD_ID, "stored_souls");
@@ -78,6 +79,8 @@ public class HephPlusRegistry {
         }
     }
 
+    public static final ItemObject<Item> carmotReinforcement = ADDON_ITEMS.register("carmot_reinforcement", ITEM_PROPS);
+
     // Modifiers
 
 
@@ -90,7 +93,7 @@ public class HephPlusRegistry {
     // Tool properties
     public static final StaticModifier<Modifier> CARMOT_SYNERGY = MODIFIERS.register("carmot_synergy", Modifier::new);
     public static final DynamicModifier<Modifier> CARMOT_SHIELD_MODIFIER = MODIFIERS.registerDynamic("carmot_shield", Modifier.class);
-    public static final StaticModifier<Modifier> CARMOT_BOOST = MODIFIERS.register("carmot_boost", Modifier::new);
+    public static final DynamicModifier<Modifier> CARMOT_BOOST = MODIFIERS.registerDynamic("carmot_boost", Modifier.class);
     public static final StaticModifier<Modifier> SOLID = MODIFIERS.register("solid", SolidModifier::new);
     public static final StaticModifier<Modifier> COSMIC = MODIFIERS.register("cosmic", CosmicModifier::new);
     public static final StaticModifier<Modifier> PRISMATIC = MODIFIERS.register("prismatic", PrismaticModifier::new);
@@ -101,9 +104,11 @@ public class HephPlusRegistry {
     public static final StaticModifier<NoLevelsModifier> UNOBTAINABLE = MODIFIERS.register("unobtainable", UnobtainableModifier::new);
 
     public static final StaticModifier<Modifier> MANASHIELD = MODIFIERS.register("manashield", ManashieldModifier::new);
+    public static final StaticModifier<Modifier> MANASHOT = MODIFIERS.register("manashot", ManashotModifier::new);
     public static final StaticModifier<Modifier> CRUDE_MANASHIELD = MODIFIERS.register("crude_manashield", CrudeManashieldModifier::new);
     public static final StaticModifier<SingleLevelModifier> GARBAGE_COLLECTOR = MODIFIERS.register("garbage_collector", SingleLevelModifier::new);
-    public static final StaticModifier<Modifier> FAIRY_BLESSING = MODIFIERS.register("fairy_blessing", FairyBlessingModifier::new);
+    public static final DynamicModifier<Modifier> FAIRY_BLESSING = MODIFIERS.registerDynamic("fairy_blessing", Modifier.class);
+
     public static final StaticModifier<Modifier> TERRAFIRMA = MODIFIERS.register("terrafirma", TerrafirmaModifier::new);
 
     public static final Attribute CARMOT_SHIELD = new RangedAttribute("hephaestusplus.carmot_shield", 0, 0, 1024).setSyncable(true);
@@ -280,6 +285,7 @@ public class HephPlusRegistry {
         pack.addProvider(HephPlusMaterialRecipeProvider::new);
         pack.addProvider(HephPlusStationSlotLayoutProvider::new);
         pack.addProvider(HephPlusModifierRecipeProvider::new);
+        pack.addProvider(HephPlusSmelteryRecipeProvider::new);
         pack.addProvider(HephPlusToolDefinitionProvider::new);
         pack.addProvider(HephPlusModifierProvider::new);
 

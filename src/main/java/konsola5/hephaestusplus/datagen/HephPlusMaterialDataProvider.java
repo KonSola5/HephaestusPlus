@@ -38,6 +38,7 @@ public class HephPlusMaterialDataProvider extends AbstractMaterialDataProvider {
         // Botania
         addCompatMaterial(MoarMaterialIds.livingwood, 1, ORDER_COMPAT, "livingwood_logs", true);
         addCompatMaterial(MoarMaterialIds.livingrock, 1, ORDER_COMPAT, "livingrock", true);
+        addCompatMaterial(MoarMaterialIds.manastring, 2, ORDER_COMPAT, "mana_string", true);
         addCompatMetalMaterial(MoarMaterialIds.manasteel, 2, ORDER_COMPAT);
         addCompatMetalMaterial(MoarMaterialIds.elementium, 3, ORDER_COMPAT);
         addCompatMetalMaterial(MoarMaterialIds.terrasteel, 4, ORDER_COMPAT);

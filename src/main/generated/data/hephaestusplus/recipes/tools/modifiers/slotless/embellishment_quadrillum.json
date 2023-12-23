@@ -1,0 +1,30 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:quadrillum_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:swappable_modifier",
+  "allow_crystal": false,
+  "inputs": [
+    {
+      "tag": "c:quadrillum_ingots"
+    },
+    {
+      "tag": "c:quadrillum_ingots"
+    },
+    {
+      "tag": "c:quadrillum_ingots"
+    }
+  ],
+  "result": {
+    "name": "tconstruct:embellishment",
+    "value": "hephaestusplus:quadrillum"
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/embellishment/metal"
+  }
+}

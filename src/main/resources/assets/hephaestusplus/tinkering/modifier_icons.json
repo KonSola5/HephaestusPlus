@@ -1,5 +1,7 @@
 {
   "hephaestusplus:crooking":  ["fabricaeexnihilo:item/tools/crook/wooden_crook", "tconstruct:gui/modifiers/book"],
   "hephaestusplus:smashing":  ["fabricaeexnihilo:item/tools/hammer/wooden_hammer", "tconstruct:gui/modifiers/book"],
-  "hephaestusplus:legendary_banglum":  ["mythicmetals:item/banglum_chunk", "tconstruct:gui/modifiers/book"]
+  "hephaestusplus:legendary_banglum":  ["mythicmetals:item/banglum_chunk", "tconstruct:gui/modifiers/book"],
+  "hephaestusplus:carmot_shield": "hephaestusplus:gui/modifiers/carmot_shield",
+  "hephaestusplus:carmot_boost":  ["hephaestusplus:gui/modifiers/carmot_shield", "tconstruct:gui/modifiers/plus"]
 }

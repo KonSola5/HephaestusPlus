@@ -13,14 +13,15 @@ import java.util.function.Supplier;
 
 public class HephPlusMixinPlugin implements IMixinConfigPlugin {
     // Copy-paste from Adorn's Mixin plugin.
-    // Will prevent loading FEN mixins when FEN is not present.
+    // Will prevent loading mod-specific mixins when said mod is not present.
 // https://github.com/FabricMC/fabric-loader/issues/188
     private static final Supplier<Boolean> TRUE = () -> true;
 
     private static final Map<String, Supplier<Boolean>> CONDITIONS = ImmutableMap.of(
             "konsola5.hephaestusplus.mixin.IsCrookMixin", () -> FabricLoader.getInstance().isModLoaded("fabricaeexnihilo"),
             "konsola5.hephaestusplus.mixin.IsHammerMixin", () -> FabricLoader.getInstance().isModLoaded("fabricaeexnihilo"),
-            "konsola5.hephaestusplus.mixin.CarmotShieldMixin", () -> FabricLoader.getInstance().isModLoaded("mythicmetals")
+            "konsola5.hephaestusplus.mixin.CarmotShieldMixin", () -> FabricLoader.getInstance().isModLoaded("mythicmetals"),
+            "konsola5.hephaestusplus.mixin.ShouldFilterOutMixin", () -> FabricLoader.getInstance().isModLoaded("botania")
     );
 
     @Override

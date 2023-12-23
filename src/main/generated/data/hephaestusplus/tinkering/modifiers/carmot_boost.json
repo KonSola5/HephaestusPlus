@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:stat_boost",
+  "level_display": "tconstruct:default",
+  "attributes": [
+    {
+      "unique": "hephaestusplus.modifier.carmot_boost",
+      "attribute": "hephaestusplus:carmot_shield",
+      "operation": "addition",
+      "amount": 1.0,
+      "slots": [
+        "feet",
+        "legs",
+        "chest",
+        "head"
+      ]
+    }
+  ]
+}

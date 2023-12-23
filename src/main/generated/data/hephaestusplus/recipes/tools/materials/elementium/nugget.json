@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:elementium_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:elementium_nuggets"
+  },
+  "material": "hephaestusplus:elementium",
+  "needed": 9,
+  "value": 1
+}

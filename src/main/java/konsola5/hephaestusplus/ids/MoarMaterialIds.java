@@ -25,6 +25,7 @@ public final class MoarMaterialIds {
     public static final MaterialId livingwood = new MaterialId(HephaestusPlus.MOD_ID, "livingwood");
     public static final MaterialId livingrock = new MaterialId(HephaestusPlus.MOD_ID, "livingrock");
     public static final MaterialId manasteel = new MaterialId(HephaestusPlus.MOD_ID, "manasteel");
+    public static final MaterialId manastring = new MaterialId(HephaestusPlus.MOD_ID, "manastring");
     public static final MaterialId elementium = new MaterialId(HephaestusPlus.MOD_ID, "elementium");
     public static final MaterialId terrasteel = new MaterialId(HephaestusPlus.MOD_ID, "terrasteel");
 

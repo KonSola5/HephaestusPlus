@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:stat_boost",
+  "level_display": "tconstruct:default",
+  "attributes": [
+    {
+      "unique": "hephaestusplus.modifier.fairy_blessing",
+      "attribute": "botania:pixie_spawn_chance",
+      "operation": "addition",
+      "amount": 0.03,
+      "slots": [
+        "mainhand"
+      ]
+    }
+  ]
+}

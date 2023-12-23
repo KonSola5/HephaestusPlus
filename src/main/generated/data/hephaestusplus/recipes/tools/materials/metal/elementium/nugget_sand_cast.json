@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:elementium_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/nugget"
+  },
+  "cast_consumed": true,
+  "cooling_time": 22,
+  "fluid": {
+    "amount": 1000,
+    "tag": "c:molten_elementium"
+  },
+  "result": {
+    "tag": "c:elementium_nuggets"
+  }
+}

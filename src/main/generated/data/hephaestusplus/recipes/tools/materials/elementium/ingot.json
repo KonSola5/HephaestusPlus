@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:elementium_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:elementium_ingots"
+  },
+  "material": "hephaestusplus:elementium",
+  "needed": 1,
+  "value": 1
+}

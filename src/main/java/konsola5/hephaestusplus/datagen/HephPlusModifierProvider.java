@@ -2,7 +2,6 @@ package konsola5.hephaestusplus.datagen;
 
 import konsola5.hephaestusplus.HephPlusRegistry;
 import konsola5.hephaestusplus.ids.MoarModifierIds;
-import konsola5.hephaestusplus.mixin.CarmotShieldMixin;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -12,6 +11,8 @@ import slimeknights.tconstruct.library.modifiers.dynamic.StatBoostModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierLevelDisplay;
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
+
+import static vazkii.botania.common.handler.PixieHandler.PIXIE_SPAWN_CHANCE;
 
 public class HephPlusModifierProvider extends AbstractModifierProvider {
     public HephPlusModifierProvider(FabricDataOutput output) {
@@ -40,13 +41,32 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                 "hephaestusplus.modifier.carmot_shield",
                 HephPlusRegistry.CARMOT_SHIELD,
                 AttributeModifier.Operation.ADDITION,
-                5,
+                2,
                 EquipmentSlot.HEAD,
                 EquipmentSlot.CHEST,
                 EquipmentSlot.LEGS,
                 EquipmentSlot.FEET
                 )
                 .display(ModifierLevelDisplay.NO_LEVELS).build());
+        addModifier(MoarModifierIds.carmot_boost, StatBoostModifier.builder().attribute(
+                        "hephaestusplus.modifier.carmot_boost",
+                        HephPlusRegistry.CARMOT_SHIELD,
+                        AttributeModifier.Operation.ADDITION,
+                        1,
+                        EquipmentSlot.HEAD,
+                        EquipmentSlot.CHEST,
+                        EquipmentSlot.LEGS,
+                        EquipmentSlot.FEET
+                )
+                .display(ModifierLevelDisplay.DEFAULT).build());
+        addModifier(MoarModifierIds.fairy_blessing, StatBoostModifier.builder().attribute(
+                        "hephaestusplus.modifier.fairy_blessing",
+                        PIXIE_SPAWN_CHANCE,
+                        AttributeModifier.Operation.ADDITION,
+                        0.03f,
+                        EquipmentSlot.MAINHAND
+                )
+                .display(ModifierLevelDisplay.DEFAULT).build());
     }
 
 

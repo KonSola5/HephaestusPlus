@@ -1,4 +1,4 @@
-package konsola5.hephaestusplus.datagen;
+package konsola5.hephaestusplus.spritegen;
 
 import konsola5.hephaestusplus.ids.MoarMaterialIds;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -35,6 +35,7 @@ public class HephPlusMaterialRenderInfoProvider extends AbstractMaterialRenderIn
         buildRenderInfo(MoarMaterialIds.livingwood).color(0x36180e).fallbacks("wood");
         buildRenderInfo(MoarMaterialIds.livingrock).color(0xc7c0af).fallbacks("rock");
         buildRenderInfo(MoarMaterialIds.manasteel).color(0x66b7eb).fallbacks("metal");
+        buildRenderInfo(MoarMaterialIds.manastring).color(0x66b7eb).fallbacks("primitive");
         buildRenderInfo(MoarMaterialIds.elementium).color(0xc342a6).fallbacks("metal");
         buildRenderInfo(MoarMaterialIds.terrasteel).color(0x69e561).fallbacks("metal");
 

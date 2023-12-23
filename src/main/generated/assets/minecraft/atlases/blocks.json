@@ -42,6 +42,10 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "hephaestusplus:gui/modifiers/carmot_shield"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/ranged/punch"
     },
     {
@@ -319,6 +323,14 @@
     {
       "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/armor/magic_protection"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "hephaestusplus:gui/modifiers/carmot_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/plus"
     },
     {
       "type": "minecraft:single",

@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:nuggets/elementium"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:nuggets/elementium"
+  },
+  "result": {
+    "amount": 1000,
+    "fluid": "hephaestusplus:molten_elementium"
+  },
+  "temperature": 1000,
+  "time": 22
+}

@@ -36,15 +36,25 @@ public class REIPlugin implements REIClientPlugin {
             removeFluid(registry, HephPlusRegistry.moltenStarrite    .get(), HephPlusRegistry.moltenStarrite.asItem());
             removeFluid(registry, HephPlusRegistry.moltenStormyx     .get(), HephPlusRegistry.moltenStormyx.asItem());
             removeFluid(registry, HephPlusRegistry.moltenUnobtainium .get(), HephPlusRegistry.moltenUnobtainium.asItem());
+            registry.removeEntry(EntryStacks.of(HephPlusRegistry.carmotReinforcement));
             registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "legendary_banglum"));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "carmot_shield"));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "carmot_boost"));
         }
         // Hide Crooking and Smashing is FEN isn't loaded
         if (!FabricLoader.getInstance().isModLoaded("fabricaeexnihilo")) {
             registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "crooking"));
             registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "smashing"));
         }
+        // Hide fluids if Botania isn't loaded
+        if (!FabricLoader.getInstance().isModLoaded("botania")) {
+            removeFluid(registry, HephPlusRegistry.moltenManasteel  .get(), HephPlusRegistry.moltenManasteel.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenElementium .get(), HephPlusRegistry.moltenElementium.asItem());
+            removeFluid(registry, HephPlusRegistry.moltenTerrasteel .get(), HephPlusRegistry.moltenTerrasteel.asItem());
+        }
     }
 
+    @SuppressWarnings("UnstableApiUsage")
     private static void removeFluid(EntryRegistry manager, Fluid fluid, Item bucket) {
         manager.removeEntry(EntryStacks.of(FluidStack.create(fluid, FluidConstants.BUCKET)));
         manager.removeEntry(EntryStacks.of(bucket));

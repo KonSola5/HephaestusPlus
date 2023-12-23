@@ -4,6 +4,7 @@
     "smashing":             "#828282",
     "crooking":             "#592f13",
     "legendary_banglum":    "#fca800",
+    "carmot_shield": "#b6253c",
 
     "__traits__": null,
     "solid": "#95e49c",
@@ -23,9 +24,13 @@
     "unobtainable": "#4d5858",
     "crude_manashield": "#c9c2b2",
     "manashield": "#67b9ef",
+    "manashot": "#67b9ef",
     "garbage_collector": "#e58dbd",
     "fairy_blessing": "#e58dbd",
-    "terrafirma": "#5ada30"
+    "terrafirma": "#5ada30",
+
+    "__defense__": null,
+    "carmot_boost": "#b6253c"
   },
 
   "material.hephaestusplus": {
@@ -49,6 +54,7 @@
     "livingrock": "#c9c2b2",
     "livingwood": "#562210",
     "manasteel": "#67b9ef",
+    "manastring": "#67b9ef",
     "elementium": "#e58dbd",
     "terrasteel": "#5ada30"
   },

@@ -25,6 +25,7 @@ public class MoarModifierIds {
     public static final ModifierId legendary_banglum = new ModifierId(HephaestusPlus.MOD_ID, "legendary_banglum");
 
     public static final ModifierId manashield = new ModifierId(HephaestusPlus.MOD_ID, "manashield");
+    public static final ModifierId manashot = new ModifierId(HephaestusPlus.MOD_ID, "manashot");
     public static final ModifierId crude_manashield = new ModifierId(HephaestusPlus.MOD_ID, "crude_manashield");
     public static final ModifierId garbage_collector = new ModifierId(HephaestusPlus.MOD_ID, "garbage_collector");
     public static final ModifierId fairy_blessing = new ModifierId(HephaestusPlus.MOD_ID, "fairy_blessing");

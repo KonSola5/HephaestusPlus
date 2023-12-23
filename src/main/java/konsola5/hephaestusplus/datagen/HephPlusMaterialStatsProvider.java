@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.world.item.Tier;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialStatsDataProvider;
+import slimeknights.tconstruct.tools.stats.BowstringMaterialStats;
 import slimeknights.tconstruct.tools.stats.ExtraMaterialStats;
 import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
@@ -104,6 +105,7 @@ public class HephPlusMaterialStatsProvider extends AbstractMaterialStatsDataProv
                 new HeadMaterialStats(150, 4.1f, STONE, 1f),
                 HandleMaterialStats.DEFAULT.withDurability(0.9f).withMiningSpeed(1.05f).withAttackDamage(1f).withAttackSpeed(1f),
                 ExtraMaterialStats.DEFAULT);
+        addMaterialStats(MoarMaterialIds.manastring, BowstringMaterialStats.DEFAULT);
         addMaterialStats(MoarMaterialIds.manasteel,
                 new HeadMaterialStats(300, 6.2f, DIAMOND, 2f),
                 HandleMaterialStats.DEFAULT.withDurability(1.1f).withMiningSpeed(1f).withAttackDamage(1f).withAttackSpeed(1f),

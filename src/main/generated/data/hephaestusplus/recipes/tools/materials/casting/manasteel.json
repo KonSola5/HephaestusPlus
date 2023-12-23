@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manasteel_ingots"
+      ]
+    }
+  ],
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 9000,
+    "tag": "c:molten_manasteel"
+  },
+  "output": "hephaestusplus:manasteel",
+  "temperature": 700
+}

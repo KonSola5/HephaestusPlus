@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:terrasteel_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:terrasteel_nuggets"
+  },
+  "material": "hephaestusplus:terrasteel",
+  "needed": 9,
+  "value": 1
+}

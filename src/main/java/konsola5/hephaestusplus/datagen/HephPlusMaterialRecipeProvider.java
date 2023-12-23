@@ -6,6 +6,7 @@ import konsola5.hephaestusplus.recipecompat.HephPlusSmelteryCompat;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
 import nourl.mythicmetals.blocks.MythicBlocks;
 import nourl.mythicmetals.item.MythicItems;
 import slimeknights.tconstruct.fluids.TinkerFluids;
@@ -14,6 +15,7 @@ import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
+import vazkii.botania.common.item.BotaniaItems;
 
 import java.util.function.Consumer;
 
@@ -29,6 +31,7 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
         String metalFolder = folder + "metal/";
         String alloyFolder = "smeltery/alloys/";
         // This generates .json necessary for repairing custom materials
+        // Mythic Metals
         metalMaterialRecipe(consumer, MoarMaterialIds.adamantite, folder, "adamantite", true);
         metalMaterialRecipe(consumer, MoarMaterialIds.aquarium, folder, "aquarium", true);
         metalMaterialRecipe(consumer, MoarMaterialIds.banglum, folder, "banglum", true);
@@ -64,6 +67,18 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
         compatMeltingCasting(consumer, MoarMaterialIds.runite, HephPlusRegistry.moltenRunite, folder);
         compatMeltingCasting(consumer, MoarMaterialIds.star_platinum, HephPlusRegistry.moltenStarPlatinum, folder);
         compatMeltingCasting(consumer, MoarMaterialIds.stormyx, HephPlusRegistry.moltenStormyx, folder);
+
+        // Botania
+
+        metalMaterialRecipe(consumer, MoarMaterialIds.manasteel, folder, "manasteel", true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.elementium, folder, "elementium", true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.terrasteel, folder, "terrasteel", true);
+
+        materialRecipe(consumer, MoarMaterialIds.manastring, Ingredient.of(BotaniaItems.manaString), 1, 4, folder + "string");
+
+        compatMeltingCasting(consumer, MoarMaterialIds.manasteel, HephPlusRegistry.moltenManasteel, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.elementium, HephPlusRegistry.moltenElementium, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.terrasteel, HephPlusRegistry.moltenTerrasteel, folder);
 
         this.gemCasting(consumer, HephPlusRegistry.moltenStarrite, MythicItems.Mats.STARRITE, folder + "starrite/gem");
         this.gemMelting(consumer, HephPlusRegistry.moltenStarrite.get(), "starrite", true, 9,folder + "starrite/gem", true);
@@ -139,7 +154,6 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
                 .addInput(HephPlusRegistry.moltenCarmot.getForgeTag(), FluidValues.INGOT)
                 .addInput(HephPlusRegistry.moltenUnobtainium.getForgeTag(), FluidValues.INGOT)
                 .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusRegistry.moltenCelestium.get()), alloyFolder));
-
 
     }
 

@@ -67,6 +67,15 @@
   "modifier.hephaestusplus.carmot_synergy.flavor": "Goes well with Carmot Armor!",
   "modifier.hephaestusplus.carmot_synergy.description": "Holding a tool will regenerate Carmot Shield faster",
 
+  "modifier.hephaestusplus.carmot_shield": "Carmot Shield",
+  "modifier.hephaestusplus.carmot_shield.flavor": "We are... protected!",
+  "modifier.hephaestusplus.carmot_shield.description": "Provides Carmot Shield to armor which absorbs damage and regenerates over time",
+
+  "modifier.hephaestusplus.carmot_boost": "Carmot Boost",
+  "modifier.hephaestusplus.carmot_boost.flavor": "Not protected enough.",
+  "modifier.hephaestusplus.carmot_boost.description": "Strengthens the Carmot Shield, adding more capacity",
+  "recipe.hephaestusplus.modifier.carmot_shield_required": "Requires the Carmot Shield ability to be added first",
+
   "modifier.hephaestusplus.unobtainable": "Unobtainable",
   "modifier.hephaestusplus.unobtainable.flavor": "Only you are worthy of this tool.",
   "modifier.hephaestusplus.unobtainable.description": "Only the person who forged the tool from this part may hold it",
@@ -93,6 +102,10 @@
   "modifier.hephaestusplus.manashield.flavor": "Masterful Manabending",
   "modifier.hephaestusplus.manashield.description": "The tool can avoid taking durability damage by consuming Mana from the mana-carrying items.",
 
+  "modifier.hephaestusplus.manashot": "Manashot",
+  "modifier.hephaestusplus.manashot.flavor": "Where are the arrows coming from?",
+  "modifier.hephaestusplus.manashot.description": "Conjures arrows for the bow using Mana",
+
   "modifier.hephaestusplus.crude_manashield": "Crude Manashield",
   "modifier.hephaestusplus.crude_manashield.flavor": "Doesn't attract Mana as well, but it will do.",
   "modifier.hephaestusplus.crude_manashield.description": "The tool has a chance of avoiding durability damage by consuming Mana from the mana-carrying items.",
@@ -115,7 +128,10 @@
   "item.hephaestusplus.crook_head_sand_cast": "Crook Head Sand Cast",
   "item.hephaestusplus.crook_head_red_sand_cast": "Crook Head Red Sand Cast",
 
-  "_comment5": "HephaestusPlus Materials",
+  "_comment5": "HephaestusTools Items",
+  "item.hephaestusplus.carmot_reinforcement": "Carmot Reinforcement",
+
+  "_comment6": "HephaestusPlus Materials",
 
   "material.hephaestusplus.adamantite": "Adamantite",
   "material.hephaestusplus.adamantite.flavor": "Legends say that this alloy is sharper than diamonds.",
@@ -193,6 +209,10 @@
   "material.hephaestusplus.livingrock.flavor": "Like stone, but more lively.",
   "material.hephaestusplus.livingrock.encyclopedia": "Causes the tool to mine faster by half of the square root of the trait level times lost durability",
 
+  "material.hephaestusplus.manastring": "Mana Infused String",
+  "material.hephaestusplus.manastring.flavor": "Where are the arrows coming from?",
+  "material.hephaestusplus.manastring.encyclopedia": "The tool can use mana from mana-containing items to conjure arrows for bows and crossbows",
+
   "material.hephaestusplus.manasteel": "Manasteel",
   "material.hephaestusplus.manasteel.flavor": "A mana-infused metal, known for its extreme mana affinity.",
   "material.hephaestusplus.manasteel.encyclopedia": "The tool can use mana from mana-containing items to prevent taking durability damage.\nHigher levels decrease the mana cost per durability.",
@@ -205,11 +225,11 @@
   "material.hephaestusplus.terrasteel.flavor": "A perfect fusion of various mana materials",
   "material.hephaestusplus.terrasteel.encyclopedia": "If you are hungry and hurt, holding a tool will restore 1 health point every 5 seconds at the cost of some Mana. Faster healing at higher levels.",
 
-  "_comment6": "HephaestusPlus Tiers",
+  "_comment7": "HephaestusPlus Tiers",
 
   "stat.tconstruct.harvest_tier.hephaestusplus.metallurgium": "Metallurgium",
 
-  "_comment7": "HephaestusPlus Buckets and Fluids",
+  "_comment8": "HephaestusPlus Buckets and Fluids",
   "item.hephaestusplus.molten_adamantite_bucket": "Molten Adamantite Bucket",
   "fluid.hephaestusplus.molten_adamantite": "Molten Adamantite",
   "block.hephaestusplus.molten_adamantite_fluid": "Molten Adamantite",
@@ -295,15 +315,18 @@
   "block.hephaestusplus.molten_manasteel_fluid": "Molten Manasteel",
   
   "item.hephaestusplus.molten_elementium_bucket": "Molten Elementium Bucket",
-  "fluid.hephaestusplus.molten_elementium": "Molten Elentium",
+  "fluid.hephaestusplus.molten_elementium": "Molten Elementium",
   "block.hephaestusplus.molten_elementium_fluid": "Molten Elementium",
   
   "item.hephaestusplus.molten_terrasteel_bucket": "Molten Terrasteel Bucket",
   "fluid.hephaestusplus.molten_terrasteel": "Molten Terrasteel",
   "block.hephaestusplus.molten_terrasteel_fluid": "Molten Terrasteel",
 
-  "comment_8": "Damage types",
+  "comment_9": "Damage types",
   "death.attack.not_your_tool": "%s obtained a tool unobtainable for them",
+
+  "comment_10": "Attributes",
+  "hephaestusplus.carmot_shield": "Carmot Shield",
 
   "jade.modName.hephaestusplus": "HephaestusPlus"
 }

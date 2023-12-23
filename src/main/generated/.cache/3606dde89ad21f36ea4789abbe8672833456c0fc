@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-20T22:15:00.7938887	HephaestusPlus/HephaestusPlus Materials
+// 1.20.1	2023-12-23T18:53:45.7529337	HephaestusPlus/HephaestusPlus Materials
 dfe9298e1b4206785feda4e7f01f0e374ab82a88 data\hephaestusplus\tinkering\materials\definition\durasteel.json
 fb1de8278f429511b9819dbfad737cbd63076edb data\hephaestusplus\tinkering\materials\definition\adamantite.json
 ad8cd5c2d1f006988e21a3cc6e38322101d7eb07 data\hephaestusplus\tinkering\materials\definition\kyber.json
@@ -6,6 +6,7 @@ ad8cd5c2d1f006988e21a3cc6e38322101d7eb07 data\hephaestusplus\tinkering\materials
 f56d71db8534d482baef299629c9928529e86306 data\hephaestusplus\tinkering\materials\definition\aquarium.json
 fe28af876fcffeeb8ee88dc1105c9c83e326e9bf data\hephaestusplus\tinkering\materials\definition\manasteel.json
 e6fcd04248c74eeefbe01fc19da6622f1cf4d58b data\hephaestusplus\tinkering\materials\definition\banglum.json
+cbaf25430ea8890f784104144621046f837e01a2 data\hephaestusplus\tinkering\materials\definition\manastring.json
 c637cc3614b9dc6f2dc0ead0fc2481f929cb7ca8 data\hephaestusplus\tinkering\materials\definition\carmot.json
 df09f8a491ae69eaba183017e83f0179797ca3c5 data\hephaestusplus\tinkering\materials\definition\livingrock.json
 9c671f9f9fcdbd8ca1fa407eca86f0667a8ff3ca data\hephaestusplus\tinkering\materials\definition\orichalcum.json

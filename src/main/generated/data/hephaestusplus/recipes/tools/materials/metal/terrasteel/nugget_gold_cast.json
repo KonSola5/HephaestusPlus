@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:terrasteel_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "cooling_time": 24,
+  "fluid": {
+    "amount": 1000,
+    "tag": "c:molten_terrasteel"
+  },
+  "result": {
+    "tag": "c:terrasteel_nuggets"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:elementium_plates"
+      ]
+    }
+  ],
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:elementium_plates"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_elementium"
+  },
+  "temperature": 1000,
+  "time": 66
+}

@@ -13,8 +13,7 @@
     "ShouldFilterOutMixin"
   ],
   "client": [
-    "NoTooltipsInDevMixin",
-    "PlateArmorModelMixin"
+    "NoTooltipsInDevMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:elementium_rods"
+      ]
+    }
+  ],
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/rod"
+  },
+  "cooling_time": 47,
+  "fluid": {
+    "amount": 4500,
+    "tag": "c:molten_elementium"
+  },
+  "result": {
+    "tag": "c:elementium_rods"
+  }
+}

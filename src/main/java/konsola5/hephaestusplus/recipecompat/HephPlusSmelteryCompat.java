@@ -29,7 +29,12 @@ public enum HephPlusSmelteryCompat {
     RUNITE(HephPlusRegistry.moltenRunite, HephPlusByproducts.SILVER),
     STAR_PLATINUM(HephPlusRegistry.moltenStarPlatinum),
     STORMYX(HephPlusRegistry.moltenStormyx, true),
-    UNOBTAINIUM(HephPlusRegistry.moltenUnobtainium, true);
+    UNOBTAINIUM(HephPlusRegistry.moltenUnobtainium, true),
+
+    MANASTEEL(HephPlusRegistry.moltenManasteel),
+    ELEMENTIUM(HephPlusRegistry.moltenElementium),
+    TERRASTEEL(HephPlusRegistry.moltenTerrasteel),
+    ;
 
     private final String name = this.name().toLowerCase(Locale.US);
     private final FluidObject<? extends SimpleFlowableFluid> fluid;

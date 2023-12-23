@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "byproducts": [
+    {
+      "amount": 20250,
+      "fluid": "tconstruct:molten_obsidian"
+    }
+  ],
+  "ingredient": {
+    "item": "hephaestusplus:carmot_reinforcement"
+  },
+  "result": {
+    "amount": 3000,
+    "fluid": "hephaestusplus:molten_carmot"
+  },
+  "temperature": 970,
+  "time": 38
+}

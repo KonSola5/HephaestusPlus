@@ -1,0 +1,31 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "amount_needed": 20,
+      "item": "hephaestusplus:carmot_reinforcement"
+    }
+  ],
+  "max_level": 5,
+  "requirements": {
+    "error": "recipe.hephaestusplus.modifier.carmot_shield_required",
+    "level": 1,
+    "name": "hephaestusplus:carmot_shield"
+  },
+  "result": {
+    "level": 1,
+    "name": "hephaestusplus:carmot_boost"
+  },
+  "slots": {
+    "defense": 1
+  },
+  "tools": {
+    "fabric:type": "fabric:any",
+    "ingredients": [
+      {
+        "tag": "tconstruct:modifiable/armor"
+      }
+    ]
+  }
+}

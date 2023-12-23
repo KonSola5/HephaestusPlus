@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:manasteel_nuggets"
+      ]
+    }
+  ],
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "c:manasteel_nuggets"
+  },
+  "material": "hephaestusplus:manasteel",
+  "needed": 9,
+  "value": 1
+}

@@ -1,5 +1,5 @@
 # HephaestusPlus
-![CurseForge Downloads](https://img.shields.io/curseforge/dt/942224?logo=curseforge&color=orange) ![Modrinth Downloads](https://img.shields.io/modrinth/dt/SSoB0fRh?logo=modrinth)
+<a href="https://www.curseforge.com/minecraft/mc-mods/hephaestusplus"><img alt="CurseForge Downloads" src="https://img.shields.io/curseforge/dt/942224?logo=curseforge&color=orange"></a> <a href="https://modrinth.com/mod/hephaestusplus"><img alt="Modrinth Downloads" src="https://img.shields.io/modrinth/dt/SSoB0fRh?logo=modrinth"></a>
 
 This is an addon adding new tools, materials and modifiers to supplement other mods.
 

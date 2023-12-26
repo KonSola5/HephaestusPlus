@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.mixin;
 
-import konsola5.hephaestusplus.HephPlusRegistry;
+import konsola5.hephaestusplus.registry.HephPlusAttributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,6 +15,6 @@ public class PlayerMixin {
      */
     @Inject(at = @At("RETURN"), method = "createAttributes")
     private static void addCarmotShieldAttribute(CallbackInfoReturnable<AttributeSupplier.Builder> cir) {
-        cir.getReturnValue().add(HephPlusRegistry.CARMOT_SHIELD);
+        cir.getReturnValue().add(HephPlusAttributes.CARMOT_SHIELD);
     }
 }

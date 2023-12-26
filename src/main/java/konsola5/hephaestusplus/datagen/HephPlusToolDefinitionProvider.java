@@ -1,8 +1,9 @@
 package konsola5.hephaestusplus.datagen;
 
 import io.github.fabricators_of_create.porting_lib.tool.ToolActions;
-import konsola5.hephaestusplus.HephPlusRegistry;
 import konsola5.hephaestusplus.HephaestusPlus;
+import konsola5.hephaestusplus.registry.HephPlusItemRegistry;
+import konsola5.hephaestusplus.registry.HephPlusModifierRegistry;
 import konsola5.hephaestusplus.tools.ToolDefinitions;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;
@@ -30,7 +31,7 @@ public class HephPlusToolDefinitionProvider extends AbstractToolDefinitionDataPr
                 .stat(ToolStats.ATTACK_SPEED, 1.2f)
                 .smallToolStartingSlots()
                 // traits
-                .trait(HephPlusRegistry.SMASHING, 1)
+                .trait(HephPlusModifierRegistry.SMASHING, 1)
                 // harvest
                 .action(ToolActions.PICKAXE_DIG)
                 .action(ToolActions.SHOVEL_DIG)
@@ -39,7 +40,7 @@ public class HephPlusToolDefinitionProvider extends AbstractToolDefinitionDataPr
 
         define(ToolDefinitions.CROOK)
                 // parts
-                .part(HephPlusRegistry.crookHead)
+                .part(HephPlusItemRegistry.crookHead)
                 .part(toolHandle)
                 .part(toolBinding)
                 // stats
@@ -47,7 +48,7 @@ public class HephPlusToolDefinitionProvider extends AbstractToolDefinitionDataPr
                 .stat(ToolStats.ATTACK_SPEED, 1.2f)
                 .smallToolStartingSlots()
                 // traits
-                .trait(HephPlusRegistry.CROOKING, 1)
+                .trait(HephPlusModifierRegistry.CROOKING, 1)
                 // harvest
                 .action(ToolActions.SHEARS_DIG)
                 .effective(ModTags.CROOKABLES)

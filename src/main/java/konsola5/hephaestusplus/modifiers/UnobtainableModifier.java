@@ -11,15 +11,15 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
-import slimeknights.mantle.client.TooltipKey;
 
 import java.util.List;
 import java.util.UUID;
 
-import static konsola5.hephaestusplus.HephPlusRegistry.TOOL_OWNER;
+import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.TOOL_OWNER;
 
 public class UnobtainableModifier extends NoLevelsModifier {
     // Inspired by Relic binding from Botania (by Vazkii) (uses some code from Botania, heavily modified)

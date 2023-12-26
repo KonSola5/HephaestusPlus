@@ -1,7 +1,7 @@
 package konsola5.hephaestusplus.datagen;
 
-import konsola5.hephaestusplus.HephPlusRegistry;
 import konsola5.hephaestusplus.ids.MoarModifierIds;
+import konsola5.hephaestusplus.registry.HephPlusAttributes;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -39,7 +39,7 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                 .build());
         addModifier(MoarModifierIds.carmot_shield, StatBoostModifier.builder().attribute(
                 "hephaestusplus.modifier.carmot_shield",
-                HephPlusRegistry.CARMOT_SHIELD,
+                HephPlusAttributes.CARMOT_SHIELD,
                 AttributeModifier.Operation.ADDITION,
                 2,
                 EquipmentSlot.HEAD,
@@ -50,7 +50,7 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                 .display(ModifierLevelDisplay.NO_LEVELS).build());
         addModifier(MoarModifierIds.carmot_boost, StatBoostModifier.builder().attribute(
                         "hephaestusplus.modifier.carmot_boost",
-                        HephPlusRegistry.CARMOT_SHIELD,
+                        HephPlusAttributes.CARMOT_SHIELD,
                         AttributeModifier.Operation.ADDITION,
                         1,
                         EquipmentSlot.HEAD,

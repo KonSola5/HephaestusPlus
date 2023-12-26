@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.datagen;
 
-import konsola5.hephaestusplus.HephPlusRegistry;
+import konsola5.hephaestusplus.registry.HephPlusItemRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import org.jetbrains.annotations.NotNull;
@@ -19,8 +19,8 @@ public class HephPlusToolRecipeProvider extends BaseRecipeProvider implements IM
     public void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
         String folder = "tools/building/";
 
-        toolBuilding(consumer, HephPlusRegistry.handHammer, folder);
-        toolBuilding(consumer, HephPlusRegistry.crook, folder);
+        toolBuilding(consumer, HephPlusItemRegistry.handHammer, folder);
+        toolBuilding(consumer, HephPlusItemRegistry.crook, folder);
 
         this.addPartRecipes(consumer);
     }
@@ -29,7 +29,7 @@ public class HephPlusToolRecipeProvider extends BaseRecipeProvider implements IM
         String partFolder = "tools/parts/";
         String castFolder = "smeltery/casts/";
 
-        partRecipes(consumer, HephPlusRegistry.crookHead, HephPlusRegistry.crookHeadCast, 2, partFolder, castFolder);
+        partRecipes(consumer, HephPlusItemRegistry.crookHead, HephPlusItemRegistry.crookHeadCast, 2, partFolder, castFolder);
     }
 
     @Override

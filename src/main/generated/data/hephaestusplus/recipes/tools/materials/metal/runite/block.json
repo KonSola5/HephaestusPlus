@@ -7,14 +7,13 @@
       ]
     }
   ],
-  "type": "tconstruct:melting",
-  "ingredient": {
-    "tag": "c:runite_blocks"
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 196,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_runite"
   },
   "result": {
-    "amount": 81000,
-    "fluid": "hephaestusplus:molten_runite"
-  },
-  "temperature": 970,
-  "time": 196
+    "tag": "c:runite_blocks"
+  }
 }

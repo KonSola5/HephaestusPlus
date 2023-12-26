@@ -1,6 +1,5 @@
 package konsola5.hephaestusplus.modifiers;
 
-import konsola5.hephaestusplus.HephPlusRegistry;
 import konsola5.hephaestusplus.HephaestusPlus;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,9 +15,11 @@ import slimeknights.tconstruct.library.utils.TooltipKey;
 
 import java.util.List;
 
+import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.STORED_SOULS;
+
 public class SoulPoweredModifier extends Modifier {
     public void incrementSouls(ModDataNBT persistentData) {
-        persistentData.putInt(HephPlusRegistry.STORED_SOULS, persistentData.getInt(HephPlusRegistry.STORED_SOULS) + 1);
+        persistentData.putInt(STORED_SOULS, persistentData.getInt(STORED_SOULS) + 1);
     }
 
     private static final Component STORED_SOULS_TEXT = HephaestusPlus.makeTranslation("modifier", "soul_powered.stored_souls");
@@ -36,7 +37,7 @@ public class SoulPoweredModifier extends Modifier {
     @Override
     public float getEntityDamage(IToolStackView tool, int level, ToolAttackContext context, float baseDamage, float damage) {
         IModDataView persistentData = tool.getPersistentData();
-        int souls = persistentData.getInt(HephPlusRegistry.STORED_SOULS);
+        int souls = persistentData.getInt(STORED_SOULS);
         if (souls > 0) {
             return damage + (float) (0.5 * Math.log(souls));
         }
@@ -44,13 +45,13 @@ public class SoulPoweredModifier extends Modifier {
     }
 
     public void onRemoved(IToolStackView tool) {
-        tool.getPersistentData().remove(HephPlusRegistry.STORED_SOULS);
+        tool.getPersistentData().remove(STORED_SOULS);
     }
 
     @Override
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         IModDataView persistentData = tool.getPersistentData();
-        int souls = persistentData.getInt(HephPlusRegistry.STORED_SOULS);
+        int souls = persistentData.getInt(STORED_SOULS);
         float bonus = (float) (0.5 * Math.log(souls));
         if (souls > 0) {
             tooltip.add(applyStyle(Component.empty().append(STORED_SOULS_TEXT).append(Component.literal(": " + souls))));

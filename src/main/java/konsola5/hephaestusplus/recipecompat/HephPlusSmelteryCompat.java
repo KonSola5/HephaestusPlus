@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.recipecompat;
 
-import konsola5.hephaestusplus.HephPlusRegistry;
+import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
 import net.minecraft.world.item.Item;
 import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.mantle.util.SimpleFlowableFluid;
@@ -11,29 +11,29 @@ import java.util.Locale;
  * Enum holding all relevant smeltery compat. A copy-over from Hephaestus code
  */
 public enum HephPlusSmelteryCompat {
-    ADAMANTITE(HephPlusRegistry.moltenAdamantite, HephPlusByproducts.ORICHALCUM),
-    AQUARIUM(HephPlusRegistry.moltenAquarium, true),
-    BANGLUM(HephPlusRegistry.moltenBanglum, true),
-    CARMOT(HephPlusRegistry.moltenCarmot, true),
-    CELESTIUM(HephPlusRegistry.moltenCelestium),
-    DURASTEEL(HephPlusRegistry.moltenDurasteel),
-    HALLOWED(HephPlusRegistry.moltenHallowed),
-    KYBER(HephPlusRegistry.moltenKyber, HephPlusByproducts.AMETHYST),
-    MANGANESE(HephPlusRegistry.moltenManganese, true),
-    METALLURGIUM(HephPlusRegistry.moltenMetallurgium),
-    MYTHRIL(HephPlusRegistry.moltenMythril, true),
-    ORICHALCUM(HephPlusRegistry.moltenOrichalcum, HephPlusByproducts.ADAMANTITE),
-    PALLADIUM(HephPlusRegistry.moltenPalladium, true),
-    PROMETHEUM(HephPlusRegistry.moltenPrometheum, true),
-    QUADRILLUM(HephPlusRegistry.moltenQuadrillum, true),
-    RUNITE(HephPlusRegistry.moltenRunite, HephPlusByproducts.SILVER),
-    STAR_PLATINUM(HephPlusRegistry.moltenStarPlatinum),
-    STORMYX(HephPlusRegistry.moltenStormyx, true),
-    UNOBTAINIUM(HephPlusRegistry.moltenUnobtainium, true),
+    ADAMANTITE(HephPlusFluidRegistry.moltenAdamantite, HephPlusByproducts.ORICHALCUM),
+    AQUARIUM(HephPlusFluidRegistry.moltenAquarium, true),
+    BANGLUM(HephPlusFluidRegistry.moltenBanglum, true),
+    CARMOT(HephPlusFluidRegistry.moltenCarmot, true),
+    CELESTIUM(HephPlusFluidRegistry.moltenCelestium),
+    DURASTEEL(HephPlusFluidRegistry.moltenDurasteel),
+    HALLOWED(HephPlusFluidRegistry.moltenHallowed),
+    KYBER(HephPlusFluidRegistry.moltenKyber, HephPlusByproducts.AMETHYST),
+    MANGANESE(HephPlusFluidRegistry.moltenManganese, true),
+    METALLURGIUM(HephPlusFluidRegistry.moltenMetallurgium),
+    MYTHRIL(HephPlusFluidRegistry.moltenMythril, true),
+    ORICHALCUM(HephPlusFluidRegistry.moltenOrichalcum, HephPlusByproducts.ADAMANTITE),
+    PALLADIUM(HephPlusFluidRegistry.moltenPalladium, true),
+    PROMETHEUM(HephPlusFluidRegistry.moltenPrometheum, true),
+    QUADRILLUM(HephPlusFluidRegistry.moltenQuadrillum, true),
+    RUNITE(HephPlusFluidRegistry.moltenRunite, HephPlusByproducts.SILVER),
+    STAR_PLATINUM(HephPlusFluidRegistry.moltenStarPlatinum),
+    STORMYX(HephPlusFluidRegistry.moltenStormyx, true),
+    UNOBTAINIUM(HephPlusFluidRegistry.moltenUnobtainium, true),
 
-    MANASTEEL(HephPlusRegistry.moltenManasteel),
-    ELEMENTIUM(HephPlusRegistry.moltenElementium),
-    TERRASTEEL(HephPlusRegistry.moltenTerrasteel),
+    MANASTEEL(HephPlusFluidRegistry.moltenManasteel),
+    ELEMENTIUM(HephPlusFluidRegistry.moltenElementium),
+    TERRASTEEL(HephPlusFluidRegistry.moltenTerrasteel),
     ;
 
     private final String name = this.name().toLowerCase(Locale.US);

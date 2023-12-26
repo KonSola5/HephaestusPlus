@@ -1,9 +1,10 @@
 package konsola5.hephaestusplus.datagen;
 
-import konsola5.hephaestusplus.HephPlusRegistry;
 import konsola5.hephaestusplus.HephaestusPlus;
 import konsola5.hephaestusplus.ids.MoarMaterialIds;
 import konsola5.hephaestusplus.ids.MoarModifierIds;
+import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
+import konsola5.hephaestusplus.registry.HephPlusItemRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -79,14 +80,14 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
                 .setSlots(SlotType.ABILITY, 1)
                 .save(consumer, prefix(MoarModifierIds.carmot_shield, abilityFolder));
 
-        ItemCastingRecipeBuilder.tableRecipe(HephPlusRegistry.carmotReinforcement)
-                .setFluidAndTime(HephPlusRegistry.moltenCarmot, true, FluidValues.NUGGET * 3)
+        ItemCastingRecipeBuilder.tableRecipe(HephPlusItemRegistry.carmotReinforcement)
+                .setFluidAndTime(HephPlusFluidRegistry.moltenCarmot, true, FluidValues.NUGGET * 3)
                 .setCast(TinkerCommons.obsidianPane, true)
                 .save(consumer, prefix(TinkerModifiers.ironReinforcement.getRegistryName(), modifiersFolder));
 
         ModifierRecipeBuilder.modifier(MoarModifierIds.carmot_boost)
                 .setTools(ingredientFromTags(TinkerTags.Items.ARMOR))
-                .addInput(HephPlusRegistry.carmotReinforcement, 20)
+                .addInput(HephPlusItemRegistry.carmotReinforcement, 20)
                 .setRequirements(ModifierMatch.entry(MoarModifierIds.carmot_shield))
                 .setRequirementsError(makeRequirementsError("carmot_shield_required"))
                 .setMaxLevel(5)

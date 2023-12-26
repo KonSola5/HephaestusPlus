@@ -1,6 +1,8 @@
 package konsola5.hephaestusplus;
 
 import dev.architectury.fluid.FluidStack;
+import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
+import konsola5.hephaestusplus.registry.HephPlusItemRegistry;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
 import me.shedaniel.rei.api.client.registry.entry.EntryRegistry;
 import me.shedaniel.rei.api.common.entry.EntryStack;
@@ -16,27 +18,27 @@ public class REIPlugin implements REIClientPlugin {
     public void registerEntries(EntryRegistry registry) {
         // Hide fluids and Legendary Banglum if Mythic Metals isn't loaded
         if (!FabricLoader.getInstance().isModLoaded("mythicmetals")) {
-            removeFluid(registry, HephPlusRegistry.moltenAdamantite  .get(), HephPlusRegistry.moltenAdamantite.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenAquarium    .get(), HephPlusRegistry.moltenAquarium.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenBanglum     .get(), HephPlusRegistry.moltenBanglum.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenCarmot      .get(), HephPlusRegistry.moltenCarmot.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenCelestium   .get(), HephPlusRegistry.moltenCelestium.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenDurasteel   .get(), HephPlusRegistry.moltenDurasteel.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenHallowed    .get(), HephPlusRegistry.moltenHallowed.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenKyber       .get(), HephPlusRegistry.moltenKyber.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenManganese   .get(), HephPlusRegistry.moltenManganese.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenMetallurgium.get(), HephPlusRegistry.moltenMetallurgium.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenMythril     .get(), HephPlusRegistry.moltenMythril.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenOrichalcum  .get(), HephPlusRegistry.moltenOrichalcum.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenPalladium   .get(), HephPlusRegistry.moltenPalladium.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenPrometheum  .get(), HephPlusRegistry.moltenPrometheum.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenQuadrillum  .get(), HephPlusRegistry.moltenQuadrillum.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenRunite      .get(), HephPlusRegistry.moltenRunite.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenStarPlatinum.get(), HephPlusRegistry.moltenStarPlatinum.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenStarrite    .get(), HephPlusRegistry.moltenStarrite.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenStormyx     .get(), HephPlusRegistry.moltenStormyx.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenUnobtainium .get(), HephPlusRegistry.moltenUnobtainium.asItem());
-            registry.removeEntry(EntryStacks.of(HephPlusRegistry.carmotReinforcement));
+            removeFluid(registry, HephPlusFluidRegistry.moltenAdamantite  .get(), HephPlusFluidRegistry.moltenAdamantite.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenAquarium    .get(), HephPlusFluidRegistry.moltenAquarium.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenBanglum     .get(), HephPlusFluidRegistry.moltenBanglum.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenCarmot      .get(), HephPlusFluidRegistry.moltenCarmot.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenCelestium   .get(), HephPlusFluidRegistry.moltenCelestium.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenDurasteel   .get(), HephPlusFluidRegistry.moltenDurasteel.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenHallowed    .get(), HephPlusFluidRegistry.moltenHallowed.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenKyber       .get(), HephPlusFluidRegistry.moltenKyber.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenManganese   .get(), HephPlusFluidRegistry.moltenManganese.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenMetallurgium.get(), HephPlusFluidRegistry.moltenMetallurgium.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenMythril     .get(), HephPlusFluidRegistry.moltenMythril.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenOrichalcum  .get(), HephPlusFluidRegistry.moltenOrichalcum.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenPalladium   .get(), HephPlusFluidRegistry.moltenPalladium.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenPrometheum  .get(), HephPlusFluidRegistry.moltenPrometheum.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenQuadrillum  .get(), HephPlusFluidRegistry.moltenQuadrillum.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenRunite      .get(), HephPlusFluidRegistry.moltenRunite.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenStarPlatinum.get(), HephPlusFluidRegistry.moltenStarPlatinum.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenStarrite    .get(), HephPlusFluidRegistry.moltenStarrite.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenStormyx     .get(), HephPlusFluidRegistry.moltenStormyx.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenUnobtainium .get(), HephPlusFluidRegistry.moltenUnobtainium.asItem());
+            registry.removeEntry(EntryStacks.of(HephPlusItemRegistry.carmotReinforcement));
             registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "legendary_banglum"));
             registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "carmot_shield"));
             registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "carmot_boost"));
@@ -48,9 +50,9 @@ public class REIPlugin implements REIClientPlugin {
         }
         // Hide fluids if Botania isn't loaded
         if (!FabricLoader.getInstance().isModLoaded("botania")) {
-            removeFluid(registry, HephPlusRegistry.moltenManasteel  .get(), HephPlusRegistry.moltenManasteel.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenElementium .get(), HephPlusRegistry.moltenElementium.asItem());
-            removeFluid(registry, HephPlusRegistry.moltenTerrasteel .get(), HephPlusRegistry.moltenTerrasteel.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenManasteel  .get(), HephPlusFluidRegistry.moltenManasteel.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenElementium .get(), HephPlusFluidRegistry.moltenElementium.asItem());
+            removeFluid(registry, HephPlusFluidRegistry.moltenTerrasteel .get(), HephPlusFluidRegistry.moltenTerrasteel.asItem());
         }
     }
 

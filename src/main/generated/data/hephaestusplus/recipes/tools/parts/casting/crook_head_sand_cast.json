@@ -1,4 +1,18 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "fabricaeexnihilo"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "fabricaeexnihilo"
+      ]
+    }
+  ],
   "type": "tconstruct:table_casting_material",
   "cast": {
     "tag": "hephaestusplus:casts/single_use/crook_head"

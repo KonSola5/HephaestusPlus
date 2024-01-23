@@ -7,14 +7,13 @@
       ]
     }
   ],
-  "type": "tconstruct:melting",
-  "ingredient": {
-    "tag": "c:mythril_blocks"
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 190,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_mythril"
   },
   "result": {
-    "amount": 81000,
-    "fluid": "hephaestusplus:molten_mythril"
-  },
-  "temperature": 900,
-  "time": 190
+    "tag": "c:mythril_blocks"
+  }
 }

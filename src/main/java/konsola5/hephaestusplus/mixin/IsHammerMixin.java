@@ -1,6 +1,6 @@
 package konsola5.hephaestusplus.mixin;
 
-import konsola5.hephaestusplus.registry.HephPlusModifierRegistry;
+import konsola5.hephaestusplus.ids.MoarModifierIds;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,7 +13,7 @@ import wraith.fabricaeexnihilo.modules.tools.HammerItem;
 public class IsHammerMixin {
     @Inject(method = "isHammer", at = @At("HEAD"), cancellable = true)
     private static void checkSmashing(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        int level = ModifierUtil.getModifierLevel(stack, HephPlusModifierRegistry.SMASHING.getId());
+        int level = ModifierUtil.getModifierLevel(stack, MoarModifierIds.smashing);
         if (level > 0) cir.setReturnValue(true);
     }
 }

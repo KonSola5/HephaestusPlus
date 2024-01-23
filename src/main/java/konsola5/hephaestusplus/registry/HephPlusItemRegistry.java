@@ -32,17 +32,13 @@ public class HephPlusItemRegistry {
         if (FabricLoader.getInstance().isModLoaded("fabricaeexnihilo")) {
             HephPlusItemRegistry.handHammer = HephPlusItemRegistry.ITEMS.register("hand_hammer", () -> new ModifiableItem(HephPlusItemRegistry.TOOL, ToolDefinitions.HAND_HAMMER, TinkerTabs.TAB_TOOLS));
             HephPlusItemRegistry.crook = HephPlusItemRegistry.ITEMS.register("crook", () -> new ModifiableItem(HephPlusItemRegistry.TOOL, ToolDefinitions.CROOK, TinkerTabs.TAB_TOOLS));
-        } else {
-            HephPlusItemRegistry.handHammer = null;
-            HephPlusItemRegistry.crook = null;
-        }
-    }
 
-    static {
-        if (FabricLoader.getInstance().isModLoaded("fabricaeexnihilo")) {
             HephPlusItemRegistry.crookHead = HephPlusItemRegistry.ITEMS.register("crook_head", () -> new ToolPartItem(HephPlusItemRegistry.PARTS_PROPS, HeadMaterialStats.ID, TinkerTabs.TAB_TOOL_PARTS));
             HephPlusItemRegistry.crookHeadCast = HephPlusItemRegistry.ITEMS.registerCast("crook_head", HephPlusItemRegistry.SMELTERY_PROPS);
         } else {
+            HephPlusItemRegistry.handHammer = null;
+            HephPlusItemRegistry.crook = null;
+
             HephPlusItemRegistry.crookHead = null;
             HephPlusItemRegistry.crookHeadCast = null;
         }

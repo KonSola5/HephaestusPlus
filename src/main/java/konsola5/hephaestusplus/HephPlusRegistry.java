@@ -10,6 +10,7 @@ import konsola5.hephaestusplus.spritegen.HephPlusMaterialRenderInfoProvider;
 import konsola5.hephaestusplus.spritegen.HephaestusPlusMaterialSpriteProvider;
 import konsola5.hephaestusplus.spritegen.HephaestusPlusPartSpriteProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import slimeknights.tconstruct.library.client.data.TinkerSpriteSourceGenerator;
@@ -32,6 +33,8 @@ public class HephPlusRegistry {
 
     public static void gatherData(FabricDataGenerator.Pack pack, ExistingFileHelper existingFileHelper) {
 
+        FabricTagProvider.BlockTagProvider blockTags = pack.addProvider(HephPlusBlockTagsProvider::new); // Required, despite not adding any blocks yet.
+        pack.addProvider((output, registriesFuture) -> new HephPlusItemTagsProvider(output, registriesFuture, blockTags));
         pack.addProvider(HephPlusFluidTagsProvider::new);
 
         pack.addProvider(HephPlusToolRecipeProvider::new);

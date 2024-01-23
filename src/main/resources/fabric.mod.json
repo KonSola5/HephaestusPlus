@@ -33,11 +33,11 @@
 		"hephaestusplus.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.23",
+		"fabricloader": ">=0.15.3",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*",
-		"tconstruct": ">=1.20.1-3.6.3.232"
+		"tconstruct": ">=1.20.1-3.6.3.240"
 	},
 	"suggests": {
 		"fabricaeexnihilo": "*",

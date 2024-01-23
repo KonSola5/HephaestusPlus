@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "hephaestusplus:crook",
+      "required": false
+    }
+  ]
+}

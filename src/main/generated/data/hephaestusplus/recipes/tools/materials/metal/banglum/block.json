@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 178,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_banglum"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:banglum_blocks"
   },
   "result": {
-    "tag": "c:banglum_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_banglum"
+  },
+  "temperature": 770,
+  "time": 178
 }

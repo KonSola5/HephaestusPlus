@@ -8,15 +8,12 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
-import static konsola5.hephaestusplus.HephaestusPlus.LOGGER;
-
 public class LegendaryBanglumModifier extends NoLevelsModifier {
     @Override
     public void addToolStats(ToolRebuildContext context, int level, ModifierStatsBuilder builder) {
         var materialVariantList = context.getMaterials().getList();
         boolean hasBanglum = false;
         for (var material : materialVariantList) {
-            LOGGER.info(String.valueOf(material));
             if (material.matches(MoarMaterialIds.banglum)) {
                 hasBanglum = true;
                 break;

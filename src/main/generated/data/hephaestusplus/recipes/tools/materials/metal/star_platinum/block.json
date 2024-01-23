@@ -7,14 +7,13 @@
       ]
     }
   ],
-  "type": "tconstruct:melting",
-  "ingredient": {
-    "tag": "c:star_platinum_blocks"
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 225,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_star_platinum"
   },
   "result": {
-    "amount": 81000,
-    "fluid": "hephaestusplus:molten_star_platinum"
-  },
-  "temperature": 1300,
-  "time": 225
+    "tag": "c:star_platinum_blocks"
+  }
 }

@@ -7,6 +7,7 @@ import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
 import konsola5.hephaestusplus.registry.HephPlusItemRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
+import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -55,35 +56,41 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
         String compatSalvage = "tools/modifiers/salvage/compat/";
         String worktableFolder = "tools/modifiers/worktable/";
 
+        Consumer<FinishedRecipe> whenFENLoaded = withCondition(consumer,
+                DefaultResourceConditions.allModsLoaded("fabricaeexnihilo")
+        );
+        Consumer<FinishedRecipe> whenMythicMetalsLoaded = withCondition(consumer,
+                DefaultResourceConditions.allModsLoaded("mythicmetals")
+        );
         ModifierRecipeBuilder.modifier(MoarModifierIds.smashing)
                 .setTools(ingredientFromTags(TinkerTags.Items.HARVEST_PRIMARY))
                 .addInput(ModTags.HAMMERS)
                 .setMaxLevel(1)
                 .setSlots(SlotType.ABILITY, 1)
-                .save(consumer, prefix(MoarModifierIds.smashing, abilityFolder));
+                .save(whenFENLoaded, prefix(MoarModifierIds.smashing, abilityFolder));
         ModifierRecipeBuilder.modifier(MoarModifierIds.crooking)
                 .setTools(ingredientFromTags(TinkerTags.Items.HARVEST_PRIMARY))
                 .addInput(ModTags.CROOKS)
                 .setMaxLevel(1)
                 .setSlots(SlotType.ABILITY, 1)
-                .save(consumer, prefix(MoarModifierIds.crooking, abilityFolder));
+                .save(whenFENLoaded, prefix(MoarModifierIds.crooking, abilityFolder));
         ModifierRecipeBuilder.modifier(MoarModifierIds.legendary_banglum)
                 .setTools(ingredientFromTags(TinkerTags.Items.HARVEST_PRIMARY))
                 .addInput(MythicItems.Mats.BANGLUM_CHUNK)
                 .setMaxLevel(1)
                 .setSlots(SlotType.ABILITY, 1)
-                .save(consumer, prefix(MoarModifierIds.legendary_banglum, abilityFolder));
+                .save(whenMythicMetalsLoaded, prefix(MoarModifierIds.legendary_banglum, abilityFolder));
         ModifierRecipeBuilder.modifier(MoarModifierIds.carmot_shield)
                 .setTools(ingredientFromTags(TinkerTags.Items.ARMOR))
                 .addInput(MythicItems.Templates.CARMOT_SMITHING_TEMPLATE)
                 .setMaxLevel(1)
                 .setSlots(SlotType.ABILITY, 1)
-                .save(consumer, prefix(MoarModifierIds.carmot_shield, abilityFolder));
+                .save(whenMythicMetalsLoaded, prefix(MoarModifierIds.carmot_shield, abilityFolder));
 
         ItemCastingRecipeBuilder.tableRecipe(HephPlusItemRegistry.carmotReinforcement)
                 .setFluidAndTime(HephPlusFluidRegistry.moltenCarmot, true, FluidValues.NUGGET * 3)
                 .setCast(TinkerCommons.obsidianPane, true)
-                .save(consumer, prefix(TinkerModifiers.ironReinforcement.getRegistryName(), modifiersFolder));
+                .save(whenMythicMetalsLoaded, prefix(HephPlusItemRegistry.carmotReinforcement.getRegistryName(), modifiersFolder));
 
         ModifierRecipeBuilder.modifier(MoarModifierIds.carmot_boost)
                 .setTools(ingredientFromTags(TinkerTags.Items.ARMOR))
@@ -92,7 +99,7 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
                 .setRequirementsError(makeRequirementsError("carmot_shield_required"))
                 .setMaxLevel(5)
                 .setSlots(SlotType.DEFENSE, 1)
-                .save(consumer, prefix(MoarModifierIds.carmot_boost, defenseFolder));
+                .save(whenMythicMetalsLoaded, prefix(MoarModifierIds.carmot_boost, defenseFolder));
 
         // Embellishments
         buildEmbellishment(MoarMaterialIds.adamantite   ,"adamantite_ingots"    ,consumer);

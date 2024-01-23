@@ -1,6 +1,7 @@
 package konsola5.hephaestusplus;
 
 import dev.architectury.fluid.FluidStack;
+import konsola5.hephaestusplus.ids.MoarModifierIds;
 import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
 import konsola5.hephaestusplus.registry.HephPlusItemRegistry;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
@@ -12,6 +13,8 @@ import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.Fluid;
+import slimeknights.tconstruct.TConstruct;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 
 public class REIPlugin implements REIClientPlugin {
     @Override
@@ -39,14 +42,14 @@ public class REIPlugin implements REIClientPlugin {
             removeFluid(registry, HephPlusFluidRegistry.moltenStormyx     .get(), HephPlusFluidRegistry.moltenStormyx.asItem());
             removeFluid(registry, HephPlusFluidRegistry.moltenUnobtainium .get(), HephPlusFluidRegistry.moltenUnobtainium.asItem());
             registry.removeEntry(EntryStacks.of(HephPlusItemRegistry.carmotReinforcement));
-            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "legendary_banglum"));
-            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "carmot_shield"));
-            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "carmot_boost"));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(TConstruct.getResource("modifier_entry")), new ModifierEntry(MoarModifierIds.legendary_banglum ,1)));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(TConstruct.getResource("modifier_entry")), new ModifierEntry(MoarModifierIds.carmot_shield ,1)));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(TConstruct.getResource("modifier_entry")), new ModifierEntry(MoarModifierIds.carmot_boost ,1)));
         }
         // Hide Crooking and Smashing is FEN isn't loaded
         if (!FabricLoader.getInstance().isModLoaded("fabricaeexnihilo")) {
-            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "crooking"));
-            registry.removeEntry(EntryStack.of(EntryType.deferred(HephaestusPlus.getResource("modifier_entry")), "smashing"));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(TConstruct.getResource("modifier_entry")), new ModifierEntry(MoarModifierIds.crooking ,1)));
+            registry.removeEntry(EntryStack.of(EntryType.deferred(TConstruct.getResource("modifier_entry")), new ModifierEntry(MoarModifierIds.smashing ,1)));
         }
         // Hide fluids if Botania isn't loaded
         if (!FabricLoader.getInstance().isModLoaded("botania")) {

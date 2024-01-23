@@ -1,4 +1,18 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "fabricaeexnihilo"
+      ]
+    },
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "fabricaeexnihilo"
+      ]
+    }
+  ],
   "type": "tconstruct:molding_table",
   "material": {
     "item": "tconstruct:blank_red_sand_cast"

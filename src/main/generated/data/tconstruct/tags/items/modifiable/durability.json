@@ -2,11 +2,11 @@
   "replace": false,
   "values": [
     {
-      "id": "hephaestusplus:hand_hammer",
+      "id": "hephaestusplus:crook",
       "required": false
     },
     {
-      "id": "hephaestusplus:crook",
+      "id": "hephaestusplus:hand_hammer",
       "required": false
     }
   ]

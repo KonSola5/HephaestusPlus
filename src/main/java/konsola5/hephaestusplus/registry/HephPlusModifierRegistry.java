@@ -37,6 +37,8 @@ public class HephPlusModifierRegistry {
     public static final DynamicModifier<Modifier> FAIRY_BLESSING = MODIFIERS.registerDynamic("fairy_blessing", Modifier.class);
     public static final StaticModifier<Modifier> TERRAFIRMA = MODIFIERS.register("terrafirma", TerrafirmaModifier::new);
 
+    public static final StaticModifier<BatteryModifier> BATTERY = MODIFIERS.register("battery", () -> new BatteryModifier(10000));
+
     public static void register() {
         MODIFIERS.register();
     }

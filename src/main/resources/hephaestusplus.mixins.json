@@ -9,6 +9,7 @@
     "IsCorrectTierVanillaMixin",
     "IsCrookMixin",
     "IsHammerMixin",
+    "ModifiableItemMixin",
     "PlayerMixin",
     "ShouldFilterOutMixin"
   ],

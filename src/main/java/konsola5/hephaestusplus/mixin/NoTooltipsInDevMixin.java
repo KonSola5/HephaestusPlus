@@ -1,13 +1,10 @@
 package konsola5.hephaestusplus.mixin;
 
-import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import slimeknights.tconstruct.FabricEvents;
-
-import java.util.List;
 
 @Mixin(FabricEvents.class)
 public class NoTooltipsInDevMixin {
@@ -17,7 +14,7 @@ public class NoTooltipsInDevMixin {
             shift = At.Shift.AFTER),
             cancellable = true, remap = false)
     private static void injected(CallbackInfo ci) {
-        boolean TOOLTIPS = true;
+        boolean TOOLTIPS = false;
         if (!TOOLTIPS) ci.cancel();
     }
 }

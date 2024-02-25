@@ -21,6 +21,7 @@ public class HephPlusMixinPlugin implements IMixinConfigPlugin {
             "konsola5.hephaestusplus.mixin.IsCrookMixin", () -> FabricLoader.getInstance().isModLoaded("fabricaeexnihilo"),
             "konsola5.hephaestusplus.mixin.IsHammerMixin", () -> FabricLoader.getInstance().isModLoaded("fabricaeexnihilo"),
             "konsola5.hephaestusplus.mixin.CarmotShieldMixin", () -> FabricLoader.getInstance().isModLoaded("mythicmetals"),
+            "konsola5.hephaestusplus.mixin.PlayerMixin", () -> FabricLoader.getInstance().isModLoaded("mythicmetals"),
             "konsola5.hephaestusplus.mixin.ShouldFilterOutMixin", () -> FabricLoader.getInstance().isModLoaded("botania")
     );
 

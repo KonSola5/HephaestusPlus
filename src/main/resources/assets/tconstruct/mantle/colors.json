@@ -4,7 +4,10 @@
     "smashing":             "#828282",
     "crooking":             "#592f13",
     "legendary_banglum":    "#fca800",
-    "carmot_shield": "#b6253c",
+    "carmot_shield":        "#b6253c",
+    "battery":              "#ff0000",
+    "big_battery":          "#ff0000",
+    "huge_battery":         "#ff0000",
 
     "__traits__": null,
     "solid": "#95e49c",

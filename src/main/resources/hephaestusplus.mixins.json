@@ -10,6 +10,7 @@
     "IsCrookMixin",
     "IsHammerMixin",
     "ModifiableItemMixin",
+    "ModifiableLauncherItemMixin",
     "PlayerMixin",
     "ShouldFilterOutMixin"
   ],

@@ -31,6 +31,8 @@ public class MoarModifierIds {
     public static final ModifierId fairy_blessing = new ModifierId(HephaestusPlus.MOD_ID, "fairy_blessing");
     public static final ModifierId terrafirma = new ModifierId(HephaestusPlus.MOD_ID, "terrafirma");
 
+
+    public static final ModifierId battery = new ModifierId(HephaestusPlus.MOD_ID, "battery");
     private MoarModifierIds() {
     }
 }

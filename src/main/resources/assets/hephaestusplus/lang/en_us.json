@@ -122,6 +122,15 @@
   "modifier.hephaestusplus.fairy_blessing.flavor": "A special grace.",
   "modifier.hephaestusplus.fairy_blessing.description": "Increases the Pixie spawn chance upon being damaged when held",
 
+  "modifier.hephaestusplus.battery": "Battery",
+  "modifier.hephaestusplus.big_battery": "Big Battery",
+  "modifier.hephaestusplus.huge_battery": "Huge Battery",
+  "modifier.hephaestusplus.battery.flavor": "What does a battery do on my tool?",
+  "modifier.hephaestusplus.battery.description": "Tool now has a battery, allowing it to store Energy",
+  "modifier.hephaestusplus.battery.energy": "Energy: %d %s / %d %s",
+  "modifier.hephaestusplus.battery.unit": "E",
+
+
   "_comment4": "HephaestusTools Patterns",
   "pattern.hephaestusplus.crook_head": "Crook Head",
   "item.hephaestusplus.crook_head_cast": "Crook Head Cast",

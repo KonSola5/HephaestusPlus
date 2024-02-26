@@ -6,6 +6,7 @@ import konsola5.hephaestusplus.util.ToolEnergyCapability.EnergyModifierHook;
 import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
+import net.minecraft.client.resources.language.I18n;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
@@ -34,8 +35,9 @@ import java.util.List;
 @ParametersAreNonnullByDefault
 public class BatteryModifier extends Modifier {
 
-    private static final String FILLED_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.filled");
+    private static final String ENERGY_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.energy");
     private static final String CAPACITY_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.capacity");
+    private static final String UNIT_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.unit");
 
     private static final ResourceLocation OWNER = HephaestusPlus.getResource("battery_owner");
     private static final ResourceLocation CAPACITY = HephaestusPlus.getResource("battery_capacity");
@@ -71,8 +73,7 @@ public class BatteryModifier extends Modifier {
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         if (isOwner(tool)) {
             long current = getEnergy(tool);
-            //tooltip.add(Component.translatable(CAPACITY_KEY);
-            tooltip.add(Component.literal(String.valueOf(current)).append("E/").append(String.valueOf(getCapacity(tool))).append(" E"));
+            tooltip.add(Component.translatable(ENERGY_KEY, current, I18n.get(UNIT_KEY), getCapacity(tool), I18n.get(UNIT_KEY)));
         }
     }
 
@@ -138,7 +139,7 @@ public class BatteryModifier extends Modifier {
     public void addCapacity(ModDataNBT volatileNBT, long amount) {
         ResourceLocation key = getCapacityKey();
         if (volatileNBT.contains(key, Tag.TAG_ANY_NUMERIC)) {
-            amount += volatileNBT.getInt(key);
+            amount += volatileNBT.get(key, CompoundTag::getLong);
         }
         volatileNBT.putLong(key, amount);
     }
@@ -182,13 +183,21 @@ public class BatteryModifier extends Modifier {
         return setCurrentEnergy(tool, Math.min(currentEnergy + energyToInsert, capacity));
     }
 
+    public long insert(IToolStackView tool, long energyToInsert) {
+        long capacity = getCapacity(tool);
+        return setCurrentEnergy(tool, Math.min(getEnergy(tool) + energyToInsert, capacity));
+    }
+
     public long extract(ContainerItemContext context, IToolStackView tool, long currentEnergy, long energyToExtract, TransactionContext tx) {
         return setCurrentEnergy(context, tool, Math.max(currentEnergy - energyToExtract, 0), tx);
     }
 
     public long extract(IToolStackView tool, long currentEnergy, long energyToExtract) {
-        long capacity = getCapacity(tool);
         return setCurrentEnergy(tool, Math.max(currentEnergy - energyToExtract, 0));
+    }
+
+    public long extract(IToolStackView tool, long energyToExtract) {
+        return setCurrentEnergy(tool, Math.max(getEnergy(tool) - energyToExtract, 0));
     }
 
     @SuppressWarnings("UnstableApiUsage")

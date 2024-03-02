@@ -16,11 +16,14 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.common.Sounds;
+import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.TinkerHooks;
 import slimeknights.tconstruct.library.modifiers.hook.ConditionalStatModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.TooltipModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.GeneralInteractionModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InteractionSource;
+import slimeknights.tconstruct.library.modifiers.hook.mining.BreakSpeedModifierHook;
 import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.item.IModifiable;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
@@ -35,9 +38,9 @@ import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.VELOCIT
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.VELOCITY_COOLDOWN;
 
 @ParametersAreNonnullByDefault
-public class EnergyVelocityModifier extends BatteryModifier implements GeneralInteractionModifierHook, ConditionalStatModifierHook {
+public class EnergyVelocityModifier extends BatteryModifier implements GeneralInteractionModifierHook, ConditionalStatModifierHook, BreakSpeedModifierHook, TooltipModifierHook {
 
-    private final long ENERGY_PER_TICK = 5;
+    private final long ENERGY_PER_TICK = 50;
 
     public EnergyVelocityModifier() {
         super(0);
@@ -45,7 +48,10 @@ public class EnergyVelocityModifier extends BatteryModifier implements GeneralIn
 
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, TinkerHooks.CHARGEABLE_INTERACT);
+        hookBuilder
+                .addHook(this, TinkerHooks.CHARGEABLE_INTERACT)
+                .addHook(this, TinkerHooks.BREAK_SPEED)
+                .addHook(this, TinkerHooks.CONDITIONAL_STAT);
         super.registerHooks(hookBuilder);
     }
 
@@ -58,9 +64,9 @@ public class EnergyVelocityModifier extends BatteryModifier implements GeneralIn
     }
 
     @Override
-    public void onBreakSpeed(IToolStackView tool, int level, BreakSpeed event, Direction sideHit, boolean isEffective, float miningSpeedModifier) {
+    public void onBreakSpeed(IToolStackView tool, ModifierEntry modifier, BreakSpeed event, Direction sideHit, boolean isEffective, float miningSpeedModifier) {
         if (isEffective && !tool.isBroken() && tool.getPersistentData().getInt(VELOCITY_ACTIVE) > 0) {
-            event.setNewSpeed((float) ((1 + (0.5 * level)) * event.getNewSpeed()));
+            event.setNewSpeed((float) ((1 + (0.5 * modifier.getLevel())) * event.getNewSpeed()));
         }
     }
 
@@ -99,7 +105,11 @@ public class EnergyVelocityModifier extends BatteryModifier implements GeneralIn
         int DURATION = 10 * 20;
         int COOLDOWN = 30 * 20;
 
-        if (persistentData.getInt(VELOCITY_COOLDOWN) == 0 && getEnergy(tool) >= ENERGY_PER_TICK * Math.pow(2, modifier.getLevel() - 1) * DURATION) {
+        if (!(persistentData.getInt(VELOCITY_COOLDOWN) == 0)) {
+            player.displayClientMessage(Component.literal("Energy Velocity is on cooldown"), true);
+        } else if (!(getEnergy(tool) >= ENERGY_PER_TICK * Math.pow(2, modifier.getLevel() - 1) * DURATION)) {
+            player.displayClientMessage(Component.literal("Not enough Energy"), true);
+        } else {
             persistentData.putInt(VELOCITY_COOLDOWN, COOLDOWN);
             persistentData.putInt(VELOCITY_ACTIVE, DURATION);
             world.playSound(player, player, Sounds.CHARGED.getSound(), SoundSource.PLAYERS, 1.0f, 1.0f);
@@ -108,8 +118,13 @@ public class EnergyVelocityModifier extends BatteryModifier implements GeneralIn
     }
 
     @Override
-    public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+
     }
 
-
+    @Nullable
+    @Override
+    public Component onRemoved(IToolStackView tool, Modifier modifier) {
+        return null;
+    }
 }

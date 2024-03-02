@@ -16,6 +16,8 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.TinkerHooks;
 import slimeknights.tconstruct.library.modifiers.hook.ConditionalStatModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.TooltipModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.mining.BreakSpeedModifierHook;
 import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
@@ -24,7 +26,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class CosmicModifier extends Modifier implements ConditionalStatModifierHook {
+public class CosmicModifier extends Modifier implements ConditionalStatModifierHook, BreakSpeedModifierHook, TooltipModifierHook {
     private static final Component MINING_SPEED = HephaestusPlus.makeTranslation("modifier", "cosmic.mining_speed");
     private static final Component VELOCITY = HephaestusPlus.makeTranslation("modifier", "cosmic.velocity");
     /**
@@ -46,7 +48,10 @@ public class CosmicModifier extends Modifier implements ConditionalStatModifierH
 
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, TinkerHooks.CONDITIONAL_STAT);
+        hookBuilder
+                .addHook(this, TinkerHooks.CONDITIONAL_STAT)
+                .addHook(this, TinkerHooks.BREAK_SPEED)
+                .addHook(this, TinkerHooks.TOOLTIP);
     }
 
     /**
@@ -75,44 +80,53 @@ public class CosmicModifier extends Modifier implements ConditionalStatModifierH
         return baseSpeed;
     }
 
+
     @Override
-    public void onBreakSpeed(@NotNull IToolStackView tool, int level, PlayerEvents.@NotNull BreakSpeed event, @NotNull Direction sideHit, boolean isEffective, float miningSpeedModifier) {
-        if (!isEffective) {
-            return;
-        }
-        event.setNewSpeed(getBoost(event.getPlayer().level(), event.getPos().getY(), level, event.getNewSpeed(), miningSpeedModifier * tool.getMultiplier(ToolStats.MINING_SPEED), MINING_BONUS));
+    public float modifyStat(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, @NotNull LivingEntity living, @NotNull FloatToolStat stat, float baseValue, float multiplier) {
+        return 0;
     }
 
     @Override
-    public void addInformation(IToolStackView tool, int level, @Nullable Player player, @NotNull List<Component> tooltip, @NotNull TooltipKey key, @NotNull TooltipFlag tooltipFlag) {
+    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         boolean harvest = tool.hasTag(TinkerTags.Items.HARVEST);
         if (harvest || tool.hasTag(TinkerTags.Items.RANGED)) {
             Component prefix = harvest ? MINING_SPEED : VELOCITY;
             float baseBoost = harvest ? MINING_BONUS : VELOCITY_BONUS;
             double boost;
-            if (player != null && key == TooltipKey.SHIFT) {
+            if (player != null && tooltipKey == TooltipKey.SHIFT) {
                 // passing in 1 means greater than 1 is a boost, and less than 1 is a percentage
                 // the -1 means for percentage, the range is now 0 to -75%, and for flat boost it's properly 0 to baseBoost
-                boost = getBoost(player.level(), (float) player.getY(), level, 1, 1f, baseBoost) - 1;
+                boost = getBoost(player.level(), (float) player.getY(), modifier.getLevel(), 1, 1f, baseBoost) - 1;
                 if (boost < 0) {
                     // goes from 0 to -75%, don't show 0%
                     if (boost <= -0.01) {
-                        addPercentTooltip(prefix, boost, tooltip);
+                        TooltipModifierHook.addPercentBoost(modifier.getModifier(), prefix, boost, tooltip);
                     }
                     return;
                 }
             } else {
-                boost = baseBoost * level;
+                boost = baseBoost * modifier.getLevel();
             }
             if (boost >= 0.01) {
-                addFlatBoost(prefix, boost * tool.getMultiplier(harvest ? ToolStats.MINING_SPEED : ToolStats.VELOCITY), tooltip);
+                TooltipModifierHook.addFlatBoost(modifier.getModifier(), prefix, boost * tool.getMultiplier(harvest ? ToolStats.MINING_SPEED : ToolStats.VELOCITY), tooltip);
             }
         }
     }
 
     @Override
-    public float modifyStat(@NotNull IToolStackView tool, @NotNull ModifierEntry modifier, @NotNull LivingEntity living, @NotNull FloatToolStat stat, float baseValue, float multiplier) {
-        return 0;
+    public void onBreakSpeed(IToolStackView tool, ModifierEntry modifier, PlayerEvents.BreakSpeed event, Direction sideHit, boolean isEffective, float miningSpeedModifier) {
+        if (!isEffective) {
+            return;
+        }
+        event.setNewSpeed(
+                getBoost(
+                        event.getPlayer().level(),
+                        event.getPos().getY(),
+                        modifier.getLevel(),
+                        event.getNewSpeed(),
+                        miningSpeedModifier * tool.getMultiplier(ToolStats.MINING_SPEED),
+                        MINING_BONUS)
+        );
     }
 }
 

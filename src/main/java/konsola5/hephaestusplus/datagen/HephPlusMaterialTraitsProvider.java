@@ -42,7 +42,7 @@ public class HephPlusMaterialTraitsProvider extends AbstractMaterialTraitDataPro
         addDefaultTraits(MoarMaterialIds.star_platinum, MoarModifierIds.stellar_swiftness);
         addDefaultTraits(MoarMaterialIds.stormyx, MoarModifierIds.storm_spell);
 
-        addDefaultTraits(MoarMaterialIds.livingwood, MoarModifierIds.crude_manashield, TinkerModifiers.stonebound.getId());
+        addDefaultTraits(MoarMaterialIds.livingwood, MoarModifierIds.crude_manashield, ModifierIds.cultivated);
         addDefaultTraits(MoarMaterialIds.livingrock, MoarModifierIds.crude_manashield, TinkerModifiers.stonebound.getId());
         addDefaultTraits(MoarMaterialIds.manasteel, MoarModifierIds.manashield);
         addDefaultTraits(MoarMaterialIds.manastring, MoarModifierIds.manashot);

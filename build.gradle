@@ -155,9 +155,13 @@ dependencies {
 	for (String module in port_lib_modules.split(",")) {
 		modImplementation("io.github.fabricators_of_create.Porting-Lib:$module:$port_lib_version+$minecraft_base_version")
 	}
-	// Tech Reborn
+	// Ah, so Lombok needs to be included in gradle dependencies in order for it to work.
 
-	//modImplementation include("dev.isxander.yacl:yet-another-config-lib-fabric:$yacl_version")
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.30'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
 processResources {

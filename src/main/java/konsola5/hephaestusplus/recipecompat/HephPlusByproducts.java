@@ -1,6 +1,7 @@
 package konsola5.hephaestusplus.recipecompat;
 
 import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
+import lombok.Getter;
 import net.minecraft.world.level.material.Fluid;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IByproduct;
@@ -34,9 +35,12 @@ public enum HephPlusByproducts implements IByproduct {
 //    QUARTZ  ("quartz",   true, TinkerFluids.moltenQuartz, FluidValues.GEM);
 
     ;
+    @Getter
     private final String name;
+    @Getter
     private final boolean alwaysPresent;
     private final Supplier<? extends Fluid> fluidSupplier;
+    @Getter
     private final long amount;
 
     HephPlusByproducts(boolean alwaysPresent, Supplier<? extends Fluid> fluidSupplier) {
@@ -56,22 +60,5 @@ public enum HephPlusByproducts implements IByproduct {
     @Override
     public Fluid getFluid() {
         return fluidSupplier.get();
-    }
-
-    // For some reason, @Getter annotation doesn't want to work here, so needed to make getters manually.
-// Else, project won't compile.
-    @Override
-    public long getAmount() {
-        return amount;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public boolean isAlwaysPresent() {
-        return alwaysPresent;
     }
 }

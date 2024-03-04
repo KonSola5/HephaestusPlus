@@ -56,7 +56,6 @@ public class BatteryModifier extends Modifier implements VolatileDataModifierHoo
 
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        super.registerHooks(hookBuilder);
         battery = new EnergyModifier();
         hookBuilder
                 .addHook(battery, ToolEnergyCapability.HOOK)
@@ -64,6 +63,7 @@ public class BatteryModifier extends Modifier implements VolatileDataModifierHoo
                 .addHook(TinkerHooks.TOOLTIP)
                 .addHook(TinkerHooks.VALIDATE)
                 .addHook(TinkerHooks.REMOVE);
+        super.registerHooks(hookBuilder);
     }
 
     @Override

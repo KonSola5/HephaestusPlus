@@ -12,9 +12,6 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.TinkerHooks;
 import slimeknights.tconstruct.library.modifiers.hook.ConditionalStatModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.TooltipModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.build.ModifierRemovalHook;
-import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
@@ -23,23 +20,17 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.PROMETHEUM_REPAIRS;
 
-@ParametersAreNonnullByDefault
-public class RegrowthModifier extends Modifier implements ConditionalStatModifierHook, MeleeDamageModifierHook, ModifierRemovalHook, TooltipModifierHook {
+public class RegrowthModifier extends Modifier implements ConditionalStatModifierHook {
     private static final int REPAIR_THRESHOLD = 1200;
 
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
         super.registerHooks(hookBuilder);
-        hookBuilder
-                .addHook(this, TinkerHooks.CONDITIONAL_STAT)
-                .addHook(this, TinkerHooks.MELEE_DAMAGE)
-                .addHook(this, TinkerHooks.REMOVE)
-                .addHook(this, TinkerHooks.TOOLTIP);
+        hookBuilder.addHook(this, TinkerHooks.CONDITIONAL_STAT);
     }
 
     public void incrementRepairs(ModDataNBT persistentData) {
@@ -58,28 +49,7 @@ public class RegrowthModifier extends Modifier implements ConditionalStatModifie
     }
 
     @Override
-    public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
-        return 0;
-    }
-
-    @Override
-    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
-        IModDataView persistentData = tool.getPersistentData();
-        int repairs = persistentData.getInt(PROMETHEUM_REPAIRS);
-        if (repairs >= REPAIR_THRESHOLD) {
-            TooltipModifierHook.addDamageBoost(tool, modifier, 1, tooltip);
-        }
-    }
-
-    @Nullable
-    @Override
-    public Component onRemoved(IToolStackView tool, Modifier modifier) {
-        tool.getPersistentData().remove(PROMETHEUM_REPAIRS);
-        return null;
-    }
-
-    @Override
-    public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
+    public float getEntityDamage(IToolStackView tool, int level, ToolAttackContext context, float baseDamage, float damage) {
         IModDataView persistentData = tool.getPersistentData();
         int repairs = persistentData.getInt(PROMETHEUM_REPAIRS);
         int bonus = 0;
@@ -87,5 +57,24 @@ public class RegrowthModifier extends Modifier implements ConditionalStatModifie
             bonus = 1;
         }
         return damage + bonus;
+    }
+
+    @Override
+    public void onRemoved(IToolStackView tool) {
+        tool.getPersistentData().remove(PROMETHEUM_REPAIRS);
+    }
+
+    @Override
+    public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+        IModDataView persistentData = tool.getPersistentData();
+        int repairs = persistentData.getInt(PROMETHEUM_REPAIRS);
+        if (repairs >= REPAIR_THRESHOLD) {
+            addDamageTooltip(tool, 1, tooltip);
+        }
+    }
+
+    @Override
+    public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
+        return 0;
     }
 }

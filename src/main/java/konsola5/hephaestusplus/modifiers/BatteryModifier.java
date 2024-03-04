@@ -18,12 +18,8 @@ import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
-import slimeknights.tconstruct.library.modifiers.TinkerHooks;
-import slimeknights.tconstruct.library.modifiers.hook.TooltipModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.build.ModifierRemovalHook;
-import slimeknights.tconstruct.library.modifiers.hook.build.ValidateModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.build.VolatileDataModifierHook;
 import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
+import slimeknights.tconstruct.library.recipe.tinkerstation.ValidatedResult;
 import slimeknights.tconstruct.library.tools.context.ToolRebuildContext;
 import slimeknights.tconstruct.library.tools.nbt.*;
 import team.reborn.energy.api.EnergyStorage;
@@ -37,7 +33,7 @@ import java.util.List;
  */
 @SuppressWarnings("UnstableApiUsage")
 @ParametersAreNonnullByDefault
-public class BatteryModifier extends Modifier implements VolatileDataModifierHook, TooltipModifierHook, ValidateModifierHook, ModifierRemovalHook {
+public class BatteryModifier extends Modifier {
 
     private static final String ENERGY_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.energy");
     private static final String CAPACITY_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.capacity");
@@ -56,30 +52,25 @@ public class BatteryModifier extends Modifier implements VolatileDataModifierHoo
 
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        battery = new EnergyModifier();
-        hookBuilder
-                .addHook(battery, ToolEnergyCapability.HOOK)
-                .addHook(TinkerHooks.VOLATILE_DATA)
-                .addHook(TinkerHooks.TOOLTIP)
-                .addHook(TinkerHooks.VALIDATE)
-                .addHook(TinkerHooks.REMOVE);
         super.registerHooks(hookBuilder);
+        battery = new EnergyModifier();
+        hookBuilder.addHook(battery, ToolEnergyCapability.HOOK);
     }
 
     @Override
-    public void addVolatileData(ToolRebuildContext context, ModifierEntry modifier, ModDataNBT volatileData) {
+    public void addVolatileData(ToolRebuildContext context, int level, ModDataNBT volatileData) {
         ResourceLocation ownerKey = getOwnerKey();
         if (ownerKey != null && !volatileData.contains(ownerKey, Tag.TAG_STRING)) {
             volatileData.putString(ownerKey, this.getId().toString());
         }
         ToolEnergyCapability.addBatteries(context, this, volatileData, battery);
         if (capacity > 0) {
-            addCapacity(volatileData, capacity * modifier.getLevel());
+            addCapacity(volatileData, capacity * level);
         }
     }
 
     @Override
-    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+    public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         if (isOwner(tool)) {
             long current = getEnergy(tool);
             tooltip.add(Component.translatable(ENERGY_KEY, current, I18n.get(UNIT_KEY), getCapacity(tool), I18n.get(UNIT_KEY)));
@@ -87,8 +78,8 @@ public class BatteryModifier extends Modifier implements VolatileDataModifierHoo
     }
 
     @Override
-    public Component validate(IToolStackView tool, ModifierEntry modifier) {
-        if (modifier.getLevel() > 0 && isOwner(tool)) {
+    public ValidatedResult validate(IToolStackView tool, int level) {
+        if (level > 0 && isOwner(tool)) {
             long current = getEnergy(tool);
             if (current != 0) {
                 long capacity = getCapacity(tool);
@@ -97,17 +88,17 @@ public class BatteryModifier extends Modifier implements VolatileDataModifierHoo
                 }
             }
         }
-        return null;
+
+        return ValidatedResult.PASS;
     }
 
     @Override
-    public Component onRemoved(IToolStackView tool, Modifier modifier) {
+    public void onRemoved(IToolStackView tool) {
         ModDataNBT persistentData = tool.getPersistentData();
         // if no one claims the tank, it either belonged to us or another removed modifier, so clean up data
         if (!persistentData.contains(OWNER, Tag.TAG_STRING)) {
             persistentData.remove(getEnergyKey());
         }
-        return null;
     }
 
     @Nullable

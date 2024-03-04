@@ -8,29 +8,15 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import nourl.mythicmetals.effects.MythicStatusEffects;
 import slimeknights.tconstruct.library.modifiers.Modifier;
-import slimeknights.tconstruct.library.modifiers.ModifierEntry;
-import slimeknights.tconstruct.library.modifiers.TinkerHooks;
-import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
-import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import static nourl.mythicmetals.item.tools.PalladiumToolSet.MAX_HEAT;
 
-@ParametersAreNonnullByDefault
-public class BrandingModifier extends Modifier implements MeleeHitModifierHook {
+public class BrandingModifier extends Modifier {
     // Mostly copy-paste from Mytic Metals' PalladiumToolSet.java, translated to Mojang mappings.
-
     @Override
-    protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        super.registerHooks(hookBuilder);
-        hookBuilder.addHook(TinkerHooks.MELEE_HIT);
-    }
-
-    @Override
-    public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
+    public int afterEntityHit(IToolStackView tool, int level, ToolAttackContext context, float damageDealt) {
         if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
             LivingEntity target = context.getLivingTarget();
             LivingEntity attacker = context.getAttacker();
@@ -39,7 +25,7 @@ public class BrandingModifier extends Modifier implements MeleeHitModifierHook {
                     target.addEffect(new MobEffectInstance(MythicStatusEffects.HEAT, 100), attacker);
                 } else {
                     var effect = target.getEffect(MythicStatusEffects.HEAT);
-                    int amplifier = effect == null ? 0 : (target.getRandom().nextFloat() < 0.15 * modifier.getLevel()) ? effect.getAmplifier() + 1 : effect.getAmplifier();
+                    int amplifier = effect == null ? 0 : (target.getRandom().nextFloat() < 0.15 * level) ? effect.getAmplifier() + 1 : effect.getAmplifier();
                     if (amplifier >= MAX_HEAT) {
                         WorldOps.playSound(target.level(), target.position(), SoundEvents.GENERIC_BURN, SoundSource.PLAYERS);
                     }
@@ -47,5 +33,6 @@ public class BrandingModifier extends Modifier implements MeleeHitModifierHook {
                 }
             }
         }
+        return 0;
     }
 }

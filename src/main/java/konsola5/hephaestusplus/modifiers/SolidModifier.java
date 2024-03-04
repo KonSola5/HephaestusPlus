@@ -5,27 +5,15 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.TooltipFlag;
 import slimeknights.tconstruct.library.modifiers.Modifier;
-import slimeknights.tconstruct.library.modifiers.ModifierEntry;
-import slimeknights.tconstruct.library.modifiers.TinkerHooks;
-import slimeknights.tconstruct.library.modifiers.hook.TooltipModifierHook;
-import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.utils.TooltipKey;
 import slimeknights.tconstruct.library.utils.Util;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
-@ParametersAreNonnullByDefault
-public class SolidModifier extends Modifier implements TooltipModifierHook {
-
-    @Override
-    protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
-        super.registerHooks(hookBuilder);
-        hookBuilder.addHook(TinkerHooks.TOOLTIP);
-    }
-
+public class SolidModifier extends Modifier {
     public static int damageSolid(int amount, double percentage) {
 
         // 100% protection? all damage blocked
@@ -64,12 +52,12 @@ public class SolidModifier extends Modifier implements TooltipModifierHook {
     }
 
     @Override
-    public void addTooltip(IToolStackView tool, ModifierEntry modifier, @org.jetbrains.annotations.Nullable Player player, List<Component> tooltip, slimeknights.mantle.client.TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+    public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         double solid;
         if (tool.getModifierLevel(TinkerModifiers.unbreakable.get()) > 0) {
             solid = 1; // Shouldn't happen, since the maximum percentage will be 50%
         } else {
-            solid = getPercentage(tool, modifier.getLevel());
+            solid = getPercentage(tool, level);
         }
         if (solid >= 0.01) {
             tooltip.add(applyStyle(Component.literal(Util.PERCENT_FORMAT.format(solid) + " ").append(makeDisplayName())));

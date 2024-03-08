@@ -10,6 +10,9 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import vazkii.botania.api.mana.ManaItemHandler;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
 public class TerrafirmaModifier extends Modifier {
     // A copy-paste from Botania's Terra armor set, modified to fit the tool better.
     @Override

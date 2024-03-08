@@ -34,6 +34,7 @@ import java.util.List;
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.VELOCITY_ACTIVE;
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.VELOCITY_COOLDOWN;
 
+@SuppressWarnings("deprecation")
 @ParametersAreNonnullByDefault
 public class EnergyVelocityModifier extends BatteryModifier implements GeneralInteractionModifierHook, ConditionalStatModifierHook {
 

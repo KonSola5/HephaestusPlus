@@ -24,6 +24,7 @@ import vazkii.botania.api.mana.ManaItemHandler;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Predicate;
 
+@SuppressWarnings("deprecation")
 @ParametersAreNonnullByDefault
 public class ManashotModifier extends NoLevelsModifier implements BowAmmoModifierHook, ProjectileLaunchModifierHook {
 

@@ -11,8 +11,11 @@ import slimeknights.tconstruct.library.utils.Util;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
+@ParametersAreNonnullByDefault
 public class SolidModifier extends Modifier {
     public static int damageSolid(int amount, double percentage) {
 

@@ -13,8 +13,11 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
+@ParametersAreNonnullByDefault
 public class PrismaticModifier extends Modifier {
     private static final Component PRISMATIC_DAMAGE = HephaestusPlus.makeTranslation("modifier", "prismatic.attack_damage");
 

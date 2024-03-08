@@ -16,11 +16,14 @@ import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.UUID;
 
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.TOOL_OWNER;
 
+@SuppressWarnings("deprecation")
+@ParametersAreNonnullByDefault
 public class UnobtainableModifier extends NoLevelsModifier {
     // Inspired by Relic binding from Botania (by Vazkii) (uses some code from Botania, heavily modified)
     // Thanks 800020h for the idea!

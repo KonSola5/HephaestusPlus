@@ -31,7 +31,7 @@ import java.util.List;
  * <p>Modifier containing the standard battery. Extend to share this battery.</p>
  * <p>Modifier similar to {@link slimeknights.tconstruct.library.modifiers.impl.TankModifier}</p>.
  */
-@SuppressWarnings("UnstableApiUsage")
+@SuppressWarnings({"UnstableApiUsage", "deprecation"})
 @ParametersAreNonnullByDefault
 public class BatteryModifier extends Modifier {
 

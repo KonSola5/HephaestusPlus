@@ -41,7 +41,7 @@ public class EnergyVelocityModifier extends BatteryModifier implements GeneralIn
     private final long ENERGY_PER_TICK = 5;
 
     public EnergyVelocityModifier() {
-        super(0);
+        super(0, 0);
     }
 
     @Override

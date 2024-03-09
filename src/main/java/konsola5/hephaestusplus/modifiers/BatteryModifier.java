@@ -42,12 +42,16 @@ public class BatteryModifier extends Modifier {
     private static final ResourceLocation OWNER = HephaestusPlus.getResource("battery_owner");
     private static final ResourceLocation CAPACITY = HephaestusPlus.getResource("battery_capacity");
     private static final ResourceLocation ENERGY = HephaestusPlus.getResource("energy");
+    private static final ResourceLocation TRANSFER_RATE = HephaestusPlus.getResource("transfer_rate");
 
     private EnergyModifier battery;
     private final long capacity;
 
-    public BatteryModifier(long capacity) {
+    private final long transferRate;
+
+    public BatteryModifier(long capacity, long transferRate) {
         this.capacity = capacity;
+        this.transferRate = transferRate;
     }
 
     @Override
@@ -114,6 +118,10 @@ public class BatteryModifier extends Modifier {
         return ENERGY;
     }
 
+    public ResourceLocation getTransferRateKey() {
+        return TRANSFER_RATE;
+    }
+
     public boolean isOwner(IModDataView volatileData) {
         ResourceLocation key = getOwnerKey();
         if (key == null) {
@@ -126,12 +134,12 @@ public class BatteryModifier extends Modifier {
         return isOwner(tool.getVolatileData());
     }
 
-    /** Gets the capacity of the tank */
+    /** Gets the capacity of the battery */
     public long getCapacity(IModDataView volatileData) {
         return volatileData.get(getCapacityKey(), CompoundTag::getLong);
     }
 
-    /** Gets the capacity of the tank */
+    /** Gets the capacity of the battery */
     public long getCapacity(IToolStackView tool) {
         return tool.getVolatileData().get(getCapacityKey(), CompoundTag::getLong);
     }

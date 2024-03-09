@@ -89,11 +89,13 @@ public class ToolEnergyCapability extends EnergyModifierHookIterator<ModifierEnt
         return EnergyStorage.EMPTY;
     }
 
+    // EnergyStorage //
     @Override
     public long insert(long maxAmount, TransactionContext transaction) {
         return insert(container, tool.get(), maxAmount, transaction);
     }
 
+    // EnergyStorage //
     @Override
     public long extract(long maxAmount, TransactionContext transaction) {
         return extract(container, tool.get(), maxAmount, transaction);

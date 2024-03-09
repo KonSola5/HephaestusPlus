@@ -37,9 +37,9 @@ public class HephPlusModifierRegistry {
     public static final DynamicModifier<Modifier> FAIRY_BLESSING = MODIFIERS.registerDynamic("fairy_blessing", Modifier.class);
     public static final StaticModifier<Modifier> TERRAFIRMA = MODIFIERS.register("terrafirma", TerrafirmaModifier::new);
 
-    public static final StaticModifier<BatteryModifier> BATTERY = MODIFIERS.register("battery", () -> new BatteryModifier(10000));
-    public static final StaticModifier<BatteryModifier> BIG_BATTERY = MODIFIERS.register("big_battery", () -> new BatteryModifier(100000));
-    public static final StaticModifier<BatteryModifier> HUGE_BATTERY = MODIFIERS.register("huge_battery", () -> new BatteryModifier(1000000));
+    public static final StaticModifier<BatteryModifier> BATTERY = MODIFIERS.register("battery", () -> new BatteryModifier(10000, 128));
+    public static final StaticModifier<BatteryModifier> BIG_BATTERY = MODIFIERS.register("big_battery", () -> new BatteryModifier(100000, 512));
+    public static final StaticModifier<BatteryModifier> HUGE_BATTERY = MODIFIERS.register("huge_battery", () -> new BatteryModifier(1000000, 2048));
 
     public static final StaticModifier<EnergyVelocityModifier> ENERGY_VELOCITY = MODIFIERS.register("energy_velocity", EnergyVelocityModifier::new);
 

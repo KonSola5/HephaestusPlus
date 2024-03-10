@@ -1,0 +1,332 @@
+{
+  "_comment1": "HephaestusPlus Werkzeuge",
+
+  "item.hephaestusplus.hand_hammer": "Handhammer",
+  "item.hephaestusplus.crook": "Asthaken",
+  "item.hephaestusplus.crook_head": "Asthakenkopf",
+
+  "_comment2": "HephaestusPlus Werkzeug Beschreibung",
+
+  "item.hephaestusplus.hand_hammer.description": "Der Handhammer ist ein Werkzeug zum Zerschlagen von Blöcken. Er zerschlägt alles, was auch von einem FabricaeExNihilo-Hammer zerschlagen werden kann.",
+  "item.hephaestusplus.crook.description": "Der Asthaken ist ein Werkzeug, um Fäden aus befallenen Blättern zu erhalten. Er ist wirksam gegen alles, was mit einem FabricaeExNihilo Asthaken bearbeitet werden kann.",
+
+  "_comment3": "HephaestusPlus Modifikatoren",
+
+  "modifier.hephaestusplus.smashing": "Zerschlagen",
+  "modifier.hephaestusplus.smashing.flavor": "Halt Stop! Zeit zu Hämmern!",
+  "modifier.hephaestusplus.smashing.description": "Ermöglicht dem Werkzeug Blöcke wie ein FabricaeExNihilo-Hammer zu zerschlagen.",
+
+  "modifier.hephaestusplus.crooking": "Krümmen",
+  "modifier.hephaestusplus.crooking.flavor": "Ich bin nicht krumm!",
+  "modifier.hephaestusplus.crooking.description": "Ermöglicht dem Werkzeug Blöcke wie einen FabricaeExNihilo-Krümmer zu krümmen.",
+
+  "modifier.hephaestusplus.regrowth": "Nachwachsen",
+  "modifier.hephaestusplus.regrowth.flavor": "Natürlich faszinierend!",
+  "modifier.hephaestusplus.regrowth.description": "Regeneriert sich auf magische Weise!",
+  "modifier.hephaestusplus.regrowth.attack_damage": "Überwucherter Schaden",
+
+  "modifier.hephaestusplus.branding": "Branding",
+  "modifier.hephaestusplus.branding.flavor": "Fühlt sich an wie ein Cowboy?",
+  "modifier.hephaestusplus.branding.description": "Angriffe gegen Mobs können sie heißer machen. Heißere Mobs brennen lebendiger.",
+
+  "modifier.hephaestusplus.cosmic": "Kosmisch",
+  "modifier.hephaestusplus.cosmic.flavor": "¡puǝᴉɹɟ s,ɹǝuᴉW",
+  "modifier.hephaestusplus.cosmic.description": "Das Werkzeug baut schneller ab, je höher du abbaust. Baue nur nicht zu hoch ab.",
+  "modifier.hephaestusplus.cosmic.mining_speed": "Höhenabbau",
+
+  "modifier.hephaestusplus.magically_modifiable": "Magisch modifizierbar",
+  "modifier.hephaestusplus.magically_modifiable.flavor": "Glänzend!",
+  "modifier.hephaestusplus.magically_modifiable.description": "Die magischen Eigenschaften des Mythrils setzen das Werkzeug mit einem Bonus-Upgrade in Gang!",
+
+  "modifier.hephaestusplus.stellar_swiftness": "Stellare Schnelligkeit",
+  "modifier.hephaestusplus.stellar_swiftness.flavor": "Schnell wie eine Sternschnuppe!",
+  "modifier.hephaestusplus.stellar_swiftness.description": "Dein Werkzeug schwingt und baut sehr schnell ab!",
+
+  "modifier.hephaestusplus.durable": "Langlebig",
+  "modifier.hephaestusplus.durable.flavor": "Keine Powerzelle!",
+  "modifier.hephaestusplus.durable.description": "Das Werkzeug hält viel länger, baut schneller ab und verursacht mehr Schaden.",
+
+  "modifier.hephaestusplus.solid": "Stabil",
+  "modifier.hephaestusplus.solid.flavor": "Je mehr du es beschädigst, desto stabiler wird es!",
+  "modifier.hephaestusplus.solid.description": "Dein Werkzeug nimmt bei jedem verlorenen Haltbarkeitspunkt weniger Schaden",
+
+  "modifier.hephaestusplus.prismatic": "Prismatisch",
+  "modifier.hephaestusplus.prismatic.flavor": "Fokussiere das Licht, schade den Monstern!",
+  "modifier.hephaestusplus.prismatic.description": "Dein Werkzeug verursacht mehr Schaden in beleuchteten Bereichen steht.",
+  "modifier.hephaestusplus.prismatic.attack_damage": "Prismatischer Schaden",
+
+  "modifier.hephaestusplus.storm_spell": "Sturmspruch",
+  "modifier.hephaestusplus.storm_spell.flavor": "Wer braucht Mana?",
+  "modifier.hephaestusplus.storm_spell.description": "Ein Gegner zu treffen, kann einen Blitz auf sie beschwören",
+
+  "modifier.hephaestusplus.freezing": "Einfrieren",
+  "modifier.hephaestusplus.freezing.flavor": "Los! Stop! Los!",
+  "modifier.hephaestusplus.freezing.description": "Ein Gegner zu treffen, kann sie für eine kurze Zeit einfrieren",
+
+  "modifier.hephaestusplus.carmot_synergy": "Carmot-Synergie",
+  "modifier.hephaestusplus.carmot_synergy.flavor": "Passt gut zu Carmot-Rüstung!",
+  "modifier.hephaestusplus.carmot_synergy.description": "Das Halten eines Werkzeugs regeneriert den Carmot-Schild schneller",
+
+  "modifier.hephaestusplus.carmot_shield": "Carmot-Schild",
+  "modifier.hephaestusplus.carmot_shield.flavor": "Wir sind... geschützt!",
+  "modifier.hephaestusplus.carmot_shield.description": "Verleiht der Rüstung Carmot-Schild, der Schaden absorbiert und sich im Laufe der Zeit regeneriert",
+
+  "modifier.hephaestusplus.carmot_boost": "Carmot-Verstärkung",
+  "modifier.hephaestusplus.carmot_boost.flavor": "Nicht genug geschützt.",
+  "modifier.hephaestusplus.carmot_boost.description": "Stärkt den Carmot-Schild und erhöht die Kapazität",
+  "recipe.hephaestusplus.modifier.carmot_shield_required": "Erfordert die Fähigkeit Carmot-Schild zuerst hinzuzufügen",
+
+  "modifier.hephaestusplus.unobtainable": "Nicht erhältlich",
+  "modifier.hephaestusplus.unobtainable.flavor": "Das Beste vom Besten!",
+  "modifier.hephaestusplus.unobtainable.description": "Ein Modifikator, der normalerweise nicht auf ein Werkzeug angewendet werden kann. Viel Glück, es zu bekommen!",
+  "modifier.hephaestusplus.unobtainable.tool_no_owner": "Ungebunden",
+  "modifier.hephaestusplus.unobtainable.tool_owned_by": "Gehört",
+  "modifier.hephaestusplus.unobtainable.not_your_tool": "§cNicht dein Werkzeug!§r",
+  "modifier.hephaestusplus.unobtainable.your_tool": "§aDein Werkzeug§r",
+  
+  "modifier.hephaestusplus.soul_powered": "Seelenkraft",
+  "modifier.hephaestusplus.soul_powered.flavor": "Angetrieben von den Seelen deiner besiegten Gegner",
+  "modifier.hephaestusplus.soul_powered.description": "Dein Werkzeug verursacht mehr Schaden, je mehr Mobs du tötest!",
+  "modifier.hephaestusplus.soul_powered.stored_souls": "Gespeicherte Seelen",
+  "modifier.hephaestusplus.soul_powered.attack_damage": "Seelenkraft Schaden",
+  
+  "modifier.hephaestusplus.bang_bang": "Bang Bang",
+  "modifier.hephaestusplus.bang_bang.flavor": "Kaboom!",
+  "modifier.hephaestusplus.bang_bang.description": "Das Werkzeug kann Tunnel sprengen, wenn Legendärer Banglum angewendet wird",
+  
+  "modifier.hephaestusplus.legendary_banglum": "Legendärer Banglum",
+  "modifier.hephaestusplus.legendary_banglum.flavor": "Ka-pow!",
+  "modifier.hephaestusplus.legendary_banglum.description": "Erhöht den Rückstoß und verleiht Werkzeugen mit Banglum-Teilen größere Boni.",
+  
+  "modifier.hephaestusplus.manashield": "Manaschild",
+  "modifier.hephaestusplus.manashield.flavor": "Meisterhaftes Manabiegen",
+  "modifier.hephaestusplus.manashield.description": "Das Werkzeug kann Schaden an Haltbarkeit vermeiden, indem es Mana aus manatragenden Gegenständen verbraucht.",
+  
+  "modifier.hephaestusplus.manashot": "Manaschuss",
+  "modifier.hephaestusplus.manashot.flavor": "Woher kommen die Pfeile?",
+  "modifier.hephaestusplus.manashot.description": "Beschwört Pfeile für den Bogen unter Verwendung von Mana",
+  
+  "modifier.hephaestusplus.crude_manashield": "Primitives Manaschild",
+  "modifier.hephaestusplus.crude_manashield.flavor": "Lockt das Mana nicht so gut an, aber es wird schon gehen.",
+  "modifier.hephaestusplus.crude_manashield.description": "Das Werkzeug hat die Chance, Schaden an Haltbarkeit zu vermeiden, indem es Mana aus manatragenden Gegenständen verbraucht.",
+  
+  "modifier.hephaestusplus.garbage_collector": "Müllsammler",
+  "modifier.hephaestusplus.garbage_collector.flavor": "Weg mit dem schwachen Zeug!",
+  "modifier.hephaestusplus.garbage_collector.description": "Das Werkzeug kann 'alltägliche' Gegenstände wie die Elementium-Spitzhacke ungültig machen",
+  
+  "modifier.hephaestusplus.terrafirma": "Terrafirma",
+  "modifier.hephaestusplus.terrafirma.flavor": "...handwerk.",
+  "modifier.hephaestusplus.terrafirma.description": "Wenn du hungrig und verletzt bist, wird das Halten des Werkzeugs dich mit einer beruhigenden, heilenden Aura umgeben.",
+  
+  "modifier.hephaestusplus.fairy_blessing": "Feenbegünstigung",
+  "modifier.hephaestusplus.fairy_blessing.flavor": "Eine besondere Gnade.",
+  "modifier.hephaestusplus.fairy_blessing.description": "Erhöht die Wahrscheinlichkeit, dass Pixies erscheinen, wenn du Schaden erleidest und das Werkzeug hältst",
+  
+  "_comment4": "HephaestusTools Form",
+  "pattern.hephaestusplus.crook_head": "Asthakenkopf",
+  "item.hephaestusplus.crook_head_cast": "Asthakenkopfform",
+  "item.hephaestusplus.crook_head_sand_cast": "Asthakenkopfform aus Sand",
+  "item.hephaestusplus.crook_head_red_sand_cast": "Asthakenopfform aus rotem Sand",
+  
+  "_comment5": "HephaestusTools Gegenstände",
+  "item.hephaestusplus.carmot_reinforcement": "Carmot-Verstärkung",
+  
+  "_comment6": "HephaestusPlus Materialien",
+  
+  "material.hephaestusplus.adamantite": "Adamantit",
+  "material.hephaestusplus.adamantite.flavor": "Die Legenden besagen, dass diese Legierung schärfer ist als Diamanten.",
+  "material.hephaestusplus.adamantite.encyclopedia": "Verleiht +0,75 Angriffsschaden pro Stufe",
+  
+  "material.hephaestusplus.aquarium": "Aquarium",
+  "material.hephaestusplus.aquarium.flavor": "Eine aquatische Legierung, hat eine starke Affinität zum Wasser",
+  "material.hephaestusplus.aquarium.encyclopedia": "Negiert den Bergbaubonus beim Bergbau unter Wasser und gewährt +8 Bergbaugeschwindigkeit unter Wasser oder +4 Bergbaugeschwindigkeit bei Regen pro Stufe.",
+  
+  "material.hephaestusplus.banglum": "Banglum",
+  "material.hephaestusplus.banglum.flavor": "Ein sehr explosives Metall! Zünde dich nicht selbst!",
+  "material.hephaestusplus.banglum.encyclopedia": "Wenn Legendärer Banglum angewendet wird, kann das Werkzeug Tunnel mit 3x3x(Stufe*2) sprengen und dabei 2 Haltbarkeit pro Block verbrauchen.",
+  
+  "material.hephaestusplus.carmot": "Carmot",
+  "material.hephaestusplus.carmot.flavor": "Die Legenden besagen, dass der Stein der Weisen aus diesem Metall gemacht wurde.",
+  "material.hephaestusplus.carmot.encyclopedia": "Das Halten eines Werkzeugs mit Carmot-Synergie verkürzt die maximale Abklingzeit des Schilds um 1 Sekunde pro Stufe und beschleunigt die Regeneration des Schilds. Das Verbinden gibt eine zusätzliche Stufe von Glück.",
+  
+  "material.hephaestusplus.celestium": "Celestium",
+  "material.hephaestusplus.celestium.flavor": "Eine himmlische Legierung, unglaublich scharf und überraschend leicht.",
+  "material.hephaestusplus.celestium.encyclopedia": "Nur die Person, die das Werkzeug erstellt hat, kann es sicher halten - andere erleiden kontinuierlichen Schaden beim Halten des Werkzeugs.",
+  
+  "material.hephaestusplus.durasteel": "Durasteel",
+  "material.hephaestusplus.durasteel.flavor": "Robuster Stahl.",
+  "material.hephaestusplus.durasteel.encyclopedia": "Verleiht +12% Haltbarkeit, +4% Schaden und Geschwindigkeit pro Stufe",
+  
+  "material.hephaestusplus.hallowed": "Geheiligt",
+  "material.hephaestusplus.hallowed.flavor": "Eine unheimliche Legierung, hat eine starke Affinität zu Seelen",
+  "material.hephaestusplus.hallowed.encyclopedia": "Das Töten von Mobs speichert Seelen im Werkzeug. Erhöht den Schaden um die Hälfte des natürlichen Logarithmus der gespeicherten Seelen.",
+  
+  "material.hephaestusplus.kyber": "Kyber",
+  "material.hephaestusplus.kyber.flavor": "Ein lichtfokussierendes Material, das in Lichtschwertern verwendet wird.",
+  "material.hephaestusplus.kyber.encyclopedia": "Fügt Mobs in hellen Gebieten bis zu 15% zusätzlichen Schaden pro Stufe zu",
+  
+  "material.hephaestusplus.metallurgium": "Metallurgium",
+  "material.hephaestusplus.metallurgium.flavor": "Die ultimative Legierung. Extrem scharf und langlebig.",
+  "material.hephaestusplus.metallurgium.encyclopedia": "Nur die Person, die das Werkzeug erstellt hat, kann es sicher halten - andere erleiden kontinuierlichen Schaden beim Halten des Werkzeugs.",
+  
+  "material.hephaestusplus.mythril": "Mythril",
+  "material.hephaestusplus.mythril.flavor": "... denn es wurde aus purem Silber mit der Kraft und Stärke von dreifachem Stahl geschmiedet.",
+  "material.hephaestusplus.mythril.encyclopedia": "Verleiht pro Teil einen zusätzlichen Upgrade-Slot.",
+  
+  "material.hephaestusplus.orichalcum": "Orichalcum",
+  "material.hephaestusplus.orichalcum.flavor": "Ein terrarianisches Metall, bekannt für seine unglaubliche Haltbarkeit.",
+  "material.hephaestusplus.orichalcum.encyclopedia": "Das Werkzeug nimmt basierend auf einer ziemlich komplizierten Formel bis zu 50% weniger Schaden auf. Niedrige Stufen neigen die Charakteristik zu niedrigeren Haltbarkeiten, höhere Stufen zu höheren Haltbarkeiten.",
+  
+  "material.hephaestusplus.palladium": "Palladium",
+  "material.hephaestusplus.palladium.flavor": "Mit Palladium-Werkzeugen kannst du Mobs wie ein Cowboy markieren.",
+  "material.hephaestusplus.palladium.encyclopedia": "Gibt eine Chance von 15% pro Stufe, Heat auf das Ziel zu übertragen. Setze das Wesen mit Heat in Brand für zusätzlichen Schaden!",
+  
+  "material.hephaestusplus.prometheum": "Prometheum",
+  "material.hephaestusplus.prometheum.flavor": "Trotz des Namens hat es nichts mit Feuer zu tun.",
+  "material.hephaestusplus.prometheum.encyclopedia": "Gibt eine Chance von 5% pro Stufe, die Haltbarkeit pro Sekunde wiederherzustellen. Wenn diese Eigenschaft das Werkzeug 1200 Mal repariert, erhält das Werkzeug +1 Schaden.",
+  
+  "material.hephaestusplus.quadrillum": "Quadrillum",
+  "material.hephaestusplus.quadrillum.flavor": "Ein Material aus Asteroiden. Hat eine hohe Affinität zu Höhen.",
+  "material.hephaestusplus.quadrillum.encyclopedia": "Verleiht beim Bergbau Geschwindigkeit in größeren Höhen, +6 pro 64 Blöcke über 64. Gräbt langsamer tief unter der Erde.",
+  
+  "material.hephaestusplus.runite": "Runite",
+  "material.hephaestusplus.runite.flavor": "Nicht zu verwechseln mit Runescape.",
+  "material.hephaestusplus.runite.encyclopedia": "Hat eine Chance von 10% pro Stufe, einen Mob für 5 Sekunden komplett zu immobilisieren",
+  
+  "material.hephaestusplus.star_platinum": "Star Platinum",
+  "material.hephaestusplus.star_platinum.flavor": "Überraschend leicht.",
+  "material.hephaestusplus.star_platinum.encyclopedia": "Verleiht +15% Angriffsgeschwindigkeit pro Stufe",
+  
+  "material.hephaestusplus.stormyx": "Stormyx",
+  "material.hephaestusplus.stormyx.flavor": "Eine magische Legierung mit magischen, donnernden Fähigkeiten.",
+  "material.hephaestusplus.stormyx.encyclopedia": "Hat eine Chance von 2% pro Stufe, einen ausgewählten Mob mit Blitz zu treffen. Chance vervierfacht bei Gewitter",
+  
+  "material.hephaestusplus.livingwood": "Lebendiges Holz",
+  "material.hephaestusplus.livingwood.flavor": "Wie Holz, aber lebendiger.",
+  "material.hephaestusplus.livingwood.encyclopedia": "Macht Reparaturen pro Teil um 50% effektiver",
+  
+  "material.hephaestusplus.livingrock": "Lebender Stein",
+  "material.hephaestusplus.livingrock.flavor": "Wie Stein, aber lebendiger.",
+  "material.hephaestusplus.livingrock.encyclopedia": "Bewirkt, dass das Werkzeug schneller abbaut, indem es die Quadratwurzel des Merkmalsniveaus mal der verlorenen Haltbarkeit halbiert",
+  
+  "material.hephaestusplus.manastring": "Mana-durchtränkter Faden",
+  "material.hephaestusplus.manastring.flavor": "Woher kommen die Pfeile?",
+  "material.hephaestusplus.manastring.encyclopedia": "Das Werkzeug kann Mana aus manaenthaltenden Gegenständen verwenden, um Pfeile für Bögen und Armbrüste zu beschwören",
+  
+  "material.hephaestusplus.manasteel": "Manasteel",
+  "material.hephaestusplus.manasteel.flavor": "Ein mit Mana durchtränktes Metall, bekannt für seine extreme Mana-Affinität.",
+  "material.hephaestusplus.manasteel.encyclopedia": "Das Werkzeug kann Mana aus manaenthaltenden Gegenständen verwenden, um Schäden an der Haltbarkeit zu verhindern.\nHöhere Stufen verringern die Mana-Kosten pro Haltbarkeit.",
+  
+  "material.hephaestusplus.elementium": "Elementium",
+  "material.hephaestusplus.elementium.flavor": "Ein magisches Metall aus Alfheim importiert.",
+  "material.hephaestusplus.elementium.encyclopedia": "Leert gewöhnliche Materialien (wie Stein, Erde, ...) beim Bergbau.\nErhöht die Spawn-Chance von Pixies um 3% pro Stufe.",
+  
+  "material.hephaestusplus.terrasteel": "Terrasteel",
+  "material.hephaestusplus.terrasteel.flavor": "Eine perfekte Fusion verschiedener Mana-Materialien",
+  "material.hephaestusplus.terrasteel.encyclopedia": "Wenn du hungrig und verletzt bist, wird durch das Halten eines Werkzeugs alle 5 Sekunden 1 Gesundheitspunkt wiederhergestellt, auf Kosten von etwas Mana. Schnellere Heilung bei höheren Stufen.",
+  
+  "_comment7": "HephaestusPlus-Stufen",
+  
+  "stat.tconstruct.harvest_tier.hephaestusplus.metallurgium": "Metallurgium",
+  
+  "_comment8": "HephaestusPlus-Eimer und Flüssigkeiten",
+  "item.hephaestusplus.molten_adamantite_bucket": "Geschmolzener Adamantite-Eimer",
+  "fluid.hephaestusplus.molten_adamantite": "Geschmolzenes Adamantite",
+  "block.hephaestusplus.molten_adamantite_fluid": "Geschmolzenes Adamantite",
+  
+  "item.hephaestusplus.molten_aquarium_bucket": "Geschmolzener Aquarium-Eimer",
+  "fluid.hephaestusplus.molten_aquarium": "Geschmolzenes Aquarium",
+  "block.hephaestusplus.molten_aquarium_fluid": "Geschmolzenes Aquarium",
+  
+  "item.hephaestusplus.molten_banglum_bucket": "Geschmolzener Banglum-Eimer",
+  "fluid.hephaestusplus.molten_banglum": "Geschmolzenes Banglum",
+  "block.hephaestusplus.molten_banglum_fluid": "Geschmolzenes Banglum",
+  
+  "item.hephaestusplus.molten_carmot_bucket": "Geschmolzener Carmot-Eimer",
+  "fluid.hephaestusplus.molten_carmot": "Geschmolzenes Carmot",
+  "block.hephaestusplus.molten_carmot_fluid": "Geschmolzenes Carmot",
+  
+  "item.hephaestusplus.molten_celestium_bucket": "Geschmolzener Celestium-Eimer",
+  "fluid.hephaestusplus.molten_celestium": "Geschmolzenes Celestium",
+  "block.hephaestusplus.molten_celestium_fluid": "Geschmolzenes Celestium",
+  
+  "item.hephaestusplus.molten_durasteel_bucket": "Geschmolzener Durasteel-Eimer",
+  "fluid.hephaestusplus.molten_durasteel": "Geschmolzenes Durasteel",
+  "block.hephaestusplus.molten_durasteel_fluid": "Geschmolzenes Durasteel",
+  
+  "item.hephaestusplus.molten_hallowed_bucket": "Geschmolzener Hallowed-Eimer",
+  "fluid.hephaestusplus.molten_hallowed": "Geschmolzenes Hallowed",
+  "block.hephaestusplus.molten_hallowed_fluid": "Geschmolzenes Hallowed",
+  
+  "item.hephaestusplus.molten_kyber_bucket": "Geschmolzener Kyber-Eimer",
+  "fluid.hephaestusplus.molten_kyber": "Geschmolzenes Kyber",
+  "block.hephaestusplus.molten_kyber_fluid": "Geschmolzenes Kyber",
+  
+  "item.hephaestusplus.molten_manganese_bucket": "Geschmolzener Mangan-Eimer",
+  "fluid.hephaestusplus.molten_manganese": "Geschmolzenes Mangan",
+  "block.hephaestusplus.molten_manganese_fluid": "Geschmolzenes Mangan",
+  
+  "item.hephaestusplus.molten_metallurgium_bucket": "Geschmolzener Metallurgium-Eimer",
+  "fluid.hephaestusplus.molten_metallurgium": "Geschmolzenes Metallurgium",
+  "block.hephaestusplus.molten_metallurgium_fluid": "Geschmolzenes Metallurgium",
+  
+  "item.hephaestusplus.molten_mythril_bucket": "Geschmolzener Mythril-Eimer",
+  "fluid.hephaestusplus.molten_mythril": "Geschmolzenes Mythril",
+  "block.hephaestusplus.molten_mythril_fluid": "Geschmolzenes Mythril",
+  
+  "item.hephaestusplus.molten_orichalcum_bucket": "Geschmolzener Orichalcum-Eimer",
+  "fluid.hephaestusplus.molten_orichalcum": "Geschmolzenes Orichalcum",
+  "block.hephaestusplus.molten_orichalcum_fluid": "Geschmolzenes Orichalcum",
+  
+  "item.hephaestusplus.molten_palladium_bucket": "Geschmolzener Palladium-Eimer",
+  "fluid.hephaestusplus.molten_palladium": "Geschmolzenes Palladium",
+  "block.hephaestusplus.molten_palladium_fluid": "Geschmolzenes Palladium",
+  
+  "item.hephaestusplus.molten_prometheum_bucket": "Geschmolzener Prometheum-Eimer",
+  "fluid.hephaestusplus.molten_prometheum": "Geschmolzenes Prometheum",
+  "block.hephaestusplus.molten_prometheum_fluid": "Geschmolzenes Prometheum",
+  
+  "item.hephaestusplus.molten_quadrillum_bucket": "Geschmolzener Quadrillum-Eimer",
+  "fluid.hephaestusplus.molten_quadrillum": "Geschmolzenes Quadrillum",
+  "block.hephaestusplus.molten_quadrillum_fluid": "Geschmolzenes Quadrillum",
+  
+  "item.hephaestusplus.molten_runite_bucket": "Geschmolzener Runite-Eimer",
+  "fluid.hephaestusplus.molten_runite": "Geschmolzenes Runite",
+  "block.hephaestusplus.molten_runite_fluid": "Geschmolzenes Runite",
+  
+  "item.hephaestusplus.molten_starrite_bucket": "Geschmolzener Starrite-Eimer",
+  "fluid.hephaestusplus.molten_starrite": "Geschmolzenes Starrite",
+  "block.hephaestusplus.molten_starrite_fluid": "Geschmolzenes Starrite",
+  
+  "item.hephaestusplus.molten_star_platinum_bucket": "Geschmolzener Star Platinum-Eimer",
+  "fluid.hephaestusplus.molten_star_platinum": "Geschmolzenes Star Platinum",
+  "block.hephaestusplus.molten_star_platinum_fluid": "Geschmolzenes Star Platinum",
+  
+  "item.hephaestusplus.molten_stormyx_bucket": "Geschmolzener Stormyx-Eimer",
+  "fluid.hephaestusplus.molten_stormyx": "Geschmolzenes Stormyx",
+  "block.hephaestusplus.molten_stormyx_fluid": "Geschmolzenes Stormyx",
+  
+  "item.hephaestusplus.molten_unobtainium_bucket": "Geschmolzener Unobtainium-Eimer",
+  "fluid.hephaestusplus.molten_unobtainium": "Geschmolzenes Unobtainium",
+  "block.hephaestusplus.molten_unobtainium_fluid": "Geschmolzenes Unobtainium",
+  
+  "item.hephaestusplus.molten_manasteel_bucket": "Geschmolzener Manasteel-Eimer",
+  "fluid.hephaestusplus.molten_manasteel": "Geschmolzenes Manasteel",
+  "block.hephaestusplus.molten_manasteel_fluid": "Geschmolzenes Manasteel",
+  
+  "item.hephaestusplus.molten_elementium_bucket": "Geschmolzener Elementium-Eimer",
+  "fluid.hephaestusplus.molten_elementium": "Geschmolzenes Elementium",
+  "block.hephaestusplus.molten_elementium_fluid": "Geschmolzenes Elementium",
+  
+  "item.hephaestusplus.molten_terrasteel_bucket": "Geschmolzener Terrasteel-Eimer",
+  "fluid.hephaestusplus.molten_terrasteel": "Geschmolzenes Terrasteel",
+  "block.hephaestusplus.molten_terrasteel_fluid": "Geschmolzenes Terrasteel",
+  
+  "comment_9": "Schadensarten",
+  "death.attack.not_your_tool": "%s hat ein für sie unerreichbares Werkzeug erhalten",
+  
+  "comment_10": "Attribute",
+  "hephaestusplus.carmot_shield": "Carmot-Schild",
+  
+  "jade.modName.hephaestusplus": "HephaestusPlus"
+}

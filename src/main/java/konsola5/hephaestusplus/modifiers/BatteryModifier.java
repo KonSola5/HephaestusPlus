@@ -30,7 +30,8 @@ import java.util.List;
 
 /**
  * <p>Modifier containing the standard battery. Extend to share this battery.</p>
- * <p>Modifier similar to {@link slimeknights.tconstruct.library.modifiers.impl.TankModifier}</p>.
+ * <p>Modifier similar to {@link slimeknights.tconstruct.library.modifiers.impl.TankModifier}.</p>
+ * <p>May be split into a separate mod if some mod author wants to use Energy on Hephaestus tools too.</p>
  */
 @SuppressWarnings({"UnstableApiUsage", "deprecation"})
 @ParametersAreNonnullByDefault
@@ -52,9 +53,22 @@ public class BatteryModifier extends Modifier {
     @Getter
     private final long transferRate;
 
+    /**
+     * Initializes a Battery Modifier with fixed capacity and transfer rate.
+     * @param capacity The battery capacity (in E).
+     * @param transferRate The battery transfer rate (in E/t).
+     */
     public BatteryModifier(long capacity, long transferRate) {
         this.capacity = capacity;
         this.transferRate = transferRate;
+    }
+
+    /**
+     * Initializes a Battery Modifier with 0 E capacity and 0 E/t transfer rate.<br>
+     * Great for modifiers extending this modifier that just want to utilize Energy from batteries.
+     */
+    public BatteryModifier() {
+        this(0, 0);
     }
 
     @Override
@@ -156,10 +170,16 @@ public class BatteryModifier extends Modifier {
         return tool.getVolatileData().get(getCapacityKey(), CompoundTag::getLong);
     }
 
+    /**
+     * Gets the transfer rate of the battery
+     */
     public long getTransferRate(IModDataView volatileData) {
         return volatileData.get(getTransferRateKey(), CompoundTag::getLong);
     }
 
+    /**
+     * Gets the transfer rate of the battery
+     */
     public long getTransferRate(IToolStackView tool) {
         return tool.getVolatileData().get(getTransferRateKey(), CompoundTag::getLong);
     }
@@ -209,29 +229,73 @@ public class BatteryModifier extends Modifier {
         return energy;
     }
 
+    /**
+     * Inserts energy into the tool.
+     * @param context Current container item.
+     * @param tool The tool that the modifier is applied on.
+     * @param currentEnergy Current amount of energy stored in the tool.
+     * @param energyToInsert Energy to insert.
+     * @param tx Current transaction.
+     * @return The amount of energy inserted.
+     */
     public long insert(ContainerItemContext context, IToolStackView tool, long currentEnergy, long energyToInsert, TransactionContext tx) {
         long capacity = getCapacity(tool);
         return setCurrentEnergy(context, tool, Math.min(currentEnergy + energyToInsert, capacity), tx);
     }
 
+    /**
+     * Inserts energy into the tool.
+     * @param tool The tool that the modifier is applied on.
+     * @param currentEnergy Current amount of energy stored in the tool.
+     * @param energyToInsert Energy to insert.
+     * @return The amount of energy inserted.
+     */
     public long insert(IToolStackView tool, long currentEnergy, long energyToInsert) {
         long capacity = getCapacity(tool);
         return setCurrentEnergy(tool, Math.min(currentEnergy + energyToInsert, capacity));
     }
 
+    /**
+     * Inserts energy into the tool.
+     * @param tool The tool that the modifier is applied on.
+     * @param energyToInsert Energy to insert.
+     * @return The amount of energy inserted.
+     */
     public long insert(IToolStackView tool, long energyToInsert) {
         long capacity = getCapacity(tool);
         return setCurrentEnergy(tool, Math.min(getEnergy(tool) + energyToInsert, capacity));
     }
 
+    /**
+     * Extracts energy from the tool.
+     * @param context Current container item.
+     * @param tool The tool that the modifier is applied on.
+     * @param currentEnergy Current amount of energy stored in the tool.
+     * @param energyToExtract Energy to extract.
+     * @param tx Current transaction.
+     * @return The amount of energy extracted.
+     */
     public long extract(ContainerItemContext context, IToolStackView tool, long currentEnergy, long energyToExtract, TransactionContext tx) {
         return setCurrentEnergy(context, tool, Math.max(currentEnergy - energyToExtract, 0), tx);
     }
 
+    /**
+     * Extracts energy from the tool.
+     * @param tool The tool that the modifier is applied on.
+     * @param currentEnergy Current amount of energy stored in the tool.
+     * @param energyToExtract Energy to extract.
+     * @return The amount of energy extracted.
+     */
     public long extract(IToolStackView tool, long currentEnergy, long energyToExtract) {
         return setCurrentEnergy(tool, Math.max(currentEnergy - energyToExtract, 0));
     }
 
+    /**
+     * Extracts energy from the tool.
+     * @param tool The tool that the modifier is applied on.
+     * @param energyToExtract Energy to extract.
+     * @return The amount of energy extracted.
+     */
     public long extract(IToolStackView tool, long energyToExtract) {
         return setCurrentEnergy(tool, Math.max(getEnergy(tool) - energyToExtract, 0));
     }
@@ -259,6 +323,15 @@ public class BatteryModifier extends Modifier {
             return isOwner(tool) ? getCapacity(tool) : 0;
         }
 
+        /**
+         * Inserts energy into the tool.
+         * @param context Current container item.
+         * @param tool The tool that the modifier is applied on.
+         * @param modifier Current modifier.
+         * @param maxAmount Energy to insert.
+         * @param tx Current transaction.
+         * @return The amount of energy inserted.
+         */
         @Override
         public long insert(ContainerItemContext context, IToolStackView tool, ModifierEntry modifier, long maxAmount, TransactionContext tx) {
             if (isOwner(tool)) {
@@ -276,6 +349,15 @@ public class BatteryModifier extends Modifier {
             return 0;
         }
 
+        /**
+         * Extracts energy from the tool.
+         * @param context Current container item.
+         * @param tool The tool that the modifier is applied on.
+         * @param modifier Current modifier.
+         * @param maxAmount Energy to extract.
+         * @param tx Current transaction.
+         * @return The amount of energy extracted.
+         */
         @Override
         public long extract(ContainerItemContext context, IToolStackView tool, ModifierEntry modifier, long maxAmount, TransactionContext tx) {
             if (isOwner(tool)) {

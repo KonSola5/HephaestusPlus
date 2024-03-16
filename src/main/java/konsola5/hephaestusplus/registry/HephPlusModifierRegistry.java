@@ -3,6 +3,7 @@ package konsola5.hephaestusplus.registry;
 import konsola5.hephaestusplus.HephaestusPlus;
 import konsola5.hephaestusplus.modifiers.*;
 import konsola5.hephaestusplus.modifiers.dynamic.DynamicBatteryModifier;
+import konsola5.hephaestusplus.modifiers.dynamic.ForceFieldModifier;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierManager;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
@@ -40,14 +41,15 @@ public class HephPlusModifierRegistry {
     public static final DynamicModifier<Modifier> FAIRY_BLESSING = MODIFIERS.registerDynamic("fairy_blessing", Modifier.class);
     public static final StaticModifier<Modifier> TERRAFIRMA = MODIFIERS.register("terrafirma", TerrafirmaModifier::new);
 
-    public static final StaticModifier<BatteryModifier> BATTERY = MODIFIERS.register("battery", () -> new BatteryModifier(10000, 128));
-    public static final StaticModifier<BatteryModifier> BIG_BATTERY = MODIFIERS.register("big_battery", () -> new BatteryModifier(100000, 512));
-    public static final StaticModifier<BatteryModifier> HUGE_BATTERY = MODIFIERS.register("huge_battery", () -> new BatteryModifier(1000000, 2048));
+//    public static final StaticModifier<BatteryModifier> BATTERY = MODIFIERS.register("battery", () -> new BatteryModifier(10000, 128));
+//    public static final StaticModifier<BatteryModifier> BIG_BATTERY = MODIFIERS.register("big_battery", () -> new BatteryModifier(100000, 512));
+//    public static final StaticModifier<BatteryModifier> HUGE_BATTERY = MODIFIERS.register("huge_battery", () -> new BatteryModifier(1000000, 2048));
 
     public static final StaticModifier<EnergyVelocityModifier> ENERGY_VELOCITY = MODIFIERS.register("energy_velocity", EnergyVelocityModifier::new);
 
     static void registerSerializers() {
         ModifierManager.MODIFIER_LOADERS.register(HephaestusPlus.getResource("battery"), DynamicBatteryModifier.LOADER);
+        ModifierManager.MODIFIER_LOADERS.register(HephaestusPlus.getResource("force_field"), ForceFieldModifier.LOADER);
     }
 
     public static void register() {

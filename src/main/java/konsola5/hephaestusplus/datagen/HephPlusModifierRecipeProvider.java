@@ -16,6 +16,7 @@ import nourl.mythicmetals.item.MythicItems;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
+import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.modifiers.ModifierMatch;
@@ -24,6 +25,7 @@ import slimeknights.tconstruct.library.recipe.modifiers.adding.SwappableModifier
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.shared.TinkerCommons;
 import slimeknights.tconstruct.tools.TinkerModifiers;
+import techreborn.init.TRContent;
 import wraith.fabricaeexnihilo.modules.ModTags;
 
 import java.util.function.Consumer;
@@ -122,6 +124,15 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
         buildEmbellishment(MoarMaterialIds.elementium   ,"elementium_ingots"    ,consumer);
         buildEmbellishment(MoarMaterialIds.terrasteel   ,"terrasteel_ingots"    ,consumer);
 
+        Consumer<FinishedRecipe> whenTRLoaded = withCondition(consumer,
+                DefaultResourceConditions.allModsLoaded("techreborn")
+        );
+
+        addBattery(MoarModifierIds.red_cell_battery,      TRContent.RED_CELL_BATTERY,    whenTRLoaded, upgradeFolder);
+        addBattery(MoarModifierIds.lithium_battery,       TRContent.LITHIUM_ION_BATTERY, whenTRLoaded, upgradeFolder);
+        addBattery(MoarModifierIds.energy_crystal,        TRContent.ENERGY_CRYSTAL,      whenTRLoaded, upgradeFolder);
+        addBattery(MoarModifierIds.lapotron_crystal,      TRContent.LAPOTRON_CRYSTAL,    whenTRLoaded, upgradeFolder);
+        addBattery(MoarModifierIds.lapotronic_energy_orb, TRContent.LAPOTRONIC_ORB,      whenTRLoaded, upgradeFolder);
     }
 
     @SafeVarargs
@@ -137,13 +148,6 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
         return HephaestusPlus.makeTranslationKey("recipe", "modifier." + recipe);
     }
 
-//    private void buildEmbellishment(MaterialId material, ItemLike ingot, String suffix, Consumer<FinishedRecipe> consumer) {
-//        SwappableModifierRecipeBuilder.modifier(TinkerModifiers.embellishment, material.toString())
-//                .setTools(TinkerTags.Items.EMBELLISHMENT_METAL)
-//                .addInput(ingot).addInput(ingot).addInput(ingot)
-//                .save(consumer, wrap(TinkerModifiers.embellishment.getId(), "tools/modifiers/slotless/", suffix));
-//    }
-
     private void buildEmbellishment(MaterialVariantId material, String tag, Consumer<FinishedRecipe> consumer) {
         Ingredient ingot = Ingredient.of(getItemTag("c", tag));
         consumer = withCondition(consumer, tagCondition(tag));
@@ -152,4 +156,13 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
                 .addInput(ingot).addInput(ingot).addInput(ingot)
                 .save(consumer, wrap(TinkerModifiers.embellishment.getId(), "tools/modifiers/slotless/", "_" + material.getLocation('_').getPath()));
     }
+
+    private void addBattery(ModifierId modifier, Item item, Consumer<FinishedRecipe> condition, String folder){
+        ModifierRecipeBuilder.modifier(modifier)
+                .setTools(ingredientFromTags(TinkerTags.Items.MODIFIABLE))
+                .addInput(item)
+                .setSlots(SlotType.UPGRADE, 1)
+                .save(condition, prefix(modifier, folder));
+    }
+
 }

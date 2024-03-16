@@ -1,0 +1,5 @@
+{
+  "type": "hephaestusplus:battery",
+  "capacity": 10000000,
+  "transfer_rate": 2048
+}

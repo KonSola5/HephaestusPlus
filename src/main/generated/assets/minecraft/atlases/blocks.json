@@ -174,6 +174,14 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "techreborn:item/battery/lapotronic_orb"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/fortune"
     },
     {
@@ -195,6 +203,14 @@
     {
       "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/armor/plowing"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "techreborn:item/battery/red_cell_battery"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
     },
     {
       "type": "minecraft:single",
@@ -422,7 +438,23 @@
     },
     {
       "type": "minecraft:single",
+      "resource": "techreborn:item/battery/lapotron_crystal"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
+    },
+    {
+      "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/melee/parrying"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "techreborn:item/battery/energy_crystal"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
     },
     {
       "type": "minecraft:single",
@@ -475,6 +507,14 @@
     {
       "type": "minecraft:single",
       "resource": "tconstruct:gui/modifiers/armor/bouncy"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "techreborn:item/battery/lithium_battery"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "tconstruct:gui/modifiers/book"
     },
     {
       "type": "minecraft:single",

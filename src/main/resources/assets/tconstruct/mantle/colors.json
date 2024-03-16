@@ -1,13 +1,19 @@
 {
   "modifier.hephaestusplus": {
     "__abilities__": null,
-    "smashing":             "#828282",
-    "crooking":             "#592f13",
-    "legendary_banglum":    "#fca800",
-    "carmot_shield":        "#b6253c",
-    "battery":              "#ff0000",
-    "big_battery":          "#ff0000",
-    "huge_battery":         "#ff0000",
+    "smashing":              "#828282",
+    "crooking":              "#592f13",
+    "legendary_banglum":     "#fca800",
+
+    "__upgrades__": null,
+    "carmot_shield":         "#b6253c",
+    "battery":               "#ff0000",
+    "red_cell_battery":      "#ff0000",
+    "lithium_battery":       "#ff0000",
+    "energy_crystal":        "#ff0000",
+    "lapotron_crystal":      "#ff0000",
+    "lapotronic_energy_orb": "#ff0000",
+    "energy_velocity":       "#E2D738",
 
     "__traits__": null,
     "solid": "#95e49c",

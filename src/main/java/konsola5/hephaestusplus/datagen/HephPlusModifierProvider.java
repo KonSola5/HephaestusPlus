@@ -2,11 +2,13 @@ package konsola5.hephaestusplus.datagen;
 
 import konsola5.hephaestusplus.ids.MoarModifierIds;
 import konsola5.hephaestusplus.modifiers.dynamic.DynamicBatteryModifier;
+import konsola5.hephaestusplus.modifiers.dynamic.ForceFieldModifier;
 import konsola5.hephaestusplus.registry.HephPlusAttributes;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import slimeknights.tconstruct.library.data.tinkering.AbstractModifierProvider;
+import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.library.modifiers.dynamic.ExtraModifier;
 import slimeknights.tconstruct.library.modifiers.dynamic.StatBoostModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierLevelDisplay;
@@ -68,11 +70,20 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                         EquipmentSlot.MAINHAND
                 )
                 .display(ModifierLevelDisplay.DEFAULT).build());
-        addModifier(MoarModifierIds.dynamic_battery, DynamicBatteryModifier.builder()
-                .capacity(50000)
-                .transferRate(100)
-                .build());
+        addDynamicBattery(MoarModifierIds.red_cell_battery,      10_000L,      32);
+        addDynamicBattery(MoarModifierIds.lithium_battery,       100_000L,     128);
+        addDynamicBattery(MoarModifierIds.energy_crystal,        1_000_000L,   512);
+        addDynamicBattery(MoarModifierIds.lapotron_crystal,      10_000_000L,  2048);
+        addDynamicBattery(MoarModifierIds.lapotronic_energy_orb, 100_000_000L, 8192);
+
+        addModifier(MoarModifierIds.force_field, ForceFieldModifier.builder().energyPerTry(10).denominator(3).build());
     }
 
+    private void addDynamicBattery(ModifierId modifierId, long capacity, long transferRate) {
+        addModifier(modifierId, DynamicBatteryModifier.builder()
+                .capacity(capacity)
+                .transferRate(transferRate)
+                .build());
+    }
 
 }

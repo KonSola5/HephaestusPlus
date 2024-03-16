@@ -31,9 +31,14 @@ public class MoarModifierIds {
     public static final ModifierId fairy_blessing = new ModifierId(HephaestusPlus.MOD_ID, "fairy_blessing");
     public static final ModifierId terrafirma = new ModifierId(HephaestusPlus.MOD_ID, "terrafirma");
 
+    // Batteries: Tech Reborn
+    public static final ModifierId red_cell_battery = new ModifierId(HephaestusPlus.MOD_ID, "red_cell_battery");
+    public static final ModifierId lithium_battery = new ModifierId(HephaestusPlus.MOD_ID, "lithium_battery");
+    public static final ModifierId energy_crystal = new ModifierId(HephaestusPlus.MOD_ID, "energy_crystal");
+    public static final ModifierId lapotron_crystal = new ModifierId(HephaestusPlus.MOD_ID, "lapotron_crystal");
+    public static final ModifierId lapotronic_energy_orb = new ModifierId(HephaestusPlus.MOD_ID, "lapotronic_energy_orb");
 
-    public static final ModifierId battery = new ModifierId(HephaestusPlus.MOD_ID, "battery");
-    public static final ModifierId dynamic_battery = new ModifierId(HephaestusPlus.MOD_ID, "dynamic_battery");
+    public static final ModifierId force_field = new ModifierId(HephaestusPlus.MOD_ID, "force_field");
 
     private MoarModifierIds() {
     }

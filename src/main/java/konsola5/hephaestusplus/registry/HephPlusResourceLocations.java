@@ -13,5 +13,7 @@ public class HephPlusResourceLocations {
     public static final ResourceLocation VELOCITY_COOLDOWN = new ResourceLocation(MOD_ID, "velocity_cooldown");
     public static final ResourceLocation VELOCITY_ACTIVE = new ResourceLocation(MOD_ID, "velocity_active");
 
+    public static final ResourceLocation SHINE = new ResourceLocation(MOD_ID, "shine");
+
     public static ResourceLocation MINING_LEVEL_5 = new ResourceLocation("fabric:needs_tool_level_5");
 }

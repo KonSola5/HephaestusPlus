@@ -63,6 +63,7 @@ public class HephPlusRegistry {
         //HephaestusPlus materials for HephaestusPlus parts
         pack.addProvider((output, registriesFuture) -> new MaterialPartTextureGenerator(output, existingFileHelper, morePartSprites, moreToolMats));
         pack.addProvider((output, registriesFuture) -> new TinkerSpriteSourceGenerator(output, existingFileHelper));
+        //HephaestusPlus materials for the future Hephaestus addon parts
     }
 
 }

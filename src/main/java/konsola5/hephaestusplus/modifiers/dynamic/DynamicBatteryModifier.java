@@ -8,7 +8,11 @@ import net.minecraft.util.GsonHelper;
 import slimeknights.mantle.data.GenericLoaderRegistry.IGenericLoader;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 
-public class DynamicBatteryModifier extends BatteryModifier {
+/**
+ * Logic to create dynamically loaded batteries via datapacks.
+ * If you want to share the battery, extend from {@link BatteryModifier}.
+ */
+public final class DynamicBatteryModifier extends BatteryModifier {
 
     public DynamicBatteryModifier(long capacity, long transferRate) {
         super(capacity, transferRate);
@@ -51,10 +55,9 @@ public class DynamicBatteryModifier extends BatteryModifier {
         return LOADER;
     }
 
+    @Setter
     public static class Builder {
-        @Setter
         private long capacity = 0;
-        @Setter
         private long transferRate = 0;
 
         public DynamicBatteryModifier build() {

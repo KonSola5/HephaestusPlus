@@ -3,5 +3,11 @@
   "hephaestusplus:smashing":  ["fabricaeexnihilo:item/tools/hammer/wooden_hammer", "tconstruct:gui/modifiers/book"],
   "hephaestusplus:legendary_banglum":  ["mythicmetals:item/banglum_chunk", "tconstruct:gui/modifiers/book"],
   "hephaestusplus:carmot_shield": "hephaestusplus:gui/modifiers/carmot_shield",
-  "hephaestusplus:carmot_boost":  ["hephaestusplus:gui/modifiers/carmot_shield", "tconstruct:gui/modifiers/plus"]
+  "hephaestusplus:carmot_boost":  ["hephaestusplus:gui/modifiers/carmot_shield", "tconstruct:gui/modifiers/plus"],
+
+  "hephaestusplus:red_cell_battery": ["techreborn:item/battery/red_cell_battery", "tconstruct:gui/modifiers/book"],
+  "hephaestusplus:lithium_battery": ["techreborn:item/battery/lithium_battery", "tconstruct:gui/modifiers/book"],
+  "hephaestusplus:energy_crystal": ["techreborn:item/battery/energy_crystal", "tconstruct:gui/modifiers/book"],
+  "hephaestusplus:lapotron_crystal": ["techreborn:item/battery/lapotron_crystal", "tconstruct:gui/modifiers/book"],
+  "hephaestusplus:lapotronic_energy_orb": ["techreborn:item/battery/lapotronic_orb", "tconstruct:gui/modifiers/book"]
 }

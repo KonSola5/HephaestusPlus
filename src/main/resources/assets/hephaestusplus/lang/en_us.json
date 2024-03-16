@@ -122,10 +122,32 @@
   "modifier.hephaestusplus.fairy_blessing.flavor": "A special grace.",
   "modifier.hephaestusplus.fairy_blessing.description": "Increases the Pixie spawn chance upon being damaged when held",
 
+  "modifier.hephaestusplus.energy_velocity": "Energy Velocity",
+  "modifier.hephaestusplus.energy_velocity.flavor": "Buzzzzzz!",
+  "modifier.hephaestusplus.energy_velocity.description": "Sharply increases mining speed for a while using some Energy, but it takes a while to cool down",
+  "modifier.hephaestusplus.energy_velocity.on_cooldown": "Energy Velocity is on cooldown (%d %s)",
+  "modifier.hephaestusplus.energy_velocity.cooldown": "Cooldown: ",
+  "modifier.hephaestusplus.energy_velocity.not_enough_energy": "Not enough Energy",
+  "modifier.hephaestusplus.energy_velocity.transfer_rate_too_small": "Transfer Rate is too small for Energy Velocity to function",
+  "modifier.hephaestusplus.energy_velocity.energy_velocity": "Energy Velocity",
+
+  "modifier.hephaestusplus.red_cell_battery": "Red Cell Battery",
+  "modifier.hephaestusplus.lithium_battery": "Lithium Battery",
+  "modifier.hephaestusplus.energy_crystal": "Energy Crystal",
+  "modifier.hephaestusplus.lapotron_crystal": "Lapotron Crystal",
+  "modifier.hephaestusplus.lapotronic_energy_orb": "Lapotronic Energy Orb",
   "modifier.hephaestusplus.battery": "Battery",
-  "modifier.hephaestusplus.big_battery": "Big Battery",
-  "modifier.hephaestusplus.huge_battery": "Huge Battery",
+  "modifier.hephaestusplus.red_cell_battery.flavor": "What does a battery do on my tool?",
+  "modifier.hephaestusplus.lithium_battery.flavor": "What does a battery do on my tool?",
+  "modifier.hephaestusplus.energy_crystal.flavor": "What does a battery do on my tool?",
+  "modifier.hephaestusplus.lapotron_crystal.flavor": "What does a battery do on my tool?",
+  "modifier.hephaestusplus.lapotronic_energy_orb.flavor": "What does a battery do on my tool?",
   "modifier.hephaestusplus.battery.flavor": "What does a battery do on my tool?",
+  "modifier.hephaestusplus.red_cell_battery.description": "Tool now has a battery, allowing it to store Energy",
+  "modifier.hephaestusplus.lithium_battery.description": "Tool now has a battery, allowing it to store Energy",
+  "modifier.hephaestusplus.energy_crystal.description": "Tool now has a battery, allowing it to store Energy",
+  "modifier.hephaestusplus.lapotron_crystal.description": "Tool now has a battery, allowing it to store Energy",
+  "modifier.hephaestusplus.lapotronic_energy_orb.description": "Tool now has a battery, allowing it to store Energy",
   "modifier.hephaestusplus.battery.description": "Tool now has a battery, allowing it to store Energy",
   "_energy_comment": "Format: {current_energy} {unit} {capacity} {unit}",
   "modifier.hephaestusplus.battery.energy": "Energy: %d %s / %d %s",
@@ -340,6 +362,9 @@
 
   "comment_10": "Attributes",
   "hephaestusplus.carmot_shield": "Carmot Shield",
+
+  "comment_11": "Other useful strings",
+  "hephaestusplus.seconds": "s",
 
   "jade.modName.hephaestusplus": "HephaestusPlus"
 }

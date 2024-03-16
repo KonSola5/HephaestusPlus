@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 216,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_terrasteel"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:terrasteel_blocks"
   },
   "result": {
-    "tag": "c:terrasteel_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_terrasteel"
+  },
+  "temperature": 1200,
+  "time": 216
 }

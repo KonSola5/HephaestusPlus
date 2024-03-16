@@ -4,7 +4,7 @@
   "stats": [
     {
       "stat": "tconstruct:attack_speed",
-      "type": "multiply_base",
+      "operation": "multiply_base",
       "value": 0.15
     }
   ]

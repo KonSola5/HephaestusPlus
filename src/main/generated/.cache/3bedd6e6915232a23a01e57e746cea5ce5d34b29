@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-23T18:00:25.9617694	HephaestusPlus/HephaestusPlus Item Tags
+// 1.20.1	2024-03-16T11:23:39.6472025	HephaestusPlus/HephaestusPlus Item Tags
 cbebaf8575c9c5e9bfb5b423aa6a3b15cf9db881 data\tconstruct\tags\items\modifiable\melee.json
 cbebaf8575c9c5e9bfb5b423aa6a3b15cf9db881 data\tconstruct\tags\items\modifiable\aoe.json
 df50f44ddfa67f31c57064a6b50c29fdd981df48 data\fabricaeexnihilo\tags\items\hammers.json
@@ -11,5 +11,5 @@ cbebaf8575c9c5e9bfb5b423aa6a3b15cf9db881 data\tconstruct\tags\items\modifiable\h
 df50f44ddfa67f31c57064a6b50c29fdd981df48 data\tconstruct\tags\items\modifiable\harvest\stone.json
 715210998b786d852d9b72d8439b9966e3139c89 data\tconstruct\tags\items\casts\gold.json
 84c823f338f31c17c1eea72560c110e32a0bd286 data\fabricaeexnihilo\tags\items\crooks.json
-cbebaf8575c9c5e9bfb5b423aa6a3b15cf9db881 data\tconstruct\tags\items\modifiable\durability.json
 cbebaf8575c9c5e9bfb5b423aa6a3b15cf9db881 data\tconstruct\tags\items\modifiable\held.json
+cbebaf8575c9c5e9bfb5b423aa6a3b15cf9db881 data\tconstruct\tags\items\modifiable\durability.json

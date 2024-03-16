@@ -3,15 +3,15 @@
     "tconstruct:extra": {},
     "tconstruct:handle": {
       "durability": 1.2,
-      "miningSpeed": 1.2,
+      "miningSpeed": 0.9,
       "attackSpeed": 0.8,
       "attackDamage": 1.2
     },
     "tconstruct:head": {
       "durability": 2500,
-      "miningSpeed": 15.0,
+      "miningSpeed": 10.0,
       "harvestTier": "hephaestusplus:metallurgium",
-      "attack": 8.0
+      "attack": 6.0
     }
   }
 }

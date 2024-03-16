@@ -8,10 +8,10 @@
       "attackDamage": 1.2
     },
     "tconstruct:head": {
-      "durability": 1024,
-      "miningSpeed": 7.0,
-      "harvestTier": "minecraft:netherite",
-      "attack": 4.5
+      "durability": 768,
+      "miningSpeed": 3.5,
+      "harvestTier": "minecraft:diamond",
+      "attack": 3.3
     }
   }
 }

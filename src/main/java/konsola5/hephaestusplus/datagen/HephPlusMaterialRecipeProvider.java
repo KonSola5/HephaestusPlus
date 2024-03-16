@@ -32,56 +32,56 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
         String alloyFolder = "smeltery/alloys/";
         // This generates .json necessary for repairing custom materials
         // Mythic Metals
-        metalMaterialRecipe(consumer, MoarMaterialIds.adamantite, folder, "adamantite", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.aquarium, folder, "aquarium", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.banglum, folder, "banglum", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.carmot, folder, "carmot", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.celestium, folder, "celestium", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.durasteel, folder, "durasteel", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.hallowed, folder, "hallowed", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.kyber, folder, "kyber", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.metallurgium, folder, "metallurgium", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.mythril, folder, "mythril", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.orichalcum, folder, "orichalcum", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.palladium, folder, "palladium", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.prometheum, folder, "prometheum", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.quadrillum, folder, "quadrillum", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.runite, folder, "runite", true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.adamantite,    folder, "adamantite",    true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.aquarium,      folder, "aquarium",      true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.banglum,       folder, "banglum",       true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.carmot,        folder, "carmot",        true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.celestium,     folder, "celestium",     true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.durasteel,     folder, "durasteel",     true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.hallowed,      folder, "hallowed",      true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.kyber,         folder, "kyber",         true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.metallurgium,  folder, "metallurgium",  true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.mythril,       folder, "mythril",       true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.orichalcum,    folder, "orichalcum",    true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.palladium,     folder, "palladium",     true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.prometheum,    folder, "prometheum",    true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.quadrillum,    folder, "quadrillum",    true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.runite,        folder, "runite",        true);
         metalMaterialRecipe(consumer, MoarMaterialIds.star_platinum, folder, "star_platinum", true);
-        metalMaterialRecipe(consumer, MoarMaterialIds.stormyx, folder, "stormyx", true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.stormyx,       folder, "stormyx",       true);
 
-        compatMeltingCasting(consumer, MoarMaterialIds.adamantite, HephPlusFluidRegistry.moltenAdamantite, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.aquarium, HephPlusFluidRegistry.moltenAquarium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.banglum, HephPlusFluidRegistry.moltenBanglum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.carmot, HephPlusFluidRegistry.moltenCarmot, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.celestium, HephPlusFluidRegistry.moltenCelestium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.durasteel, HephPlusFluidRegistry.moltenDurasteel, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.hallowed, HephPlusFluidRegistry.moltenHallowed, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.kyber, HephPlusFluidRegistry.moltenKyber, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.metallurgium, HephPlusFluidRegistry.moltenMetallurgium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.mythril, HephPlusFluidRegistry.moltenMythril, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.orichalcum, HephPlusFluidRegistry.moltenOrichalcum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.palladium, HephPlusFluidRegistry.moltenPalladium, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.prometheum, HephPlusFluidRegistry.moltenPrometheum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.quadrillum, HephPlusFluidRegistry.moltenQuadrillum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.runite, HephPlusFluidRegistry.moltenRunite, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.adamantite,    HephPlusFluidRegistry.moltenAdamantite,   folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.aquarium,      HephPlusFluidRegistry.moltenAquarium,     folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.banglum,       HephPlusFluidRegistry.moltenBanglum,      folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.carmot,        HephPlusFluidRegistry.moltenCarmot,       folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.celestium,     HephPlusFluidRegistry.moltenCelestium,    folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.durasteel,     HephPlusFluidRegistry.moltenDurasteel,    folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.hallowed,      HephPlusFluidRegistry.moltenHallowed,     folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.kyber,         HephPlusFluidRegistry.moltenKyber,        folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.metallurgium,  HephPlusFluidRegistry.moltenMetallurgium, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.mythril,       HephPlusFluidRegistry.moltenMythril,      folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.orichalcum,    HephPlusFluidRegistry.moltenOrichalcum,   folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.palladium,     HephPlusFluidRegistry.moltenPalladium,    folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.prometheum,    HephPlusFluidRegistry.moltenPrometheum,   folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.quadrillum,    HephPlusFluidRegistry.moltenQuadrillum,   folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.runite,        HephPlusFluidRegistry.moltenRunite,       folder);
         compatMeltingCasting(consumer, MoarMaterialIds.star_platinum, HephPlusFluidRegistry.moltenStarPlatinum, folder);
-        compatMeltingCasting(consumer, MoarMaterialIds.stormyx, HephPlusFluidRegistry.moltenStormyx, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.stormyx,       HephPlusFluidRegistry.moltenStormyx,      folder);
 
         // Botania
 
-        metalMaterialRecipe(consumer, MoarMaterialIds.manasteel, folder, "manasteel", true);
+        metalMaterialRecipe(consumer, MoarMaterialIds.manasteel,  folder, "manasteel",  true);
         metalMaterialRecipe(consumer, MoarMaterialIds.elementium, folder, "elementium", true);
         metalMaterialRecipe(consumer, MoarMaterialIds.terrasteel, folder, "terrasteel", true);
 
         materialRecipe(consumer, MoarMaterialIds.manastring, Ingredient.of(BotaniaItems.manaString), 1, 4, folder + "string");
 
-        compatMeltingCasting(consumer, MoarMaterialIds.manasteel, HephPlusFluidRegistry.moltenManasteel, folder);
+        compatMeltingCasting(consumer, MoarMaterialIds.manasteel,  HephPlusFluidRegistry.moltenManasteel,  folder);
         compatMeltingCasting(consumer, MoarMaterialIds.elementium, HephPlusFluidRegistry.moltenElementium, folder);
         compatMeltingCasting(consumer, MoarMaterialIds.terrasteel, HephPlusFluidRegistry.moltenTerrasteel, folder);
 
         this.gemCasting(consumer, HephPlusFluidRegistry.moltenStarrite, MythicItems.Mats.STARRITE, folder + "starrite/gem");
-        this.gemMelting(consumer, HephPlusFluidRegistry.moltenStarrite.get(), "starrite", true, 9,folder + "starrite/gem", true);
+        this.gemMelting(consumer, HephPlusFluidRegistry.moltenStarrite.get(), "starrite", true, 9, folder + "starrite/gem", true);
         ItemCastingRecipeBuilder.basinRecipe(MythicBlocks.STARRITE.getStorageBlock())
                 .setFluidAndTime(HephPlusFluidRegistry.moltenStarrite, false, FluidValues.LARGE_GEM_BLOCK)
                 .save(consumer, modResource(folder + "starrite/block"));

@@ -10,9 +10,6 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import vazkii.botania.api.mana.ManaItemHandler;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@ParametersAreNonnullByDefault
 public class TerrafirmaModifier extends Modifier {
     // A copy-paste from Botania's Terra armor set, modified to fit the tool better.
     @Override
@@ -20,7 +17,7 @@ public class TerrafirmaModifier extends Modifier {
         if (FabricLoader.getInstance().isModLoaded("botania") && !world.isClientSide() && holder instanceof Player player) {
             int food = player.getFoodData().getFoodLevel();
             if (food > 0 && food < 18 && player.isHurt() && player.tickCount % Math.max(20, (100 - 20 * level)) == 0 && isSelected) {
-                 if (ManaItemHandler.instance().requestManaExact(stack, player, 60, true)) player.heal(1F);
+                if (ManaItemHandler.instance().requestManaExact(stack, player, 60, true)) player.heal(1F);
             }
         }
     }

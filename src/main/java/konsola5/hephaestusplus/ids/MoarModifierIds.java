@@ -33,6 +33,8 @@ public class MoarModifierIds {
 
 
     public static final ModifierId battery = new ModifierId(HephaestusPlus.MOD_ID, "battery");
+    public static final ModifierId dynamic_battery = new ModifierId(HephaestusPlus.MOD_ID, "dynamic_battery");
+
     private MoarModifierIds() {
     }
 }

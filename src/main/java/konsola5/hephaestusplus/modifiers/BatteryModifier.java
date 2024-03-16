@@ -3,6 +3,7 @@ package konsola5.hephaestusplus.modifiers;
 import konsola5.hephaestusplus.HephaestusPlus;
 import konsola5.hephaestusplus.util.ToolEnergyCapability;
 import konsola5.hephaestusplus.util.ToolEnergyCapability.EnergyModifierHook;
+import lombok.Getter;
 import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
@@ -36,8 +37,9 @@ import java.util.List;
 public class BatteryModifier extends Modifier {
 
     private static final String ENERGY_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.energy");
-    private static final String CAPACITY_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.capacity");
+    private static final String TRANSFER_RATE_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.transfer_rate");
     private static final String UNIT_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.unit");
+    private static final String UNIT_PER_TICK_KEY = HephaestusPlus.makeTranslationKey("modifier", "battery.unit_per_tick");
 
     private static final ResourceLocation OWNER = HephaestusPlus.getResource("battery_owner");
     private static final ResourceLocation CAPACITY = HephaestusPlus.getResource("battery_capacity");
@@ -45,8 +47,9 @@ public class BatteryModifier extends Modifier {
     private static final ResourceLocation TRANSFER_RATE = HephaestusPlus.getResource("transfer_rate");
 
     private EnergyModifier battery;
+    @Getter
     private final long capacity;
-
+    @Getter
     private final long transferRate;
 
     public BatteryModifier(long capacity, long transferRate) {
@@ -71,13 +74,18 @@ public class BatteryModifier extends Modifier {
         if (capacity > 0) {
             addCapacity(volatileData, capacity * level);
         }
+        if (transferRate > 0) {
+            addTransferRate(volatileData, transferRate * level);
+        }
     }
 
     @Override
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         if (isOwner(tool)) {
-            long current = getEnergy(tool);
-            tooltip.add(Component.translatable(ENERGY_KEY, current, I18n.get(UNIT_KEY), getCapacity(tool), I18n.get(UNIT_KEY)));
+            long currentEnergy = getEnergy(tool);
+            long currentTransferRate = getTransferRate(tool);
+            tooltip.add(Component.translatable(ENERGY_KEY, currentEnergy, I18n.get(UNIT_KEY), getCapacity(tool), I18n.get(UNIT_KEY)));
+            tooltip.add(Component.translatable(TRANSFER_RATE_KEY, currentTransferRate, I18n.get(UNIT_PER_TICK_KEY)));
         }
     }
 
@@ -99,7 +107,7 @@ public class BatteryModifier extends Modifier {
     @Override
     public void onRemoved(IToolStackView tool) {
         ModDataNBT persistentData = tool.getPersistentData();
-        // if no one claims the tank, it either belonged to us or another removed modifier, so clean up data
+        // if no one claims the battery, it either belonged to us or another removed modifier, so clean up data
         if (!persistentData.contains(OWNER, Tag.TAG_STRING)) {
             persistentData.remove(getEnergyKey());
         }
@@ -134,18 +142,38 @@ public class BatteryModifier extends Modifier {
         return isOwner(tool.getVolatileData());
     }
 
-    /** Gets the capacity of the battery */
+    /**
+     * Gets the capacity of the battery
+     */
     public long getCapacity(IModDataView volatileData) {
         return volatileData.get(getCapacityKey(), CompoundTag::getLong);
     }
 
-    /** Gets the capacity of the battery */
+    /**
+     * Gets the capacity of the battery
+     */
     public long getCapacity(IToolStackView tool) {
         return tool.getVolatileData().get(getCapacityKey(), CompoundTag::getLong);
     }
 
+    public long getTransferRate(IModDataView volatileData) {
+        return volatileData.get(getTransferRateKey(), CompoundTag::getLong);
+    }
+
+    public long getTransferRate(IToolStackView tool) {
+        return tool.getVolatileData().get(getTransferRateKey(), CompoundTag::getLong);
+    }
+
     public void addCapacity(ModDataNBT volatileNBT, long amount) {
         ResourceLocation key = getCapacityKey();
+        if (volatileNBT.contains(key, Tag.TAG_ANY_NUMERIC)) {
+            amount += volatileNBT.get(key, CompoundTag::getLong);
+        }
+        volatileNBT.putLong(key, amount);
+    }
+
+    public void addTransferRate(ModDataNBT volatileNBT, long amount) {
+        ResourceLocation key = getTransferRateKey();
         if (volatileNBT.contains(key, Tag.TAG_ANY_NUMERIC)) {
             amount += volatileNBT.get(key, CompoundTag::getLong);
         }
@@ -236,8 +264,10 @@ public class BatteryModifier extends Modifier {
             if (isOwner(tool)) {
                 long current = getEnergy(tool);
                 long remaining = getCapacity(tool) - current;
-                if (remaining <= 0) {return 0;}
-                long inserted = Math.min(remaining, maxAmount);
+                if (remaining <= 0) {
+                    return 0;
+                }
+                long inserted = Math.min(getTransferRate(tool), Math.min(remaining, maxAmount));
                 if (inserted > 0) {
                     BatteryModifier.this.insert(context, tool, current, inserted, tx);
                 }
@@ -250,8 +280,10 @@ public class BatteryModifier extends Modifier {
         public long extract(ContainerItemContext context, IToolStackView tool, ModifierEntry modifier, long maxAmount, TransactionContext tx) {
             if (isOwner(tool)) {
                 long current = getEnergy(tool);
-                if (current == 0) {return 0;}
-                long extracted = Math.min(current, maxAmount);
+                if (current == 0) {
+                    return 0;
+                }
+                long extracted = Math.min(getTransferRate(tool), Math.min(current, maxAmount));
                 BatteryModifier.this.extract(context, tool, current, extracted, tx);
                 return extracted;
             }

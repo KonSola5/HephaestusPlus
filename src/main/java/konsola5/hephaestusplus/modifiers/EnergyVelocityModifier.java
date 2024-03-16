@@ -28,14 +28,12 @@ import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.VELOCITY_ACTIVE;
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.VELOCITY_COOLDOWN;
 
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class EnergyVelocityModifier extends BatteryModifier implements GeneralInteractionModifierHook, ConditionalStatModifierHook {
 
     private final long ENERGY_PER_TICK = 5;

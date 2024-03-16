@@ -1,6 +1,7 @@
 package konsola5.hephaestusplus.datagen;
 
 import konsola5.hephaestusplus.ids.MoarModifierIds;
+import konsola5.hephaestusplus.modifiers.dynamic.DynamicBatteryModifier;
 import konsola5.hephaestusplus.registry.HephPlusAttributes;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -38,14 +39,14 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                 .multiplyBase(ToolStats.PROJECTILE_DAMAGE, 0.03f)
                 .build());
         addModifier(MoarModifierIds.carmot_shield, StatBoostModifier.builder().attribute(
-                "hephaestusplus.modifier.carmot_shield",
-                HephPlusAttributes.CARMOT_SHIELD,
-                AttributeModifier.Operation.ADDITION,
-                2,
-                EquipmentSlot.HEAD,
-                EquipmentSlot.CHEST,
-                EquipmentSlot.LEGS,
-                EquipmentSlot.FEET
+                        "hephaestusplus.modifier.carmot_shield",
+                        HephPlusAttributes.CARMOT_SHIELD,
+                        AttributeModifier.Operation.ADDITION,
+                        2,
+                        EquipmentSlot.HEAD,
+                        EquipmentSlot.CHEST,
+                        EquipmentSlot.LEGS,
+                        EquipmentSlot.FEET
                 )
                 .display(ModifierLevelDisplay.NO_LEVELS).build());
         addModifier(MoarModifierIds.carmot_boost, StatBoostModifier.builder().attribute(
@@ -67,6 +68,10 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                         EquipmentSlot.MAINHAND
                 )
                 .display(ModifierLevelDisplay.DEFAULT).build());
+        addModifier(MoarModifierIds.dynamic_battery, DynamicBatteryModifier.builder()
+                .capacity(50000)
+                .transferRate(100)
+                .build());
     }
 
 

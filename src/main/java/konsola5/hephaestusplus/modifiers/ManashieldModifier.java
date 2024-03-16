@@ -13,10 +13,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import vazkii.botania.api.mana.ManaItemHandler;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class ManashieldModifier extends Modifier {
     private static final int MANA_PER_DAMAGE_MIN = 60;
 
@@ -30,8 +27,7 @@ public class ManashieldModifier extends Modifier {
                 while (amount > 0) {
                     if (ManaItemHandler.instance().requestManaExactForTool(toolStack, (Player) holder, manaCost(toolStack, numParts), true)) {
                         amount--;
-                    }
-                    else break;
+                    } else break;
                 }
             }
         }
@@ -49,7 +45,8 @@ public class ManashieldModifier extends Modifier {
         int manashieldLevel = ModifierUtil.getModifierLevel(toolStack, MoarModifierIds.garbage_collector);
         int crudeLevel = ModifierUtil.getModifierLevel(toolStack, MoarModifierIds.garbage_collector);
 
-        if (manashieldLevel > 0) return MANA_PER_DAMAGE_MIN * (int) Math.pow(2, numParts - manashieldLevel - (crudeLevel / 2d));
+        if (manashieldLevel > 0)
+            return MANA_PER_DAMAGE_MIN * (int) Math.pow(2, numParts - manashieldLevel - (crudeLevel / 2d));
         else return MANA_PER_DAMAGE_MIN;
     }
 }

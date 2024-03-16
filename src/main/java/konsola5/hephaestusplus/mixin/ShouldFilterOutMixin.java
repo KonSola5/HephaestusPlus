@@ -26,9 +26,10 @@ public abstract class ShouldFilterOutMixin {
     }
 
     @Inject(method = "shouldFilterOut", at = @At("HEAD"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
-    private static void modifierFilter(Entity e, ItemStack tool, ItemStack drop, CallbackInfoReturnable<Boolean> cir){
+    private static void modifierFilter(Entity e, ItemStack tool, ItemStack drop, CallbackInfoReturnable<Boolean> cir) {
         int level = ModifierUtil.getModifierLevel(tool, MoarModifierIds.garbage_collector);
-        if (level > 0) cir.setReturnValue(!drop.isEmpty() && (isDisposable(drop) || isSemiDisposable(drop) && !e.isShiftKeyDown()));
+        if (level > 0)
+            cir.setReturnValue(!drop.isEmpty() && (isDisposable(drop) || isSemiDisposable(drop) && !e.isShiftKeyDown()));
     }
 
 }

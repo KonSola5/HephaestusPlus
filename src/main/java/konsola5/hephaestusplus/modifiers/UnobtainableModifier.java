@@ -16,14 +16,12 @@ import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.UUID;
 
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.TOOL_OWNER;
 
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class UnobtainableModifier extends NoLevelsModifier {
     // Inspired by Relic binding from Botania (by Vazkii) (uses some code from Botania, heavily modified)
     // Thanks 800020h for the idea!
@@ -34,7 +32,7 @@ public class UnobtainableModifier extends NoLevelsModifier {
 
     private static LivingEntity holder = null;
 
-
+    @Nullable
     public UUID getHolderUUID(IToolStackView tool) {
         if (tool.getPersistentData().get(TOOL_OWNER) != null) {
             try {
@@ -84,7 +82,7 @@ public class UnobtainableModifier extends NoLevelsModifier {
     private Component addOwnerInfo(IToolStackView tool) {
         if (holder != null) {
             if (tool.getPersistentData().get(TOOL_OWNER) == null) {
-                return(TOOL_NO_OWNER);
+                return (TOOL_NO_OWNER);
             } else {
                 if (!holder.getUUID().equals(getHolderUUID(tool))) {
                     return (NOT_YOUR_TOOL);

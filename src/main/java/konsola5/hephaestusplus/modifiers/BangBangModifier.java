@@ -24,12 +24,9 @@ import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 // A copy-paste of a Blast Mining ability from Mythic Metals' BanglumPickaxe.java/BanglumShovel.java,
 // translated to Official Mojang mappings.
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class BangBangModifier extends Modifier implements BlockInteractionModifierHook {
     @Override
     protected void registerHooks(ModifierHookMap.Builder hookBuilder) {

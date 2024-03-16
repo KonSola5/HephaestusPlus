@@ -21,11 +21,9 @@ import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import vazkii.botania.api.mana.ManaItemHandler;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Predicate;
 
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class ManashotModifier extends NoLevelsModifier implements BowAmmoModifierHook, ProjectileLaunchModifierHook {
 
     @Override

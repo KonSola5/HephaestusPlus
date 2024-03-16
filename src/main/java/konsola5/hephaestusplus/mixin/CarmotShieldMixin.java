@@ -20,15 +20,18 @@ import static nourl.mythicmetals.armor.CarmotShield.MAX_COOLDOWN;
 @Debug(export = true)
 @Mixin(value = CarmotShield.class, remap = false)
 public abstract class CarmotShieldMixin {
-    @Shadow @Final private Player player;
+    @Shadow
+    @Final
+    private Player player;
 
-    @Shadow public int cooldown;
+    @Shadow
+    public int cooldown;
 
     @ModifyConstant(method = "tickShield", constant = @Constant(floatValue = 0.1f))
-    private float increaseCarmotShieldRegen (float original) {
+    private float increaseCarmotShieldRegen(float original) {
         ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
         int level = ModifierUtil.getModifierLevel(stack, MoarModifierIds.carmot_synergy);
-        return (float) (0.1 * ((0.5 * level)+1));
+        return (float) (0.1 * ((0.5 * level) + 1));
     }
 
     @Inject(method = "tickShield", at = @At(value = "FIELD", target = "Lnourl/mythicmetals/armor/CarmotShield;cooldown:I", opcode = Opcodes.GETFIELD, ordinal = 1))

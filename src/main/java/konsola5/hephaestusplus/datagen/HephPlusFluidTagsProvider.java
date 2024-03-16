@@ -62,7 +62,7 @@ public class HephPlusFluidTagsProvider extends FabricTagProvider.FluidTagProvide
                 .addTag(HephPlusFluidRegistry.moltenStarPlatinum.getForgeTag())
                 .addTag(HephPlusFluidRegistry.moltenStormyx.getForgeTag())
                 .addTag(HephPlusFluidRegistry.moltenUnobtainium.getForgeTag())
-        // Botania
+                // Botania
                 .addTag(HephPlusFluidRegistry.moltenManasteel.getForgeTag())
                 .addTag(HephPlusFluidRegistry.moltenElementium.getForgeTag())
                 .addTag(HephPlusFluidRegistry.moltenTerrasteel.getForgeTag());

@@ -22,11 +22,9 @@ import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class CosmicModifier extends Modifier implements ConditionalStatModifierHook {
     private static final Component MINING_SPEED = HephaestusPlus.makeTranslation("modifier", "cosmic.mining_speed");
     private static final Component VELOCITY = HephaestusPlus.makeTranslation("modifier", "cosmic.velocity");

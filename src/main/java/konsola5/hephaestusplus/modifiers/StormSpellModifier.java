@@ -6,10 +6,7 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class StormSpellModifier extends Modifier {
     @Override
     public int afterEntityHit(IToolStackView tool, int level, ToolAttackContext context, float damageDealt) {

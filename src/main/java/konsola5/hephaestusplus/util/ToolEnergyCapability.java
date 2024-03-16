@@ -126,17 +126,19 @@ public class ToolEnergyCapability extends EnergyModifierHookIterator<ModifierEnt
     }
 
     public interface EnergyModifierHook {
-        default int getBatteries (IToolContext tool, Modifier modifier) {
+        default int getBatteries(IToolContext tool, Modifier modifier) {
             return 1;
         }
 
-        EnergyStorage getSlot (IToolStackView tool, ModifierEntry modifier, int slot);
+        EnergyStorage getSlot(IToolStackView tool, ModifierEntry modifier, int slot);
 
         default long getCurrentEnergy(IToolStackView tool, ModifierEntry modifier, int battery) {
             return 0;
         }
 
-        default long getBatteryCapacity(IToolStackView tool, ModifierEntry modifier, int battery) {return 0;}
+        default long getBatteryCapacity(IToolStackView tool, ModifierEntry modifier, int battery) {
+            return 0;
+        }
 
         long insert(ContainerItemContext context, IToolStackView tool, ModifierEntry modifier, long maxAmount, TransactionContext tx);
 

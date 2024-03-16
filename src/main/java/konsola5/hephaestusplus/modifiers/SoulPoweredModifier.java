@@ -13,13 +13,11 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.utils.TooltipKey;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.STORED_SOULS;
 
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class SoulPoweredModifier extends Modifier {
     public void incrementSouls(ModDataNBT persistentData) {
         persistentData.putInt(STORED_SOULS, persistentData.getInt(STORED_SOULS) + 1);

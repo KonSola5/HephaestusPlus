@@ -30,7 +30,7 @@ abstract class EnergyModifierHookIterator<I> extends CompoundIndexHookIterator<T
      */
     protected long insert(ContainerItemContext context, IToolStackView tool, long maxAmount, TransactionContext tx) {
         int totalFilled = 0;
-        Iterator<I> iterator = getIterator(tool);
+        Iterator<I> iterator = getIterator(tool); // Iterates through modifiers
         while (iterator.hasNext()) {
             long filled = getHook(iterator.next()).insert(context, tool, indexEntry, maxAmount, tx);
             if (filled > 0) {
@@ -55,7 +55,7 @@ abstract class EnergyModifierHookIterator<I> extends CompoundIndexHookIterator<T
     public long extract(ContainerItemContext context, IToolStackView tool, long maxAmount, TransactionContext tx) {
         long drainedSoFar = 0;
         Iterator<I> iterator = getIterator(tool);
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             // try draining each modifier
             long drained = getHook(iterator.next()).extract(context, tool, indexEntry, maxAmount, tx);
             if (drained != 0) {

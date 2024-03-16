@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-16T11:23:39.6352045	HephaestusPlus/HephaestusPlus Material Recipes
+// 1.20.1	2024-03-16T14:52:25.2096913	HephaestusPlus/HephaestusPlus Material Recipes
 d402047ea6dd7bb81aaea8833b8885285687b706 data\hephaestusplus\recipes\tools\materials\metal\unobtainium\dust.json
 b3007da1c3a17cfc0cb319fd43abe8b97ab3446c data\hephaestusplus\recipes\tools\materials\metal\orichalcum\geore\block.json
 bac24d1bf75fd8b527c77c3101a2e5bd8906422a data\hephaestusplus\recipes\tools\materials\metal\quadrillum\gear_sand_cast.json
@@ -172,7 +172,7 @@ dadff3cc8053ac39e19caacce6712e3bedc9231f data\hephaestusplus\recipes\tools\mater
 b61eb83b4f1fee43cf3b6e92531c1d8521102aeb data\hephaestusplus\recipes\tools\materials\hallowed\block.json
 25a07241ba48fec6a22729fabb1899422414fe60 data\hephaestusplus\recipes\tools\materials\metal\unobtainium\wire_sand_cast.json
 ea183cc86bb359230dbd6881a33cd2a5074fb010 data\hephaestusplus\recipes\tools\materials\metal\banglum\rod_gold_cast.json
-cfdb6f1a571d2f404ffe2b90917c580d1cf91b7f data\hephaestusplus\recipes\tools\materials\metal\manganese\block.json
+4c7610c648d1eca15c6ff26d1df7ae342c877d25 data\hephaestusplus\recipes\tools\materials\metal\manganese\block.json
 035c03b87462464da8db3b93c91366d282a479ec data\hephaestusplus\recipes\tools\materials\metal\runite\ingot.json
 94eaf28596c2dff773e50cd3b1157476cba74ac0 data\hephaestusplus\recipes\tools\materials\metal\quadrillum\coin_gold_cast.json
 847c383dee7f56196bd699fc9953d20eed508f01 data\hephaestusplus\recipes\tools\materials\metal\stormyx\coin.json
@@ -180,7 +180,7 @@ cfdb6f1a571d2f404ffe2b90917c580d1cf91b7f data\hephaestusplus\recipes\tools\mater
 02fa541acc3c78c076019ca25147d96c71c178af data\hephaestusplus\recipes\tools\materials\metal\orichalcum\ingot_sand_cast.json
 9e51ded511144f96fa24ba4fe5d0a6d641c19365 data\hephaestusplus\recipes\tools\materials\metal\palladium\ore_dense.json
 fc440a4c155c2f2734cd476531d9575b58e76a31 data\hephaestusplus\recipes\tools\materials\metal\kyber\plate_gold_cast.json
-0f4eb20c48fa5f07c55bb9541928d6acf878545d data\hephaestusplus\recipes\tools\materials\metal\stormyx\block.json
+6211a6ecb30ec9c0e5deb4eccea3b274549938f4 data\hephaestusplus\recipes\tools\materials\metal\stormyx\block.json
 050d3b7e9e43a4728c7454a212ad5422178b4367 data\hephaestusplus\recipes\tools\materials\metal\metallurgium\wire.json
 f210f61b81433e22a88489b214654d4bdd5580e9 data\hephaestusplus\recipes\tools\materials\mythril\nugget.json
 d64cc84a86c918eb490b3cb9ad6c63fa7333bdab data\hephaestusplus\recipes\tools\materials\manasteel\ingot.json
@@ -229,11 +229,11 @@ f940efdca4396b51d78411b0df49a7cdc124ab85 data\hephaestusplus\recipes\tools\mater
 964f5a0e1173727ffec7f4a1f99862f966c31c55 data\hephaestusplus\recipes\tools\materials\metal\quadrillum\wire.json
 4a4f9d4884b0b95e2dcb0fa6ac20f1dac6a94f73 data\hephaestusplus\recipes\tools\materials\metal\carmot\gear_gold_cast.json
 56e97758158e5e70cf10edfc9e5d16ed60aadd1f data\hephaestusplus\recipes\tools\materials\metal\manganese\ore_singular.json
-0714b906bcd0f916f660d037f7af3b5bb4d75c18 data\hephaestusplus\recipes\tools\materials\metal\star_platinum\block.json
+8b794a49d0c3610d09f2aa9e264397cc7c117161 data\hephaestusplus\recipes\tools\materials\metal\star_platinum\block.json
 6d5a4de95b651af1c825e6739fbc255023cf8292 data\hephaestusplus\recipes\tools\materials\metal\elementium\gear_gold_cast.json
 0183ebd9ba26d0d8a1da7484bf6a475388a8d02b data\hephaestusplus\recipes\tools\materials\metal\orichalcum\nugget_gold_cast.json
 8d61673123b74bf447da2433aa297db11e3feb2f data\hephaestusplus\recipes\tools\materials\metal\orichalcum\plates.json
-40aa8eb892acd875e18cb6b6082bf049d3486c1a data\hephaestusplus\recipes\tools\materials\metal\metallurgium\block.json
+687aaeeb9e1d82d7ff11cb3f6451137db0f945f8 data\hephaestusplus\recipes\tools\materials\metal\metallurgium\block.json
 bbeffc5ec3473def1d264e76fad1091e539ab3e2 data\hephaestusplus\recipes\tools\materials\metal\runite\coin_sand_cast.json
 d5d7198eea0cbc3c9f94ea885f2b6300017044e2 data\hephaestusplus\recipes\tools\materials\melting\kyber.json
 cf07a2e0655ed0c2f7442b205e02e39d405330e8 data\hephaestusplus\recipes\tools\materials\metal\metallurgium\ingot_sand_cast.json
@@ -326,7 +326,7 @@ f0d239c147290d58da86006b78712e19f2e8c39a data\hephaestusplus\recipes\tools\mater
 9a006ab7320daffe9b01524c655b2722e93b6be9 data\hephaestusplus\recipes\tools\materials\starrite\gem\starrite\ore_singular.json
 48cf71672943b8c591493f239e3b8bb5bd52200e data\hephaestusplus\recipes\tools\materials\metal\durasteel\plate_sand_cast.json
 4bc8dee0a08cea72a5ecc6880ec23cf31d5d235f data\hephaestusplus\recipes\tools\materials\metal\prometheum\geore\cluster.json
-06d877ca8612e3b3303c0da37e5e0ac78f79edc5 data\hephaestusplus\recipes\tools\materials\metal\hallowed\block.json
+a0b2a5cdaeecc15ec1e5f77204917b6f06344fa9 data\hephaestusplus\recipes\tools\materials\metal\hallowed\block.json
 cbebcf86879b2fbb028ec6b4aa7bb5aeec5513e0 data\hephaestusplus\recipes\tools\materials\metal\terrasteel\plates.json
 cdcf7a66e787b36c18a543f1c0b70a30dbbb5d70 data\hephaestusplus\recipes\tools\materials\casting\adamantite.json
 bd8b104ee48b59bca258ddf571c43a3a8aadf38b data\hephaestusplus\recipes\tools\materials\metal\manganese\geore\cluster.json
@@ -364,7 +364,7 @@ fa7fda34ada66df421033ed467a16aeac6793ee8 data\hephaestusplus\recipes\tools\mater
 4610f1e217feb6d3ea0c9ec7dddd4c4a16e283ce data\hephaestusplus\recipes\tools\materials\melting\adamantite.json
 655fc47d0589242f8c86f3118caced9dec13dcd8 data\hephaestusplus\recipes\tools\materials\metal\stormyx\wire_sand_cast.json
 15d8d68c26d6271952baf90b4371bc2dc6369ae9 data\hephaestusplus\recipes\tools\materials\metal\runite\ore_sparse.json
-61d8ad741f7d24e503d4d08bda8358a4c6bd8ef7 data\hephaestusplus\recipes\tools\materials\metal\celestium\block.json
+0c9e341fec3c152da1b0463c515a6e245b14fb5c data\hephaestusplus\recipes\tools\materials\metal\celestium\block.json
 c2c5bde281a1082c0449275cb6b3b35f9076338c data\hephaestusplus\recipes\tools\materials\metal\manganese\gear_gold_cast.json
 6636e8ade2c5b1a257dd4ce3981d725b5236bbb9 data\hephaestusplus\recipes\tools\materials\metal\runite\gear.json
 04007f4d738adf79a5d6e61ed502db16e4ca02d3 data\hephaestusplus\recipes\tools\materials\metal\runite\nugget.json
@@ -557,7 +557,7 @@ aebe77454e751ea38a70076e49bb032d272aa276 data\hephaestusplus\recipes\tools\mater
 1b91408b9ab04ef3e377184e2d19e59e226de98b data\hephaestusplus\recipes\tools\materials\metal\durasteel\ingot_sand_cast.json
 73b5e3878f369e8f23f64d2ade415eb14e577103 data\hephaestusplus\recipes\tools\materials\metal\durasteel\plate_gold_cast.json
 fe3e6b57cf9f4dffebe140567d917b5d43a5266d data\hephaestusplus\recipes\tools\materials\metal\hallowed\gear_sand_cast.json
-a5ea4d604bb0bb8e4911d19ee6dada6f2ab6bdcb data\hephaestusplus\recipes\tools\materials\metal\banglum\block.json
+ca1dfad5a755a8bfb5235d80017c14b4b7800ae0 data\hephaestusplus\recipes\tools\materials\metal\banglum\block.json
 0f125d6b98399affd524e9fc71f76808f02646bf data\hephaestusplus\recipes\tools\materials\metal\quadrillum\nugget_gold_cast.json
 8dcf2ab4327d3f8435ef93792170e07eca1fddfc data\hephaestusplus\recipes\tools\materials\banglum\nugget.json
 d50f35ff4a8fed0a48b4f58e3c37d54a00bdd2af data\hephaestusplus\recipes\tools\materials\metal\palladium\nugget_gold_cast.json
@@ -589,7 +589,7 @@ af28db2ec6fbef5c411551877bd070982421b8e3 data\hephaestusplus\recipes\tools\mater
 8e65a69942b58561f851f8b3bc3185b30b6c658e data\hephaestusplus\recipes\tools\materials\metal\orichalcum\gear_sand_cast.json
 fa0233c1b64175be3396095e8752e6cded2d1ceb data\hephaestusplus\recipes\tools\materials\metal\hallowed\nugget_gold_cast.json
 34181a093a07040aeb0c76df35b2caf29101b533 data\hephaestusplus\recipes\tools\materials\metal\manganese\nugget_sand_cast.json
-52e9bd2f59c3046d4e0aaea14fafbe1e1d5063f9 data\hephaestusplus\recipes\tools\materials\metal\aquarium\block.json
+81e906171191862d06b8fa994fb9daffeb3d46f7 data\hephaestusplus\recipes\tools\materials\metal\aquarium\block.json
 e4563438a95e632ea7eacd5d7be53902e2b07317 data\hephaestusplus\recipes\tools\materials\metal\kyber\wire_sand_cast.json
 da74890c66561ecbee48ae3f69780e2b24d6e231 data\hephaestusplus\recipes\tools\materials\metal\adamantite\plate_sand_cast.json
 aa78f40181249e2fe49da48c317f1abe63cf1a38 data\hephaestusplus\recipes\tools\materials\metal\terrasteel\ingot.json
@@ -711,7 +711,7 @@ f35ace987adf167419fe5e54f2016443aef42dd4 data\hephaestusplus\recipes\tools\mater
 49d9026f8af7462528b23dd519ff7df4be74b34e data\hephaestusplus\recipes\tools\materials\metal\celestium\nugget_gold_cast.json
 1173224a1ec5c65c05dd67c490bb635a3d3b7c2c data\hephaestusplus\recipes\tools\materials\metal\banglum\nugget_sand_cast.json
 6990014669c6356232ebf916d0df6b56a6c607c9 data\hephaestusplus\recipes\tools\materials\metal\orichalcum\raw_block.json
-8b4e82482b8455a038ef56c4256af64f794276a2 data\hephaestusplus\recipes\tools\materials\metal\unobtainium\block.json
+e146d8452c7652f88339ea92fac80627ef1603df data\hephaestusplus\recipes\tools\materials\metal\unobtainium\block.json
 e893dafdb037d8750bf31588c4bedd7cc93675ae data\hephaestusplus\recipes\tools\materials\metal\durasteel\rod_sand_cast.json
 47e4851b151a74c4e63e3aecef630912b9a63370 data\hephaestusplus\recipes\tools\materials\quadrillum\block.json
 537fdec4cfd52e161dcec2403f2d335284a04271 data\hephaestusplus\recipes\tools\materials\metal\metallurgium\gear_gold_cast.json

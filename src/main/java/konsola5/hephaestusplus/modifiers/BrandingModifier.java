@@ -11,12 +11,9 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import static nourl.mythicmetals.item.tools.PalladiumToolSet.MAX_HEAT;
 
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class BrandingModifier extends Modifier {
     // Mostly copy-paste from Mytic Metals' PalladiumToolSet.java, translated to Mojang mappings.
     @Override

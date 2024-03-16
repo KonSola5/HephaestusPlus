@@ -20,13 +20,11 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 import static konsola5.hephaestusplus.registry.HephPlusResourceLocations.PROMETHEUM_REPAIRS;
 
 @SuppressWarnings("deprecation")
-@ParametersAreNonnullByDefault
 public class RegrowthModifier extends Modifier implements ConditionalStatModifierHook {
     private static final int REPAIR_THRESHOLD = 1200;
 

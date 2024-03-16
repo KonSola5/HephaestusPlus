@@ -1,7 +1,10 @@
 package konsola5.hephaestusplus.registry;
 
+import konsola5.hephaestusplus.HephaestusPlus;
 import konsola5.hephaestusplus.modifiers.*;
+import konsola5.hephaestusplus.modifiers.dynamic.DynamicBatteryModifier;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.ModifierManager;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.modifiers.impl.SingleLevelModifier;
 import slimeknights.tconstruct.library.modifiers.util.DynamicModifier;
@@ -43,7 +46,12 @@ public class HephPlusModifierRegistry {
 
     public static final StaticModifier<EnergyVelocityModifier> ENERGY_VELOCITY = MODIFIERS.register("energy_velocity", EnergyVelocityModifier::new);
 
+    static void registerSerializers() {
+        ModifierManager.MODIFIER_LOADERS.register(HephaestusPlus.getResource("battery"), DynamicBatteryModifier.LOADER);
+    }
+
     public static void register() {
         MODIFIERS.register();
+        registerSerializers();
     }
 }

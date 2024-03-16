@@ -22,7 +22,6 @@ public class IsCorrectTierVanillaMixin {
         int level = tier.getLevel();
         if (level < MiningLevelManager.getRequiredMiningLevel(state)) {
             return false;
-        }
-        else return level >= 1 || !state.is(BlockTags.NEEDS_STONE_TOOL);
+        } else return level >= 1 || !state.is(BlockTags.NEEDS_STONE_TOOL);
     }
 }

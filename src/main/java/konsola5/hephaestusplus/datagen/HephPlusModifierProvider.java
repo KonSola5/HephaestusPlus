@@ -24,7 +24,7 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
 
     @Override
     public String getName() {
-        return "HephaestusPlus Simple Modifiers";
+        return "HephaestusPlus Dynamic Modifiers";
     }
 
     @Override

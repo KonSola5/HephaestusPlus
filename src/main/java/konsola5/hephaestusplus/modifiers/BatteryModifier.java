@@ -1,6 +1,7 @@
 package konsola5.hephaestusplus.modifiers;
 
 import konsola5.hephaestusplus.HephaestusPlus;
+import konsola5.hephaestusplus.util.HephPlusUtil;
 import konsola5.hephaestusplus.util.ToolEnergyCapability;
 import konsola5.hephaestusplus.util.ToolEnergyCapability.EnergyModifierHook;
 import lombok.Getter;
@@ -98,8 +99,11 @@ public class BatteryModifier extends Modifier {
         if (isOwner(tool)) {
             long currentEnergy = getEnergy(tool);
             long currentTransferRate = getTransferRate(tool);
-            tooltip.add(Component.translatable(ENERGY_KEY, currentEnergy, I18n.get(UNIT_KEY), getCapacity(tool), I18n.get(UNIT_KEY)));
-            tooltip.add(Component.translatable(TRANSFER_RATE_KEY, currentTransferRate, I18n.get(UNIT_PER_TICK_KEY)));
+            tooltip.add(Component.translatable(ENERGY_KEY,
+                    HephPlusUtil.getNumberWithMagnitude(currentEnergy, I18n.get(HephPlusUtil.ENERGY)),
+                    HephPlusUtil.getNumberWithMagnitude(getCapacity(tool), I18n.get(HephPlusUtil.ENERGY))));
+            tooltip.add(Component.translatable(TRANSFER_RATE_KEY,
+                    HephPlusUtil.getNumberWithMagnitude(currentTransferRate, I18n.get(HephPlusUtil.ENERGY_PER_TICK))));
         }
     }
 

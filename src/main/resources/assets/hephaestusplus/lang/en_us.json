@@ -149,12 +149,10 @@
   "modifier.hephaestusplus.lapotron_crystal.description": "Tool now has a battery, allowing it to store Energy",
   "modifier.hephaestusplus.lapotronic_energy_orb.description": "Tool now has a battery, allowing it to store Energy",
   "modifier.hephaestusplus.battery.description": "Tool now has a battery, allowing it to store Energy",
-  "_energy_comment": "Format: {current_energy} {unit} {capacity} {unit}",
-  "modifier.hephaestusplus.battery.energy": "Energy: %d %s / %d %s",
-  "_transfer_rate_comment": "Format: {transfer_rate} {unit_per_tick}",
-  "modifier.hephaestusplus.battery.transfer_rate": "Transfer Rate: %d %s",
-  "modifier.hephaestusplus.battery.unit": "E",
-  "modifier.hephaestusplus.battery.unit_per_tick": "E/t",
+  "_energy_comment": "Format: {current_energy w/ energy} {capacity w/ energy}",
+  "modifier.hephaestusplus.battery.energy": "Energy: %s / %s",
+  "_transfer_rate_comment": "Format: {transfer_rate w/ energy_per_tick}",
+  "modifier.hephaestusplus.battery.transfer_rate": "Transfer Rate: %s",
 
 
   "_comment4": "HephaestusTools Patterns",
@@ -365,6 +363,8 @@
 
   "comment_11": "Other useful strings",
   "hephaestusplus.seconds": "s",
+  "hephaestusplus.energy": "E",
+  "hephaestusplus.energy_per_tick": "E/t",
 
   "jade.modName.hephaestusplus": "HephaestusPlus"
 }

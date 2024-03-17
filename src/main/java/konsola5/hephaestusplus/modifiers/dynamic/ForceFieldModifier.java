@@ -41,7 +41,7 @@ public final class ForceFieldModifier extends BatteryModifier {
     public int onDamageTool(@NotNull IToolStackView tool, int level, int amount, @Nullable LivingEntity holder) {
         if (holder instanceof Player) {
             // Fail if the modifier can't extract energy
-            if (getEnergyUsage(level) <= getTransferRate() && !tool.isUnbreakable()) {
+            if (getEnergyUsage(level) <= getTransferRate(tool) && !tool.isUnbreakable()) {
                 // Always extract energy, regardless whether durability damage was avoided or not
                 extract(tool, getEnergyUsage(level));
                 // Rest of the logic like in ReinforcedModifier
@@ -75,6 +75,7 @@ public final class ForceFieldModifier extends BatteryModifier {
 
     @Override
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
+        super.addInformation(tool, level, player, tooltip, tooltipKey, tooltipFlag);
         addPercentTooltip(FORCE_SHIELDED, getChance(level), tooltip);
     }
 

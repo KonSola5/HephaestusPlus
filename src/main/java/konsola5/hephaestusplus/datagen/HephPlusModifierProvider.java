@@ -29,6 +29,7 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
 
     @Override
     protected void addModifiers() {
+        // TODO: Pull off the good old Extra Utils random chance of completely breaking the tool when using Mythril.
         addModifier(MoarModifierIds.magically_modifiable, ExtraModifier.builder(SlotType.UPGRADE).alwaysShow().build());
         addModifier(MoarModifierIds.stellar_swiftness, StatBoostModifier.builder()
                 .multiplyBase(ToolStats.ATTACK_SPEED, 0.15f)

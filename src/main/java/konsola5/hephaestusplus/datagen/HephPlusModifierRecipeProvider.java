@@ -124,15 +124,15 @@ public class HephPlusModifierRecipeProvider extends BaseRecipeProvider {
         buildEmbellishment(MoarMaterialIds.elementium   ,"elementium_ingots"    ,consumer);
         buildEmbellishment(MoarMaterialIds.terrasteel   ,"terrasteel_ingots"    ,consumer);
 
-        Consumer<FinishedRecipe> whenTRLoaded = withCondition(consumer,
-                DefaultResourceConditions.allModsLoaded("techreborn")
-        );
-
-        addBattery(MoarModifierIds.red_cell_battery,      TRContent.RED_CELL_BATTERY,    whenTRLoaded, upgradeFolder);
-        addBattery(MoarModifierIds.lithium_battery,       TRContent.LITHIUM_ION_BATTERY, whenTRLoaded, upgradeFolder);
-        addBattery(MoarModifierIds.energy_crystal,        TRContent.ENERGY_CRYSTAL,      whenTRLoaded, upgradeFolder);
-        addBattery(MoarModifierIds.lapotron_crystal,      TRContent.LAPOTRON_CRYSTAL,    whenTRLoaded, upgradeFolder);
-        addBattery(MoarModifierIds.lapotronic_energy_orb, TRContent.LAPOTRONIC_ORB,      whenTRLoaded, upgradeFolder);
+//        Consumer<FinishedRecipe> whenTRLoaded = withCondition(consumer,
+//                DefaultResourceConditions.allModsLoaded("techreborn")
+//        );
+//
+//        addBattery(MoarModifierIds.red_cell_battery,      TRContent.RED_CELL_BATTERY,    whenTRLoaded, upgradeFolder);
+//        addBattery(MoarModifierIds.lithium_battery,       TRContent.LITHIUM_ION_BATTERY, whenTRLoaded, upgradeFolder);
+//        addBattery(MoarModifierIds.energy_crystal,        TRContent.ENERGY_CRYSTAL,      whenTRLoaded, upgradeFolder);
+//        addBattery(MoarModifierIds.lapotron_crystal,      TRContent.LAPOTRON_CRYSTAL,    whenTRLoaded, upgradeFolder);
+//        addBattery(MoarModifierIds.lapotronic_energy_orb, TRContent.LAPOTRONIC_ORB,      whenTRLoaded, upgradeFolder);
     }
 
     @SafeVarargs

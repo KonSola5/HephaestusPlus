@@ -71,13 +71,13 @@ public class HephPlusModifierProvider extends AbstractModifierProvider {
                         EquipmentSlot.MAINHAND
                 )
                 .display(ModifierLevelDisplay.DEFAULT).build());
-        addDynamicBattery(MoarModifierIds.red_cell_battery,      10_000L,      32);
-        addDynamicBattery(MoarModifierIds.lithium_battery,       100_000L,     128);
-        addDynamicBattery(MoarModifierIds.energy_crystal,        1_000_000L,   512);
-        addDynamicBattery(MoarModifierIds.lapotron_crystal,      10_000_000L,  2048);
-        addDynamicBattery(MoarModifierIds.lapotronic_energy_orb, 100_000_000L, 8192);
+//        addDynamicBattery(MoarModifierIds.red_cell_battery,      10_000L,      32);
+//        addDynamicBattery(MoarModifierIds.lithium_battery,       100_000L,     128);
+//        addDynamicBattery(MoarModifierIds.energy_crystal,        1_000_000L,   512);
+//        addDynamicBattery(MoarModifierIds.lapotron_crystal,      10_000_000L,  2048);
+//        addDynamicBattery(MoarModifierIds.lapotronic_energy_orb, 100_000_000L, 8192);
 
-        addModifier(MoarModifierIds.force_field, ForceFieldModifier.builder().energyPerTry(10).denominator(3).build());
+//        addModifier(MoarModifierIds.force_field, ForceFieldModifier.builder().energyPerTry(10).denominator(3).build());
     }
 
     private void addDynamicBattery(ModifierId modifierId, long capacity, long transferRate) {

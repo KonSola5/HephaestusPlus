@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 171,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_manasteel"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:manasteel_blocks"
   },
   "result": {
-    "tag": "c:manasteel_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_manasteel"
+  },
+  "temperature": 700,
+  "time": 171
 }

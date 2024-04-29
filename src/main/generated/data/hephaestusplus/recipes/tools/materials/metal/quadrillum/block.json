@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 155,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_quadrillum"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:quadrillum_blocks"
   },
   "result": {
-    "tag": "c:quadrillum_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_quadrillum"
+  },
+  "temperature": 550,
+  "time": 155
 }

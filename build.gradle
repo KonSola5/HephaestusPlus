@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.5-SNAPSHOT'
+	id 'fabric-loom' version '1.6-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -104,9 +104,9 @@ dependencies {
 	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
 
 	if (project.use_fabricae_ex_nihilo.toBoolean()) {
-		modImplementation "maven.modrinth:j9JARqmz:vkrmmrFW"
+		modImplementation "maven.modrinth:fabricae-ex-nihilo:1.0.0+mc.1.20.1"
 	} else {
-		modCompileOnly "maven.modrinth:j9JARqmz:vkrmmrFW"
+		modCompileOnly "maven.modrinth:fabricae-ex-nihilo:1.0.0+mc.1.20.1"
 	}
 
 	if (project.use_mythic_metals.toBoolean()) {

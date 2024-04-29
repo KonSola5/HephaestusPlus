@@ -28,9 +28,9 @@ public class HephaestusPlus implements ModInitializer {
         // Proceed with mild caution.
         MixinExtrasBootstrap.init();
         HephPlusRegistry.init();
-        // The Metallurgium tier, surprised that mods generally don't initialize tiers like that
+        // The Metallurgium tier, Forge-style tiers are weird
         if (!TierSortingRegistry.isTierSorted(MetallurgiumTier.instance)) {
-            if (TierSortingRegistry.getSortedTiers().size() != 0) {
+            if (!TierSortingRegistry.getSortedTiers().isEmpty()) {
                 TierSortingRegistry.registerTier(MetallurgiumTier.instance,
                         new ResourceLocation(HephaestusPlus.MOD_ID + ":metallurgium"), List.of(TierSortingRegistry.getSortedTiers().get(TierSortingRegistry.getSortedTiers().size())), List.of());
             } else {

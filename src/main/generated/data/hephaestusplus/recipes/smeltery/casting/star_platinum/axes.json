@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": [
+    {
+      "item": "mythicmetals:star_platinum_pickaxe"
+    },
+    {
+      "item": "mythicmetals:star_platinum_axe"
+    }
+  ],
+  "result": {
+    "amount": 27000,
+    "fluid": "hephaestusplus:molten_star_platinum",
+    "unit_size": 1000
+  },
+  "temperature": 1300,
+  "time": 130
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#hephaestusplus:casts/single_use/crook_head",
+      "required": false
+    }
+  ]
+}

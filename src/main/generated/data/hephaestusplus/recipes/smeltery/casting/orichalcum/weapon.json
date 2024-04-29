@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": [
+    {
+      "item": "mythicmetals:orichalcum_sword"
+    },
+    {
+      "item": "mythicmetals:orichalcum_hoe"
+    }
+  ],
+  "result": {
+    "amount": 18000,
+    "fluid": "hephaestusplus:molten_orichalcum",
+    "unit_size": 1000
+  },
+  "temperature": 750,
+  "time": 83
+}

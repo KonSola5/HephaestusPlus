@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": {
+    "item": "mythicmetals:silver_chestplate"
+  },
+  "result": {
+    "amount": 72000,
+    "fluid": "tconstruct:molten_silver",
+    "unit_size": 1000
+  },
+  "temperature": 790,
+  "time": 169
+}

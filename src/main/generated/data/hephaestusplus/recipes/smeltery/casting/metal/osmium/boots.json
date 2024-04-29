@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": {
+    "item": "mythicmetals:osmium_boots"
+  },
+  "result": {
+    "amount": 36000,
+    "fluid": "tconstruct:molten_osmium",
+    "unit_size": 1000
+  },
+  "temperature": 975,
+  "time": 131
+}

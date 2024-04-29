@@ -1,0 +1,33 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "byproducts": [
+    {
+      "amount": 9000,
+      "fluid": "tconstruct:molten_netherite",
+      "unit_size": 1000
+    },
+    {
+      "amount": 97200,
+      "fluid": "tconstruct:molten_diamond",
+      "unit_size": 2025
+    }
+  ],
+  "ingredient": {
+    "item": "mythicmetals:metallurgium_helmet"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_metallurgium",
+    "unit_size": 1000
+  },
+  "temperature": 1470,
+  "time": 79
+}

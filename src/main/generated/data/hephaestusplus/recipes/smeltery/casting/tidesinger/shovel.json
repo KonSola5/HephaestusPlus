@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": {
+    "item": "mythicmetals:tidesinger_shovel"
+  },
+  "result": {
+    "amount": 72000,
+    "fluid": "hephaestusplus:molten_aquarium",
+    "unit_size": 1000
+  },
+  "temperature": 700,
+  "time": 161
+}

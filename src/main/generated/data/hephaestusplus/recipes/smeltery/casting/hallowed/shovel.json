@@ -1,0 +1,21 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": {
+    "item": "mythicmetals:hallowed_shovel"
+  },
+  "result": {
+    "amount": 9000,
+    "fluid": "hephaestusplus:molten_hallowed",
+    "unit_size": 1000
+  },
+  "temperature": 1200,
+  "time": 72
+}

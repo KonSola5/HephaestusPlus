@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": [
+    {
+      "item": "mythicmetals:mythril_pickaxe"
+    },
+    {
+      "item": "mythicmetals:mythril_axe"
+    }
+  ],
+  "result": {
+    "amount": 27000,
+    "fluid": "hephaestusplus:molten_mythril",
+    "unit_size": 1000
+  },
+  "temperature": 900,
+  "time": 110
+}

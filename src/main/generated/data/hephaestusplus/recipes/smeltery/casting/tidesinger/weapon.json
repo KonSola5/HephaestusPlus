@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": [
+    {
+      "item": "mythicmetals:tidesinger_sword"
+    },
+    {
+      "item": "mythicmetals:tidesinger_hoe"
+    }
+  ],
+  "result": {
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_aquarium",
+    "unit_size": 1000
+  },
+  "temperature": 700,
+  "time": 171
+}

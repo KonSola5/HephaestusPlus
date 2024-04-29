@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ],
+  "type": "tconstruct:damagable_melting",
+  "ingredient": [
+    {
+      "item": "mythicmetals:mythril_sword"
+    },
+    {
+      "item": "mythicmetals:mythril_hoe"
+    }
+  ],
+  "result": {
+    "amount": 18000,
+    "fluid": "hephaestusplus:molten_mythril",
+    "unit_size": 1000
+  },
+  "temperature": 900,
+  "time": 90
+}

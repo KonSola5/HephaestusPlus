@@ -135,6 +135,26 @@ dependencies {
 		modCompileOnly "curse.maven:reborncore-237903:4708961"
 	}
 
+	if (project.use_spectrum.toBoolean()) {
+		modImplementation "maven.modrinth:spectrum:${project.spectrum_version}"
+		modImplementation "maven.modrinth:revelationary:${project.revelationary_version}"
+		modImplementation "com.github.Noaaan:Matchbooks:${project.matchbooks_version}"
+		modImplementation "maven.modrinth:fractal-lib:${project.fractal_version}"
+		modImplementation "com.github.DaFuqs:Arrowhead:${project.arrowhead_version}"
+		modImplementation "com.github.DaFuqs:DimensionalReverb:${project.dimensional_reverb_version}"
+		modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-item:${project.cca_version}"
+		modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-level:${project.cca_version}"
+	} else {
+		modCompileOnly "maven.modrinth:spectrum:${project.spectrum_version}"
+		modCompileOnly "maven.modrinth:revelationary:${project.revelationary_version}"
+		modCompileOnly "com.github.Noaaan:Matchbooks:${project.matchbooks_version}"
+		modCompileOnly "maven.modrinth:fractal-lib:${project.fractal_version}"
+		modCompileOnly "com.github.DaFuqs:Arrowhead:${project.arrowhead_version}"
+		modCompileOnly "com.github.DaFuqs:DimensionalReverb:${project.dimensional_reverb_version}"
+		modCompileOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-item:${project.cca_version}"
+		modCompileOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-level:${project.cca_version}"
+	}
+
 
 	modRuntimeOnly "maven.modrinth:tamago:2.2"
 	// Come on, trigger the Bytecode Junkie

@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 150,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_manganese"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:manganese_blocks"
   },
   "result": {
-    "tag": "c:manganese_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_manganese"
+  },
+  "temperature": 500,
+  "time": 150
 }

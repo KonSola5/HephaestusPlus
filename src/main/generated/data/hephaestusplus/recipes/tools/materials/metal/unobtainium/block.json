@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 233,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_unobtainium"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:unobtainium_blocks"
   },
   "result": {
-    "tag": "c:unobtainium_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_unobtainium"
+  },
+  "temperature": 1400,
+  "time": 233
 }

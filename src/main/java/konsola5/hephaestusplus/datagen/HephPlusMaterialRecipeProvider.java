@@ -1,20 +1,25 @@
 package konsola5.hephaestusplus.datagen;
 
+import io.github.fabricators_of_create.porting_lib.fluids.FluidStack;
 import konsola5.hephaestusplus.ids.MoarMaterialIds;
 import konsola5.hephaestusplus.recipecompat.HephPlusSmelteryCompat;
 import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
+import nourl.mythicmetals.armor.MythicArmor;
 import nourl.mythicmetals.blocks.MythicBlocks;
 import nourl.mythicmetals.item.MythicItems;
+import nourl.mythicmetals.item.tools.MythicTools;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.melting.MeltingRecipeBuilder;
 import vazkii.botania.common.item.BotaniaItems;
 
 import java.util.function.Consumer;
@@ -80,6 +85,10 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
         compatMeltingCasting(consumer, MoarMaterialIds.elementium, HephPlusFluidRegistry.moltenElementium, folder);
         compatMeltingCasting(consumer, MoarMaterialIds.terrasteel, HephPlusFluidRegistry.moltenTerrasteel, folder);
 
+        // Spectrum
+
+        // WIP
+
         this.gemCasting(consumer, HephPlusFluidRegistry.moltenStarrite, MythicItems.Mats.STARRITE, folder + "starrite/gem");
         this.gemMelting(consumer, HephPlusFluidRegistry.moltenStarrite.get(), "starrite", true, 9, folder + "starrite/gem", true);
         ItemCastingRecipeBuilder.basinRecipe(MythicBlocks.STARRITE.getStorageBlock())
@@ -92,68 +101,6 @@ public class HephPlusMaterialRecipeProvider extends BaseRecipeProvider implement
             this.metalTagCasting(consumer, compat.getFluid(), compat.getName(), metalFolder, false);
         }
 
-        Consumer<FinishedRecipe> wrapped;
-
-        wrapped = withCondition(consumer,
-                tagCondition("adamantite_ingots"),
-                tagCondition("mythril_ingots"),
-                tagCondition("orichalcum_ingots"),
-                tagCondition("hallowed_ingots"));
-        AlloyRecipeBuilder.alloy(HephPlusFluidRegistry.moltenHallowed.get(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenAdamantite.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenMythril.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenOrichalcum.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusFluidRegistry.moltenHallowed.get()), alloyFolder));
-
-        wrapped = withCondition(consumer,
-                tagCondition("hallowed_ingots"),
-                tagCondition("palladium_ingots"),
-                tagCondition("unobtainium"),
-                tagCondition("metallurgium_ingots"));
-        AlloyRecipeBuilder.alloy(HephPlusFluidRegistry.moltenMetallurgium.get(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenHallowed.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenPalladium.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenUnobtainium.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusFluidRegistry.moltenMetallurgium.get()), alloyFolder));
-
-        wrapped = withCondition(consumer,
-                tagCondition("manganese_ingots"),
-                tagCondition("steel_ingots"));
-        AlloyRecipeBuilder.alloy(TinkerFluids.moltenSteel.get(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenManganese.getForgeTag(), FluidValues.INGOT)
-                .addInput(TinkerFluids.moltenIron.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(TinkerFluids.moltenSteel.get()), alloyFolder));
-
-        wrapped = withCondition(consumer,
-                tagCondition("manganese_ingots"),
-                tagCondition("quadrillum_ingots"),
-                tagCondition("durasteel_ingots"));
-        AlloyRecipeBuilder.alloy(HephPlusFluidRegistry.moltenDurasteel.get(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenManganese.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenQuadrillum.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusFluidRegistry.moltenDurasteel.get()), alloyFolder));
-
-        wrapped = withCondition(consumer,
-                tagCondition("starrite"),
-                tagCondition("platinum_ingots"),
-                tagCondition("star_platinum"));
-        AlloyRecipeBuilder.alloy(HephPlusFluidRegistry.moltenStarPlatinum.get(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenStarrite.getForgeTag(), FluidValues.GEM)
-                .addInput(TinkerFluids.moltenPlatinum.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusFluidRegistry.moltenStarPlatinum.get()), alloyFolder));
-
-        wrapped = withCondition(consumer,
-                tagCondition("star_platinum"),
-                tagCondition("kyber_ingots"),
-                tagCondition("carmot_ingots"),
-                tagCondition("unobtainium"),
-                tagCondition("celestium_ingots"));
-        AlloyRecipeBuilder.alloy(HephPlusFluidRegistry.moltenCelestium.get(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenStarPlatinum.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenKyber.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenCarmot.getForgeTag(), FluidValues.INGOT)
-                .addInput(HephPlusFluidRegistry.moltenUnobtainium.getForgeTag(), FluidValues.INGOT)
-                .save(wrapped, prefix(BuiltInRegistries.FLUID.getKey(HephPlusFluidRegistry.moltenCelestium.get()), alloyFolder));
 
     }
 

@@ -7,13 +7,14 @@
       ]
     }
   ],
-  "type": "tconstruct:casting_basin",
-  "cooling_time": 190,
-  "fluid": {
-    "amount": 81000,
-    "tag": "c:molten_palladium"
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "c:palladium_blocks"
   },
   "result": {
-    "tag": "c:palladium_blocks"
-  }
+    "amount": 81000,
+    "fluid": "hephaestusplus:molten_palladium"
+  },
+  "temperature": 900,
+  "time": 190
 }

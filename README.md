@@ -8,7 +8,10 @@ This is an addon adding new tools, materials and modifiers to supplement other m
 - Mythic Metals materials and modifiers/traits.
 - Botania materials and traits.
 
+## In progress
+- Spectrum materials, traits and modifiers,
+- Modifiers utilizing TR Energy
+
 ## Todo:
-- Spectrum materials, traits and modifiers (when it releases)
 - Better Nether/End materials and traits,
 - Ad Astra modifiable Space Suit.

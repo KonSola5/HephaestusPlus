@@ -163,6 +163,8 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok:1.18.30'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 
+	// Some mods to test stuff
+
 	// Straw Dummy is written in Kotlin wrrrr
 	modRuntimeOnly("net.fabricmc:fabric-language-kotlin:1.10.18+kotlin.1.9.22")
 	// Straw Dummy, for testing damage

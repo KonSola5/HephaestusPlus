@@ -3,8 +3,11 @@ package konsola5.hephaestusplus;
 import konsola5.hephaestusplus.registry.HephPlusFluidRegistry;
 import konsola5.hephaestusplus.util.PlatformHelper;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.EnvType;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
@@ -34,6 +37,14 @@ public class HephaestusPlusClient implements ClientModInitializer {
             }
         });
         setTranslucent(HephPlusFluidRegistry.moltenStarrite);
+
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT && FabricLoader.getInstance().isDevelopmentEnvironment()) {
+            ItemTooltipCallback.EVENT.register((stack, context, lines) -> {
+                stack.getTags().forEach(tagKey ->
+                        lines.add(Component.literal("#" + tagKey.location()).withStyle(ChatFormatting.GRAY))
+                );
+            });
+        }
     }
 
     @SuppressWarnings("SameParameterValue")

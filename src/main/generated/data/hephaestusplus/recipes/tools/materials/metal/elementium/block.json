@@ -7,14 +7,13 @@
       ]
     }
   ],
-  "type": "tconstruct:melting",
-  "ingredient": {
-    "tag": "c:elementium_blocks"
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 199,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_elementium"
   },
   "result": {
-    "amount": 81000,
-    "fluid": "hephaestusplus:molten_elementium"
-  },
-  "temperature": 1000,
-  "time": 199
+    "tag": "c:elementium_blocks"
+  }
 }

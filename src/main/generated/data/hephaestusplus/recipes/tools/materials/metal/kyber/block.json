@@ -7,14 +7,13 @@
       ]
     }
   ],
-  "type": "tconstruct:melting",
-  "ingredient": {
-    "tag": "c:kyber_blocks"
+  "type": "tconstruct:casting_basin",
+  "cooling_time": 177,
+  "fluid": {
+    "amount": 81000,
+    "tag": "c:molten_kyber"
   },
   "result": {
-    "amount": 81000,
-    "fluid": "hephaestusplus:molten_kyber"
-  },
-  "temperature": 760,
-  "time": 177
+    "tag": "c:kyber_blocks"
+  }
 }

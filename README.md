@@ -9,7 +9,11 @@ This is an addon adding new tools, materials and modifiers to supplement other m
 - Botania materials and traits.
 
 ## In progress
-- Spectrum materials, traits and modifiers,
+- Spectrum materials, traits and modifiers:
+  - Citrine, Topaz, Onyx and Moonstone meltable and alloyable with metals to create new alloys,
+  - Enchanted books to modifiers,
+  - An ability that grants the tool the ability to store Ink to perform special tasks
+  - Modifiers utilizing Spectrum Ink
 - Modifiers utilizing TR Energy
 
 ## Todo:
